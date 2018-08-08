@@ -24,6 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/SME-project/';
+=======
+$config['base_url'] = 'http://localhost:8080/SME-Project/';
+>>>>>>> 5713e0749577b509138ceb23c7c39f130f73a0ba
 
 /*
 |--------------------------------------------------------------------------
