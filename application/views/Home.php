@@ -106,7 +106,7 @@
 													</div>
 													<!-- END: Subheader -->
 													<div class="m-content">
-														<!--Begin::Section-->
+														<!--Begin::Section Hot Threads-->
 														<div class="row">
 															<div class="col-xl-6">
 																<div class="m-portlet" >
@@ -175,80 +175,18 @@
 																			</div>
 																			
 																		</div>
-																		<div class="row">
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
-																			</div>
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
-																			</div>
-																			
-																		</div>
-																		<div class="row">
-																			<div class="col-xl-3">
-																			</div>
-																			<div class="col-xl-3" style="text-align:right;">
-																			<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																					Show More..
-																				</button>
-																			</div>
-																		</div>
 																	</div>
 																</div>
 															</div>
+														<!--End::Section Hot Threads-->
+														<!--Begin::Section SME of The Week-->
 															<div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
 																				<h3 class="m-portlet__head-text">
-																					Experts
+																					SME Of The Week
 																				</h3>
 																			</div>
 																		</div>
@@ -307,59 +245,26 @@
 																				</div>
 																				<!--end:: Widgets/Blog-->
 																			</div>
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
-																			</div>
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!--End::Section SME of the Week-->
+														<!--Begin::Section Topic Graph-->
+														<div class="row">
+															<div class="col-xl-6">
+																<div class="m-portlet" >
+																	<div class="m-portlet__head" >
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h3 class="m-portlet__head-text">
+																					Topic's Graph 
+																				</h3>
 																			</div>
 																		</div>
+																	</div>
+																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-3" >
 																				<!--begin:: Widgets/Blog-->
@@ -413,76 +318,82 @@
 																				</div>
 																				<!--end:: Widgets/Blog-->
 																			</div>
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
-																			</div>
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
+																			
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-xl-6">
+																<div class="m-portlet" >
+																	<div class="m-portlet__head" >
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h3 class="m-portlet__head-text">
+																					Questioner of The Week
+																				</h3>
 																			</div>
 																		</div>
+																	</div>
+																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
-																			<div class="col-xl-3">
+																			<div class="col-xl-3" >
+																				<!--begin:: Widgets/Blog-->
+																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
+																					
+																					<div class="m-portlet__body" style="">
+																						<div class="m-widget19" >
+																							<div class="m-widget19__content">
+																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
+																									<div class="m-widget19__user-img" >
+																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
+																									</div>
+																								</div>
+																								<div class="m-widget19__body" style="text-align:center;">
+																									<h5> hlo hlo hlo hlo hlo </h5>
+																								</div>
+																							</div>
+																							<!-- <div class="m-widget19__action">
+																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+																									Read More
+																								</button>
+																							</div> -->
+																						</div>
+																					</div>
+																				</div>
+																				<!--end:: Widgets/Blog-->
 																			</div>
-																			<div class="col-xl-3">
-																			</div>
-																			<div class="col-xl-3">
-																			</div>
-																			<div class="col-xl-3" style="text-align:right;">
-																			<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																					Show More..
-																				</button>
+																			<div class="col-xl-3" >
+																				<!--begin:: Widgets/Blog-->
+																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
+																					
+																					<div class="m-portlet__body" style="">
+																						<div class="m-widget19" >
+																							<div class="m-widget19__content">
+																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
+																									<div class="m-widget19__user-img" >
+																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
+																									</div>
+																								</div>
+																								<div class="m-widget19__body" style="text-align:center;">
+																									<h5> hlo hlo hlo hlo hlo </h5>
+																								</div>
+																							</div>
+																							<!-- <div class="m-widget19__action">
+																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+																									Read More
+																								</button>
+																							</div> -->
+																						</div>
+																					</div>
+																				</div>
+																				<!--end:: Widgets/Blog-->
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
+														<!--Begin::Section Experts-->
 														<div class="m-portlet" >
 															<div class="m-portlet__head" >
 																<div class="m-portlet__head-caption">
