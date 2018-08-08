@@ -391,24 +391,7 @@
 																			<td>
 																				GMC
 																			</td>
-																			<td>
-																				Savana 2500
-																			</td>
-																			<td>
-																				Yellow
-																			</td>
-																			<td>
-																				$99799.94
-																			</td>
-																			<td>
-																				2016-03-23
-																			</td>
-																			<td>
-																				5
-																			</td>
-																			<td>
-																				2
-																			</td>
+
 																		</tr>
 																		<tr>
 																			<td>
@@ -422,24 +405,6 @@
 																			</td>
 																			<td>
 																				Chevrolet
-																			</td>
-																			<td>
-																				Avalanche
-																			</td>
-																			<td>
-																				Fuscia
-																			</td>
-																			<td>
-																				$88746.22
-																			</td>
-																			<td>
-																				2017-06-04
-																			</td>
-																			<td>
-																				4
-																			</td>
-																			<td>
-																				3
 																			</td>
 																		</tr>
 																	</tbody>
