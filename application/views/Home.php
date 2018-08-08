@@ -98,9 +98,9 @@
 													<div class="m-subheader ">
 														<div class="d-flex align-items-center">
 															<div class="mr-auto">
-																<h3 class="m-subheader__title ">
+																<h2 class="m-subheader__title ">
 																	Home 
-																</h3>
+																</h2>
 															</div>
 														</div>
 													</div>
@@ -225,91 +225,237 @@
 																	</div>
 																</div>
 																<div class="row">
-																				
-																				<div class="col-xl-3">
-																					<!--begin:: Widgets/Blog-->
-																					<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
-																						
-																						<div class="m-portlet__body">
-																							<div class="m-widget19">
-																								<div class="m-widget19__content">
-																									<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																										<div class="m-widget19__user-img" >
-																											<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-bottom: 20px;width: 100px; height: 100px;">
-																										</div>
-																									</div>
-																									<div class="m-widget19__body">
-																										Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing.
-																									</div>
-																								</div>
-																								<div class="m-widget19__action">
-																									<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																										Read More
-																									</button>
-																								</div>
+																	<div class="col-xl-3" >
+																		<!--begin:: Widgets/Blog-->
+																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
+																			
+																			<div class="m-portlet__body" style="">
+																				<div class="m-widget19" >
+																					<div class="m-widget19__content">
+																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
+																							<div class="m-widget19__user-img" >
+																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
 																							</div>
+																						</div>
+																						<div class="m-widget19__body" style="text-align:center;">
+																							<h5> hlo hlo hlo hlo hlo </h5>
 																						</div>
 																					</div>
-																					<!--end:: Widgets/Blog-->
+																					<!-- <div class="m-widget19__action">
+																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+																							Read More
+																						</button>
+																					</div> -->
 																				</div>
-																				<div class="col-xl-3">
-																					<!--begin:: Widgets/Blog-->
-																					<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
-																						<div class="m-portlet__head m-portlet__head--fit">
-																							<div class="m-portlet__head-caption">
-																								<div class="m-portlet__head-action">
-																									<button type="button" class="btn btn-sm m-btn--pill  btn-brand">
-																										Blog
-																									</button>
-																								</div>
+																			</div>
+																		</div>
+																		<!--end:: Widgets/Blog-->
+																	</div>
+																	<div class="col-xl-3" >
+																		<!--begin:: Widgets/Blog-->
+																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
+																			
+																			<div class="m-portlet__body" style="">
+																				<div class="m-widget19" >
+																					<div class="m-widget19__content">
+																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
+																							<div class="m-widget19__user-img" >
+																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
 																							</div>
 																						</div>
-																						<div class="m-portlet__body">
-																							<div class="m-widget19">
-																								<div class="m-widget19__pic m-portlet-fit--top m-portlet-fit--sides" style="min-height-: 286px">
-																									<img src="assets/app/media/img//blog/blog1.jpg" alt="">
-																									<h3 class="m-widget19__title m--font-light">
-																										Introducing New Feature
-																									</h3>
-																									<div class="m-widget19__shadow"></div>
-																								</div>
-																								<div class="m-widget19__content">
-																									<div class="m-widget19__header">
-																										<div class="m-widget19__user-img">
-																											<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="">
-																										</div>
-																										<div class="m-widget19__info">
-																											<span class="m-widget19__username">
-																												Anna Krox
-																											</span>
-																											<br>
-																											<span class="m-widget19__time">
-																												UX/UI Designer, Google
-																											</span>
-																										</div>
-																										<div class="m-widget19__stats">
-																											<span class="m-widget19__number m--font-brand">
-																												18
-																											</span>
-																											<span class="m-widget19__comment">
-																												Comments
-																											</span>
-																										</div>
-																									</div>
-																									<div class="m-widget19__body">
-																										Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing.
-																									</div>
-																								</div>
-																								<div class="m-widget19__action">
-																									<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																										Read More
-																									</button>
-																								</div>
-																							</div>
+																						<div class="m-widget19__body" style="text-align:center;">
+																							<h5> hlo hlo hlo hlo hlo </h5>
 																						</div>
 																					</div>
-																					<!--end:: Widgets/Blog-->
+																					<!-- <div class="m-widget19__action">
+																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+																							Read More
+																						</button>
+																					</div> -->
 																				</div>
+																			</div>
+																		</div>
+																		<!--end:: Widgets/Blog-->
+																	</div>
+																	<div class="col-xl-3" >
+																		<!--begin:: Widgets/Blog-->
+																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
+																			
+																			<div class="m-portlet__body" style="">
+																				<div class="m-widget19" >
+																					<div class="m-widget19__content">
+																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
+																							<div class="m-widget19__user-img" >
+																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
+																							</div>
+																						</div>
+																						<div class="m-widget19__body" style="text-align:center;">
+																							<h5> hlo hlo hlo hlo hlo </h5>
+																						</div>
+																					</div>
+																					<!-- <div class="m-widget19__action">
+																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+																							Read More
+																						</button>
+																					</div> -->
+																				</div>
+																			</div>
+																		</div>
+																		<!--end:: Widgets/Blog-->
+																	</div>
+																	<div class="col-xl-3" >
+																		<!--begin:: Widgets/Blog-->
+																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
+																			
+																			<div class="m-portlet__body" style="">
+																				<div class="m-widget19" >
+																					<div class="m-widget19__content">
+																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
+																							<div class="m-widget19__user-img" >
+																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
+																							</div>
+																						</div>
+																						<div class="m-widget19__body" style="text-align:center;">
+																							<h5> hlo hlo hlo hlo hlo </h5>
+																						</div>
+																					</div>
+																					<!-- <div class="m-widget19__action">
+																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+																							Read More
+																						</button>
+																					</div> -->
+																				</div>
+																			</div>
+																		</div>
+																		<!--end:: Widgets/Blog-->
+																	</div>
+																</div>
+																<div class="row">
+		  															<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3" style="text-align:right;">
+																	<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																			Show More..
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!--End::Section-->
+														<!--Begin::Section-->
+														<div class="m-portlet" >
+															<div class="m-portlet__head" >
+																<div class="m-portlet__head-caption">
+																	<div class="m-portlet__head-title">
+																		<h3 class="m-portlet__head-text">
+																			Knowledges
+																		</h3>
+																	</div>
+																</div>
+															</div>
+															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
+																	<!--begin: Datatable -->
+																<table class="m-datatable" id="html_table" width="100%" style="margin-bottom: 20px;">
+																	<thead>
+																		<tr>
+																			<th title="Field #1">
+																				Order ID
+																			</th>
+																			<th title="Field #2">
+																				Owner
+																			</th>
+																			<th title="Field #3">
+																				Contact
+																			</th>
+																			<th title="Field #4">
+																				Car Make
+																			</th>
+																		
+																		</tr>
+																	</thead>
+																	<tbody style="visibility: visible;">
+																		<tr>
+																			<td>
+																				57520-0405
+																			</td>
+																			<td>
+																				Sunny Garton
+																			</td>
+																			<td>
+																				(288) 1417941
+																			</td>
+																			<td>
+																				GMC
+																			</td>
+																			<td>
+																				Savana 2500
+																			</td>
+																			<td>
+																				Yellow
+																			</td>
+																			<td>
+																				$99799.94
+																			</td>
+																			<td>
+																				2016-03-23
+																			</td>
+																			<td>
+																				5
+																			</td>
+																			<td>
+																				2
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				43269-858
+																			</td>
+																			<td>
+																				Sandor Engley
+																			</td>
+																			<td>
+																				(411) 8011040
+																			</td>
+																			<td>
+																				Chevrolet
+																			</td>
+																			<td>
+																				Avalanche
+																			</td>
+																			<td>
+																				Fuscia
+																			</td>
+																			<td>
+																				$88746.22
+																			</td>
+																			<td>
+																				2017-06-04
+																			</td>
+																			<td>
+																				4
+																			</td>
+																			<td>
+																				3
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<div class="row" style="ma">
+		  															<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3" style="text-align:right;">
+																	<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																			Show More..
+																		</button>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -3908,6 +4054,9 @@
         <!--begin::Page Snippets -->
 										<script src=<?php echo base_url("assets/app/js/dashboard.js") ?> type="text/javascript"></script>
 										<!--end::Page Snippets -->
+										 <!--begin::Page Resources -->
+										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
+										<!--end::Page Resources -->
 									</body>
 									<!-- end::Body -->
 								</html>
