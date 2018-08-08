@@ -107,6 +107,7 @@
 													<!-- END: Subheader -->
 													<div class="m-content">
 														<!--Begin::Section-->
+														<div class="row">
 														<div class="m-portlet" >
 															<div class="m-portlet__head" >
 																<div class="m-portlet__head-caption">
@@ -424,9 +425,9 @@
 																				Chevrolet
 																			</td>
 																		</tr>
-																	</tbody>
-																</table>
-																<div class="row" style="ma">
+		</tbody>
+		</table>
+																		<div class="row" style="ma">
 		  															<div class="col-xl-3">
 																	</div>
 																	<div class="col-xl-3">
