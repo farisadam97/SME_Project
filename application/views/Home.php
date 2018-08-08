@@ -359,7 +359,7 @@
 															</div>
 															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																	<!--begin: Datatable -->
-																<table class="m-datatable" id="html_table" width="100%" style="margin-bottom: 20px;">
+																	<table class="m-datatable" id="html_table" width="100%">
 																	<thead>
 																		<tr>
 																			<th title="Field #1">
@@ -374,10 +374,27 @@
 																			<th title="Field #4">
 																				Car Make
 																			</th>
-																		
+																			<th title="Field #5">
+																				Car Model
+																			</th>
+																			<th title="Field #6">
+																				Color
+																			</th>
+																			<th title="Field #7">
+																				Deposit Paid
+																			</th>
+																			<th title="Field #8">
+																				Order Date
+																			</th>
+																			<th title="Field #9">
+																				Status
+																			</th>
+																			<th title="Field #10">
+																				Type
+																			</th>
 																		</tr>
 																	</thead>
-																	<tbody style="visibility: visible;">
+																	<tbody>
 																		<tr>
 																			<td>
 																				57520-0405
@@ -410,41 +427,9 @@
 																				2
 																			</td>
 																		</tr>
-																		<tr>
-																			<td>
-																				43269-858
-																			</td>
-																			<td>
-																				Sandor Engley
-																			</td>
-																			<td>
-																				(411) 8011040
-																			</td>
-																			<td>
-																				Chevrolet
-																			</td>
-																			<td>
-																				Avalanche
-																			</td>
-																			<td>
-																				Fuscia
-																			</td>
-																			<td>
-																				$88746.22
-																			</td>
-																			<td>
-																				2017-06-04
-																			</td>
-																			<td>
-																				4
-																			</td>
-																			<td>
-																				3
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<div class="row" style="ma">
+		</tbody>
+		</table>
+																		<div class="row" style="ma">
 		  															<div class="col-xl-3">
 																	</div>
 																	<div class="col-xl-3">
