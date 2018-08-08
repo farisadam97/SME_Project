@@ -359,7 +359,7 @@
 															</div>
 															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																	<!--begin: Datatable -->
-																<table class="m-datatable" id="html_table" width="100%" style="margin-bottom: 20px;">
+																	<table class="m-datatable" id="html_table" width="100%">
 																	<thead>
 																		<tr>
 																			<th title="Field #1">
@@ -374,10 +374,27 @@
 																			<th title="Field #4">
 																				Car Make
 																			</th>
-																		
+																			<th title="Field #5">
+																				Car Model
+																			</th>
+																			<th title="Field #6">
+																				Color
+																			</th>
+																			<th title="Field #7">
+																				Deposit Paid
+																			</th>
+																			<th title="Field #8">
+																				Order Date
+																			</th>
+																			<th title="Field #9">
+																				Status
+																			</th>
+																			<th title="Field #10">
+																				Type
+																			</th>
 																		</tr>
 																	</thead>
-																	<tbody style="visibility: visible;">
+																	<tbody>
 																		<tr>
 																			<td>
 																				57520-0405
