@@ -646,76 +646,231 @@
 															</div>
 															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																	<!--begin: Datatable -->
-																	<table class="m-datatable" id="html_table" width="100%">
-																	<thead>
-																		<tr>
-																			<th title="Field #1">
-																				Order ID
-																			</th>
-																			<th title="Field #2">
-																				Owner
-																			</th>
-																			<th title="Field #3">
-																				Contact
-																			</th>
-																			<th title="Field #4">
-																				Car Make
-																			</th>
-																			<th title="Field #5">
-																				Car Model
-																			</th>
-																			<th title="Field #6">
-																				Color
-																			</th>
-																			<th title="Field #7">
-																				Deposit Paid
-																			</th>
-																			<th title="Field #8">
-																				Order Date
-																			</th>
-																			<th title="Field #9">
-																				Status
-																			</th>
-																			<th title="Field #10">
-																				Type
-																			</th>
-																		</tr>
-																	</thead>
-																	<tbody>
-																		<tr>
-																			<td>
-																				57520-0405
-																			</td>
-																			<td>
-																				Sunny Garton
-																			</td>
-																			<td>
-																				(288) 1417941
-																			</td>
-																			<td>
-																				GMC
-																			</td>
-																			<td>
-																				Savana 2500
-																			</td>
-																			<td>
-																				Yellow
-																			</td>
-																			<td>
-																				$99799.94
-																			</td>
-																			<td>
-																				2016-03-23
-																			</td>
-																			<td>
-																				5
-																			</td>
-																			<td>
-																				2
-																			</td>
-																		</tr>
-																	</tbody>
-																	</table>
+																	<div class="row">
+															<div class="col-sm-12">
+		  														<div class="m-portlet">
+																  <div class="m-portlet__head" >
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h3 class="m-portlet__head-text">
+																					Knowledges List
+																				</h3>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
+																		<div class="row">
+																			<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+																				<thead>
+																					<tr>
+																						<th>
+																							RecordID
+																						</th>
+																						<th>
+																							OrderID
+																						</th>
+																						<th>
+																							Country
+																						</th>
+																						<th>
+																							ShipCity
+																						</th>
+																						<th>
+																							ShipAddress
+																						</th>
+																						<th>
+																							CompanyAgent
+																						</th>
+																						<th>
+																							CompanyName
+																						</th>
+																						<th>
+																							ShipDate
+																						</th>
+																						<th>
+																							Status
+																						</th>
+																						<th>
+																							Type
+																						</th>
+																						<th>
+																							Actions
+																						</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							1
+																						</td>
+																						<td>
+																							61715-075
+																						</td>
+																						<td>
+																							China
+																						</td>
+																						<td>
+																							Tieba
+																						</td>
+																						<td>
+																							746 Pine View Junction
+																						</td>
+																						<td>
+																							Nixie Sailor
+																						</td>
+																						<td>
+																							Gleichner, Ziemann and Gutkowski
+																						</td>
+																						<td>
+																							2/12/2018
+																						</td>
+																						<td>
+																							3
+																						</td>
+																						<td>
+																							2
+																						</td>
+																						<td nowrap></td>
+																					</tr>
+																					<tr>
+																						<td>
+																							2
+																						</td>
+																						<td>
+																							63629-4697
+																						</td>
+																						<td>
+																							Indonesia
+																						</td>
+																						<td>
+																							Cihaur
+																						</td>
+																						<td>
+																							01652 Fulton Trail
+																						</td>
+																						<td>
+																							Emelita Giraldez
+																						</td>
+																						<td>
+																							Rosenbaum-Reichel
+																						</td>
+																						<td>
+																							8/6/2017
+																						</td>
+																						<td>
+																							6
+																						</td>
+																						<td>
+																							3
+																						</td>
+																						<td nowrap></td>
+																					</tr>
+																					<tr>
+																						<td>
+																							3
+																						</td>
+																						<td>
+																							68084-123
+																						</td>
+																						<td>
+																							Argentina
+																						</td>
+																						<td>
+																							Puerto Iguazú
+																						</td>
+																						<td>
+																							2 Pine View Park
+																						</td>
+																						<td>
+																							Ula Luckin
+																						</td>
+																						<td>
+																							Kulas, Cassin and Batz
+																						</td>
+																						<td>
+																							5/26/2016
+																						</td>
+																						<td>
+																							1
+																						</td>
+																						<td>
+																							2
+																						</td>
+																						<td nowrap></td>
+																					</tr>
+																					<tr>
+																						<td>
+																							4
+																						</td>
+																						<td>
+																							67457-428
+																						</td>
+																						<td>
+																							Indonesia
+																						</td>
+																						<td>
+																							Talok
+																						</td>
+																						<td>
+																							3050 Buell Terrace
+																						</td>
+																						<td>
+																							Evangeline Cure
+																						</td>
+																						<td>
+																							Pfannerstill-Treutel
+																						</td>
+																						<td>
+																							7/2/2016
+																						</td>
+																						<td>
+																							1
+																						</td>
+																						<td>
+																							3
+																						</td>
+																						<td nowrap></td>
+																					</tr>
+																					<tr>
+																						<td>
+																							5
+																						</td>
+																						<td>
+																							31722-529
+																						</td>
+																						<td>
+																							Austria
+																						</td>
+																						<td>
+																							Sankt Andrä-Höch
+																						</td>
+																						<td>
+																							3038 Trailsway Junction
+																						</td>
+																						<td>
+																							Tierney St. Louis
+																						</td>
+																						<td>
+																							Dicki-Kling
+																						</td>
+																						<td>
+																							5/20/2017
+																						</td>
+																						<td>
+																							2
+																						</td>
+																						<td>
+																							3
+																						</td>
+																						<td nowrap></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 																<div class="row" style="ma">
 		  															<div class="col-xl-3">
 																	</div>
@@ -3731,583 +3886,7 @@
 														</a>
 													</li>
 												</ul>
-												<div class="tab-content">
-													<div class="tab-pane active" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
-														<div class="m-messenger m-messenger--message-arrow m-messenger--skin-light">
-															<div class="m-messenger__messages m-scrollable">
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--in">
-																		<div class="m-messenger__message-pic">
-																			<img src="assets/app/media/img//users/user3.jpg" alt=""/>
-																		</div>
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-username">
-																					Megan wrote
-																				</div>
-																				<div class="m-messenger__message-text">
-																					Hi Bob. What time will be the meeting ?
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--out">
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-text">
-																					Hi Megan. It's at 2.30PM
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--in">
-																		<div class="m-messenger__message-pic">
-																			<img src="assets/app/media/img//users/user3.jpg" alt=""/>
-																		</div>
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-username">
-																					Megan wrote
-																				</div>
-																				<div class="m-messenger__message-text">
-																					Will the development team be joining ?
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--out">
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-text">
-																					Yes sure. I invited them as well
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__datetime">
-																	2:30PM
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--in">
-																		<div class="m-messenger__message-pic">
-																			<img src="assets/app/media/img//users/user3.jpg"  alt=""/>
-																		</div>
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-username">
-																					Megan wrote
-																				</div>
-																				<div class="m-messenger__message-text">
-																					Noted. For the Coca-Cola Mobile App project as well ?
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--out">
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-text">
-																					Yes, sure.
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--out">
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-text">
-																					Please also prepare the quotation for the Loop CRM project as well.
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__datetime">
-																	3:15PM
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--in">
-																		<div class="m-messenger__message-no-pic m--bg-fill-danger">
-																			<span>
-																				M
-																			</span>
-																		</div>
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-username">
-																					Megan wrote
-																				</div>
-																				<div class="m-messenger__message-text">
-																					Noted. I will prepare it.
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--out">
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-text">
-																					Thanks Megan. I will see you later.
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="m-messenger__wrapper">
-																	<div class="m-messenger__message m-messenger__message--in">
-																		<div class="m-messenger__message-pic">
-																			<img src="assets/app/media/img//users/user3.jpg"  alt=""/>
-																		</div>
-																		<div class="m-messenger__message-body">
-																			<div class="m-messenger__message-arrow"></div>
-																			<div class="m-messenger__message-content">
-																				<div class="m-messenger__message-username">
-																					Megan wrote
-																				</div>
-																				<div class="m-messenger__message-text">
-																					Sure. See you in the meeting soon.
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="m-messenger__seperator"></div>
-															<div class="m-messenger__form">
-																<div class="m-messenger__form-controls">
-																	<input type="text" name="" placeholder="Type here..." class="m-messenger__form-input">
-																</div>
-																<div class="m-messenger__form-tools">
-																	<a href="" class="m-messenger__form-attachment">
-																		<i class="la la-paperclip"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="tab-pane" id="m_quick_sidebar_tabs_settings" role="tabpanel">
-														<div class="m-list-settings m-scrollable">
-															<div class="m-list-settings__group">
-																<div class="m-list-settings__heading">
-																	General Settings
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Email Notifications
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" checked="checked" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Site Tracking
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		SMS Alerts
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Backup Storage
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Audit Logs
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" checked="checked" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-															</div>
-															<div class="m-list-settings__group">
-																<div class="m-list-settings__heading">
-																	System Settings
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		System Logs
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Error Reporting
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Applications Logs
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Backup Servers
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" checked="checked" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-																<div class="m-list-settings__item">
-																	<span class="m-list-settings__item-label">
-																		Audit Logs
-																	</span>
-																	<span class="m-list-settings__item-control">
-																		<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
-																			<label>
-																				<input type="checkbox" name="">
-																				<span></span>
-																			</label>
-																		</span>
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="tab-pane" id="m_quick_sidebar_tabs_logs" role="tabpanel">
-														<div class="m-list-timeline m-scrollable">
-															<div class="m-list-timeline__group">
-																<div class="m-list-timeline__heading">
-																	System Logs
-																</div>
-																<div class="m-list-timeline__items">
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			12 new users registered
-																			<span class="m-badge m-badge--warning m-badge--wide">
-																				important
-																			</span>
-																		</a>
-																		<span class="m-list-timeline__time">
-																			Just now
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			System shutdown
-																		</a>
-																		<span class="m-list-timeline__time">
-																			11 mins
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-																		<a href="" class="m-list-timeline__text">
-																			New invoice received
-																		</a>
-																		<span class="m-list-timeline__time">
-																			20 mins
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Database overloaded 89%
-																			<span class="m-badge m-badge--success m-badge--wide">
-																				resolved
-																			</span>
-																		</a>
-																		<span class="m-list-timeline__time">
-																			1 hr
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			System error
-																		</a>
-																		<span class="m-list-timeline__time">
-																			2 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Production server down
-																			<span class="m-badge m-badge--danger m-badge--wide">
-																				pending
-																			</span>
-																		</a>
-																		<span class="m-list-timeline__time">
-																			3 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Production server up
-																		</a>
-																		<span class="m-list-timeline__time">
-																			5 hrs
-																		</span>
-																	</div>
-																</div>
-															</div>
-															<div class="m-list-timeline__group">
-																<div class="m-list-timeline__heading">
-																	Applications Logs
-																</div>
-																<div class="m-list-timeline__items">
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			New order received
-																			<span class="m-badge m-badge--info m-badge--wide">
-																				urgent
-																			</span>
-																		</a>
-																		<span class="m-list-timeline__time">
-																			7 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			12 new users registered
-																		</a>
-																		<span class="m-list-timeline__time">
-																			Just now
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			System shutdown
-																		</a>
-																		<span class="m-list-timeline__time">
-																			11 mins
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-																		<a href="" class="m-list-timeline__text">
-																			New invoices received
-																		</a>
-																		<span class="m-list-timeline__time">
-																			20 mins
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Database overloaded 89%
-																		</a>
-																		<span class="m-list-timeline__time">
-																			1 hr
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			System error
-																			<span class="m-badge m-badge--info m-badge--wide">
-																				pending
-																			</span>
-																		</a>
-																		<span class="m-list-timeline__time">
-																			2 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Production server down
-																		</a>
-																		<span class="m-list-timeline__time">
-																			3 hrs
-																		</span>
-																	</div>
-																</div>
-															</div>
-															<div class="m-list-timeline__group">
-																<div class="m-list-timeline__heading">
-																	Server Logs
-																</div>
-																<div class="m-list-timeline__items">
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Production server up
-																		</a>
-																		<span class="m-list-timeline__time">
-																			5 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			New order received
-																		</a>
-																		<span class="m-list-timeline__time">
-																			7 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			12 new users registered
-																		</a>
-																		<span class="m-list-timeline__time">
-																			Just now
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			System shutdown
-																		</a>
-																		<span class="m-list-timeline__time">
-																			11 mins
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-																		<a href="" class="m-list-timeline__text">
-																			New invoice received
-																		</a>
-																		<span class="m-list-timeline__time">
-																			20 mins
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Database overloaded 89%
-																		</a>
-																		<span class="m-list-timeline__time">
-																			1 hr
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			System error
-																		</a>
-																		<span class="m-list-timeline__time">
-																			2 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Production server down
-																		</a>
-																		<span class="m-list-timeline__time">
-																			3 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-																		<a href="" class="m-list-timeline__text">
-																			Production server up
-																		</a>
-																		<span class="m-list-timeline__time">
-																			5 hrs
-																		</span>
-																	</div>
-																	<div class="m-list-timeline__item">
-																		<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-																		<a href="" class="m-list-timeline__text">
-																			New order received
-																		</a>
-																		<span class="m-list-timeline__time">
-																			1117 hrs
-																		</span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+												
 											</div>
 										</div>
 										<!-- end::Quick Sidebar -->		    
@@ -4329,6 +3908,10 @@
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
+										<script src=<?php echo base_url("assets/vendors/custom/datatables/datatables.bundle.js") ?> type="text/javascript"></script>
+										<!--end::Page Vendors -->  
+        <!--begin::Page Resources -->
+										<script src=<?php echo base_url("assets/demo/default/custom/crud/datatables/basic/basic.js") ?> type="text/javascript"></script>
 									</body>
 									<!-- end::Body -->
 								</html>
