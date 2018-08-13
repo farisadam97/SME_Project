@@ -90,39 +90,129 @@
 												<div class="m-grid__item m-grid__item--fluid m-wrapper">
                                                     <div class="m-content">
 														<div class="row">
-															<div class="m-portlet m-portlet--creative m-portlet--bordered-semi" >
-																<div class="m-portlet__head">
-																	<div class="m-portlet__head-caption">
-																		<div class="m-portlet__head-title">
-																			<h2>
-																				Penjelasan
-																			</h2>
-																			<h2 class="m-portlet__head-label m-portlet__head-label--danger">
+															<div class="col-md-12">
+																<div class="m-portlet m-portlet--creative m-portlet--bordered-semi" >
+																	<div class="m-portlet__head">
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h2>
+																					Penjelasan
+																				</h2>
+																				<h2 class="m-portlet__head-label m-portlet__head-label--danger">
+																					<span>
+																					Studi Lingkungan
+																					</span>
+																				</h2>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="m-portlet__body">
+																	Mengetahui tatacara sebuah studi  lingkungan (AMDAL, UKL/UDL) guna pengajuan perijinan
+																	</div>
+																	<div class="m-portlet__head">
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h2 >
+																					Sub-Ilmu
+																				</h2>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="m-portlet__body">
+																		<ul>
+																			<li> Ilmu Lingkungan </li>
+																			<li> Ilmu Lingkungan </li>
+																			<li> Ilmu Lingkungan </li>
+																		</ul>
+																	</div>
+																	<div class="m-portlet__head">
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h2 >
+																					Experts
+																				</h2>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="m-portlet__body">
+																		<div class="m-list-search">
+																			<div class="m-list-search__results">
+																				<a href="#" class="m-list-search__result-item">
+																					<span class="m-list-search__result-item-pic">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
+																					</span>
+																					<span class="m-list-search__result-item-text">
+																						Amanda Anderson
+																					</span>
+																				</a>
+																				<a href="#" class="m-list-search__result-item">
+																					<span class="m-list-search__result-item-pic">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
+																					</span>
+																					<span class="m-list-search__result-item-text">
+																						Kennedy Lloyd
+																					</span>
+																				</a>
+																				<a href="#" class="m-list-search__result-item">
+																					<span class="m-list-search__result-item-pic">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
+																					</span>
+																					<span class="m-list-search__result-item-text">
+																						Megan Weldon
+																					</span>
+																				</a>
+																				<a href="#" class="m-list-search__result-item">
+																					<span class="m-list-search__result-item-pic">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
+																					</span>
+																					<span class="m-list-search__result-item-text">
+																						Marc-André ter Stegen
+																					</span>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="m-portlet__head">
+																		<div class="m-portlet__head-caption">
+																			<div class="m-portlet__head-title">
+																				<h2 >
+																					FAQ
+																				</h2>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="m-portlet__body">
+																		<div class="m-portlet">
+																			<div class="m-portlet__body" style="padding-bottom: 10px;">
 																				<span>
-																				Studi Lingkungan
+																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
 																				</span>
-																			</h2>
+																				<span>
+																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
+																				</span>
+																			</div>
+																		</div>
+																		<div class="m-portlet">
+																			<div class="m-portlet__body" style="padding-bottom: 10px;">
+																				<span>
+																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
+																				</span>
+																				<span>
+																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
+																				</span>
+																			</div>
+																		</div>
+																		<div class="m-portlet">
+																			<div class="m-portlet__body" style="padding-bottom: 10px;">
+																				<span>
+																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
+																				</span>
+																				<span>
+																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
+																				</span>
+																			</div>
 																		</div>
 																	</div>
-																</div>
-																<div class="m-portlet__body">
-																Mengetahui tatacara sebuah studi  lingkungan (AMDAL, UKL/UDL) guna pengajuan perijinan
-																</div>
-																<div class="m-portlet__head">
-																	<div class="m-portlet__head-caption">
-																		<div class="m-portlet__head-title">
-																			<span class="m-portlet__head-icon m--hide">
-																				<i class="flaticon-statistics"></i>
-																			</span>
-																			<h2 >
-																				Portlet sub title goes here
-																			</h2>
-																			
-																		</div>
-																	</div>
-																</div>
-																<div class="m-portlet__body">
-																	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
 																</div>
 															</div>
 														</div>
