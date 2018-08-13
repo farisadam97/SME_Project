@@ -116,6 +116,9 @@
 																				<h3 class="m-portlet__head-text">
 																					HOT THREADS! 
 																				</h3>
+																				<span style="margin-left: 5px;">
+																				<i class="fa fa-fire"></i>
+																				</span>
 																			</div>
 																		</div>
 																	</div>
@@ -123,38 +126,44 @@
 																		<div class="row">
 																			<div class="col-xl-12" >
 		  																		<!--Begin::Section-->
-																				<div class="m-portlet" >
-																					
-																					<div class="m-portlet-body" style="padding: 2.2rem 2.2rem; overflow:auto">
-																							<!--begin: Datatable -->
-																						<div class="row">
-																							<div class="col-sm-12">
-																								<div class="row">
-																									<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1" >
-																										<tbody style="text-align: center">
-																											<tr>
-																												<td>
-																													3
-																												</td>
-																											</tr>
-																											<tr>
-																												<td>
-																													4
-																												</td>
-																											</tr>
-																											<tr>
-																												<td>
-																													5
-																												</td>
-																											</tr>
-																										</tbody>
-																									</table>
-																								</div>
-																							</div>
-																						</div>
-																						
-																					</div>
-																				</div>
+																				  <table class="table table-striped- table-bordered table-hover" >
+																				  	<col width="85%">
+  																					<col width="15%">
+																					<tbody>
+																						<tr>
+																							<td>
+																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																							</td>
+																							<td>
+																								<i class="fa fa-eye"> 29<i>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td>
+																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																							</td>
+																							<td>
+																								<i class="fa fa-eye"> 29<i>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td>
+																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																							</td>
+																							<td>
+																								<i class="fa fa-eye"> 29<i>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td>
+																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																							</td>
+																							<td>
+																								<i class="fa fa-eye"> 29<i>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
 														<!--End::Section-->
 																			</div>
 																		</div>
@@ -605,209 +614,44 @@
 															<div class="row">
 																<div class="col-sm-12">
 																	<div class="row">
-																		<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
-																			<thead style="text-align: center">
+																		<table class="table table-striped- table-bordered table-hover" >
+																			<thead>
 																				<tr>
 																					<th>
-																						RecordID
+																						Nama
 																					</th>
 																					<th>
-																						OrderID
+																						Sub Ilmu
 																					</th>
 																					<th>
-																						Country
+																						Experts
 																					</th>
 																					<th>
-																						ShipCity
-																					</th>
-																					<th>
-																						ShipAddress
-																					</th>
-																					<th>
-																						CompanyAgent
-																					</th>
-																					<th>
-																						CompanyName
-																					</th>
-																					<th>
-																						ShipDate
-																					</th>
-																					<th>
-																						Status
-																					</th>
-																					<th>
-																						Type
-																					</th>
-																					<th>
-																						Actions
+																						Action
 																					</th>
 																				</tr>
 																			</thead>
-																			<tbody style="text-align: center">
+																			<tbody>
 																				<tr>
 																					<td>
-																						1
+																						Studi Lingkungan
 																					</td>
 																					<td>
-																						61715-075
+																						Ilmu Lingkungan
 																					</td>
 																					<td>
-																						China
+																						<ul>
+																							<li>Someone</li>
+																							<li>Someone</li>
+																							<li>Someone</li>
+																							<li>Someone</li>
+																						</ul>
 																					</td>
-																					<td>
-																						Tieba
+																					<td style="text-align: center; vertical-align: middle;">
+																					<button type="button" class="btn btn-accent" style="width=: 1.15rem">
+																							Link
+																						</button>
 																					</td>
-																					<td>
-																						746 Pine View Junction
-																					</td>
-																					<td>
-																						Nixie Sailor
-																					</td>
-																					<td>
-																						Gleichner, Ziemann and Gutkowski
-																					</td>
-																					<td>
-																						2/12/2018
-																					</td>
-																					<td>
-																						3
-																					</td>
-																					<td>
-																						2
-																					</td>
-																					<td nowrap></td>
-																				</tr>
-																				<tr>
-																					<td>
-																						2
-																					</td>
-																					<td>
-																						63629-4697
-																					</td>
-																					<td>
-																						Indonesia
-																					</td>
-																					<td>
-																						Cihaur
-																					</td>
-																					<td>
-																						01652 Fulton Trail
-																					</td>
-																					<td>
-																						Emelita Giraldez
-																					</td>
-																					<td>
-																						Rosenbaum-Reichel
-																					</td>
-																					<td>
-																						8/6/2017
-																					</td>
-																					<td>
-																						6
-																					</td>
-																					<td>
-																						3
-																					</td>
-																					<td nowrap></td>
-																				</tr>
-																				<tr>
-																					<td>
-																						3
-																					</td>
-																					<td>
-																						68084-123
-																					</td>
-																					<td>
-																						Argentina
-																					</td>
-																					<td>
-																						Puerto Iguazú
-																					</td>
-																					<td>
-																						2 Pine View Park
-																					</td>
-																					<td>
-																						Ula Luckin
-																					</td>
-																					<td>
-																						Kulas, Cassin and Batz
-																					</td>
-																					<td>
-																						5/26/2016
-																					</td>
-																					<td>
-																						1
-																					</td>
-																					<td>
-																						2
-																					</td>
-																					<td nowrap></td>
-																				</tr>
-																				<tr>
-																					<td>
-																						4
-																					</td>
-																					<td>
-																						67457-428
-																					</td>
-																					<td>
-																						Indonesia
-																					</td>
-																					<td>
-																						Talok
-																					</td>
-																					<td>
-																						3050 Buell Terrace
-																					</td>
-																					<td>
-																						Evangeline Cure
-																					</td>
-																					<td>
-																						Pfannerstill-Treutel
-																					</td>
-																					<td>
-																						7/2/2016
-																					</td>
-																					<td>
-																						1
-																					</td>
-																					<td>
-																						3
-																					</td>
-																					<td nowrap></td>
-																				</tr>
-																				<tr>
-																					<td>
-																						5
-																					</td>
-																					<td>
-																						31722-529
-																					</td>
-																					<td>
-																						Austria
-																					</td>
-																					<td>
-																						Sankt Andrä-Höch
-																					</td>
-																					<td>
-																						3038 Trailsway Junction
-																					</td>
-																					<td>
-																						Tierney St. Louis
-																					</td>
-																					<td>
-																						Dicki-Kling
-																					</td>
-																					<td>
-																						5/20/2017
-																					</td>
-																					<td>
-																						2
-																					</td>
-																					<td>
-																						3
-																					</td>
-																					<td nowrap></td>
 																				</tr>
 																			</tbody>
 																		</table>
@@ -925,12 +769,8 @@
 										<script src=<?php echo base_url("assets/vendors/base/vendors.bundle.js") ?> type="text/javascript"></script>
 										<script src=<?php echo base_url("assets/demo/default/base/scripts.bundle.js") ?> type="text/javascript"></script>
 										<!--end::Base Scripts -->   
-        <!--begin::Page Vendors -->
-										<script src=<?php echo base_url("assets/vendors/custom/fullcalendar/fullcalendar.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Page Vendors -->  
-        <!--begin::Page Snippets -->
-										<script src=<?php echo base_url("assets/app/js/dashboard.js") ?> type="text/javascript"></script>
-										<!--end::Page Snippets -->
+       
+       
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->

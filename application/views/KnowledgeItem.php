@@ -212,6 +212,19 @@
 																				</span>
 																			</div>
 																		</div>
+																		<div class="row" style="ma">
+																			<div class="col-xl-3">
+																			</div>
+																			<div class="col-xl-3">
+																			</div>
+																			<div class="col-xl-3">
+																			</div>
+																			<div class="col-xl-3" style="text-align:right;">
+																			<button type="button" class="btn btn-warning">
+																					Back
+																				</button>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
