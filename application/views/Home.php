@@ -650,7 +650,7 @@
 																<div class="col-sm-12">
 																	<div class="row">
 																		<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
-																			<thead>
+																			<thead style="text-align: center">
 																				<tr>
 																					<th>
 																						RecordID
@@ -687,7 +687,7 @@
 																					</th>
 																				</tr>
 																			</thead>
-																			<tbody>
+																			<tbody style="text-align: center">
 																				<tr>
 																					<td>
 																						1
