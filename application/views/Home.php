@@ -646,231 +646,218 @@
 															</div>
 															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																	<!--begin: Datatable -->
+															<div class="row">
+																<div class="col-sm-12">
 																	<div class="row">
-															<div class="col-sm-12">
-		  														<div class="m-portlet">
-																  <div class="m-portlet__head" >
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
-																					Knowledges List
-																				</h3>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																		<div class="row">
-																			<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
-																				<thead>
-																					<tr>
-																						<th>
-																							RecordID
-																						</th>
-																						<th>
-																							OrderID
-																						</th>
-																						<th>
-																							Country
-																						</th>
-																						<th>
-																							ShipCity
-																						</th>
-																						<th>
-																							ShipAddress
-																						</th>
-																						<th>
-																							CompanyAgent
-																						</th>
-																						<th>
-																							CompanyName
-																						</th>
-																						<th>
-																							ShipDate
-																						</th>
-																						<th>
-																							Status
-																						</th>
-																						<th>
-																							Type
-																						</th>
-																						<th>
-																							Actions
-																						</th>
-																					</tr>
-																				</thead>
-																				<tbody>
-																					<tr>
-																						<td>
-																							1
-																						</td>
-																						<td>
-																							61715-075
-																						</td>
-																						<td>
-																							China
-																						</td>
-																						<td>
-																							Tieba
-																						</td>
-																						<td>
-																							746 Pine View Junction
-																						</td>
-																						<td>
-																							Nixie Sailor
-																						</td>
-																						<td>
-																							Gleichner, Ziemann and Gutkowski
-																						</td>
-																						<td>
-																							2/12/2018
-																						</td>
-																						<td>
-																							3
-																						</td>
-																						<td>
-																							2
-																						</td>
-																						<td nowrap></td>
-																					</tr>
-																					<tr>
-																						<td>
-																							2
-																						</td>
-																						<td>
-																							63629-4697
-																						</td>
-																						<td>
-																							Indonesia
-																						</td>
-																						<td>
-																							Cihaur
-																						</td>
-																						<td>
-																							01652 Fulton Trail
-																						</td>
-																						<td>
-																							Emelita Giraldez
-																						</td>
-																						<td>
-																							Rosenbaum-Reichel
-																						</td>
-																						<td>
-																							8/6/2017
-																						</td>
-																						<td>
-																							6
-																						</td>
-																						<td>
-																							3
-																						</td>
-																						<td nowrap></td>
-																					</tr>
-																					<tr>
-																						<td>
-																							3
-																						</td>
-																						<td>
-																							68084-123
-																						</td>
-																						<td>
-																							Argentina
-																						</td>
-																						<td>
-																							Puerto Iguazú
-																						</td>
-																						<td>
-																							2 Pine View Park
-																						</td>
-																						<td>
-																							Ula Luckin
-																						</td>
-																						<td>
-																							Kulas, Cassin and Batz
-																						</td>
-																						<td>
-																							5/26/2016
-																						</td>
-																						<td>
-																							1
-																						</td>
-																						<td>
-																							2
-																						</td>
-																						<td nowrap></td>
-																					</tr>
-																					<tr>
-																						<td>
-																							4
-																						</td>
-																						<td>
-																							67457-428
-																						</td>
-																						<td>
-																							Indonesia
-																						</td>
-																						<td>
-																							Talok
-																						</td>
-																						<td>
-																							3050 Buell Terrace
-																						</td>
-																						<td>
-																							Evangeline Cure
-																						</td>
-																						<td>
-																							Pfannerstill-Treutel
-																						</td>
-																						<td>
-																							7/2/2016
-																						</td>
-																						<td>
-																							1
-																						</td>
-																						<td>
-																							3
-																						</td>
-																						<td nowrap></td>
-																					</tr>
-																					<tr>
-																						<td>
-																							5
-																						</td>
-																						<td>
-																							31722-529
-																						</td>
-																						<td>
-																							Austria
-																						</td>
-																						<td>
-																							Sankt Andrä-Höch
-																						</td>
-																						<td>
-																							3038 Trailsway Junction
-																						</td>
-																						<td>
-																							Tierney St. Louis
-																						</td>
-																						<td>
-																							Dicki-Kling
-																						</td>
-																						<td>
-																							5/20/2017
-																						</td>
-																						<td>
-																							2
-																						</td>
-																						<td>
-																							3
-																						</td>
-																						<td nowrap></td>
-																					</tr>
-																				</tbody>
-																			</table>
-																		</div>
+																		<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
+																			<thead>
+																				<tr>
+																					<th>
+																						RecordID
+																					</th>
+																					<th>
+																						OrderID
+																					</th>
+																					<th>
+																						Country
+																					</th>
+																					<th>
+																						ShipCity
+																					</th>
+																					<th>
+																						ShipAddress
+																					</th>
+																					<th>
+																						CompanyAgent
+																					</th>
+																					<th>
+																						CompanyName
+																					</th>
+																					<th>
+																						ShipDate
+																					</th>
+																					<th>
+																						Status
+																					</th>
+																					<th>
+																						Type
+																					</th>
+																					<th>
+																						Actions
+																					</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>
+																						1
+																					</td>
+																					<td>
+																						61715-075
+																					</td>
+																					<td>
+																						China
+																					</td>
+																					<td>
+																						Tieba
+																					</td>
+																					<td>
+																						746 Pine View Junction
+																					</td>
+																					<td>
+																						Nixie Sailor
+																					</td>
+																					<td>
+																						Gleichner, Ziemann and Gutkowski
+																					</td>
+																					<td>
+																						2/12/2018
+																					</td>
+																					<td>
+																						3
+																					</td>
+																					<td>
+																						2
+																					</td>
+																					<td nowrap></td>
+																				</tr>
+																				<tr>
+																					<td>
+																						2
+																					</td>
+																					<td>
+																						63629-4697
+																					</td>
+																					<td>
+																						Indonesia
+																					</td>
+																					<td>
+																						Cihaur
+																					</td>
+																					<td>
+																						01652 Fulton Trail
+																					</td>
+																					<td>
+																						Emelita Giraldez
+																					</td>
+																					<td>
+																						Rosenbaum-Reichel
+																					</td>
+																					<td>
+																						8/6/2017
+																					</td>
+																					<td>
+																						6
+																					</td>
+																					<td>
+																						3
+																					</td>
+																					<td nowrap></td>
+																				</tr>
+																				<tr>
+																					<td>
+																						3
+																					</td>
+																					<td>
+																						68084-123
+																					</td>
+																					<td>
+																						Argentina
+																					</td>
+																					<td>
+																						Puerto Iguazú
+																					</td>
+																					<td>
+																						2 Pine View Park
+																					</td>
+																					<td>
+																						Ula Luckin
+																					</td>
+																					<td>
+																						Kulas, Cassin and Batz
+																					</td>
+																					<td>
+																						5/26/2016
+																					</td>
+																					<td>
+																						1
+																					</td>
+																					<td>
+																						2
+																					</td>
+																					<td nowrap></td>
+																				</tr>
+																				<tr>
+																					<td>
+																						4
+																					</td>
+																					<td>
+																						67457-428
+																					</td>
+																					<td>
+																						Indonesia
+																					</td>
+																					<td>
+																						Talok
+																					</td>
+																					<td>
+																						3050 Buell Terrace
+																					</td>
+																					<td>
+																						Evangeline Cure
+																					</td>
+																					<td>
+																						Pfannerstill-Treutel
+																					</td>
+																					<td>
+																						7/2/2016
+																					</td>
+																					<td>
+																						1
+																					</td>
+																					<td>
+																						3
+																					</td>
+																					<td nowrap></td>
+																				</tr>
+																				<tr>
+																					<td>
+																						5
+																					</td>
+																					<td>
+																						31722-529
+																					</td>
+																					<td>
+																						Austria
+																					</td>
+																					<td>
+																						Sankt Andrä-Höch
+																					</td>
+																					<td>
+																						3038 Trailsway Junction
+																					</td>
+																					<td>
+																						Tierney St. Louis
+																					</td>
+																					<td>
+																						Dicki-Kling
+																					</td>
+																					<td>
+																						5/20/2017
+																					</td>
+																					<td>
+																						2
+																					</td>
+																					<td>
+																						3
+																					</td>
+																					<td nowrap></td>
+																				</tr>
+																			</tbody>
+																		</table>
 																	</div>
 																</div>
 															</div>
-														</div>
 																<div class="row" style="ma">
 		  															<div class="col-xl-3">
 																	</div>

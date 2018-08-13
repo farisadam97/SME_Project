@@ -22,4 +22,9 @@ class Knowledge extends CI_Controller {
 	{
 		$this->load->view('Knowledge');
 	}
+
+	public function item()
+	{
+		$this->load->view('KnowledgeItem');
+	}
 }
