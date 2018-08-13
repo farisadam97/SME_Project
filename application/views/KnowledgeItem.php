@@ -19,11 +19,6 @@
             }
           });
 		</script>
-		<style>
-			m-portlet {padding-left=15px;padding-right=15px;}
-			/* m-portlet-body {padding= 2.2rem 2.2rem;} */
-			
-		</style>
 		<!--end::Web font -->
         <!--begin::Base Styles -->  
         <!--begin::Page Vendors -->
@@ -53,22 +48,21 @@
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
 									<!-- BEGIN: Left Aside Minimize Toggle -->
-									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
-					 ">
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
 										<span></span>
 									</a>
 									<!-- END -->
-							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+									<!-- BEGIN: Responsive Aside Left Menu Toggler -->
 									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
 										<span></span>
 									</a>
 									<!-- END -->
-							<!-- BEGIN: Responsive Header Menu Toggler -->
+									<!-- BEGIN: Responsive Header Menu Toggler -->
 									<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
 										<span></span>
 									</a>
 									<!-- END -->
-			<!-- BEGIN: Topbar Toggler -->
+									<!-- BEGIN: Topbar Toggler -->
 									<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
 										<i class="flaticon-more"></i>
 									</a>
@@ -94,53 +88,44 @@
 												</div>
 												<!-- END: Left Aside -->
 												<div class="m-grid__item m-grid__item--fluid m-wrapper">
-													<!-- BEGIN: Subheader -->
-													<div class="m-subheader ">
-														<div class="d-flex align-items-center">
-															<div class="mr-auto">
-																<h2 class="m-subheader__title ">
-																	Knowledges 
-																</h2>
+                                                    <div class="m-content">
+														<div class="row">
+															<div class="m-portlet m-portlet--creative m-portlet--bordered-semi" >
+																<div class="m-portlet__head">
+																	<div class="m-portlet__head-caption">
+																		<div class="m-portlet__head-title">
+																			<h2>
+																				Penjelasan
+																			</h2>
+																			<h2 class="m-portlet__head-label m-portlet__head-label--danger">
+																				<span>
+																				Studi Lingkungan
+																				</span>
+																			</h2>
+																		</div>
+																	</div>
+																</div>
+																<div class="m-portlet__body">
+																Mengetahui tatacara sebuah studi  lingkungan (AMDAL, UKL/UDL) guna pengajuan perijinan
+																</div>
+																<div class="m-portlet__head">
+																	<div class="m-portlet__head-caption">
+																		<div class="m-portlet__head-title">
+																			<span class="m-portlet__head-icon m--hide">
+																				<i class="flaticon-statistics"></i>
+																			</span>
+																			<h2 >
+																				Portlet sub title goes here
+																			</h2>
+																			
+																		</div>
+																	</div>
+																</div>
+																<div class="m-portlet__body">
+																	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+																</div>
 															</div>
 														</div>
-													</div>
-                                                    <!-- END: Subheader -->
-                                                    <div class="m-content" style="margin-top = -20px;">
-                                                        <div class="m-portlet m-portlet--creative m-portlet--bordered-semi" >
-                                                            <div class="m-portlet__head">
-                                                                <div class="m-portlet__head-caption">
-                                                                    <div class="m-portlet__head-title">
-                                                                        <h2>
-                                                                            Penjelasan
-                                                                        </h2>
-                                                                        <h2 class="m-portlet__head-label m-portlet__head-label--warning" style="width= max-content;">
-                                                                            <span>
-																			Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan
-                                                                            </span>
-                                                                        </h2>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="m-portlet__body">
-															Pemahaman terhadap peraturan, perundangan, dan ketentuan terkait Hubungan Kerja antara Induk dan Anak Perusahaan, baik peraturan internal maupun eksternal 
-															</div>
-                                                            <div class="m-portlet__head">
-                                                                <div class="m-portlet__head-caption">
-                                                                    <div class="m-portlet__head-title">
-                                                                        <span class="m-portlet__head-icon m--hide">
-                                                                            <i class="flaticon-statistics"></i>
-                                                                        </span>
-                                                                        <h2 >
-                                                                            Portlet sub title goes here
-                                                                        </h2>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="m-portlet__body">
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
-                                                            </div>
-                                                        </div>
                                                     </div>
 												</div>
 											</div>
