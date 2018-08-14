@@ -106,155 +106,130 @@
 													</div>
 													<!-- END: Subheader -->
 													<div class="m-content">
-														<div class="row">
-															<div class="col-sm-12">
-		  														<div class="m-portlet">
-																  <div class="m-portlet__head" >
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
-																					Knowledges List
-																				</h3>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																		<div class="row">
-																			<table class="table table-striped- table-bordered table-hover table-checkable" id="m_table_1">
-																				<thead>
-																					<tr>
-																						<th>
-																							RecordID
-																						</th>
-																						<th>
-																							OrderID
-																						</th>
-																						<th>
-																							Country
-																						</th>
-																						<th>
-																							ShipCity
-																						</th>
-																						<th>
-																							ShipAddress
-																						</th>
-																						<th>
-																							CompanyAgent
-																						</th>
-																						<th>
-																							CompanyName
-																						</th>
-																						<th>
-																							ShipDate
-																						</th>
-																						<th>
-																							Status
-																						</th>
-																						<th>
-																							Type
-																						</th>
-																						<th>
-																							Actions
-																						</th>
-																					</tr>
-																				</thead>
-																				<tbody>
-																					<tr>
-																						<td>
-																							49
-																						</td>
-																						<td>
-																							68647-122
-																						</td>
-																						<td>
-																							Philippines
-																						</td>
-																						<td>
-																							Cardona
-																						</td>
-																						<td>
-																							4765 Service Hill
-																						</td>
-																						<td>
-																							Devi Iglesias
-																						</td>
-																						<td>
-																							Ullrich-Dibbert
-																						</td>
-																						<td>
-																							7/21/2016
-																						</td>
-																						<td>
-																							5
-																						</td>
-																						<td>
-																							1
-																						</td>
-																						<td nowrap></td>
-																					</tr>
-																				</tbody>
-																			</table>
-																		</div>
+													<div class="m-portlet m-portlet--mobile">
+															<div class="m-portlet__head">
+																<div class="m-portlet__head-caption">
+																	<div class="m-portlet__head-title">
+																		<h3 class="m-portlet__head-text">
+																			Knowledges List
+																		</h3>
 																	</div>
 																</div>
 															</div>
+															<div class="m-portlet__body">
+																<!--begin: Search Form -->
+																<div class="m-form m-form--label-align-right m--margin-bottom-30">
+																	<div class="row align-items-center">
+																		<div class="col-xl-8 order-2 order-xl-1">
+																			<div class="form-group m-form__group row align-items-center">
+																				<div class="col-md-4">
+																					<div class="m-input-icon m-input-icon--left">
+																						<input type="text" class="form-control m-input" placeholder="Search..." id="generalSearch">
+																						<span class="m-input-icon__icon m-input-icon__icon--left">
+																							<span>
+																								<i class="la la-search"></i>
+																							</span>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!--end: Search Form -->
+		
+																<table class="m-datatable table table-bordered" id="html_table">
+																	<thead>
+																		<tr>
+																			<th title="Field #1" width="40%">
+																				Nama
+																			</th>
+																			<th title="Field #2" width="20%">
+																				Sub ilmu
+																			</th>
+																			<th title="Field #3" width="25%">
+																				Experts
+																			</th>
+																			<th title="Field #4" width="15%">
+																				Action
+																			</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>
+																				Studi Lingkungan
+																			</td>
+																			<td>
+																				Ilmu Lingkungan
+																			</td>
+																			<td>
+																				<ul>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																				</ul>
+																			</td>
+																			<td style="text-align: center; vertical-align: middle;">
+																			<button type="button" class="btn btn-info m-btn--wide" >
+																					Link
+																				</button>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				Studi Lingkungan
+																			</td>
+																			<td>
+																				Ilmu Lingkungan
+																			</td>
+																			<td>
+																				<ul>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																				</ul>
+																			</td>
+																			<td style="text-align: center; vertical-align: middle;">
+																			<button type="button" class="btn btn-info m-btn--wide" >
+																					Link
+																				</button>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				Studi Lingkungan
+																			</td>
+																			<td>
+																				Ilmu Lingkungan
+																			</td>
+																			<td>
+																				<ul>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																					<li>Someone</li>
+																				</ul>
+																			</td>
+																			<td style="text-align: center; vertical-align: middle;">
+																			<button type="button" class="btn btn-info m-btn--wide" >
+																					Link
+																				</button>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<!--end: Datatable -->
+															</div>
 														</div>
-													</div>
 												</div>
+													</div>
 											</div>
 											<!-- end:: Body -->
-<!-- begin::Footer -->
-											<footer class="m-grid__item		m-footer ">
-												<div class="m-container m-container--fluid m-container--full-height m-page__container">
-													<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
-														<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
-															<span class="m-footer__copyright">
-																2017 &copy; Metronic theme by
-																<a href="https://keenthemes.com" class="m-link">
-																	Keenthemes
-																</a>
-															</span>
-														</div>
-														<div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
-															<ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
-																<li class="m-nav__item">
-																	<a href="#" class="m-nav__link">
-																		<span class="m-nav__link-text">
-																			About
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item">
-																	<a href="#"  class="m-nav__link">
-																		<span class="m-nav__link-text">
-																			Privacy
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item">
-																	<a href="#" class="m-nav__link">
-																		<span class="m-nav__link-text">
-																			T&C
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item">
-																	<a href="#" class="m-nav__link">
-																		<span class="m-nav__link-text">
-																			Purchase
-																		</span>
-																	</a>
-																</li>
-																<li class="m-nav__item m-nav__item">
-																	<a href="#" class="m-nav__link" data-toggle="m-tooltip" title="Support Center" data-placement="left">
-																		<i class="m-nav__link-icon flaticon-info m--icon-font-size-lg3"></i>
-																	</a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</footer>
+											<!-- begin::Footer -->
+											<?php include 'Footer.php' ?>
 											<!-- end::Footer -->
 										</div>
 										<!-- end:: Page -->
@@ -266,24 +241,12 @@
 											<i class="la la-arrow-up"></i>
 										</div>
 										<!-- end::Scroll Top -->		    	
-    	<!--begin::Base Scripts -->
+    									<!--begin::Base Scripts -->
 										<script src=<?php echo base_url("assets/vendors/base/vendors.bundle.js") ?> type="text/javascript"></script>
 										<script src=<?php echo base_url("assets/demo/default/base/scripts.bundle.js") ?> type="text/javascript"></script>
 										<!--end::Base Scripts -->   
-        <!--begin::Page Vendors -->
-										<script src=<?php echo base_url("assets/vendors/custom/fullcalendar/fullcalendar.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Page Vendors -->  
-        <!--begin::Page Snippets -->
-										<script src=<?php echo base_url("assets/app/js/dashboard.js") ?> type="text/javascript"></script>
-										<!--end::Page Snippets -->
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
-										<!--end::Page Resources -->
-										<!--begin::Page Vendors -->
-										<script src=<?php echo base_url("assets/vendors/custom/datatables/datatables.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Page Vendors -->  
-        <!--begin::Page Resources -->
-										<script src=<?php echo base_url("assets/demo/default/custom/crud/datatables/basic/basic.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
 									</body>
 									<!-- end::Body -->

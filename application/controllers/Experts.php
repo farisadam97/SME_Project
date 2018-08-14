@@ -22,4 +22,8 @@ class Experts extends CI_Controller {
 	{
 		$this->load->view('Experts');
 	}
+	public function item()
+	{
+		$this->load->view('ExpertsItem');
+	}
 }

@@ -98,9 +98,9 @@
 																				<h2>
 																					Penjelasan
 																				</h2>
-																				<h2 class="m-portlet__head-label m-portlet__head-label--danger">
+																				<h2 class="m-portlet__head-label m-portlet__head-label--warning">
 																					<span>
-																					Studi Lingkungan
+																					Amanda Anderson
 																					</span>
 																				</h2>
 																			</div>
