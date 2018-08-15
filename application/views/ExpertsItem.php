@@ -90,128 +90,103 @@
 												<div class="m-grid__item m-grid__item--fluid m-wrapper">
                                                     <div class="m-content">
 														<div class="row">
-															<div class="col-md-12">
+														<div class="col-md-12">
 																<div class="m-portlet m-portlet--creative m-portlet--bordered-semi" >
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
-																				<h2>
-																					Penjelasan
-																				</h2>
-																				<h2 class="m-portlet__head-label m-portlet__head-label--warning">
+																				<h2 class="m-portlet__head-label m-portlet__head-label--danger">
 																					<span>
-																					Amanda Anderson
+																					Amanda RoseFeld	
 																					</span>
 																				</h2>
 																			</div>
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																	Mengetahui tatacara sebuah studi  lingkungan (AMDAL, UKL/UDL) guna pengajuan perijinan
-																	</div>
-																	<div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h2 >
-																					Sub-Ilmu
-																				</h2>
+																		<div class="row">
+		  																	<div class="col-md-3" style="margin-right:-5px;text-align: center;">
+																			  	<a href="#" class="m-list-search__result-item">
+																					<span class="m-list-search__result-item-pic">
+																						<img class="m--img-rounded" style="width:180px;height:180px;	" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
+																					</span>
+																				</a> 
+		  																		<div class="email-btn" style="margin-top: 20px; ">
+																					<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
+																					Send Email
+																					</button>
+																				</div>
+																			</div>
+																			<?php include 'EmailModal.php' ?>
+																			<div class="col-md-5">
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							Nama 
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																					<h5>Amanda RoseFeld</h5>
+																				</div>
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							NIPP 
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																					<h5>70031234</h5>
+																				</div>
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							Cabang/Kawasan 
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																					<h5>Kantor Pusat</h5>
+																				</div>
+																			</div>
+																			<div class="col-md-4">
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							Divisi 
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																					<h5>Internal Audit</h5>
+																				</div>
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							Jabatan 
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																				<h5>Head of Internal Audit</h5>
+																				</div>
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							Regional/AP 
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																				<h5>Head Office</h5>
+																				</div>
 																			</div>
 																		</div>
+																		
 																	</div>
+																	
 																	<div class="m-portlet__body">
-																		<ul>
-																			<li> Ilmu Lingkungan </li>
-																			<li> Ilmu Lingkungan </li>
-																			<li> Ilmu Lingkungan </li>
-																		</ul>
-																	</div>
-																	<div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h2 >
-																					Experts
-																				</h2>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet__body">
-																		<div class="m-list-search">
-																			<div class="m-list-search__results">
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Amanda Anderson
-																					</span>
-																				</a>
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Kennedy Lloyd
-																					</span>
-																				</a>
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Megan Weldon
-																					</span>
-																				</a>
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Marc-André ter Stegen
-																					</span>
-																				</a>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h2 >
-																					FAQ
-																				</h2>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet__body">
-																		<div class="m-portlet">
-																			<div class="m-portlet__body" style="padding-bottom: 10px;">
-																				<span>
-																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
-																				</span>
-																				<span>
-																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
-																				</span>
-																			</div>
-																		</div>
-																		<div class="m-portlet">
-																			<div class="m-portlet__body" style="padding-bottom: 10px;">
-																				<span>
-																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
-																				</span>
-																				<span>
-																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
-																				</span>
-																			</div>
-																		</div>
-																		<div class="m-portlet">
-																			<div class="m-portlet__body" style="padding-bottom: 10px;">
-																				<span>
-																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
-																				</span>
-																				<span>
-																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
-																				</span>
-																			</div>
-																		</div>
 																		<div class="row" style="ma">
 																			<div class="col-xl-3">
 																			</div>
@@ -249,22 +224,9 @@
     	<!--begin::Base Scripts -->
 										<script src=<?php echo base_url("assets/vendors/base/vendors.bundle.js") ?> type="text/javascript"></script>
 										<script src=<?php echo base_url("assets/demo/default/base/scripts.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Base Scripts -->   
-        <!--begin::Page Vendors -->
-										<script src=<?php echo base_url("assets/vendors/custom/fullcalendar/fullcalendar.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Page Vendors -->  
-        <!--begin::Page Snippets -->
-										<script src=<?php echo base_url("assets/app/js/dashboard.js") ?> type="text/javascript"></script>
-										<!--end::Page Snippets -->
+										<!--end::Base Scripts -->  
 										 <!--begin::Page Resources -->
-										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
-										<!--end::Page Resources -->
-										<!--begin::Page Vendors -->
-										<script src=<?php echo base_url("assets/vendors/custom/datatables/datatables.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Page Vendors -->  
-        <!--begin::Page Resources -->
-										<script src=<?php echo base_url("assets/demo/default/custom/crud/datatables/basic/basic.js") ?> type="text/javascript"></script>
-										<!--end::Page Resources -->
+										
 									</body>
 									<!-- end::Body -->
 								</html>

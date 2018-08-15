@@ -56,7 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 // Route for Left Side Menu
 $route['Experts'] = 'Experts';
 $route['Knowledge'] = 'Knowledge';
+$route['Inbox'] = 'Inbox';
 
 
 $route['Knowledgeitem'] = 'Knowledge/item';
 $route['Expertsitem'] = 'Experts/item';
+$route['Inboxitem'] = 'Inbox/item';
