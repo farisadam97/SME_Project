@@ -371,6 +371,7 @@
 															</div>
 															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																<div class="row">
+																	<?php foreach ($data2 as $q) { ?>
 																	<div class="col-xl-3" >
 																		<!--begin:: Widgets/Blog-->
 																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
@@ -397,84 +398,7 @@
 																		</div>
 																		<!--end:: Widgets/Blog-->
 																	</div>
-																	<div class="col-xl-3" >
-																		<!--begin:: Widgets/Blog-->
-																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																			
-																			<div class="m-portlet__body" style="">
-																				<div class="m-widget19" >
-																					<div class="m-widget19__content">
-																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																							<div class="m-widget19__user-img" >
-																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																							</div>
-																						</div>
-																						<div class="m-widget19__body" style="text-align:center;">
-																							<h5> hlo hlo hlo hlo hlo </h5>
-																						</div>
-																					</div>
-																					<!-- <div class="m-widget19__action">
-																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																							Read More
-																						</button>
-																					</div> -->
-																				</div>
-																			</div>
-																		</div>
-																		<!--end:: Widgets/Blog-->
-																	</div>
-																	<div class="col-xl-3" >
-																		<!--begin:: Widgets/Blog-->
-																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																			
-																			<div class="m-portlet__body" style="">
-																				<div class="m-widget19" >
-																					<div class="m-widget19__content">
-																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																							<div class="m-widget19__user-img" >
-																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																							</div>
-																						</div>
-																						<div class="m-widget19__body" style="text-align:center;">
-																							<h5> hlo hlo hlo hlo hlo </h5>
-																						</div>
-																					</div>
-																					<!-- <div class="m-widget19__action">
-																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																							Read More
-																						</button>
-																					</div> -->
-																				</div>
-																			</div>
-																		</div>
-																		<!--end:: Widgets/Blog-->
-																	</div>
-																	<div class="col-xl-3" >
-																		<!--begin:: Widgets/Blog-->
-																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																			
-																			<div class="m-portlet__body" style="">
-																				<div class="m-widget19" >
-																					<div class="m-widget19__content">
-																						<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																							<div class="m-widget19__user-img" >
-																								<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																							</div>
-																						</div>
-																						<div class="m-widget19__body" style="text-align:center;">
-																							<h5> hlo hlo hlo hlo hlo </h5>
-																						</div>
-																					</div>
-																					<!-- <div class="m-widget19__action">
-																						<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																							Read More
-																						</button>
-																					</div> -->
-																				</div>
-																			</div>
-																		</div>
-																		<!--end:: Widgets/Blog-->
-																	</div>
+																	<?php } ?>
 																</div>
 																<div class="row">
 																	<div class="col-xl-3" >
