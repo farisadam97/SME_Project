@@ -1,5 +1,5 @@
 <?php
-class home_model extends CI_Model
+class m_home extends CI_Model
 {
 
   public function getDataExpert() 
@@ -15,8 +15,8 @@ class home_model extends CI_Model
     $this->db->join('topik', 'pengetahuan.id_pengetahuan = topik.id_pengetahuan', 'left');
     $this->db->group_by('pengetahuan.id_pengetahuan');
     $this->db->limit(5);
-	$data2 = $this->db->get();
-	return $data2->result_array();
+  	$data2 = $this->db->get();
+  	return $data2->result_array();
   }
 
   public function getDataPengetahuanExpert()

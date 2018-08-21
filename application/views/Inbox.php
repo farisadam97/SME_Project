@@ -140,28 +140,37 @@
 																<table class="m-datatable" id="html_table">
 																	<thead>
 																		<tr> 
-																			<th title="Field #1" width="40%">
+																			<th title="Field #1" width="35%">
 																				Pengirim
 																			</th>
-																			<th title="Field #2" width="20%">
+																			<th title="Field #2" width="15%">
 																				Subjek
 																			</th>
-																			<th title="Field #3" width="25%">
+																			<th title="Field #3" width="20%">
 																				Mbo
 																			</th>
-																			<th title="Field #4" width="15%">
+																			<th title="Field #4" width="10%">
 																				Waktu 
+																			</th>
+																			<th title="Field #4" width="10%">
+																				Action 
 																			</th>
 																		</tr>
 																	</thead>
 																	<tbody>
 																		 <?php foreach ($data4 as $d) { ?>
-													                                <tr><a href="#">
+													                                <tr>
 													                                    <td><?php echo $d['nama_pengirim']; ?></td>
 													                                    <td><?php echo $d['subjek']; ?></td>
-													                                    <td><?php echo $d['isi_pesan']; ?></td>
+													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
-													                                    </a>
+													                                    <td>
+													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $data5['id_pesan']?>">
+													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+																								View
+																								</button>
+																							</a>
+																						</td>
 													                                </tr>
 													                            <?php } ?>
 																	</tbody>
@@ -192,6 +201,7 @@
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
+
 									</body>
 									<!-- end::Body -->
 								</html>

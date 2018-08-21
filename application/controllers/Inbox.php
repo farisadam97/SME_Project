@@ -16,22 +16,24 @@ class Inbox extends CI_Controller {
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-			$this->load->model('m_inbox'); 
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$this->load->view('Inbox', $data);
 		}
 	}
 	
-	public function item()
+	public function item($id_pesan)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-			$this->load->view('InboxItem');
+			$data['err_message'] = "";
+			$data = $this->m_inbox->getDataInboxItem($id_pesan);
+			$this->load->view('InboxItem', array('data'=>$data));
+
 		}
 	}
-	
 
 	
 }
+?>

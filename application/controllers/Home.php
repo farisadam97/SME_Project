@@ -12,13 +12,12 @@ class Home extends CI_Controller {
 	}
 
 
-    public function index () {
+    public function index() {
 
 	  	if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{ 
-			$this->load->model('m_home'); 
-			// $this->load->view('Home');
+			$this->load->model('m_home');
 			$data['err_message'] = "";
 			$data['data1'] = $this->m_home->getDataExpert();
 			$data['data2'] = $this->m_home->getDataPengetahuanTopik();
@@ -28,3 +27,4 @@ class Home extends CI_Controller {
         //IKI HOME!!!
     }
 }
+?>

@@ -111,7 +111,7 @@
 																<div class="m-portlet__head-caption">
 																	<div class="m-portlet__head-title">
 																		<h3 class="m-portlet__head-text">
-																			Inbox from Amanda RoseFeld
+																			Inbox From <?php echo $data[0]['nama_pengirim']; ?>
 																		</h3>
 																	</div>
 																</div>
@@ -122,18 +122,18 @@
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
 																				<h3 class="m-portlet__head-text">
-																					Subject : Apakah Ilmu Lingkungan itu?
+																					Subject : <?php echo $data[0]['subjek']; ?>
 																				</h3>
 																			</div>
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																		<h6> Mengenai Ilmu Lingkungan, sebenarnya ini belajar tentang apa? </h6>
+																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6>
 																	</div>
 																</div>
 																<div class="form-group m-form__group">
 																	<label for="exampleTextarea">
-																		Balas :
+																		Reply :
 																	</label>
 																	<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
 																	
