@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2018 at 09:23 AM
+-- Generation Time: Aug 21, 2018 at 05:17 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -27,16 +27,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `pengetahuan` (
-  `ID PENGETAHUAN` int(9) NOT NULL,
-  `NAMA PENGETAHUAN` varchar(500) DEFAULT NULL,
-  `DEFINISI PENGETAHUAN` varchar(500) DEFAULT NULL
+  `id_pengetahuan` int(9) NOT NULL,
+  `nama_pengetahuan` varchar(500) DEFAULT NULL,
+  `definisi_pengetahuan` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `pengetahuan`
 --
 
-INSERT INTO `pengetahuan` (`ID PENGETAHUAN`, `NAMA PENGETAHUAN`, `DEFINISI PENGETAHUAN`) VALUES
+INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_pengetahuan`) VALUES
 (1, 'PSAK (Pernyataan Standar Akuntansi Keuangan)', 'Kondisi dimana perusahaan telah mematuhi semua ketentuan dalam PSAK pada setiap penyusunan laporan keuangan'),
 (2, 'Proses Bisnis dan Operasional Pelindo III', 'Cara kerja/tahapan proses kegiatan meliputi perencanaan, implementasi, pengendalian serta pengembangan yang berkelanjutan dari berbagai jenis kegiatan yang ada di Pelindo III.'),
 (3, 'Ketentuan dan Perundangan terkait Perpajakan', 'Pemenuhan kepatuhan terhadap peraturan dan ketentuan perpajakan pada proses bisnis Pelindo III.'),
@@ -136,12 +136,12 @@ INSERT INTO `pengetahuan` (`ID PENGETAHUAN`, `NAMA PENGETAHUAN`, `DEFINISI PENGE
 --
 
 CREATE TABLE `pesan` (
-  `ID PESAN` int(11) NOT NULL,
-  `TIMESTAMP` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `ISI PESAN` varchar(1000) NOT NULL,
-  `NAMA PENGIRIM` varchar(100) NOT NULL,
-  `RATING` int(11) NOT NULL,
-  `FILE` varchar(1000) NOT NULL
+  `id_pesan` int(11) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `isi_pesan` varchar(1000) NOT NULL,
+  `nama_pengirim` varchar(100) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `file` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -151,23 +151,23 @@ CREATE TABLE `pesan` (
 --
 
 CREATE TABLE `sdm` (
-  `NIPP` int(9) NOT NULL,
-  `NAMA` varchar(100) DEFAULT NULL,
-  `TEMPAT LAHIR` varchar(100) DEFAULT NULL,
-  `TANGGAL LAHIR` varchar(10) DEFAULT NULL,
-  `JENIS KELAMIN` varchar(10) DEFAULT NULL,
-  `KELAS JABATAN` int(9) DEFAULT NULL,
-  `NAMA JABATAN` varchar(100) DEFAULT NULL,
-  `DIVISI` varchar(100) DEFAULT NULL,
-  `CABANG` varchar(100) DEFAULT NULL,
-  `REGIONAL` varchar(100) DEFAULT NULL
+  `nipp` int(9) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `tempat_lahir` varchar(100) DEFAULT NULL,
+  `tanggal_lahir` varchar(10) DEFAULT NULL,
+  `jenis_kelamin` varchar(10) DEFAULT NULL,
+  `kelas_jabatan` int(9) DEFAULT NULL,
+  `nama_jabatan` varchar(100) DEFAULT NULL,
+  `divisi` varchar(100) DEFAULT NULL,
+  `cabang` varchar(100) DEFAULT NULL,
+  `regional` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `sdm`
 --
 
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (166102102, 'RADEN BAMBANG SETYONO', 'Madiun', '10/14/1966', 'Male', 8, 'Pandu', 'Operational and Commercial  Division', 'R. Jawa Timur', 'Regional Jawa Timur'),
 (167111871, 'HASNA RIEF KAHARIYAH', 'Nganjuk', '11/19/1967', 'Female', 5, 'Manager', 'PT PCN', 'RS Primasatya', 'PT. Pelindo Husada Citra'),
 (167121872, 'LUSIA TIVIANIE', 'Yogyakarta', '12/14/1967', 'Female', 6, 'Staf Service Development', 'Commercial & Operational Directorate', 'Kantor Pusat', 'Head Office'),
@@ -496,7 +496,7 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 (691003999, 'ALOPSEN TONDANG', 'PEMATANG SIANTAR', '10/25/1969', 'Male', 10, 'Staf', 'Departemen Operasi', 'PT PMS Pusat', 'PT Pelindo Marine Service'),
 (691004043, 'TRI BAGUS DIGDOYO PUTRO', 'Surabaya', '10/8/1969', 'Male', 7, 'General Manager Tegal', 'Pelabuhan Tegal', 'P. Tegal', 'Regional Jawa Tengah'),
 (691004400, 'WAHJU WIDYANSJAH', 'Pontianak', '10/5/1969', 'Male', 8, 'Regional Manager of Engineering', 'Engineering  Division', 'R. Bali Nusra', 'Regional Bali Nusra');
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (691103303, 'MARJADI', 'Surabaya', '11/18/1969', 'Male', 10, 'Staf', 'Departemen Operasi', 'PT PMS Pusat', 'PT Pelindo Marine Service'),
 (691103315, 'JURENI', 'Trenggalek', '11/10/1969', 'Male', 12, 'Pelaksana Pelayanan Kapal dan Barang', 'Operational and Commercial  Division', 'P. Gresik', 'Regional Jawa Timur'),
 (691103486, 'FAUJI', 'Magetan', '11/12/1969', 'Male', 12, 'Pelaksana Rumah Tangga', 'Human Capital and GA Division', 'R. Jawa Timur', 'Regional Jawa Timur'),
@@ -822,7 +822,7 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 (740704287, 'WENI ASTUTI EKOWATI', 'Magelang', '7/1/1974', 'Female', 12, 'Pelaksana Marketing Support', 'Commercial & Operational Directorate', 'Kantor Pusat', 'Head Office'),
 (740705584, 'NUR RAHMAT YULIANTO', 'MALANG', '7/22/1974', 'Male', 17, 'Operator Lufting Crane', 'Pelabuhan Tanjung Emas', 'P. Tg. Emas', 'Regional Jawa Tengah'),
 (740803796, 'DHANY RACHMAD AGUSTIAN', 'Rogo Jampi', '8/17/1974', 'Male', 7, 'General Manager Tanjung Tembaga', 'Terminal Tanjung Tembaga', 'P. Tg. Tembaga', 'Regional Jawa Timur');
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (740803819, 'OKO PUTRA PRASETYA', 'Malang', '8/9/1974', 'Male', 5, 'Vice President Terminal Support', 'Commercial & Operational Directorate', 'Kantor Pusat', 'Head Office'),
 (740803861, 'EMI PURWANINGSIH', 'Nganjuk', '8/24/1974', 'Female', 10, 'Staf Properti Wilayah II', 'Operational and Commercial  Division', 'R. Jawa Timur', 'Regional Jawa Timur'),
 (740804252, 'AGUS PRIHANTORO', 'Balikpapan', '8/27/1974', 'Male', 8, 'Pandu', 'Operational and Commercial  Division', 'R. Jawa Timur', 'Regional Jawa Timur'),
@@ -1149,7 +1149,7 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 (781104102, 'MUHAMMAD TAUFIK NOVIANTO', 'Banjarmasin', '11/25/1978', 'Male', 11, 'Staf', 'Unit TPKS', 'T. PKS', 'Regional Jawa Tengah'),
 (781104261, 'LUHUR WICAKSONO', 'Surabaya', '11/4/1978', 'Male', 5, 'Vice President Analysis and Evaluation', 'Finance Directorate', 'Kantor Pusat', 'Head Office'),
 (781104271, 'NOVIE ARIEFANA SETYATI', 'Surabaya', '11/6/1978', 'Female', 12, 'Pelaksana Piutang dan Penagihan', 'Finance Division', 'R. Jawa Timur', 'Regional Jawa Timur');
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (781104326, 'MAHRIYADI', 'Kayu Bawang, Banjarbaru', '11/15/1978', 'Male', 11, 'Staf', 'Operational and Commercial  Division', 'R. Kalimantan', 'Regional Kalimantan'),
 (781105572, 'ROY CHRISTIAN MARGONO', 'Surabaya', '11/30/1978', 'Male', 18, 'Staf', 'Terminal Jamrud', 'T. Jamrud', 'Regional Jawa Timur'),
 (781203987, 'HENDRA BUDIMAN', 'Kotabaru', '12/23/1978', 'Male', 5, 'Regional Manager of Finance', 'Finance Division', 'R. Bali Nusra', 'Regional Bali Nusra'),
@@ -1473,7 +1473,7 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 (831004181, 'TANJUNG PERTIWI', 'Bandung', '10/22/1983', 'Female', 6, 'VP Subsidiary Business Supervision', 'Finance Directorate', 'Kantor Pusat', 'Head Office'),
 (831004367, 'DODDY IRAWAN', 'Surabaya', '10/30/1983', 'Male', 10, 'Auditor Bidang HC, GA, and Legal Audit', 'Internal Audit', 'Kantor Pusat', 'Head Office'),
 (831004528, 'DYAH AYU KUSUMANINGRUM', 'Surabaya', '10/22/1983', 'Female', 10, 'Pelaksana Corp. Stra. Peform & Research', 'Corporate Secretary', 'Kantor Pusat', 'Head Office');
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (831004561, 'LINDA MARLINAWATI', 'Purwokerto', '10/2/1983', 'Female', 9, 'Staf', 'Finance Division', 'T. PKS', 'Regional Jawa Tengah'),
 (831004715, 'JUFRIANTO SIAHAAN', 'Surabaya', '10/2/1983', 'Male', 11, 'Staf', 'Internal Audit', 'Kantor Pusat', 'Head Office'),
 (831005009, 'HARRY PRAGUSTIA', 'BANJARMASIN', '10/4/1983', 'Male', 13, 'Operator Fixed Crane', 'Terminal Gresik', 'P. Gresik', 'Regional Jawa Timur'),
@@ -1790,7 +1790,7 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 (870404848, 'PANDITA WISNA PATRIA', 'Jakarta', '4/10/1987', 'Male', 11, 'Pelaksana Tax', 'Finance Directorate', 'Kantor Pusat', 'Head Office'),
 (870404900, 'FANDI INTAN PRAKOSO', 'Semarang', '4/26/1987', 'Male', 12, 'Pelaksana ICT Operation and Services', 'Engineering, Inform & Comm Tech Directrt', 'Kantor Pusat', 'Head Office'),
 (870405120, 'ALDIK APRIRO MAHITA', 'Karanganyar', '4/1/1987', 'Male', 11, 'Pandu', 'Operational and Commercial  Division', 'R. Kalimantan', 'Regional Kalimantan');
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (870405161, 'AGUNG HARMADIYANTO UTOMO', 'Surabaya', '4/15/1987', 'Male', 14, 'Pelaksana Analysis and Evaluation', 'Finance Directorate', 'Kantor Pusat', 'Head Office'),
 (870405491, 'RYAN HIDAYAT SAMSUDIN', 'Kupang', '4/9/1987', 'Male', 18, 'Staf Operation Support', 'Pelabuhan Tenau Kupang', 'P. Tenau Kupang', 'Regional Bali Nusra'),
 (870405564, 'YUDI SISWANTO', 'Gresik', '4/11/1987', 'Male', 18, 'Staf', 'Human Capital and GA Division', 'R. Jawa Timur', 'Regional Jawa Timur'),
@@ -2095,7 +2095,7 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 (910105345, 'FERIANTO ARI YUDHA', 'Sragen', '1/29/1991', 'Male', 15, 'Pelaksana Vessel Services', 'Operational and Commercial  Division', 'P. Kotabaru', 'Regional Kalimantan'),
 (910105416, 'FARIZ HAZMILZAM BAHARUDIN HASBI', 'Serang', '1/12/1991', 'Male', 12, 'Pelaksana Communication', 'Human Capital and GA Division', 'R. Kalimantan', 'Regional Kalimantan'),
 (910205259, 'BRIDIATAMA DAMAIANTO', 'Yogyakarta', '2/3/1991', 'Male', 12, 'Pelaksana Management System', 'Commercial & Operational Directorate', 'Kantor Pusat', 'Head Office');
-INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAMIN`, `KELAS JABATAN`, `NAMA JABATAN`, `DIVISI`, `CABANG`, `REGIONAL`) VALUES
+INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `kelas_jabatan`, `nama_jabatan`, `divisi`, `cabang`, `regional`) VALUES
 (910205260, 'FEBRI WIBOWO', 'Blitar', '2/16/1991', 'Male', 15, 'Pelaksana Peralatan', 'Engineering Division', 'R. Jawa Timur', 'Regional Jawa Timur'),
 (910205261, 'SITI SOFIYATUN NAJAH', 'Sidoarjo', '2/22/1991', 'Female', 13, 'Pelaksana Pelayanan Kapal dan Barang', 'Operational and Commercial  Division', 'P. Gresik', 'Regional Jawa Timur'),
 (910304975, 'JANTER MARGIANDS SEDEH', 'Atambua', '3/10/1991', 'Male', 13, 'Pelaksana Transfomation Management', 'HC & GA Directorate', 'Kantor Pusat', 'Head Office'),
@@ -2283,23 +2283,23 @@ INSERT INTO `sdm` (`NIPP`, `NAMA`, `TEMPAT LAHIR`, `TANGGAL LAHIR`, `JENIS KELAM
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sme`
+-- Table structure for table `sme_list`
 --
 
-CREATE TABLE `sme` (
-  `NIPP` int(9) NOT NULL,
-  `NAMA SME` varchar(30) DEFAULT NULL,
-  `KELAS JABATAN SME` int(2) DEFAULT NULL,
-  `JABATAN SME` varchar(40) DEFAULT NULL,
-  `UNIT KERJA SME` varchar(30) DEFAULT NULL,
-  `BIDANG KEAHLIAN SME` varchar(625) DEFAULT NULL
+CREATE TABLE `sme_list` (
+  `nipp` int(9) NOT NULL,
+  `nama_sme` varchar(30) DEFAULT NULL,
+  `kelas_jabatan_sme` int(2) DEFAULT NULL,
+  `jabatan_sme` varchar(40) DEFAULT NULL,
+  `unit_kerja_sme` varchar(30) DEFAULT NULL,
+  `bidang_keahlian_sme` varchar(625) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `sme`
+-- Dumping data for table `sme_list`
 --
 
-INSERT INTO `sme` (`NIPP`, `NAMA SME`, `KELAS JABATAN SME`, `JABATAN SME`, `UNIT KERJA SME`, `BIDANG KEAHLIAN SME`) VALUES
+INSERT INTO `sme_list` (`nipp`, `nama_sme`, `kelas_jabatan_sme`, `jabatan_sme`, `unit_kerja_sme`, `bidang_keahlian_sme`) VALUES
 (630303222, 'BAMBANG SUHARTO', 3, 'General Manager Tanjung Emas', 'Regional Jawa Tengah', 'Proses Bisnis dan Operasional Kepelabuhanan,Penanganan Keluhan Pelanggan Kepanduan'),
 (630603213, 'YOHANES MALO', 5, 'General Manager', 'PT Pelindo Energi Logistik', 'Sistem Manajemen K-3,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
 (640603714, 'DJIWANDORO HENDROBAWONO', 6, 'Deputy Mgr.  Quality and Risk Management', 'Regional Jawa Timur', 'Sertifikasi Lead Auditor Kepelabuhanan,Sertifikasi Auditor RBIA'),
@@ -2406,249 +2406,249 @@ INSERT INTO `sme` (`NIPP`, `NAMA SME`, `KELAS JABATAN SME`, `JABATAN SME`, `UNIT
 --
 
 CREATE TABLE `sme_pengetahuan` (
-  `NAMA SME` varchar(100) DEFAULT NULL,
-  `NAMA PENGETAHUAN` varchar(100) DEFAULT NULL
+  `nipp_sme` int(11) DEFAULT NULL,
+  `id_pengetahuan` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `sme_pengetahuan`
 --
 
-INSERT INTO `sme_pengetahuan` (`NAMA SME`, `NAMA PENGETAHUAN`) VALUES
-('ADITYA RESPATI DJATINENDRA', 'Manajemen dan Optimalisasi Aset'),
-('ADITYA RESPATI DJATINENDRA', 'Ketentuan dan Perundangan terkait Kerjasama Bisnis'),
-('ADITYA RESPATI DJATINENDRA', 'Kajian Kelayakan Usaha'),
-('ADITYA RESPATI DJATINENDRA', 'Analisis Bisnis terkait Operasi Pelindo III'),
-('AGUNG PRASETYO GURITNO', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III'),
-('AGUNG PRASETYO GURITNO', 'Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
-('AGUS DHARMAWAN', 'Sistem Informasi di Pelayanan Non-Petikemas'),
-('AGUS DHARMAWAN', 'Sistem Informasi di Pelayanan petikemas'),
-('AGUS DHARMAWAN', 'IT Masterplan'),
-('AGUS DHARMAWAN', 'Enterprise IT Architech Framework'),
-('AGUS HERMAWAN', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III'),
-('AGUS HERMAWAN', 'Proses dan Penerapan Litigasi di Pelindo III'),
-('AGUS HERMAWAN', 'Networking dengan Pelanggan dan Stakeholder Pelindo III'),
-('AGUS PUDJOTOMO', 'Proses Bisnis dan Operasional Pelindo III'),
-('AHMAD NIZAR', 'English Fluency'),
-('AKBAR RAMADHAN', 'Standar ANRI'),
-('AKHMAD FAJAR', 'Self Assessment untuk Risiko'),
-('AKHMAD FAJAR', 'Manajemen Lingkungan'),
-('AKHMAD FAJAR', 'Sertifikasi Lead Auditor Kepelabuhanan'),
-('ALI SODIKIN', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III'),
-('ANDI MAWARTA', 'Pengoperasian dan Pengembangan e-procurement'),
-('ANDI MAWARTA', 'Metode dan Sistem Pelelangan'),
-('ANDI MAWARTA', 'Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
-('ANDRI KURNIAWAN', 'Pengoperasian dan Pengembangan e-procurement'),
-('ANDRI KURNIAWAN', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa'),
-('ANDRIANTO', 'Proses Pengadaan Barang dan Jasa'),
-('ANDRIANTO', 'Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
-('ANGGA PRADIPTYA', 'Proses Bisnis dan Operasional Pelindo III'),
-('ANGGA PRADIPTYA', 'Prinsip Penyusunan OE (Owner Estimate)'),
-('ANGGA PRADIPTYA', 'Aplikasi Project Management'),
-('ARI SETIAWAN', 'Penanganan Keluhan Pelanggan Kepanduan'),
-('ARIEF PRABOWO', 'Bisnis Petikemas'),
-('ARIEF PRABOWO', 'Pemahaman tentang Master Plan'),
-('ARIEF PRABOWO', 'Operasional Dasar Kepelabuhanan'),
-('BAIQ NURUL HIKMAWATI', 'Pengembangan Kompetensi Pegawai'),
-('BAMBANG HASBULLAH', 'Proses Bisnis dan Operasional Pelindo III'),
-('BAMBANG HASBULLAH', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU)'),
-('BAMBANG HASBULLAH', 'Proses Bisnis dan Operasional Kepelabuhanan'),
-('BAMBANG HASBULLAH', 'Standar Pelayanan Pelanggan Pelindo III'),
-('BAMBANG HASBULLAH', 'Bisnis Pelayanan Kepelabuhanan dan Perkembangannya'),
-('BAMBANG HASBULLAH', 'Improving Port Performance I & II'),
-('BAMBANG HASBULLAH', 'Proses Bisnis Kepelabuhanan'),
-('BAMBANG HASBULLAH', 'Pemahaman tentang Master Plan'),
-('BAMBANG HASBULLAH', 'Operasional Dasar Kepelabuhanan'),
-('BAMBANG SUHARTO', 'Proses Bisnis dan Operasional Kepelabuhanan'),
-('BAMBANG SUHARTO', 'Penanganan Keluhan Pelanggan Kepanduan'),
-('BOY ROBYANTO', 'Prinsip Penyusunan OE (Owner Estimate)'),
-('BOY ROBYANTO', 'Penyusunan Renstra Pelindo III'),
-('BUDI SATRIYO', 'PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-('BUDI SATRIYO', 'Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP)'),
-('BUDI SATRIYO', 'Laporan Keuangan Konsolidasian'),
-('BUDI SATRIYO', 'Sistem dan Administrasi Perkantoran (PBJ, Kearsipan, Keuangan, dan SDM)'),
-('DANAN SUHARDONO', 'Manajemen Lingkungan'),
-('DANURWASA', 'Teknologi Struktur Pelabuhan'),
-('DARU WICAKSONO JULIANTO', 'Manajemen Tarif Kepelabuhanan'),
-('DEDY RUDIJANTO', 'Self Assessment untuk Risiko'),
-('DEDY RUDIJANTO', 'Perasuransian'),
-('DEDY RUDIJANTO', 'Manajemen Risiko'),
-('DEDY RUDIJANTO', 'Analisis dan Evaluasi Risiko Bisnis'),
-('DEDY RUDIJANTO', 'Manajemen Risiko'),
-('DENNY HERMANTO', 'Market Intelligence and Analysis'),
-('DENNY HERMANTO', 'Manajemen Tarif Kepelabuhanan'),
-('DENNY HERMANTO', 'Ketentuan dan Perundangan terkait Kerjasama Bisnis'),
-('DENNY HERMANTO', 'Bisnis dan Operasional Pelabuhan'),
-('DJIWANDORO HENDROBAWONO', 'Sertifikasi Lead Auditor Kepelabuhanan'),
-('DJIWANDORO HENDROBAWONO', 'Sertifikasi Auditor RBIA'),
-('DOTHY', 'Bisnis Pelayanan Kepelabuhanan dan Perkembangannya'),
-('EDI PRIYANTO', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III'),
-('EDI PRIYANTO', 'Sistem Manajemen K-3'),
-('EDI PRIYANTO', 'Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
-('EKO HARIJADI BUDIJANTO', 'Bisnis Petikemas'),
-('EKO HARIJADI BUDIJANTO', 'Kajian Kelayakan Bisnis/Investasi'),
-('ENDOT ENDRARDONO', 'Ketentuan dan Perundangan terkait Perpajakan'),
-('ENDOT ENDRARDONO', 'Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro'),
-('ENDOT ENDRARDONO', 'Hinterland'),
-('ENDOT ENDRARDONO', 'Kajian Kelayakan Usaha'),
-('ENDOT ENDRARDONO', 'Analisis Ratio Keuangan'),
-('FADILAH BINAWATI', 'Perasuransian'),
-('FAHRUS SALAM', 'Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan'),
-('FAHRUS SALAM', 'Reward dan Sanksi  bagi Pegawai'),
-('FAHRUS SALAM', 'Ketentuan dan Perundangan terkait Ketenagakerjaan'),
-('FARUQ HIDAYAT', 'Prinsip Penyusunan OE (Owner Estimate)'),
-('FARUQ HIDAYAT', 'Perencanaan Pemeliharaan Fasilitas Pelabuhan'),
-('FARUQ HIDAYAT', 'Perencanaan Pemeliharaan Fasilitas Pelabuhan'),
-('FARUQ HIDAYAT', 'Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro'),
-('FARUQ HIDAYAT', 'Hinterland'),
-('FARUQ HIDAYAT', 'Penyusunan Renstra Pelindo III'),
-('FARUQ HIDAYAT', 'Perencanaan Tata Ruang Pelabuhan'),
-('FARUQ HIDAYAT', 'Kinerja Pelindo III dari Aspek Operasi, Keuangan, dan Investasi'),
-('GATOT IMAM PRASETYO', 'Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
-('HADI MOHAMMAD LUKMANTYO', 'IT Masterplan'),
-('HADI MOHAMMAD LUKMANTYO', 'IT Governance Framework'),
-('HAPSORO NUGROHO', 'Penanganan Keluhan Pelanggan Kepanduan'),
-('HARDIAWAN WICAKSONO', 'Aplikasi Pembuatan Gambar Teknik 2D & 3D'),
-('HARRY POERWANTO', 'Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
-('HARRY POERWANTO', 'Pemeliharaan dan Perbaikan Kapal (Class Matter)'),
-('HENDIEK EKO SETIANTORO', 'Perencanaan Pemeliharaan Fasilitas Pelabuhan'),
-('HENDIEK EKO SETIANTORO', 'Aplikasi Project Management'),
-('HENDIEK EKO SETIANTORO', 'Teknologi Struktur Pelabuhan'),
-('HENNY DWI ROHMATAA', 'Ketentuan dan Perundangan terkait Perpajakan'),
-('HENNY DWI ROHMATAA', 'Perencanaan Perpajakan'),
-('HERIBERTUS HARYANCE PAEMBONAN', 'Proses dan Penerapan Litigasi di Pelindo III'),
-('HOT RUDOLF MARIHOT', 'Perhitungan Hedging (Lindung Nilai)'),
-('HOT RUDOLF MARIHOT', 'Kajian Kelayakan Bisnis/Investasi'),
-('HOT RUDOLF MARIHOT', 'Proses Bisnis Anak Perusahaan'),
-('HOT RUDOLF MARIHOT', 'Analisis Bisnis terkait Operasi Pelindo III'),
-('HOT RUDOLF MARIHOT', 'Kinerja Pelindo III dari Aspek Operasi, Keuangan, dan Investasi'),
-('HOT RUDOLF MARIHOT', 'English Fluency'),
-('I WAYAN EKA SAPUTRA', 'Fraud Investigation'),
-('I GUSTI PUTU ARYA BUDHI ASTAWA', 'Ketentuan dan Perundangan terkait Perpajakan'),
-('I GUSTI PUTU ARYA BUDHI ASTAWA', 'Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP)'),
-('I GUSTI PUTU ARYA BUDHI ASTAWA', 'Pencatatan dan Pengendalian Aset'),
-('I GUSTI PUTU ARYA BUDHI ASTAWA', 'Perencanaan Perpajakan'),
-('ISKANDAR ZULKARNAIN', 'Perasuransian'),
-('ISKANDAR ZULKARNAIN', 'Analisis dan Evaluasi Risiko Bisnis'),
-('ISKANDAR ZULKARNAIN', 'Manajemen Lingkungan'),
-('ISMARTADIANTO', 'Project Management'),
-('ISMARTADIANTO', 'Sistem Informasi di Pelayanan Non-Petikemas'),
-('ISMARTADIANTO', 'Sistem Informasi di Pelayanan petikemas'),
-('ISMARTADIANTO', 'IT Masterplan'),
-('ISMARTADIANTO', 'Tren Teknologi Informasi Komunikasi Kemaritiman'),
-('ISMARTADIANTO', 'ICT-based Technology'),
-('ISMARTADIANTO', 'Change Management'),
-('ISMARTADIANTO', 'Enterprise IT Architech Framework'),
-('JAYA VIA DEWATA', 'Project Management'),
-('JAYA VIA DEWATA', 'Studi Lingkungan'),
-('JAYA VIA DEWATA', 'Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan'),
-('JAYA VIA DEWATA', 'Aplikasi Project Management'),
-('JOHANES WAHYU HERTANTO', 'Networking dengan Pelanggan dan Stakeholder Pelindo III'),
-('JOKO NOERHUDHA', 'Penyusunan Renstra Pelindo III'),
-('JOKO NOERHUDHA', 'Proses Bisnis Kepelabuhanan'),
-('JOKO NOERHUDHA', 'Perencanaan Tata Ruang Pelabuhan'),
-('JOKO NOERHUDHA', 'English Fluency'),
-('JUJU JUARSIH', 'Pengembangan Kompetensi Pegawai'),
-('JUSAK HADI WINARTO', 'Perencanaan dan Perhitungan Struktur'),
-('KARLINDA SARI', 'Teknik Negosiasi'),
-('KARTIKO ADI', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya'),
-('KARTIKO ADI', 'Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
-('KOKOK SUSANTO', 'Project Management'),
-('KOKOK SUSANTO', 'Perencanaan Tata Ruang Pelabuhan'),
-('LIA INDI AGUSTIANA', 'Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro'),
-('MUHAMMAD SADAD SUKMONO', 'Penyusunan PerDir dan PP/PKB'),
-('MOHAMAD SAIFUL ARIFIN', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya'),
-('MOHAMAD ROFIUL IBAD', 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa'),
-('MOHAMAD HARRY DHARMAWAN', 'Project Management'),
-('MOHAMMAD TAUFIK HARDJANTO', 'Fraud Investigation'),
-('MUCHAMMAD ALI AFANDI', 'Perencanaan dan Perhitungan Struktur'),
-('NANANG PRASETIYO', 'PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-('NANANG PRASETIYO', 'Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP)'),
-('NANANG PRASETIYO', 'Laporan Keuangan Konsolidasian'),
-('NOVITHA YULIATI', 'Kualifikasi dan Klasifikasi Vendor'),
-('OSCAR YOGI YUSTIANO', 'Ketentuan dan Perundangan terkait Ketenagakerjaan'),
-('PANDJI WIDYA RASMI', 'Ketentuan dan Perundangan terkait Kerjasama Bisnis'),
-('PRADIPTA PRATAMA', 'Aplikasi Pembuatan Gambar Teknik 2D & 3D'),
-('PRASETYO', 'Hinterland '),
-('PRATIWI WULANDARI', 'Proses Litigasi terkait Kasus Ketenagakerjaan'),
-('PURWANTO WAHYU WIDODO', 'Studi Lingkungan'),
-('PURWANTO WAHYU WIDODO', 'Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan'),
-('PURWANTO WAHYU WIDODO', 'Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
-('PUTUT SRI MULJANTO', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU)'),
-('PUTUT SRI MULJANTO', 'Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro'),
-('PUTUT SRI MULJANTO', 'Study Kelayakan terkait Optimasi Asset Pelabuhan'),
-('PUTUT SRI MULJANTO', 'Manajemen dan Optimalisasi Aset'),
-('PUTUT SRI MULJANTO', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III'),
-('PUTUT SRI MULJANTO', 'Networking dengan Pelanggan dan Stakeholder Pelindo III'),
-('PUTUT SRI MULJANTO', 'Standar Pelayanan Pelanggan Pelindo III'),
-('PUTUT SRI MULJANTO', 'Market Intelligence and Analysis'),
-('PUTUT SRI MULJANTO', 'Manajemen Tarif Kepelabuhanan'),
-('PUTUT SRI MULJANTO', 'Kajian Kelayakan Bisnis/Investasi'),
-('PUTUT SRI MULJANTO', 'Proses Bisnis Anak Perusahaan'),
-('PUTUT SRI MULJANTO', 'Proses Bisnis Kepelabuhanan'),
-('PUTUT SRI MULJANTO', 'Pemahaman tentang Master Plan'),
-('PUTUT SRI MULJANTO', 'Analisis Bisnis terkait Operasi Pelindo III'),
-('RAHARDIAN ZEBEDIANTO', 'Kajian Kelayakan Bisnis/Investasi'),
-('RAHMI IKA NOVIANA', 'ICT-based Technology'),
-('RAHMI IKA NOVIANA', 'Enterprise IT Architech Framework'),
-('RAKA RAHARDIANTO', 'Sistem Informasi di Pelayanan petikemas'),
-('RAKHMAT AFFIANTO', 'Pencatatan dan Pengendalian Aset'),
-('RALY EKO KURNIAWAN', 'Sertifikasi Auditor RBIA'),
-('RALY EKO KURNIAWAN', 'Fraud Investigation'),
-('RIO DWI SANTOSO', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa'),
-('RIO DWI SANTOSO', 'Metode dan Sistem Pelelangan'),
-('RIZA OCTAVIANY', 'Studi Lingkungan'),
-('ROBBY DAYOH', 'Prinsip Penyusunan OE (Owner Estimate)'),
-('ROBBY DAYOH', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya'),
-('ROBBY DAYOH', 'Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
-('RUMAJI', 'Proses Bisnis dan Operasional Kepelabuhanan'),
-('RUMAJI', 'Bisnis Pelayanan Kepelabuhanan dan Perkembangannya'),
-('RUMAJI', 'Improving Port Performance I & II'),
-('RUMAJI', 'Operasional Dasar Kepelabuhanan'),
-('RYANCHRISNA BUDI NUGRAHA', 'Self Assessment untuk Risiko'),
-('RYANCHRISNA BUDI NUGRAHA', 'Manajemen Risiko'),
-('SAPTO WASONO SOEBAGIO', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III'),
-('SAPTO WASONO SOEBAGIO', 'Marketing terhadap Asset yang Idle'),
-('SAPTO WASONO SOEBAGIO', 'Kajian Kebijakan Bisnis terkait Optimalisasi T&B'),
-('SAPTO WASONO SOEBAGIO', 'Study Kelayakan terkait Optimasi Asset Pelabuhan'),
-('SAPTO WASONO SOEBAGIO', 'Kajian Kelayakan Usaha'),
-('SAPTO WASONO SOEBAGIO', 'Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
-('SARJONO', 'PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-('SARJONO', 'Laporan Keuangan Konsolidasian'),
-('SARJONO', 'Sistem dan Administrasi Perkantoran (PBJ, Kearsipan, Keuangan, dan SDM),'),
-('SARJONO', 'Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-('SIGIT EDI PURNOMO', 'ICT-based Technology'),
-('SUGIONO', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III'),
-('SURYA YUWARDANA', 'Pemeliharaan dan Perbaikan Kapal (Class Matter)'),
-('THERESIA RURY SETYAWATI', 'Kualifikasi dan Klasifikasi Vendor'),
-('THERESIA RURY SETYAWATI', 'Metode dan Sistem Pelelangan'),
-('THERESIA RURY SETYAWATI', 'Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
-('TOPO SAPTO NUGROHO', 'Proses Pengadaan Barang dan Jasa'),
-('TRI SUHARDI', 'Sertifikasi Auditor RBIA'),
-('TRI SUHARDI', 'Ketentuan dan Perundangan terkait penerapan Good Corporate Governance (GCG)'),
-('UMI SYARIFAH AMBARWATI', 'Penyusunan PerDir dan PP/PKB'),
-('UMI SYARIFAH AMBARWATI', 'Ketentuan dan Perundangan terkait Ketenagakerjaan'),
-('UMI SYARIFAH AMBARWATI', 'Proses Litigasi terkait Kasus Ketenagakerjaan'),
-('UMI SYARIFAH AMBARWATI', 'Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-('WAHYU WIDODO', 'Marketing terhadap Asset yang Idle'),
-('WAHYU WIDODO', 'Kajian Kebijakan Bisnis terkait Optimalisasi T&B'),
-('WARSILAN', 'Proses Pengadaan Barang dan Jasa'),
-('WARSILAN', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU)'),
-('WARSILAN', 'Pengoperasian dan Pengembangan e-procurement'),
-('WARSILAN', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa'),
-('WARSILAN', 'Kualifikasi dan Klasifikasi Vendor'),
-('WARSILAN', 'Metode dan Sistem Pelelangan'),
-('WARSILAN', 'Sistem dan Administrasi Perkantoran (PBJ, Kearsipan, Keuangan, dan SDM)'),
-('WARSILAN', 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa'),
-('I WAYAN JULI ARTANA', 'Proses Pengadaan Barang dan Jasa'),
-('WIDHI TRI LEKSANA', 'Standar ANRI'),
-('YOHANES DWI WAHYONO', 'PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-('YOHANES MALO', 'Sistem Manajemen K-3'),
-('YOHANES MALO', 'Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
-('YONATHA SETIYOBUDI', 'Penggunaan Aplikasi untuk Locking Piutang (INCO)'),
-('YONI SETIAWAN', 'Ketentuan dan Perundangan terkait Perpajakan'),
-('YONI SETIAWAN', 'Perencanaan Perpajakan'),
-('YUDI PRASETYO', 'Perencanaan dan Perhitungan Struktur');
+INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
+(720703755, 28),
+(720703755, 45),
+(720703755, 46),
+(720703755, 63),
+(740503753, 12),
+(740503753, 48),
+(760804204, 34),
+(760804204, 36),
+(760804204, 83),
+(760804204, 88),
+(731003782, 12),
+(731003782, 13),
+(731003782, 40),
+(640803411, 2),
+(720703763, 73),
+(900405238, 90),
+(711003975, 17),
+(711003975, 77),
+(711003975, 19),
+(730204064, 39),
+(821204568, 29),
+(821204568, 32),
+(821204568, 33),
+(791004263, 29),
+(791004263, 30),
+(680703775, 10),
+(680703775, 33),
+(770403816, 2),
+(770403816, 8),
+(770403816, 81),
+(791204408, 38),
+(710503228, 35),
+(710503228, 56),
+(710503228, 60),
+(691203452, 65),
+(670303446, 2),
+(670303446, 14),
+(670303446, 37),
+(670303446, 41),
+(670303446, 49),
+(670303446, 53),
+(670303446, 55),
+(670303446, 56),
+(670303446, 60),
+(630303222, 37),
+(630303222, 38),
+(731203814, 8),
+(731203814, 54),
+(740103772, 1),
+(740103772, 4),
+(740103772, 7),
+(740103772, 62),
+(660403567, 77),
+(660103606, 82),
+(750704048, 43),
+(700703724, 17),
+(700703724, 18),
+(700703724, 21),
+(700703724, 74),
+(700703724, 21),
+(690703449, 42),
+(690703449, 43),
+(690703449, 45),
+(690703449, 64),
+(640603714, 19),
+(640603714, 22),
+(711003229, 49),
+(761003803, 12),
+(761003803, 20),
+(761003803, 75),
+(681203767, 35),
+(681203767, 44),
+(701103770, 3),
+(701103770, 23),
+(701103770, 24),
+(701103770, 46),
+(701103770, 59),
+(831204816, 18),
+(830204188, 61),
+(830204188, 68),
+(830204188, 69),
+(760403815, 8),
+(760403815, 9),
+(760403815, 9),
+(760403815, 23),
+(760403815, 24),
+(760403815, 54),
+(760403815, 58),
+(760403815, 71),
+(750903773, 48),
+(760103818, 83),
+(760103818, 85),
+(681104072, 38),
+(880505415, 80),
+(700603741, 51),
+(700603741, 52),
+(720303777, 9),
+(720303777, 81),
+(720303777, 82),
+(830904182, 3),
+(830904182, 6),
+(730403669, 13),
+(730803761, 15),
+(730803761, 44),
+(730803761, 47),
+(730803761, 63),
+(730803761, 71),
+(730803761, 73),
+(741003650, 78),
+(790204201, 3),
+(790204201, 4),
+(790204201, 5),
+(790204201, 6),
+(680703589, 18),
+(680703589, 74),
+(680703589, 77),
+(680603590, 11),
+(680603590, 34),
+(680603590, 36),
+(680603590, 83),
+(680603590, 84),
+(680603590, 86),
+(680603590, 87),
+(680603590, 88),
+(790504552, 11),
+(790504552, 57),
+(790504552, 61),
+(790504552, 81),
+(740104251, 40),
+(730403776, 54),
+(730403776, 55),
+(730403776, 58),
+(730403776, 73),
+(740503731, 65),
+(841205130, 79),
+(901105105, 66),
+(690303586, 50),
+(690303586, 51),
+(760503965, 11),
+(760503965, 58),
+(820804150, 23),
+(731204265, 67),
+(720803739, 50),
+(790605451, 89),
+(700903665, 11),
+(690203594, 78),
+(811104550, 79),
+(830504556, 1),
+(830504556, 4),
+(830504556, 7),
+(870705164, 31),
+(810904519, 69),
+(700603769, 45),
+(881105189, 80),
+(700503736, 24),
+(910405264, 70),
+(810704196, 57),
+(810704196, 61),
+(810704196, 75),
+(690403768, 14),
+(690403768, 23),
+(690403768, 27),
+(690403768, 28),
+(690403768, 39),
+(690403768, 40),
+(690403768, 41),
+(690403768, 42),
+(690403768, 43),
+(690403768, 44),
+(690403768, 47),
+(690403768, 55),
+(690403768, 56),
+(690403768, 63),
+(900405106, 44),
+(821104152, 86),
+(821104152, 88),
+(870504732, 36),
+(841205131, 5),
+(751104045, 22),
+(751104045, 78),
+(760104256, 30),
+(760104256, 32),
+(871004703, 57),
+(700703593, 8),
+(700703593, 50),
+(700703593, 51),
+(740403826, 37),
+(740403826, 49),
+(740403826, 53),
+(740403826, 60),
+(871105174, 17),
+(871105174, 21),
+(710403616, 12),
+(710403616, 25),
+(710403616, 26),
+(710403616, 27),
+(710403616, 46),
+(710403616, 48),
+(790704149, 1),
+(790704149, 7),
+(790704149, 62),
+(790704149, 91),
+(890204838, 86),
+(730403822, 39),
+(860504918, 52),
+(660103672, 31),
+(660103672, 32),
+(660103672, 33),
+(700303774, 10),
+(650503572, 22),
+(650503572, 72),
+(810104169, 67),
+(810104169, 69),
+(810104169, 70),
+(810104169, 91),
+(741003764, 25),
+(741003764, 26),
+(740403738, 10),
+(740403738, 14),
+(740403738, 29),
+(740403738, 30),
+(740403738, 31),
+(740403738, 32),
+(740403738, 62),
+(740403738, 89),
+(730703740, 10),
+(890304734, 90),
+(850204737, 1),
+(630603213, 20),
+(630603213, 75),
+(810604178, 16),
+(770604190, 3),
+(770604190, 6),
+(830204612, 79);
 
 -- --------------------------------------------------------
 
@@ -2657,16 +2657,16 @@ INSERT INTO `sme_pengetahuan` (`NAMA SME`, `NAMA PENGETAHUAN`) VALUES
 --
 
 CREATE TABLE `topik` (
-  `ID TOPIK` int(3) NOT NULL,
-  `NAMA TOPIK` varchar(299) DEFAULT NULL,
-  `ID PENGETAHUAN` int(2) DEFAULT NULL
+  `id_topik` int(9) NOT NULL,
+  `nama_topik` varchar(299) DEFAULT NULL,
+  `id_pengetahuan` int(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `topik`
 --
 
-INSERT INTO `topik` (`ID TOPIK`, `NAMA TOPIK`, `ID PENGETAHUAN`) VALUES
+INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 (1, 'Update PSAK terbaru\n', 1),
 (2, 'Penerapan PSAK terbaru pada laporan keuangan perusahaan', 1),
 (3, 'Sosialisasi dan Diklat pembaharuan PSAK', 1),
@@ -3116,32 +3116,39 @@ INSERT INTO `topik` (`ID TOPIK`, `NAMA TOPIK`, `ID PENGETAHUAN`) VALUES
 -- Indexes for table `pengetahuan`
 --
 ALTER TABLE `pengetahuan`
-  ADD PRIMARY KEY (`ID PENGETAHUAN`);
+  ADD PRIMARY KEY (`id_pengetahuan`);
 
 --
 -- Indexes for table `pesan`
 --
 ALTER TABLE `pesan`
-  ADD PRIMARY KEY (`ID PESAN`);
+  ADD PRIMARY KEY (`id_pesan`);
 
 --
 -- Indexes for table `sdm`
 --
 ALTER TABLE `sdm`
-  ADD PRIMARY KEY (`NIPP`);
+  ADD PRIMARY KEY (`nipp`);
 
 --
--- Indexes for table `sme`
+-- Indexes for table `sme_list`
 --
-ALTER TABLE `sme`
-  ADD KEY `NIPP` (`NIPP`);
+ALTER TABLE `sme_list`
+  ADD KEY `NIPP` (`nipp`);
+
+--
+-- Indexes for table `sme_pengetahuan`
+--
+ALTER TABLE `sme_pengetahuan`
+  ADD KEY `nipp_sme` (`nipp_sme`),
+  ADD KEY `id_pengetahuan` (`id_pengetahuan`);
 
 --
 -- Indexes for table `topik`
 --
 ALTER TABLE `topik`
-  ADD PRIMARY KEY (`ID TOPIK`),
-  ADD KEY `ID PENGETAHUAN` (`ID PENGETAHUAN`);
+  ADD PRIMARY KEY (`id_topik`),
+  ADD KEY `id_pengetahuan` (`id_pengetahuan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -3151,32 +3158,34 @@ ALTER TABLE `topik`
 -- AUTO_INCREMENT for table `pengetahuan`
 --
 ALTER TABLE `pengetahuan`
-  MODIFY `ID PENGETAHUAN` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id_pengetahuan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 --
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `ID PESAN` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `topik`
---
-ALTER TABLE `topik`
-  MODIFY `ID TOPIK` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=441;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `sme`
+-- Constraints for table `sme_list`
 --
-ALTER TABLE `sme`
-  ADD CONSTRAINT `sme_ibfk_1` FOREIGN KEY (`NIPP`) REFERENCES `sdm` (`NIPP`);
+ALTER TABLE `sme_list`
+  ADD CONSTRAINT `sme_list_ibfk_1` FOREIGN KEY (`NIPP`) REFERENCES `sdm` (`NIPP`);
+
+--
+-- Constraints for table `sme_pengetahuan`
+--
+ALTER TABLE `sme_pengetahuan`
+  ADD CONSTRAINT `sme_pengetahuan_ibfk_1` FOREIGN KEY (`nipp_sme`) REFERENCES `sme_list` (`NIPP`),
+  ADD CONSTRAINT `sme_pengetahuan_ibfk_2` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`);
 
 --
 -- Constraints for table `topik`
 --
 ALTER TABLE `topik`
-  ADD CONSTRAINT `topik_ibfk_1` FOREIGN KEY (`ID PENGETAHUAN`) REFERENCES `pengetahuan` (`ID PENGETAHUAN`);
+  ADD CONSTRAINT `topik_ibfk_1` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

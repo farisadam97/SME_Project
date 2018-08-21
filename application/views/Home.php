@@ -438,9 +438,13 @@
 																	<div class="row">
 																		<table class="table table-striped- table-bordered table-hover" >
 																			<thead>
-																				<tr>
+																			<thead>
+													                                <tr>
 																					<th>
-																						Nama
+																						No
+																					</th>
+																					<th>
+																						Ilmu
 																					</th>
 																					<th>
 																						Sub Ilmu
@@ -452,31 +456,17 @@
 																						Action
 																					</th>
 																				</tr>
-																			</thead>
-																			<tbody>
-																				<tr>
-																					<td>
-																						Studi Lingkungan
-																					</td>
-																					<td>
-																						Ilmu Lingkungan
-																					</td>
-																					<td>
-																						<ul>
-																							<li>Someone</li>
-																							<li>Someone</li>
-																							<li>Someone</li>
-																							<li>Someone</li>
-																						</ul>
-																					</td>
-																					<td style="text-align: center; vertical-align: middle;">
-																					<button type="button" class="btn btn-accent" style="width=: 1.15rem">
-																							Link
-																						</button>
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
+													                            </thead>
+													                            <tbody>
+
+													                              <?php $i=0;
+													                              foreach ($data2 as $b) {
+													                              $i++ ?>
+													                                <tr>
+													                                    <td><?php echo $i ?></td>
+													                                    <td><?php echo $b['nama_pengetahuan'] ?></td>
+													                                <?php } ?>
+													                            </tbody>	
 																	</div>
 																</div>
 															</div>
