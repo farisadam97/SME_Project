@@ -139,7 +139,7 @@
 																<!-- End Search Form -->
 																<table class="m-datatable" id="html_table">
 																	<thead>
-																		<tr>
+																		<tr> 
 																			<th title="Field #1" width="40%">
 																				Pengirim
 																			</th>
@@ -155,50 +155,15 @@
 																		</tr>
 																	</thead>
 																	<tbody>
-																		<tr>
-																			<td>
-																				Amanda RoseFeld
-																			</td>
-																			<td>
-																				<a href ="#">
-																					Pengertian Ilmu Lingkungan
-																				</a>
-																			</td>
-																			<td>
-																				Mister, apa pengertain......
-																			</td>
-																			<td>
-																				2013/03/15 00:00:00
-																			</td>
-																		</tr>
-																		<tr>
-																			<td>
-																				Amanda RoseFeld
-																			</td>
-																			<td>
-																				Pengertian Ilmu Lingkungan
-																			</td>
-																			<td>
-																				Mister, apa pengertain......
-																			</td>
-																			<td>
-																				2013/03/15 00:00:00
-																			</td>
-																		</tr>
-																		<tr>
-																			<td>
-																				Amanda RoseFeld
-																			</td>
-																			<td>
-																				Pengertian Ilmu Lingkungan
-																			</td>
-																			<td>
-																				Mister, apa pengertain......
-																			</td>
-																			<td>
-																				2013/03/15 00:00:00
-																			</td>
-																		</tr>
+																		 <?php foreach ($data4 as $d) { ?>
+													                                <tr><a href="#">
+													                                    <td><?php echo $d['nama_pengirim']; ?></td>
+													                                    <td><?php echo $d['subjek']; ?></td>
+													                                    <td><?php echo $d['isi_pesan']; ?></td>
+													                                    <td><?php echo $d['timestamp']; ?></td>
+													                                    </a>
+													                                </tr>
+													                            <?php } ?>
 																	</tbody>
 																</table>
 															</div>

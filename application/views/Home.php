@@ -462,7 +462,7 @@
 													                                <tr>
 													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
 													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
-													                                    <td><?php $topik = explode(',', $b['topik']);
+													                                    <td><?php $topik = explode(";", $b['topik']);
 													                                    foreach ($topik as $topikk)
 													                                    {
 													                                    	echo '&bull;'. $topikk. '<br>';
@@ -471,15 +471,19 @@
 													                                    </td>
 
 													                                    <td>
-													                                    <?php $experts = explode(',', $data3[$i]['expert']);
+													                                    <?php $experts = explode(";", $data3[$i]['expert']);
 													                                    foreach ($experts as $expert)
 													                                    {
 													                                    	echo '&bull;'. $expert. '<br>';
 													                                    }
 													                                    ?>
-													                                    	
 													                                    </td>
 													                                    
+													                                    <td><button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+																							Info
+																						</button>
+																					</td>
+
 													                            <?php } ?>
 															                        
 															                        </tr>

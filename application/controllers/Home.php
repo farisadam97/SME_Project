@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('home_model');
+		$this->load->model('m_home');
 		$this->load->library('session');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login")); }       
@@ -13,16 +13,16 @@ class Home extends CI_Controller {
 
 
     public function index () {
-    	
+
 	  	if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{ 
-			$this->load->model('home_model'); 
+			$this->load->model('m_home'); 
 			// $this->load->view('Home');
 			$data['err_message'] = "";
-			$data['data1'] = $this->home_model->getDataExpert();
-			$data['data2'] = $this->home_model->getDataPengetahuanTopik();
-			$data['data3'] = $this->home_model->getDataPengetahuanExpert();
+			$data['data1'] = $this->m_home->getDataExpert();
+			$data['data2'] = $this->m_home->getDataPengetahuanTopik();
+			$data['data3'] = $this->m_home->getDataPengetahuanExpert();
 			$this->load->view('Home', $data);
 		}
         //IKI HOME!!!
