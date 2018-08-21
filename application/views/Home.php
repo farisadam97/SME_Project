@@ -458,14 +458,32 @@
 																				</tr>
 													                            </thead>
 													                            <tbody>
-
-													                              <?php $i=0;
-													                              foreach ($data2 as $b) {
-													                              $i++ ?>
+													                            <?php $i=0; foreach ($data2 as $b) { $i++ ?>
 													                                <tr>
-													                                    <td><?php echo $i ?></td>
-													                                    <td><?php echo $b['nama_pengetahuan'] ?></td>
-													                                <?php } ?>
+													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
+													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
+													                                    <td><?php $topik = explode(',', $b['topik']);
+													                                    foreach ($topik as $topikk)
+													                                    {
+													                                    	echo '&bull;'. $topikk. '<br>';
+													                                    }
+													                                    ?>
+													                                    </td>
+
+													                                    <td>
+													                                    <?php $experts = explode(',', $data3[$i]['expert']);
+													                                    foreach ($experts as $expert)
+													                                    {
+													                                    	echo '&bull;'. $expert. '<br>';
+													                                    }
+													                                    ?>
+													                                    	
+													                                    </td>
+													                                    
+													                            <?php } ?>
+															                        
+															                        </tr>
+
 													                            </tbody>	
 																	</div>
 																</div>

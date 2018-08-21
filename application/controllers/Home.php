@@ -16,7 +16,8 @@ class Home extends CI_Controller {
       //  $this ->load->view('Header');
     	$data['err_message'] = "";
 		$data['data1'] = $this->home_model->getDataExpert();
-		$data['data2'] = $this->home_model->getDataPengetahuan();
+		$data['data2'] = $this->home_model->getDataPengetahuanTopik();
+		$data['data3'] = $this->home_model->getDataPengetahuanExpert();
 		$this->load->view('Home', $data);
         //IKI HOME!!!
     }
