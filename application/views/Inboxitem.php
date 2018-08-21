@@ -122,16 +122,27 @@
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
 																				<h3 class="m-portlet__head-text">
-																					Inbox from Amanda RoseFeld
+																					Subject : Apakah Ilmu Lingkungan itu?
 																				</h3>
 																			</div>
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																		
+																		<h6> Mengenai Ilmu Lingkungan, sebenarnya ini belajar tentang apa? </h6>
 																	</div>
 																</div>
-																
+																<div class="form-group m-form__group">
+																	<label for="exampleTextarea">
+																		Balas :
+																	</label>
+																	<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
+																	
+																</div>
+																<div class="m-form__actions">
+																	<button type="reset" class="btn btn-accent">
+																		Submit
+																	</button>
+																</div>
 															</div>
 														</div>
 													</div>
