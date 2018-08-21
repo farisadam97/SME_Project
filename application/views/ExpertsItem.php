@@ -97,7 +97,7 @@
 																			<div class="m-portlet__head-title">
 																				<h2 class="m-portlet__head-label m-portlet__head-label--danger">
 																					<span>
-																					Amanda RoseFeld	
+																						<?php echo $data[0]['nama_sme']; ?>
 																					</span>
 																				</h2>
 																			</div>
@@ -106,9 +106,8 @@
 																	<div class="m-portlet__body">
 																		<div class="row">
 		  																	<div class="col-md-3" style="margin-right:-5px;text-align: center;">
-																			  	<a href="#" class="m-list-search__result-item">
 																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" style="width:180px;height:180px;	" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
+																						<img class="m--img-rounded" style="width:180px;height:180px;" src=<?php echo base_url("assets/app/media/img/users/300_13.jpg") ?> title="">
 																					</span>
 																				</a> 
 		  																		<div class="email-btn" style="margin-top: 20px; ">
@@ -122,64 +121,64 @@
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
 																						<h2 >
-																							Nama 
-																						</h2>
-																					</div>
-																				</div>
-																				<div class="m-portlet__body">
-																					<h5>Amanda RoseFeld</h5>
-																				</div>
-																				<div class="m-portlet__head-caption">
-																					<div class="m-portlet__head-title">
-																						<h2 >
 																							NIPP 
 																						</h2>
 																					</div>
 																				</div>
 																				<div class="m-portlet__body">
-																					<h5>70031234</h5>
+																					<h5><?php echo $data[0]['nipp']; ?></h5>
 																				</div>
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
 																						<h2 >
-																							Cabang/Kawasan 
+																							Jabatan
 																						</h2>
 																					</div>
 																				</div>
 																				<div class="m-portlet__body">
-																					<h5>Kantor Pusat</h5>
+																					<h5><?php echo $data[0]['jabatan_sme']; ?></h5>
+																				</div>
+																				<div class="m-portlet__head-caption">
+																					<div class="m-portlet__head-title">
+																						<h2 >
+																							Regional
+																						</h2>
+																					</div>
+																				</div>
+																				<div class="m-portlet__body">
+																					<h5><?php echo $data[0]['unit_kerja_sme']; ?></h5>
 																				</div>
 																			</div>
 																			<div class="col-md-4">
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
 																						<h2 >
-																							Divisi 
+																							
 																						</h2>
 																					</div>
 																				</div>
 																				<div class="m-portlet__body">
-																					<h5>Internal Audit</h5>
+																					<h5> </h5>
 																				</div>
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
 																						<h2 >
-																							Jabatan 
+																							 
 																						</h2>
 																					</div>
 																				</div>
 																				<div class="m-portlet__body">
-																				<h5>Head of Internal Audit</h5>
+																				<h5> </h5>
 																				</div>
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
 																						<h2 >
-																							Regional/AP 
+																							 
 																						</h2>
 																					</div>
 																				</div>
 																				<div class="m-portlet__body">
-																				<h5>Head Office</h5>
+																				<h5> </h5>
 																				</div>
 																			</div>
 																		</div>
@@ -195,9 +194,11 @@
 																			<div class="col-xl-3">
 																			</div>
 																			<div class="col-xl-3" style="text-align:right;">
-																			<button type="button" class="btn btn-warning">
-																					Back
-																				</button>
+																				<a href="<?php echo base_url()."index.php/Experts" ?>">
+																					<button type="button" class="btn btn-warning">
+																						Back
+																					</button>
+																				</a>
 																			</div>
 																		</div>
 																	</div>

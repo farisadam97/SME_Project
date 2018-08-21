@@ -136,8 +136,10 @@
 																					</tr>
 																				</thead>
 																				<tbody>
+
+																					<?php foreach ($data5 as $e) { ?>
 																					<tr>
-																						<td width="50%">
+																						<td width="30%">
 																							<div class="m-list-search">
 																								<div class="m-list-search__results">
 																									<a href="#" class="m-list-search__result-item">
@@ -145,69 +147,29 @@
 																											<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
 																										</span>
 																										<span class="m-list-search__result-item-text">
-																											Amanda Anderson
+																											<?php echo $e['nama_sme']; ?>
 																										</span>
 																									</a>
 																								</div>
 																							</div>
 																						</td>
-																						<td width="30%">
-																							Ilmu Lingkungan
+																						<td width="60%">
+																							<?php $bidang = explode(",", $e['bidang_keahlian_sme']);
+													                                    foreach ($bidang as $bidangg)
+													                                    {
+													                                    	echo '&bull;'. $bidangg. '<br>';
+													                                    }
+													                                    ?>
 																						</td>
-																						<td style="text-align: center; vertical-align: middle;" width="20%">
-																						<button type="button" class="btn btn-info m-btn--wide" >
-																								Link
-																							</button>
-																						</td>
-																					</tr>
-																					<tr>
-																						<td width="50%">
-																							<div class="m-list-search">
-																								<div class="m-list-search__results">
-																									<a href="#" class="m-list-search__result-item">
-																										<span class="m-list-search__result-item-pic">
-																											<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
-																										</span>
-																										<span class="m-list-search__result-item-text">
-																											Amanda Anderson
-																										</span>
-																									</a>
-																								</div>
-																							</div>
-																						</td>
-																						<td width="30%">
-																							Ilmu Lingkungan
-																						</td>
-																						<td style="text-align: center; vertical-align: middle;" width="20%">
-																						<button type="button" class="btn btn-info m-btn--wide" >
-																								Link
-																							</button>
+																						<td width="20%">
+																							<a href="<?php echo base_url()."index.php/Experts/item/". $e['id']?>">
+																								<button type="button" class="btn btn-info m-btn--wide">
+																									View
+																								</button>
+																							</a>
 																						</td>
 																					</tr>
-																					<tr>
-																						<td width="50%">
-																							<div class="m-list-search">
-																								<div class="m-list-search__results">
-																									<a href="#" class="m-list-search__result-item">
-																										<span class="m-list-search__result-item-pic">
-																											<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
-																										</span>
-																										<span class="m-list-search__result-item-text">
-																											Amanda Anderson
-																										</span>
-																									</a>
-																								</div>
-																							</div>
-																						</td>
-																						<td width="30%">
-																							Ilmu Lingkungan
-																						</td>
-																						<td style="text-align: center; vertical-align: middle;" width="20%">
-																						<button type="button" class="btn btn-info m-btn--wide" >
-																								Link
-																							</button>
-																						</td>
-																					</tr>
+																					<?php } ?>
 																				</tbody>
 																			</table>
 																		</div>

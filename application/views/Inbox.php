@@ -165,7 +165,7 @@
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
-													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $data5['id_pesan']?>">
+													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
 													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
 																								View
 																								</button>

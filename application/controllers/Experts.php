@@ -5,6 +5,7 @@ class Experts extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		$this->load->model('m_expert');
 		$this->load->library('session');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login")); }       
@@ -15,15 +16,20 @@ class Experts extends CI_Controller {
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-		$this->load->view('Experts');
+			$this->load->model('m_expert');
+			$data['err_message'] = "";
+			$data['data5'] = $this->m_expert->getDataExperts();
+			$this->load->view('Experts', $data);
 		}
 	}
-	public function item()
+	public function item($id)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-		$this->load->view('ExpertsItem');
+			$data['err_message'] = "";
+			$data = $this->m_expert->getDataExpertsItem($id);
+			$this->load->view('ExpertsItem', array('data'=>$data));
 		}
 	}
 }
