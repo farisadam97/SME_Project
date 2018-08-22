@@ -162,7 +162,7 @@
 													                                    ?>
 																						</td>
 																						<td width="20%">
-																							<a href="<?php echo base_url()."index.php/Experts/item/". $e['id']?>">
+																							<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>">
 																								<button type="button" class="btn btn-info m-btn--wide">
 																									View
 																								</button>

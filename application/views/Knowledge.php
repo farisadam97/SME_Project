@@ -141,84 +141,54 @@
 																<table class="m-datatable table table-bordered" id="html_table">
 																	<thead>
 																		<tr>
-																			<th title="Field #1" width="40%">
-																				Nama
+																			<th>
+																				No
 																			</th>
-																			<th title="Field #2" width="20%">
+																			<th>
+																				Ilmu
+																			</th>
+																			<th>
 																				Sub ilmu
 																			</th>
-																			<th title="Field #3" width="25%">
+																			<th>
 																				Experts
 																			</th>
-																			<th title="Field #4" width="15%">
+																			<th>
 																				Action
 																			</th>
 																		</tr>
 																	</thead>
 																	<tbody>
-																		<tr>
-																			<td>
-																				Studi Lingkungan
-																			</td>
-																			<td>
-																				Ilmu Lingkungan
-																			</td>
-																			<td>
-																				<ul>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																				</ul>
-																			</td>
-																			<td style="text-align: center; vertical-align: middle;">
-																			<button type="button" class="btn btn-info m-btn--wide" >
-																					Link
-																				</button>
-																			</td>
-																		</tr>
-																		<tr>
-																			<td>
-																				Studi Lingkungan
-																			</td>
-																			<td>
-																				Ilmu Lingkungan
-																			</td>
-																			<td>
-																				<ul>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																				</ul>
-																			</td>
-																			<td style="text-align: center; vertical-align: middle;">
-																			<button type="button" class="btn btn-info m-btn--wide" >
-																					Link
-																				</button>
-																			</td>
-																		</tr>
-																		<tr>
-																			<td>
-																				Studi Lingkungan
-																			</td>
-																			<td>
-																				Ilmu Lingkungan
-																			</td>
-																			<td>
-																				<ul>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																					<li>Someone</li>
-																				</ul>
-																			</td>
-																			<td style="text-align: center; vertical-align: middle;">
-																			<button type="button" class="btn btn-info m-btn--wide" >
-																					Link
-																				</button>
-																			</td>
-																		</tr>
+																		<?php $i=0; foreach ($data6 as $f) { $i++ ?>
+													                                <tr>
+													                                    <td><?php echo $f['id_pengetahuan']; ?></td>
+													                                    <td><?php echo $f['nama_pengetahuan']; ?></td>
+													                                    <td><?php $topik = explode(";", $f['topik']);
+													                                    foreach ($topik as $topikk)
+													                                    {
+													                                    	echo '&bull;'. $topikk. '<br>';
+													                                    }
+													                                    ?>
+													                                    </td>
+
+													                                    <td>
+													                                    <?php $experts = explode(";", $data7[$i]['expert']);
+													                                    foreach ($experts as $expert)
+													                                    {
+													                                    	echo '&bull;'. $expert. '<br>';
+													                                    }
+													                                    ?>
+													                                    </td>
+													                                    
+													                                    <td>
+													                                    	<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>">
+													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+																								View
+																								</button>
+																							</a>
+																						</td>
+
+													                            <?php } ?>
 																	</tbody>
 																</table>
 																<!--end: Datatable -->

@@ -158,7 +158,7 @@
 																		</tr>
 																	</thead>
 																	<tbody>
-																		 <?php foreach ($data4 as $d) { ?>
+																		<?php foreach ($data4 as $d) { ?>
 													                                <tr>
 													                                    <td><?php echo $d['nama_pengirim']; ?></td>
 													                                    <td><?php echo $d['subjek']; ?></td>
@@ -172,7 +172,7 @@
 																							</a>
 																						</td>
 													                                </tr>
-													                            <?php } ?>
+													                    <?php } ?>
 																	</tbody>
 																</table>
 															</div>

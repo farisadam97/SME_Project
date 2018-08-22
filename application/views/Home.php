@@ -479,10 +479,11 @@
 													                                    ?>
 													                                    </td>
 													                                    
-													                                    <td><button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+													                                    <td>
+													                                    	<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
 																							Info
-																						</button>
-																					</td>
+																							</button>
+																						</td>
 
 													                            <?php } ?>
 															                        

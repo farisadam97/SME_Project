@@ -22,13 +22,13 @@ class Experts extends CI_Controller {
 			$this->load->view('Experts', $data);
 		}
 	}
-	public function item($id)
+	public function item($nipp)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
 			$data['err_message'] = "";
-			$data = $this->m_expert->getDataExpertsItem($id);
+			$data = $this->m_expert->getDataExpertsItem($nipp);
 			$this->load->view('ExpertsItem', array('data'=>$data));
 		}
 	}

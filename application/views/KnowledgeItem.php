@@ -96,18 +96,18 @@
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
 																				<h2>
-																					Penjelasan
+																					Deskripsi
 																				</h2>
-																				<h2 class="m-portlet__head-label m-portlet__head-label--danger">
+																				<h2 class="m-portlet__head-label m-portlet__head-label--danger" width="200%">
 																					<span>
-																					Studi Lingkungan
+																						<?php echo $data8[0]['nama_pengetahuan']; ?>
 																					</span>
 																				</h2>
 																			</div>
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																	Mengetahui tatacara sebuah studi  lingkungan (AMDAL, UKL/UDL) guna pengajuan perijinan
+																		<?php echo $data8[0]['definisi_pengetahuan']; ?>
 																	</div>
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
@@ -119,11 +119,19 @@
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																		<ul>
-																			<li> Ilmu Lingkungan </li>
-																			<li> Ilmu Lingkungan </li>
-																			<li> Ilmu Lingkungan </li>
+																		<?php $i=0; foreach ($data8 as $h) { $i++ ?>
+																			<?php $topik = explode(";", $h['topik']); ?>
+																		
+													                            <?php foreach ($topik as $topikk) { ?>
+													                    <ul>
+																			<li>            	
+													                            <?php echo $topikk. '<br>'; ?>  
+																			</li>
 																		</ul>
+
+																		<?php } ?>
+																		<?php } ?>
+
 																	</div>
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
@@ -137,37 +145,22 @@
 																	<div class="m-portlet__body">
 																		<div class="m-list-search">
 																			<div class="m-list-search__results">
-																				<a href="#" class="m-list-search__result-item">
+																				<?php $i=0; foreach ($data9 as $j) { $i++ ?>
+																					<?php $experts = explode(";", $j['expert']); ?>
+																					<?php $experts2 = explode(";", $j['nippsme']); ?>
+																						<?php foreach ($experts as $expert) { ?>
+																				<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+
 																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
 																					</span>
 																					<span class="m-list-search__result-item-text">
-																						Amanda Anderson
+															                            <?php
+															                               	echo $expert. '<br>';
+													                                 	?>
 																					</span>
-																				</a>
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Kennedy Lloyd
-																					</span>
-																				</a>
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Megan Weldon
-																					</span>
-																				</a>
-																				<a href="#" class="m-list-search__result-item">
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user2.jpg") ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-																						Marc-André ter Stegen
-																					</span>
+																						<?php } ?>
+																				<?php } ?>
 																				</a>
 																			</div>
 																		</div>
@@ -220,9 +213,11 @@
 																			<div class="col-xl-3">
 																			</div>
 																			<div class="col-xl-3" style="text-align:right;">
-																			<button type="button" class="btn btn-warning">
-																					Back
-																				</button>
+																				<a href="<?php echo base_url()."index.php/Knowledge" ?>">
+																					<button type="button" class="btn btn-warning">
+																						Back
+																					</button>
+																				</a>
 																			</div>
 																		</div>
 																	</div>

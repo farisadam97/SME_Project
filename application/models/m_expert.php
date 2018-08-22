@@ -10,11 +10,11 @@ class m_expert extends CI_Model
   	return $data5->result_array();
   }
 
-  public function getDataExpertsItem($id) 
+  public function getDataExpertsItem($nipp) 
   {
     $this->db->select('*');
     $this->db->from('sme_list');
-    $this->db->where('id', $id);
+    $this->db->where('nipp', $nipp);
     $data = $this->db->get();
     return $data->result_array();
   }
