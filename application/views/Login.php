@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<form class="m-login__form m-form" action="<?php echo base_url('login/aksi_login'); ?>" method="post">
 								<div class="form-group m-form__group">
-									<input class="form-control m-input"   type="text" placeholder="Email" name="email" autocomplete="on">
+									<input class="form-control m-input"   type="text" placeholder="NIPP" name="nipp" autocomplete="on">
 								</div>
 								<div class="form-group m-form__group">
 									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password">

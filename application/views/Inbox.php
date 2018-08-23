@@ -165,11 +165,20 @@
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
+													                                    	<span>
 													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
 													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
 																								View
 																								</button>
 																							</a>
+																							</span>
+																							<span>
+													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
+													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+																								View
+																								</button>
+																							</a>
+																							</span>
 																						</td>
 													                                </tr>
 													                    <?php } ?>

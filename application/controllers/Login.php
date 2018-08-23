@@ -20,17 +20,17 @@ class Login extends CI_Controller{
 	}
 
 	function aksi_login(){
-		$email = $this->input->post('email');
+		$nipp = $this->input->post('nipp');
 		$password = $this->input->post('password');
 		$where = array(
-			'email' => $email,
+			'nipp' => $nipp,
 			'password' => $password
 			);
 		$cek = $this->m_login->cek_login("user",$where)->num_rows();
 		if($cek > 0){
 
 			$data_session = array(
-				'nama' => $email,
+				'nipp' => $nipp,
 				'status' => "login"
 				);
 
