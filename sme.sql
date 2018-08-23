@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2018 at 02:35 PM
+-- Generation Time: Aug 23, 2018 at 05:16 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -126,7 +126,6 @@ INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_penge
 (87, 'Change Management', 'Perencanaan implementasi dari perbaikan atau inisiatif baru yang meliputi tahapan perencanaan implementasi, sumber daya manusia, pelaksanaan sosialisasi, pembekalan kompetensi, dan pendampingan pasca implementasi.'),
 (88, 'Enterprise IT Architech Framework', 'Pengelolaan arsitektur TIK agar mendukung arsitektur bisnis Pelindo III.'),
 (89, 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa', 'Pemahaman terhadap:\n- Aplikasi SAP khususnya mengenai absensi, cuti, disiplin dan pemutahiran data pegawai (SDM)\n- Aplikasi SAP khususnya pembuatan PR, GR barang/jasa, dan invocing (PBJ).'),
-(90, 'Standar ANRI', 'Metode kearsipan yang mengacu pada standar dari Lembaga Pembina Kearsipan Nasional'),
 (91, 'Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)', 'Standar penyusunan laporan keuangan beserta aturan-aturan yang harus dipenuhi dalam penyajian laporan keuangan.');
 
 -- --------------------------------------------------------
@@ -2305,6 +2304,7 @@ INSERT INTO `sdm` (`nipp`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelam
 --
 
 CREATE TABLE `sme_list` (
+  `id` int(11) NOT NULL,
   `nipp` int(9) NOT NULL,
   `nama_sme` varchar(30) DEFAULT NULL,
   `kelas_jabatan_sme` int(2) DEFAULT NULL,
@@ -2317,105 +2317,105 @@ CREATE TABLE `sme_list` (
 -- Dumping data for table `sme_list`
 --
 
-INSERT INTO `sme_list` (`nipp`, `nama_sme`, `kelas_jabatan_sme`, `jabatan_sme`, `unit_kerja_sme`, `bidang_keahlian_sme`) VALUES
-(630303222, 'BAMBANG SUHARTO', 3, 'General Manager Tanjung Emas', 'Regional Jawa Tengah', 'Proses Bisnis dan Operasional Kepelabuhanan,Penanganan Keluhan Pelanggan Kepanduan'),
-(630603213, 'YOHANES MALO', 5, 'General Manager', 'PT Pelindo Energi Logistik', 'Sistem Manajemen K-3,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
-(640603714, 'DJIWANDORO HENDROBAWONO', 6, 'Deputy Mgr.  Quality and Risk Management', 'Regional Jawa Timur', 'Sertifikasi Lead Auditor Kepelabuhanan,Sertifikasi Auditor RBIA'),
-(640803411, 'AGUS PUDJOTOMO', 3, 'R. Manager  Operational And Commercial', 'Regional Jawa Timur', 'Proses Bisnis dan Operasional Pelindo III'),
-(650503572, 'TRI SUHARDI', 1, 'Direktur Utama', 'PT. BJTI', 'Sertifikasi Auditor RBIA,Ketentuan dan Perundangan terkait penerapan Good Corporate Governance (GCG), '),
-(660103606, 'DANURWASA', 4, 'Project Coordinator', 'Head Office', 'Teknologi Struktur Pelabuhan'),
-(660103672, 'THERESIA RURY SETYAWATI', 6, 'Vice President Procurement Region 1', 'Head Office', 'Kualifikasi dan Klasifikasi Vendor,Metode dan Sistem Pelelangan,Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
-(660403567, 'DANAN SUHARDONO', 8, 'Deputy Manager of HSSE', 'Regional Jawa Timur', 'Manajemen Lingkungan'),
-(670303446, 'BAMBANG HASBULLAH', 2, 'Senior Vice President Port Operations', 'Head Office', 'Proses Bisnis dan Operasional Pelindo III,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU),Proses Bisnis dan Operasional Kepelabuhanan,Standar Pelayanan Pelanggan Pelindo III,Bisnis Pelayanan Kepelabuhanan dan Perkembangannya,Improving Port Performance I & II,Proses Bisnis Kepelabuhanan,Pemahaman tentang Master Plan,Operasional Dasar Kepelabuhanan'),
-(680603590, 'ISMARTADIANTO', 2, 'Senior VP of Change Management', 'Head Office', 'Project Management,Sistem Informasi di Pelayanan Non-Petikemas,Sistem Informasi di Pelayanan petikemas,IT Masterplan,Tren Teknologi Informasi Komunikasi Kemaritiman,ICT-based Technology,Change Management,Enterprise IT Architech Framework'),
-(680703589, 'ISKANDAR ZULKARNAIN', 3, 'Project Manager Officer', 'Head Office', 'Perasuransian,Analisis dan Evaluasi Risiko Bisnis,Manajemen Lingkungan'),
-(680703775, 'ANDRIANTO', 5, 'Staf', 'Regional Jawa Timur', 'Proses Pengadaan Barang dan Jasa,Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
-(681104072, 'HAPSORO NUGROHO', 6, 'Staf', 'Head Office', 'Penanganan Keluhan Pelanggan Kepanduan'),
-(681203767, 'EKO HARIJADI BUDIJANTO', 1, 'Staf', 'PT Pelindo Marine Service', 'Bisnis Petikemas,Kajian Kelayakan Bisnis/Investasi'),
-(690203594, 'MOHAMMAD TAUFIK HARDJANTO', 4, 'VP Operation & Business Dev. Audit', 'Head Office', 'Fraud Investigation'),
-(690303586, 'KARTIKO ADI', 2, 'Staf', 'Terminal Petikemas Surabaya', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya,Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
-(690403768, 'PUTUT SRI MULJANTO', 1, 'Senior Vice President Marketing', 'Head Office', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU),Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro,Study Kelayakan terkait Optimasi Asset Pelabuhan,Manajemen dan Optimalisasi Aset,Strategi Pemasaran untuk Core & Non Core Business Pelindo III,Networking dengan Pelanggan dan Stakeholder Pelindo III,Standar Pelayanan Pelanggan Pelindo III,Market Intelligence and Analysis,Manajemen Tarif Kepelabuhanan,Kajian Kelayakan Bisnis/Investasi,Proses Bisnis Anak Perusahaan,Proses Bisnis Kepelabuhanan,Pemahaman tentang Master Plan,Analisis Bisnis terkait Operasi Pelindo III'),
-(690703449, 'DENNY HERMANTO', 2, 'Staf', 'PT Pelindo Marine Service', 'Market Intelligence and Analysis,Manajemen Tarif Kepelabuhanan,Ketentuan dan Perundangan terkait Kerjasama Bisnis,Bisnis dan Operasional Pelabuhan'),
-(691203452, 'BAIQ NURUL HIKMAWATI', 6, 'VP Human Capital Development', 'Head Office', 'Pengembangan Kompetensi Pegawai'),
-(700303774, 'TOPO SAPTO NUGROHO', 2, 'Senior Vice President Port Equipment', 'Head Office', 'Proses Pengadaan Barang dan Jasa'),
-(700503736, 'PRASETYO', 2, 'Head Of Strtgic Plan & Corp Perform Bur', 'Head Office', 'Hinterland '),
-(700603741, 'HARRY POERWANTO', 3, 'Project Coordinator', 'Head Office', 'Asesmen Kondisi dan Kinerja Peralatan Pelabuhan,Pemeliharaan dan Perbaikan Kapal (Class Matter)'),
-(700603769, 'PANDJI WIDYA RASMI', 6, 'Vice President Property Management', 'Head Office', 'Ketentuan dan Perundangan terkait Kerjasama Bisnis'),
-(700703593, 'ROBBY DAYOH', 2, 'Project Coordinator', 'Head Office', 'Prinsip Penyusunan OE (Owner Estimate),Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya,Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
-(700703724, 'DEDY RUDIJANTO', 5, 'VP Management System', 'Head Office', 'Self Assessment untuk Risiko,Perasuransian,Manajemen Risiko,Analisis dan Evaluasi Risiko Bisnis,Manajemen Risiko'),
-(700903665, 'MOHAMAD HARRY DHARMAWAN', 3, 'Pimpinan Proyek Teluk Lamong', 'Head Office', 'Project Management'),
-(701103770, 'ENDOT ENDRARDONO', 2, 'Staf', 'PT. BJTI', 'Ketentuan dan Perundangan terkait Perpajakan,Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro,Hinterland,Kajian Kelayakan Usaha,Analisis Ratio Keuangan'),
-(710403616, 'SAPTO WASONO SOEBAGIO', 2, 'Staf', 'PT Pelindo Marine Service', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Marketing terhadap Asset yang Idle,Kajian Kebijakan Bisnis terkait Optimalisasi T&B,Study Kelayakan terkait Optimasi Asset Pelabuhan,Kajian Kelayakan Usaha,Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
-(710503228, 'ARIEF PRABOWO', 2, 'Director of TPKS', 'Regional Jawa Tengah', 'Bisnis Petikemas,Pemahaman tentang Master Plan,Operasional Dasar Kepelabuhanan'),
-(711003229, 'DOTHY', 1, 'Staf', 'PT Terminal Teluk Lamong', 'Bisnis Pelayanan Kepelabuhanan dan Perkembangannya'),
-(711003975, 'AKHMAD FAJAR', 6, 'Staf', 'Head Office', 'Self Assessment untuk Risiko,Manajemen Lingkungan,Sertifikasi Lead Auditor Kepelabuhanan'),
-(720303777, 'HENDIEK EKO SETIANTORO', 2, 'Direktur Utama', 'PT. BJTI', 'Perencanaan Pemeliharaan Fasilitas Pelabuhan,Aplikasi Project Management,Teknologi Struktur Pelabuhan'),
-(720703755, 'ADITYA RESPATI DJATINENDRA', 2, 'Direktur', 'PT Pelindo Daya Sejahtera', 'Manajemen dan Optimalisasi Aset,Ketentuan dan Perundangan terkait Kerjasama Bisnis,Kajian Kelayakan Usaha,Analisis Bisnis terkait Operasi Pelindo III'),
-(720703763, 'AHMAD NIZAR', 5, 'Vice President Marketing Support', 'Head Office', 'English Fluency'),
-(720803739, 'MOHAMAD SAIFUL ARIFIN', 5, 'Regional Manager of Engineering', 'Regional Kalimantan', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya'),
-(730204064, 'ALI SODIKIN', 3, 'Direktur Utama', 'PT Pelindo Daya Sejahtera', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III'),
-(730403669, 'HERIBERTUS HARYANCE PAEMBONAN', 4, 'Staf', 'Regional Kalimantan', 'Proses dan Penerapan Litigasi di Pelindo III'),
-(730403776, 'JOKO NOERHUDHA', 1, 'Staf', 'Terminal Petikemas Surabaya', 'Penyusunan Renstra Pelindo III,Proses Bisnis Kepelabuhanan,Perencanaan Tata Ruang Pelabuhan,English Fluency'),
-(730403822, 'SUGIONO', 3, 'Corporate Representative', 'Head Office', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III,'),
-(730703740, 'I WAYAN JULI ARTANA', 5, 'Vice President Vessel & Installation', 'Head Office', 'Proses Pengadaan Barang dan Jasa'),
-(730803761, 'HOT RUDOLF MARIHOT', 1, 'Direktur Utama', 'PT. BJTI', 'Perhitungan Hedging (Lindung Nilai),Kajian Kelayakan Bisnis/Investasi,Proses Bisnis Anak Perusahaan,Analisis Bisnis terkait Operasi Pelindo III,Kinerja Pelindo III dari Aspek Operasi, Keuangan, dan Investasi,English Fluency'),
-(731003782, 'AGUS HERMAWAN', 3, 'Senior VP Business Development', 'Head Office', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Proses dan Penerapan Litigasi di Pelindo III,Networking dengan Pelanggan dan Stakeholder Pelindo III'),
-(731203814, 'BOY ROBYANTO', 2, 'Senior Vice President Port Facility', 'Head Office', 'Prinsip Penyusunan OE (Owner Estimate),Penyusunan Renstra Pelindo III'),
-(731204265, 'MUHAMMAD SADAD SUKMONO', 5, 'Regional Manager of HC and GA', 'Regional Kalimantan', 'Penyusunan PerDir dan PP/PKB'),
-(740103772, 'BUDI SATRIYO', 2, 'Senior VP Accounting & Budget', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan),Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP),Laporan Keuangan Konsolidasian,Sistem dan Administrasi Perkantoran (PBJ, Kearsipan, Keuangan, dan SDM)'),
-(740104251, 'JOHANES WAHYU HERTANTO', 5, 'General Manager Jamrud', 'Regional Jawa Timur', 'Networking dengan Pelanggan dan Stakeholder Pelindo III'),
-(740403738, 'WARSILAN', 2, 'Staf', 'PT. BJTI', 'Proses Pengadaan Barang dan Jasa,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU),Pengoperasian dan Pengembangan e-procurement,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa,Kualifikasi dan Klasifikasi Vendor,Metode dan Sistem Pelelangan,Sistem dan Administrasi Perkantoran (PBJ, Kearsipan, Keuangan, dan SDM),Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa'),
-(740403826, 'RUMAJI', 2, 'Staf', 'PT Terminal Teluk Lamong', 'Proses Bisnis dan Operasional Kepelabuhanan,Bisnis Pelayanan Kepelabuhanan dan Perkembangannya,Improving Port Performance I & II,Operasional Dasar Kepelabuhanan'),
-(740503731, 'JUJU JUARSIH', 5, 'Manager', 'Dana Pensiun Pelindo Purnakary', 'Pengembangan Kompetensi Pegawai'),
-(740503753, 'AGUNG PRASETYO GURITNO', 3, 'Direktur Keuangan, SDM & Hukum', 'PT Pelindo Properti Indonesia', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
-(741003650, 'I WAYAN EKA SAPUTRA', 4, 'CEO Regional Bali Nusra', 'Regional Bali Nusra', 'Fraud Investigation'),
-(741003764, 'WAHYU WIDODO', 2, 'Staf', 'PT Terminal Teluk Lamong', 'Marketing terhadap Asset yang Idle,Kajian Kebijakan Bisnis terkait Optimalisasi T&B'),
-(750704048, 'DARU WICAKSONO JULIANTO', 3, 'Vice President Service Development', 'Head Office', 'Manajemen Tarif Kepelabuhanan'),
-(750903773, 'GATOT IMAM PRASETYO', 3, 'Direktur', 'PT. Pelindo Husada Citra', 'Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
-(751104045, 'RALY EKO KURNIAWAN', 4, 'Direktur', 'PT. BJTI', 'Sertifikasi Auditor RBIA,Fraud Investigation'),
-(760103818, 'HADI MOHAMMAD LUKMANTYO', 4, 'Direktur Utama', 'PT Terminal Petikemas Indonesi', 'IT Masterplan,IT Governance Framework'),
-(760104256, 'RIO DWI SANTOSO', 6, 'General Manager Celukan Bawang', 'Regional Bali Nusra', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa,Metode dan Sistem Pelelangan'),
-(760403815, 'FARUQ HIDAYAT', 2, 'Corporate Secretary', 'Head Office', 'Prinsip Penyusunan OE (Owner Estimate),Perencanaan Pemeliharaan Fasilitas Pelabuhan,Perencanaan Pemeliharaan Fasilitas Pelabuhan,Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro,Hinterland,Penyusunan Renstra Pelindo III,Perencanaan Tata Ruang Pelabuhan,Kinerja Pelindo III dari Aspek Operasi, Keuangan, dan Investasi'),
-(760503965, 'KOKOK SUSANTO', 3, 'Direktur Utama', 'PT Pelindo Properti Indonesia', 'Project Management,Perencanaan Tata Ruang Pelabuhan'),
-(760804204, 'AGUS DHARMAWAN', 5, 'Senior VP Information & Comm Techn', 'Head Office', 'Sistem Informasi di Pelayanan Non-Petikemas,Sistem Informasi di Pelayanan petikemas,IT Masterplan,Enterprise IT Architech Framework'),
-(761003803, 'EDI PRIYANTO', 2, 'Senior VP Human Capital Services & HSSE', 'Head Office', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Sistem Manajemen K-3,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
-(770403816, 'ANGGA PRADIPTYA', 2, 'Senior VP Port Engineering Supervision', 'Head Office', 'Proses Bisnis dan Operasional Pelindo III,Prinsip Penyusunan OE (Owner Estimate),Aplikasi Project Management'),
-(770604190, 'YONI SETIAWAN', 2, 'Senior VP Corporate Finance & Treasury', 'Head Office', 'Ketentuan dan Perundangan terkait Perpajakan,Perencanaan Perpajakan'),
-(790204201, 'I GUSTI PUTU ARYA BUDHI ASTAWA', 5, 'VP Tax', 'Head Office', 'Ketentuan dan Perundangan terkait Perpajakan,Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP),Pencatatan dan Pengendalian Aset,Perencanaan Perpajakan'),
-(790504552, 'JAYA VIA DEWATA', 5, 'Vice President Port Engineering Planning', 'Head Office', 'Project Management,Studi Lingkungan,Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan,Aplikasi Project Management'),
-(790605451, 'MOHAMAD ROFIUL IBAD', 13, 'Pelaksana ICT Solution and Dev. Back End', 'Head Office', 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa'),
-(790704149, 'SARJONO', 3, 'Senior VP of Shared Service Center', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan),Laporan Keuangan Konsolidasian,Sistem dan Administrasi Perkantoran (PBJ, Kearsipan, Keuangan, dan SDM),Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-(791004263, 'ANDRI KURNIAWAN', 7, 'Vice President System & Subsidiary', 'Head Office', 'Pengoperasian dan Pengembangan e-procurement,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa'),
-(791204408, 'ARI SETIAWAN', 12, 'Operator CC', 'Regional Jawa Tengah', 'Penanganan Keluhan Pelanggan Kepanduan'),
-(810104169, 'UMI SYARIFAH AMBARWATI', 6, 'VP Legal Agreement', 'Head Office', 'Penyusunan PerDir dan PP/PKB,Ketentuan dan Perundangan terkait Ketenagakerjaan,Proses Litigasi terkait Kasus Ketenagakerjaan,Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-(810604178, 'YONATHA SETIYOBUDI', 5, 'Regional Manager of Finance', 'Regional Jawa Timur', 'Penggunaan Aplikasi untuk Locking Piutang (INCO)'),
-(810704196, 'PURWANTO WAHYU WIDODO', 7, 'VP Corporate Strategic Planning', 'Head Office', 'Studi Lingkungan,Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
-(810904519, 'OSCAR YOGI YUSTIANO', 8, 'VP Org. Dev & HC System', 'Head Office', 'Ketentuan dan Perundangan terkait Ketenagakerjaan'),
-(811104550, 'MUCHAMMAD ALI AFANDI', 7, 'Regional Manager of Engineering', 'Regional Jawa Timur', 'Perencanaan dan Perhitungan Struktur'),
-(820804150, 'LIA INDI AGUSTIANA', 5, 'VP Corporate Communication', 'Head Office', 'Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro'),
-(821104152, 'RAHMI IKA NOVIANA', 7, 'VP Inform & Comm Tech Risk & Gov', 'Head Office', 'ICT-based Technology,Enterprise IT Architech Framework'),
-(821204568, 'ANDI MAWARTA', 6, 'Vice President Procurement Region 2', 'Head Office', 'Pengoperasian dan Pengembangan e-procurement,Metode dan Sistem Pelelangan,Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
-(830204188, 'FAHRUS SALAM', 2, 'Senior VP Subsidiary Management', 'Head Office', 'Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan,Reward dan Sanksi  bagi Pegawai,Ketentuan dan Perundangan terkait Ketenagakerjaan'),
-(830204612, 'YUDI PRASETYO', 9, 'Staf', 'Regional Bali Nusra', 'Perencanaan dan Perhitungan Struktur'),
-(830504556, 'NANANG PRASETIYO', 7, 'VP Accounting and Asset Management', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan),Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP),Laporan Keuangan Konsolidasian'),
-(830904182, 'HENNY DWI ROHMATAA', 9, 'VP Head Office Finance', 'Head Office', 'Ketentuan dan Perundangan terkait Perpajakan,Perencanaan Perpajakan'),
-(831204816, 'FADILAH BINAWATI', 10, 'Pelaksana Operation and Project Risk', 'Head Office', 'Perasuransian'),
-(841205130, 'JUSAK HADI WINARTO', 12, 'Pelaksana Port Facility Supervision', 'Head Office', 'Perencanaan dan Perhitungan Struktur'),
-(841205131, 'RAKHMAT AFFIANTO', 14, 'Pelaksana Tax', 'Head Office', 'Pencatatan dan Pengendalian Aset'),
-(850204737, 'YOHANES DWI WAHYONO', 8, 'VP Treasury & Fund Management', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan)'),
-(860504918, 'SURYA YUWARDANA', 10, 'Pelaksana Vessel and Installation', 'Head Office', 'Pemeliharaan dan Perbaikan Kapal (Class Matter)'),
-(870504732, 'RAKA RAHARDIANTO', 10, 'Pelaksana ICT Solution and Dev Front End', 'Head Office', 'Sistem Informasi di Pelayanan petikemas'),
-(870705164, 'NOVITHA YULIATI', 14, 'Ahli Procurement Region I', 'Head Office', 'Kualifikasi dan Klasifikasi Vendor'),
-(871004703, 'RIZA OCTAVIANY', 11, 'Staf', 'Regional Bali Nusra', 'Studi Lingkungan'),
-(871105174, 'RYANCHRISNA BUDI NUGRAHA', 12, 'Pelaksana Operation and Project Risk', 'Head Office', 'Self Assessment untuk Risiko,Manajemen Risiko,Manajemen Risiko'),
-(880505415, 'HARDIAWAN WICAKSONO', 12, 'Pelaksana Port Maintenance and Survey', 'Head Office', 'Aplikasi Pembuatan Gambar Teknik 2D & 3D'),
-(881105189, 'PRADIPTA PRATAMA', 12, 'Pelaksana Port Engineering Planning', 'Head Office', 'Aplikasi Pembuatan Gambar Teknik 2D & 3D'),
-(890204838, 'SIGIT EDI PURNOMO', 10, 'Ahli ICT Operation and Services', 'Head Office', 'ICT-based Technology'),
-(890304734, 'WIDHI TRI LEKSANA', 11, 'Staf Administration and General Services', 'Head Office', 'Standar ANRI'),
-(900405106, 'RAHARDIAN ZEBEDIANTO', 11, 'Deputy Manager of Customer Services', 'Regional Bali Nusra', 'Kajian Kelayakan Bisnis/Investasi'),
-(900405238, 'AKBAR RAMADHAN', 14, 'Staf Administration and General Services', 'Head Office', 'Standar ANRI'),
-(901105105, 'KARLINDA SARI', 11, 'Deputy Mgr.  Property and Other Business', 'Regional Jawa Tengah', 'Teknik Negosiasi'),
-(910405264, 'PRATIWI WULANDARI', 12, 'Pelaksana Legal Agreement', 'Head Office', 'Proses Litigasi terkait Kasus Ketenagakerjaan');
+INSERT INTO `sme_list` (`id`, `nipp`, `nama_sme`, `kelas_jabatan_sme`, `jabatan_sme`, `unit_kerja_sme`, `bidang_keahlian_sme`) VALUES
+(1, 630303222, 'BAMBANG SUHARTO', 3, 'General Manager Tanjung Emas', 'Regional Jawa Tengah', 'Proses Bisnis dan Operasional Kepelabuhanan,Penanganan Keluhan Pelanggan Kepanduan'),
+(2, 630603213, 'YOHANES MALO', 5, 'General Manager', 'PT Pelindo Energi Logistik', 'Sistem Manajemen K-3,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
+(3, 640603714, 'DJIWANDORO HENDROBAWONO', 6, 'Deputy Mgr.  Quality and Risk Management', 'Regional Jawa Timur', 'Sertifikasi Lead Auditor Kepelabuhanan,Sertifikasi Auditor RBIA'),
+(4, 640803411, 'AGUS PUDJOTOMO', 3, 'R. Manager  Operational And Commercial', 'Regional Jawa Timur', 'Proses Bisnis dan Operasional Pelindo III'),
+(5, 650503572, 'TRI SUHARDI', 1, 'Direktur Utama', 'PT. BJTI', 'Sertifikasi Auditor RBIA,Ketentuan dan Perundangan terkait penerapan Good Corporate Governance (GCG)'),
+(6, 660103606, 'DANURWASA', 4, 'Project Coordinator', 'Head Office', 'Teknologi Struktur Pelabuhan'),
+(7, 660103672, 'THERESIA RURY SETYAWATI', 6, 'Vice President Procurement Region 1', 'Head Office', 'Kualifikasi dan Klasifikasi Vendor,Metode dan Sistem Pelelangan,Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
+(8, 660403567, 'DANAN SUHARDONO', 8, 'Deputy Manager of HSSE', 'Regional Jawa Timur', 'Manajemen Lingkungan'),
+(9, 670303446, 'BAMBANG HASBULLAH', 2, 'Senior Vice President Port Operations', 'Head Office', 'Proses Bisnis dan Operasional Pelindo III,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU),Proses Bisnis dan Operasional Kepelabuhanan,Standar Pelayanan Pelanggan Pelindo III,Bisnis Pelayanan Kepelabuhanan dan Perkembangannya,Improving Port Performance I & II,Proses Bisnis Kepelabuhanan,Pemahaman tentang Master Plan,Operasional Dasar Kepelabuhanan'),
+(10, 680603590, 'ISMARTADIANTO', 2, 'Senior VP of Change Management', 'Head Office', 'Project Management,Sistem Informasi di Pelayanan Non-Petikemas,Sistem Informasi di Pelayanan petikemas,IT Masterplan,Tren Teknologi Informasi Komunikasi Kemaritiman,ICT-based Technology,Change Management,Enterprise IT Architech Framework'),
+(11, 680703589, 'ISKANDAR ZULKARNAIN', 3, 'Project Manager Officer', 'Head Office', 'Perasuransian,Analisis dan Evaluasi Risiko Bisnis,Manajemen Lingkungan'),
+(12, 680703775, 'ANDRIANTO', 5, 'Staf', 'Regional Jawa Timur', 'Proses Pengadaan Barang dan Jasa,Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
+(13, 681104072, 'HAPSORO NUGROHO', 6, 'Staf', 'Head Office', 'Penanganan Keluhan Pelanggan Kepanduan'),
+(14, 681203767, 'EKO HARIJADI BUDIJANTO', 1, 'Staf', 'PT Pelindo Marine Service', 'Bisnis Petikemas,Kajian Kelayakan Bisnis/Investasi'),
+(15, 690203594, 'MOHAMMAD TAUFIK HARDJANTO', 4, 'VP Operation & Business Dev. Audit', 'Head Office', 'Fraud Investigation'),
+(16, 690303586, 'KARTIKO ADI', 2, 'Staf', 'Terminal Petikemas Surabaya', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya,Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
+(17, 690403768, 'PUTUT SRI MULJANTO', 1, 'Senior Vice President Marketing', 'Head Office', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU),Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro,Study Kelayakan terkait Optimasi Asset Pelabuhan,Manajemen dan Optimalisasi Aset,Strategi Pemasaran untuk Core & Non Core Business Pelindo III,Networking dengan Pelanggan dan Stakeholder Pelindo III,Standar Pelayanan Pelanggan Pelindo III,Market Intelligence and Analysis,Manajemen Tarif Kepelabuhanan,Kajian Kelayakan Bisnis/Investasi,Proses Bisnis Anak Perusahaan,Proses Bisnis Kepelabuhanan,Pemahaman tentang Master Plan,Analisis Bisnis terkait Operasi Pelindo III'),
+(18, 690703449, 'DENNY HERMANTO', 2, 'Staf', 'PT Pelindo Marine Service', 'Market Intelligence and Analysis,Manajemen Tarif Kepelabuhanan,Ketentuan dan Perundangan terkait Kerjasama Bisnis,Bisnis dan Operasional Pelabuhan'),
+(19, 691203452, 'BAIQ NURUL HIKMAWATI', 6, 'VP Human Capital Development', 'Head Office', 'Pengembangan Kompetensi Pegawai'),
+(20, 700303774, 'TOPO SAPTO NUGROHO', 2, 'Senior Vice President Port Equipment', 'Head Office', 'Proses Pengadaan Barang dan Jasa'),
+(21, 700503736, 'PRASETYO', 2, 'Head Of Strtgic Plan & Corp Perform Bur', 'Head Office', 'Hinterland '),
+(22, 700603741, 'HARRY POERWANTO', 3, 'Project Coordinator', 'Head Office', 'Asesmen Kondisi dan Kinerja Peralatan Pelabuhan,Pemeliharaan dan Perbaikan Kapal (Class Matter)'),
+(23, 700603769, 'PANDJI WIDYA RASMI', 6, 'Vice President Property Management', 'Head Office', 'Ketentuan dan Perundangan terkait Kerjasama Bisnis'),
+(24, 700703593, 'ROBBY DAYOH', 2, 'Project Coordinator', 'Head Office', 'Prinsip Penyusunan OE (Owner Estimate),Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya,Asesmen Kondisi dan Kinerja Peralatan Pelabuhan'),
+(25, 700703724, 'DEDY RUDIJANTO', 5, 'VP Management System', 'Head Office', 'Self Assessment untuk Risiko,Perasuransian,Manajemen Risiko,Analisis dan Evaluasi Risiko Bisnis,Manajemen Risiko'),
+(26, 700903665, 'MOHAMAD HARRY DHARMAWAN', 3, 'Pimpinan Proyek Teluk Lamong', 'Head Office', 'Project Management'),
+(27, 701103770, 'ENDOT ENDRARDONO', 2, 'Staf', 'PT. BJTI', 'Ketentuan dan Perundangan terkait Perpajakan,Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro,Hinterland,Kajian Kelayakan Usaha,Analisis Ratio Keuangan'),
+(28, 710403616, 'SAPTO WASONO SOEBAGIO', 2, 'Staf', 'PT Pelindo Marine Service', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Marketing terhadap Asset yang Idle,Kajian Kebijakan Bisnis terkait Optimalisasi T&B,Study Kelayakan terkait Optimasi Asset Pelabuhan,Kajian Kelayakan Usaha,Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
+(29, 710503228, 'ARIEF PRABOWO', 2, 'Director of TPKS', 'Regional Jawa Tengah', 'Bisnis Petikemas,Pemahaman tentang Master Plan,Operasional Dasar Kepelabuhanan'),
+(30, 711003229, 'DOTHY', 1, 'Staf', 'PT Terminal Teluk Lamong', 'Bisnis Pelayanan Kepelabuhanan dan Perkembangannya'),
+(31, 711003975, 'AKHMAD FAJAR', 6, 'Staf', 'Head Office', 'Self Assessment untuk Risiko,Manajemen Lingkungan,Sertifikasi Lead Auditor Kepelabuhanan'),
+(32, 720303777, 'HENDIEK EKO SETIANTORO', 2, 'Direktur Utama', 'PT. BJTI', 'Perencanaan Pemeliharaan Fasilitas Pelabuhan,Aplikasi Project Management,Teknologi Struktur Pelabuhan'),
+(33, 720703755, 'ADITYA RESPATI DJATINENDRA', 2, 'Direktur', 'PT Pelindo Daya Sejahtera', 'Manajemen dan Optimalisasi Aset,Ketentuan dan Perundangan terkait Kerjasama Bisnis,Kajian Kelayakan Usaha,Analisis Bisnis terkait Operasi Pelindo III'),
+(34, 720703763, 'AHMAD NIZAR', 5, 'Vice President Marketing Support', 'Head Office', 'English Fluency'),
+(35, 720803739, 'MOHAMAD SAIFUL ARIFIN', 5, 'Regional Manager of Engineering', 'Regional Kalimantan', 'Teknologi dan Manufaktur Peralatan Kepelabuhanan serta Perkembangannya'),
+(36, 730204064, 'ALI SODIKIN', 3, 'Direktur Utama', 'PT Pelindo Daya Sejahtera', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III'),
+(37, 730403669, 'HERIBERTUS HARYANCE PAEMBONAN', 4, 'Staf', 'Regional Kalimantan', 'Proses dan Penerapan Litigasi di Pelindo III'),
+(38, 730403776, 'JOKO NOERHUDHA', 1, 'Staf', 'Terminal Petikemas Surabaya', 'Penyusunan Renstra Pelindo III,Proses Bisnis Kepelabuhanan,Perencanaan Tata Ruang Pelabuhan,English Fluency'),
+(39, 730403822, 'SUGIONO', 3, 'Corporate Representative', 'Head Office', 'Strategi Pemasaran untuk Core & Non Core Business Pelindo III'),
+(40, 730703740, 'I WAYAN JULI ARTANA', 5, 'Vice President Vessel & Installation', 'Head Office', 'Proses Pengadaan Barang dan Jasa'),
+(41, 730803761, 'HOT RUDOLF MARIHOT', 1, 'Direktur Utama', 'PT. BJTI', 'Perhitungan Hedging (Lindung Nilai),Kajian Kelayakan Bisnis/Investasi,Proses Bisnis Anak Perusahaan,Analisis Bisnis terkait Operasi Pelindo III,Kinerja Pelindo III dari Aspek Operasi, Keuangan, dan Investasi,English Fluency'),
+(42, 731003782, 'AGUS HERMAWAN', 3, 'Senior VP Business Development', 'Head Office', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Proses dan Penerapan Litigasi di Pelindo III,Networking dengan Pelanggan dan Stakeholder Pelindo III'),
+(43, 731203814, 'BOY ROBYANTO', 2, 'Senior Vice President Port Facility', 'Head Office', 'Prinsip Penyusunan OE (Owner Estimate),Penyusunan Renstra Pelindo III'),
+(44, 731204265, 'MUHAMMAD SADAD SUKMONO', 5, 'Regional Manager of HC and GA', 'Regional Kalimantan', 'Penyusunan PerDir dan PP/PKB'),
+(45, 740103772, 'BUDI SATRIYO', 2, 'Senior VP Accounting & Budget', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan),Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP),Laporan Keuangan Konsolidasian,Sistem dan Administrasi Perkantoran (PBJ; Kearsipan; Keuangan; dan SDM)'),
+(46, 740104251, 'JOHANES WAHYU HERTANTO', 5, 'General Manager Jamrud', 'Regional Jawa Timur', 'Networking dengan Pelanggan dan Stakeholder Pelindo III'),
+(47, 740403738, 'WARSILAN', 2, 'Staf', 'PT. BJTI', 'Proses Pengadaan Barang dan Jasa,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa (PBJ) dan Kerjasama Usaha (KSMU),Pengoperasian dan Pengembangan e-procurement,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa,Kualifikasi dan Klasifikasi Vendor,Metode dan Sistem Pelelangan,Sistem dan Administrasi Perkantoran (PBJ; Kearsipan; Keuangan; dan SDM),Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa'),
+(48, 740403826, 'RUMAJI', 2, 'Staf', 'PT Terminal Teluk Lamong', 'Proses Bisnis dan Operasional Kepelabuhanan,Bisnis Pelayanan Kepelabuhanan dan Perkembangannya,Improving Port Performance I & II,Operasional Dasar Kepelabuhanan'),
+(49, 740503731, 'JUJU JUARSIH', 5, 'Manager', 'Dana Pensiun Pelindo Purnakary', 'Pengembangan Kompetensi Pegawai'),
+(50, 740503753, 'AGUNG PRASETYO GURITNO', 3, 'Direktur Keuangan, SDM & Hukum', 'PT Pelindo Properti Indonesia', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
+(51, 741003650, 'I WAYAN EKA SAPUTRA', 4, 'CEO Regional Bali Nusra', 'Regional Bali Nusra', 'Fraud Investigation'),
+(52, 741003764, 'WAHYU WIDODO', 2, 'Staf', 'PT Terminal Teluk Lamong', 'Marketing terhadap Asset yang Idle,Kajian Kebijakan Bisnis terkait Optimalisasi T&B'),
+(53, 750704048, 'DARU WICAKSONO JULIANTO', 3, 'Vice President Service Development', 'Head Office', 'Manajemen Tarif Kepelabuhanan'),
+(54, 750903773, 'GATOT IMAM PRASETYO', 3, 'Direktur', 'PT. Pelindo Husada Citra', 'Ketentuan dan Perundangan terkait Hubungan Kerja antara Induk dan Anak Perusahaan'),
+(55, 751104045, 'RALY EKO KURNIAWAN', 4, 'Direktur', 'PT. BJTI', 'Sertifikasi Auditor RBIA,Fraud Investigation'),
+(56, 760103818, 'HADI MOHAMMAD LUKMANTYO', 4, 'Direktur Utama', 'PT Terminal Petikemas Indonesi', 'IT Masterplan,IT Governance Framework'),
+(57, 760104256, 'RIO DWI SANTOSO', 6, 'General Manager Celukan Bawang', 'Regional Bali Nusra', 'Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa,Metode dan Sistem Pelelangan'),
+(58, 760403815, 'FARUQ HIDAYAT', 2, 'Corporate Secretary', 'Head Office', 'Prinsip Penyusunan OE (Owner Estimate),Perencanaan Pemeliharaan Fasilitas Pelabuhan,Perencanaan Pemeliharaan Fasilitas Pelabuhan,Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro,Hinterland,Penyusunan Renstra Pelindo III,Perencanaan Tata Ruang Pelabuhan,Kinerja Pelindo III dari Aspek Operasi, Keuangan, dan Investasi'),
+(59, 760503965, 'KOKOK SUSANTO', 3, 'Direktur Utama', 'PT Pelindo Properti Indonesia', 'Project Management,Perencanaan Tata Ruang Pelabuhan'),
+(60, 760804204, 'AGUS DHARMAWAN', 5, 'Senior VP Information & Comm Techn', 'Head Office', 'Sistem Informasi di Pelayanan Non-Petikemas,Sistem Informasi di Pelayanan petikemas,IT Masterplan,Enterprise IT Architech Framework'),
+(61, 761003803, 'EDI PRIYANTO', 2, 'Senior VP Human Capital Services & HSSE', 'Head Office', 'Ketentuan dan Perundangan terkait Bisnis Pelindo III,Sistem Manajemen K-3,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
+(62, 770403816, 'ANGGA PRADIPTYA', 2, 'Senior VP Port Engineering Supervision', 'Head Office', 'Proses Bisnis dan Operasional Pelindo III,Prinsip Penyusunan OE (Owner Estimate),Aplikasi Project Management'),
+(63, 770604190, 'YONI SETIAWAN', 2, 'Senior VP Corporate Finance & Treasury', 'Head Office', 'Ketentuan dan Perundangan terkait Perpajakan,Perencanaan Perpajakan'),
+(64, 790204201, 'I GUSTI PUTU ARYA BUDHI ASTAWA', 5, 'VP Tax', 'Head Office', 'Ketentuan dan Perundangan terkait Perpajakan,Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP),Pencatatan dan Pengendalian Aset,Perencanaan Perpajakan'),
+(65, 790504552, 'JAYA VIA DEWATA', 5, 'Vice President Port Engineering Planning', 'Head Office', 'Project Management,Studi Lingkungan,Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan,Aplikasi Project Management'),
+(66, 790605451, 'MOHAMAD ROFIUL IBAD', 13, 'Pelaksana ICT Solution and Dev. Back End', 'Head Office', 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa'),
+(67, 790704149, 'SARJONO', 3, 'Senior VP of Shared Service Center', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan),Laporan Keuangan Konsolidasian,Sistem dan Administrasi Perkantoran (PBJ; Kearsipan; Keuangan; dan SDM),Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)'),
+(68, 791004263, 'ANDRI KURNIAWAN', 7, 'Vice President System & Subsidiary', 'Head Office', 'Pengoperasian dan Pengembangan e-procurement,Ketentuan dan Perundangan terkait Pengadaan Barang dan Jasa'),
+(69, 791204408, 'ARI SETIAWAN', 12, 'Operator CC', 'Regional Jawa Tengah', 'Penanganan Keluhan Pelanggan Kepanduan'),
+(70, 810104169, 'UMI SYARIFAH AMBARWATI', 6, 'VP Legal Agreement', 'Head Office', 'Penyusunan PerDir dan PP/PKB,Ketentuan dan Perundangan terkait Ketenagakerjaan,Proses Litigasi terkait Kasus Ketenagakerjaan,Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)'),
+(71, 810604178, 'YONATHA SETIYOBUDI', 5, 'Regional Manager of Finance', 'Regional Jawa Timur', 'Penggunaan Aplikasi untuk Locking Piutang (INCO)'),
+(72, 810704196, 'PURWANTO WAHYU WIDODO', 7, 'VP Corporate Strategic Planning', 'Head Office', 'Studi Lingkungan,Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan,Manajemen Keamanan berbasis Standar Manajemen Keamanan'),
+(73, 810904519, 'OSCAR YOGI YUSTIANO', 8, 'VP Org. Dev & HC System', 'Head Office', 'Ketentuan dan Perundangan terkait Ketenagakerjaan'),
+(74, 811104550, 'MUCHAMMAD ALI AFANDI', 7, 'Regional Manager of Engineering', 'Regional Jawa Timur', 'Perencanaan dan Perhitungan Struktur'),
+(75, 820804150, 'LIA INDI AGUSTIANA', 5, 'VP Corporate Communication', 'Head Office', 'Evaluasi dan Analisis Pencapaian Korporat secara Mikro dan Makro'),
+(76, 821104152, 'RAHMI IKA NOVIANA', 7, 'VP Inform & Comm Tech Risk & Gov', 'Head Office', 'ICT-based Technology,Enterprise IT Architech Framework'),
+(77, 821204568, 'ANDI MAWARTA', 6, 'Vice President Procurement Region 2', 'Head Office', 'Pengoperasian dan Pengembangan e-procurement,Metode dan Sistem Pelelangan,Tata Cara Pelaksanaan Pengadaan Barang & Jasa'),
+(78, 830204188, 'FAHRUS SALAM', 2, 'Senior VP Subsidiary Management', 'Head Office', 'Dokumen-Dokumen Perizinan terkait Pengembangan Kepelabuhanan,Reward dan Sanksi  bagi Pegawai,Ketentuan dan Perundangan terkait Ketenagakerjaan'),
+(79, 830204612, 'YUDI PRASETYO', 9, 'Staf', 'Regional Bali Nusra', 'Perencanaan dan Perhitungan Struktur'),
+(80, 830504556, 'NANANG PRASETIYO', 7, 'VP Accounting and Asset Management', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan),Penggunaan Aplikasi Akuntansi dan Perpajakan (SAP),Laporan Keuangan Konsolidasian'),
+(81, 830904182, 'HENNY DWI ROHMATAA', 9, 'VP Head Office Finance', 'Head Office', 'Ketentuan dan Perundangan terkait Perpajakan,Perencanaan Perpajakan'),
+(82, 831204816, 'FADILAH BINAWATI', 10, 'Pelaksana Operation and Project Risk', 'Head Office', 'Perasuransian'),
+(83, 841205130, 'JUSAK HADI WINARTO', 12, 'Pelaksana Port Facility Supervision', 'Head Office', 'Perencanaan dan Perhitungan Struktur'),
+(84, 841205131, 'RAKHMAT AFFIANTO', 14, 'Pelaksana Tax', 'Head Office', 'Pencatatan dan Pengendalian Aset'),
+(85, 850204737, 'YOHANES DWI WAHYONO', 8, 'VP Treasury & Fund Management', 'Head Office', 'PSAK (Pernyataan Standar Akuntansi Keuangan)'),
+(86, 860504918, 'SURYA YUWARDANA', 10, 'Pelaksana Vessel and Installation', 'Head Office', 'Pemeliharaan dan Perbaikan Kapal (Class Matter)'),
+(87, 870504732, 'RAKA RAHARDIANTO', 10, 'Pelaksana ICT Solution and Dev Front End', 'Head Office', 'Sistem Informasi di Pelayanan petikemas'),
+(88, 870705164, 'NOVITHA YULIATI', 14, 'Ahli Procurement Region I', 'Head Office', 'Kualifikasi dan Klasifikasi Vendor'),
+(89, 871004703, 'RIZA OCTAVIANY', 11, 'Staf', 'Regional Bali Nusra', 'Studi Lingkungan'),
+(90, 871105174, 'RYANCHRISNA BUDI NUGRAHA', 12, 'Pelaksana Operation and Project Risk', 'Head Office', 'Self Assessment untuk Risiko,Manajemen Risiko'),
+(91, 880505415, 'HARDIAWAN WICAKSONO', 12, 'Pelaksana Port Maintenance and Survey', 'Head Office', 'Aplikasi Pembuatan Gambar Teknik 2D & 3D'),
+(92, 881105189, 'PRADIPTA PRATAMA', 12, 'Pelaksana Port Engineering Planning', 'Head Office', 'Aplikasi Pembuatan Gambar Teknik 2D & 3D'),
+(93, 890204838, 'SIGIT EDI PURNOMO', 10, 'Ahli ICT Operation and Services', 'Head Office', 'ICT-based Technology'),
+(94, 890304734, 'WIDHI TRI LEKSANA', 11, 'Staf Administration and General Services', 'Head Office', 'Standar ANRI'),
+(95, 900405106, 'RAHARDIAN ZEBEDIANTO', 11, 'Deputy Manager of Customer Services', 'Regional Bali Nusra', 'Kajian Kelayakan Bisnis/Investasi'),
+(96, 900405238, 'AKBAR RAMADHAN', 14, 'Staf Administration and General Services', 'Head Office', 'Standar ANRI'),
+(97, 901105105, 'KARLINDA SARI', 11, 'Deputy Mgr.  Property and Other Business', 'Regional Jawa Tengah', 'Teknik Negosiasi'),
+(98, 910405264, 'PRATIWI WULANDARI', 12, 'Pelaksana Legal Agreement', 'Head Office', 'Proses Litigasi terkait Kasus Ketenagakerjaan');
 
 -- --------------------------------------------------------
 
@@ -2634,7 +2634,6 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 (790704149, 1),
 (790704149, 7),
 (790704149, 62),
-(790704149, 91),
 (890204838, 86),
 (730403822, 39),
 (860504918, 52),
@@ -2647,7 +2646,6 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 (810104169, 67),
 (810104169, 69),
 (810104169, 70),
-(810104169, 91),
 (741003764, 25),
 (741003764, 26),
 (740403738, 10),
@@ -3120,11 +3118,7 @@ INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 (433, 'Pengelolaan arsip aktif', 90),
 (434, 'Pengelolaan arsip inaktif', 90),
 (435, 'Penyusunan arsip', 90),
-(436, 'Pengelolaan arsip vital', 90),
-(437, 'Aset', 91),
-(438, 'Kas dan Likuiditas', 91),
-(439, 'Verifikasi dokumen transaksi', 91),
-(440, 'Piutang', 91);
+(436, 'Pengelolaan arsip vital', 90);
 
 -- --------------------------------------------------------
 
@@ -3170,6 +3164,7 @@ ALTER TABLE `sdm`
 -- Indexes for table `sme_list`
 --
 ALTER TABLE `sme_list`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `NIPP` (`nipp`);
 
 --
@@ -3177,14 +3172,14 @@ ALTER TABLE `sme_list`
 --
 ALTER TABLE `sme_pengetahuan`
   ADD KEY `nipp_sme` (`nipp_sme`),
-  ADD KEY `id_pengetahuan` (`id_pengetahuan`);
+  ADD KEY `sme_pengetahuan_ibfk_2` (`id_pengetahuan`);
 
 --
 -- Indexes for table `topik`
 --
 ALTER TABLE `topik`
   ADD PRIMARY KEY (`id_topik`),
-  ADD KEY `id_pengetahuan` (`id_pengetahuan`);
+  ADD KEY `topik_ibfk_1` (`id_pengetahuan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -3201,6 +3196,11 @@ ALTER TABLE `pengetahuan`
 ALTER TABLE `pesan`
   MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
+-- AUTO_INCREMENT for table `sme_list`
+--
+ALTER TABLE `sme_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+--
 -- Constraints for dumped tables
 --
 
@@ -3215,13 +3215,13 @@ ALTER TABLE `sme_list`
 --
 ALTER TABLE `sme_pengetahuan`
   ADD CONSTRAINT `sme_pengetahuan_ibfk_1` FOREIGN KEY (`nipp_sme`) REFERENCES `sme_list` (`NIPP`),
-  ADD CONSTRAINT `sme_pengetahuan_ibfk_2` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`);
+  ADD CONSTRAINT `sme_pengetahuan_ibfk_2` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `topik`
 --
 ALTER TABLE `topik`
-  ADD CONSTRAINT `topik_ibfk_1` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`);
+  ADD CONSTRAINT `topik_ibfk_1` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
