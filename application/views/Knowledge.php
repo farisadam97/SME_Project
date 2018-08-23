@@ -171,7 +171,7 @@
 													                                    </td>
 
 													                                    <td>
-													                                    <?php $experts = explode(";", $data7[$i]['expert']);
+													                                    <?php $experts = explode(";", $data7[$i-1]['expert']);
 													                                    foreach ($experts as $expert)
 													                                    {
 													                                    	echo '&bull;'. $expert. '<br>';

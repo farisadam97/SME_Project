@@ -475,9 +475,11 @@
 																<div class="col-xl-3">
 																</div>
 																<div class="col-xl-3" style="text-align:right;">
-																<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																		Show More..
-																	</button>
+																	<a href="<?php echo base_url()."index.php/Knowledge" ?>">
+																		<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																			Show More..
+																		</button>
+																	</a>
 																</div>
 															</div>
 															</div>
