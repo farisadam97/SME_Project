@@ -95,14 +95,11 @@
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
-																				<h2>
-																					Deskripsi
-																				</h2>
-																				<h2 class="m-portlet__head-label m-portlet__head-label--danger" width="200%">
-																					<span>
+																				<h1>
+																				<span>
 																						<?php echo $data8[0]['nama_pengetahuan']; ?>
-																					</span>
-																				</h2>
+																				</span>
+																				</h1>
 																			</div>
 																		</div>
 																	</div>

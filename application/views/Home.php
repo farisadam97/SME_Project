@@ -231,7 +231,7 @@
 																	</div>
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
-																			<div class="col-xl-3" >
+																			<div class="col-xl-12" >
 																				<!--begin:: Widgets/Blog-->
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
@@ -257,32 +257,7 @@
 																				</div>
 																				<!--end:: Widgets/Blog-->
 																			</div>
-																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
-																						</div>
-																					</div>
-																				</div>
-																				<!--end:: Widgets/Blog-->
-																			</div>
+																			
 																			
 																		</div>
 																	</div>
@@ -438,29 +413,28 @@
 																	<div class="row">
 																		<table class="table table-striped- table-bordered table-hover" >
 																			<thead>
-																			<thead>
-													                                <tr>
-																					<th>
-																						No
-																					</th>
-																					<th>
-																						Ilmu
-																					</th>
-																					<th>
-																						Sub Ilmu
-																					</th>
-																					<th>
-																						Experts
-																					</th>
-																					<th>
-																						Action
-																					</th>
+																				<tr>
+																				<th>
+																					No
+																				</th>
+																				<th>
+																					Ilmu
+																				</th>
+																				<th>
+																					Sub Ilmu
+																				</th>
+																				<th>
+																					Experts
+																				</th>
+																				<th>
+																					Action
+																				</th>
 																				</tr>
 													                            </thead>
 													                            <tbody>
 													                            <?php $i=0; foreach ($data2 as $b) { $i++ ?>
 													                                <tr>
-													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
+													                                    <td width="content"><?php echo $b['id_pengetahuan']; ?></td>
 													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
 													                                    <td><?php $topik = explode(";", $b['topik']);
 													                                    foreach ($topik as $topikk)
@@ -479,33 +453,30 @@
 													                                    ?>
 													                                    </td>
 													                                    
-													                                    <td>
-													                                    	<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+													                                    <td><button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
 																							Info
-																							</button>
-																						</td>
-
-													                            <?php } ?>
-															                        
-															                        </tr>
-
-													                            </tbody>	
+																						</button>
+																					</td>
+																				</tr>									
+																			<?php } ?>															                        
+																			</tbody>
+																		</table>	
 																	</div>
 																</div>
 															</div>
-																<div class="row" style="ma">
-		  															<div class="col-xl-3">
-																	</div>
-																	<div class="col-xl-3">
-																	</div>
-																	<div class="col-xl-3">
-																	</div>
-																	<div class="col-xl-3" style="text-align:right;">
-																	<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																			Show More..
-																		</button>
-																	</div>
+															<div class="row" style="ma">
+																<div class="col-xl-3">
 																</div>
+																<div class="col-xl-3">
+																</div>
+																<div class="col-xl-3">
+																</div>
+																<div class="col-xl-3" style="text-align:right;">
+																<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																		Show More..
+																	</button>
+																</div>
+															</div>
 															</div>
 														</div>
 														<!--End::Section-->

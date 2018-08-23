@@ -29,6 +29,7 @@
 																				</label>
 																				<textarea class="form-control" id="message-text"></textarea>
 																			</div>
+																			<input type="file" name="pic" accept="image/*">
 																		</form>
 																	</div>
 																	<div class="modal-footer">
