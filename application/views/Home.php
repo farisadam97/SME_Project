@@ -453,9 +453,12 @@
 													                                    ?>
 													                                    </td>
 													                                    
-													                                    <td><button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
-																							Info
-																						</button>
+													                                    <td>
+													                                    	<a href="<?php echo base_url()."index.php/Knowledge/item/". $b['id_pengetahuan']?>">
+													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
+																									View
+																								</button>
+																							</a>
 																					</td>
 																				</tr>									
 																			<?php } ?>															                        

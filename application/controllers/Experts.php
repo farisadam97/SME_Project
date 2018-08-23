@@ -22,6 +22,7 @@ class Experts extends CI_Controller {
 			$this->load->view('Experts', $data);
 		}
 	}
+	
 	public function item($nipp)
 	{
 		if($this->session->userdata('status') != "login"){

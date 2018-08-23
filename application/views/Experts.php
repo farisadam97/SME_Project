@@ -142,7 +142,7 @@
 																						<td width="30%">
 																							<div class="m-list-search">
 																								<div class="m-list-search__results">
-																									<a href="#" class="m-list-search__result-item">
+																									<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>" class="m-list-search__result-item">
 																										<span class="m-list-search__result-item-pic">
 																											<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
 																										</span>

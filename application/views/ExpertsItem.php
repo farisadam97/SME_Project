@@ -153,12 +153,22 @@
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
 																						<h2 >
-																							
+																							Bidang Keahlian
 																						</h2>
 																					</div>
 																				</div>
 																				<div class="m-portlet__body">
-																					<h5> </h5>
+																					<?php foreach ($data as $ilmu) { ?>
+																					<h5>
+																						
+																						<?php $bidang = explode(",", $ilmu['ahli']);
+													                                    foreach ($bidang as $bidangg)
+													                                    {
+													                                    	echo '&bull;'. $bidangg. '<br><br>';
+													                                    }
+													                                    ?>
+													                                </h5>
+													                                <?php } ?> 	
 																				</div>
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">
