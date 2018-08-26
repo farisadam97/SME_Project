@@ -5,7 +5,8 @@ class Inbox extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('m_inbox'); 
+		$this->load->model('m_inbox');
+		$this->load->model('m_leftMenu');
 		$this->load->library('session');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login")); }       
@@ -18,6 +19,7 @@ class Inbox extends CI_Controller {
 		}else{
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
+			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('Inbox', $data);
 		}
 	}
@@ -39,8 +41,9 @@ class Inbox extends CI_Controller {
 			redirect(base_url("Login"));
 		}else{
 			$data['err_message'] = "";
-			$data = $this->m_inbox->getDataInboxItem($id_pesan);
-			$this->load->view('InboxItem', array('data'=>$data));
+			$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
+			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+			$this->load->view('InboxItem', $data);
 
 		}
 	}

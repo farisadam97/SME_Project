@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('m_home');
+		$this->load->model('m_leftMenu');
 		$this->load->library('session');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login")); }       
@@ -17,8 +18,6 @@ class Home extends CI_Controller {
 	  	if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{ 
-			$this->load->model('m_home');
-			$this->load->model('m_leftMenu');
 			$data['err_message'] = "";
 			$data['data1'] = $this->m_home->getDataExpert();
 			$data['data2'] = $this->m_home->getDataPengetahuanTopik();
