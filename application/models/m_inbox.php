@@ -17,6 +17,11 @@ class m_inbox extends CI_Model
     return $data->result_array();
   }
 
+  public function deleteDataInboxItem($id_pesan2){
+    $this->db->where_in('id_pesan', $id_pesan2);
+    $this->db->delete('pesan');
+  }
+
 }
 
 ?>

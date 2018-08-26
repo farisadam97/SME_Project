@@ -136,49 +136,61 @@
 																		</div>
 																	</div>
 																</div>
+																<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" id="success1" style="display: none;">
+																	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+																		<strong>
+																			Warning!
+																		</strong>
+																			Better check yourself, you're not looking too good.
+																</div> -->
 																<!-- End Search Form -->
 																<table class="m-datatable" id="html_table">
 																	<thead>
 																		<tr> 
-																			<th title="Field #1" width="35%">
+																			<th title="Field #1" style="text-align: center;">
 																				Pengirim
 																			</th>
-																			<th title="Field #2" width="15%">
+																			<th title="Field #2" style="text-align: center;">
 																				Subjek
 																			</th>
-																			<th title="Field #3" width="20%">
+																			<th title="Field #3" style="text-align: center;">
 																				Mbo
 																			</th>
-																			<th title="Field #4" width="10%">
+																			<th title="Field #4" style="text-align: center;">
 																				Waktu 
 																			</th>
-																			<th title="Field #4" width="10%">
+																			<th title="Field #4" style="text-align: center;">
 																				Action 
 																			</th>
 																		</tr>
 																	</thead>
 																	<tbody>
 																		<?php foreach ($data4 as $d) { ?>
-													                                <tr>
+													                                <tr style="text-align: center; vertical-align: middle;">
 													                                    <td><?php echo $d['nama_pengirim']; ?></td>
 													                                    <td><?php echo $d['subjek']; ?></td>
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
-													                                    	<span>
-													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
-													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
-																								View
-																								</button>
-																							</a>
-																							</span>
-																							<span>
-													                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
-													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
-																								View
-																								</button>
-																							</a>
-																							</span>
+													                                    	<div style="text-align: center;">
+														                                    	<span>
+															                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
+															                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="width: 55%; height: 55%">
+																										View
+																										</button>
+																									</a>
+																								</span>
+																							</div>
+																							
+																							<div style="text-align: center;">
+																								<span>
+															                                    	<a href="<?php echo base_url()."index.php/Inbox/deletePesan/".$d['id_pesan'];?>	">
+															                                    		<button type="button" class="btn btn-danger m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="margin-top: 5px;" onclick="alertSuccess()">
+																										Delete
+																										</button>
+																									</a>
+																								</span>
+																							</div>
 																						</td>
 													                                </tr>
 													                    <?php } ?>
@@ -210,6 +222,12 @@
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
+										<script>
+											function alertSuccess() {
+											    var x = document.getElementById("success1");
+											        x.style.display = "block";
+											}
+										</script>
 
 									</body>
 									<!-- end::Body -->

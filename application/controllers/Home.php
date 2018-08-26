@@ -18,10 +18,12 @@ class Home extends CI_Controller {
 			redirect(base_url("Login"));
 		}else{ 
 			$this->load->model('m_home');
+			$this->load->model('m_leftMenu');
 			$data['err_message'] = "";
 			$data['data1'] = $this->m_home->getDataExpert();
 			$data['data2'] = $this->m_home->getDataPengetahuanTopik();
 			$data['data3'] = $this->m_home->getDataPengetahuanExpert();
+			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('Home', $data);
 		}
         //IKI HOME!!!

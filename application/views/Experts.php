@@ -120,17 +120,17 @@
 																	</div>
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
-																			<table class="m-datatable table table-bordered" id="html_table" style="width: 100%">
+																			<table class="m-datatable table table-bordered" id="html_table">
 																				
 																				<thead>
 																					<tr>
-																						<th title="Nama Expert" style="width: 50%;" >
+																						<th title="Nama Expert" style="text-align: center;">
 																							Nama
 																						</th>
-																						<th title="Bidang Keahlian" style="width: 30%;">
+																						<th title="Bidang Keahlian" style="text-align: center;">
 																							Bidang Keahlian
 																						</th>
-																						<th title="Tombol Aksi" style="width: 20%;">
+																						<th title="Tombol Aksi" style="text-align: center;">
 																							Action
 																						</th>
 																					</tr>
@@ -139,7 +139,7 @@
 
 																					<?php foreach ($data5 as $e) { ?>
 																					<tr>
-																						<td width="30%">
+																						<td>
 																							<div class="m-list-search">
 																								<div class="m-list-search__results">
 																									<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>" class="m-list-search__result-item">
@@ -153,7 +153,7 @@
 																								</div>
 																							</div>
 																						</td>
-																						<td width="60%">
+																						<td>
 																							<?php $bidang = explode(",", $e['bidang_keahlian_sme']);
 													                                    foreach ($bidang as $bidangg)
 													                                    {
@@ -161,12 +161,16 @@
 													                                    }
 													                                    ?>
 																						</td>
-																						<td width="20%">
-																							<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>">
-																								<button type="button" class="btn btn-info m-btn--wide">
-																									View
-																								</button>
-																							</a>
+																						<td>
+																							<div style="text-align: center;">
+														                                    	<span>
+																									<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>">
+																										<button type="button" class="btn btn-info m-btn--wide">
+																											View
+																										</button>
+																									</a>
+																								</span>
+																							</div>
 																						</td>
 																					</tr>
 																					<?php } ?>

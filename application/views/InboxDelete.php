@@ -53,7 +53,8 @@
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
 									<!-- BEGIN: Left Aside Minimize Toggle -->
-									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
+					 ">
 										<span></span>
 									</a>
 									<!-- END -->
@@ -98,7 +99,7 @@
 														<div class="d-flex align-items-center">
 															<div class="mr-auto">
 																<h2 class="m-subheader__title ">
-																	Knowledges 
+																	Inbox 
 																</h2>
 															</div>
 														</div>
@@ -110,13 +111,13 @@
 																<div class="m-portlet__head-caption">
 																	<div class="m-portlet__head-title">
 																		<h3 class="m-portlet__head-text">
-																			Knowledges List
+																			Inbox List
 																		</h3>
 																	</div>
 																</div>
 															</div>
 															<div class="m-portlet__body">
-																<!--begin: Search Form -->
+																<!-- Search Form -->
 																<div class="m-form m-form--label-align-right m--margin-bottom-30">
 																	<div class="row align-items-center">
 																		<div class="col-xl-8 order-2 order-xl-1">
@@ -135,61 +136,66 @@
 																		</div>
 																	</div>
 																</div>
-																<!--end: Search Form -->
-		
-																<table class="m-datatable table table-bordered" id="html_table">
+																<div class="alert alert-warning alert-dismissible fade show" role="alert">
+																	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+																		<strong>
+																			Success!
+																		</strong>
+																			Message has been successfully deleted.
+																</div>
+																<!-- End Search Form -->
+																<table class="m-datatable" id="html_table">
 																	<thead>
-																		<tr>
-																			<th style="text-align: center;">
-																				Ilmu
+																		<tr> 
+																			<th title="Field #1" style="text-align: center;">
+																				Pengirim
 																			</th>
-																			<th style="text-align: center;">
-																				Sub ilmu
+																			<th title="Field #2" style="text-align: center;">
+																				Subjek
 																			</th>
-																			<th style="text-align: center;">
-																				Experts
+																			<th title="Field #3" style="text-align: center;">
+																				Mbo
 																			</th>
-																			<th style="text-align: center;">
-																				Action
+																			<th title="Field #4" style="text-align: center;">
+																				Waktu 
+																			</th>
+																			<th title="Field #4" style="text-align: center;">
+																				Action 
 																			</th>
 																		</tr>
 																	</thead>
 																	<tbody>
-																		<?php $i=0; foreach ($data6 as $f) { $i++ ?>
-													                                <tr>
-													                                    <td><?php echo $f['nama_pengetahuan']; ?></td>
-													                                    <td><?php $topik = explode(";", $f['topik']);
-													                                    foreach ($topik as $topikk)
-													                                    {
-													                                    	echo '&bull;'. $topikk. '<br>';
-													                                    }
-													                                    ?>
-													                                    </td>
-
-													                                    <td>
-													                                    <?php $experts = explode(";", $data7[$i-1]['expert']);
-													                                    foreach ($experts as $expert)
-													                                    {
-													                                    	echo '&bull;'. $expert. '<br>';
-													                                    }
-													                                    ?>
-													                                    </td>
-													                                    
+																		<?php foreach ($data4 as $d) { ?>
+													                                <tr style="text-align: center; vertical-align: middle;">
+													                                    <td><?php echo $d['nama_pengirim']; ?></td>
+													                                    <td><?php echo $d['subjek']; ?></td>
+													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
+													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
 													                                    	<div style="text-align: center;">
 														                                    	<span>
-															                                    	<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>">
-															                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="width: 43%;">
+															                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
+															                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="width: 55%; height: 55%">
 																										View
 																										</button>
 																									</a>
 																								</span>
 																							</div>
+																							
+																							<div style="text-align: center;">
+																								<span>
+															                                    	<a href="<?php echo base_url()."index.php/Inbox/deletePesan/".$d['id_pesan'];?>	">
+															                                    		<button type="button" class="btn btn-danger m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="margin-top: 5px;" onclick="alertSuccess()">
+																										Delete
+																										</button>
+																									</a>
+																								</span>
+																							</div>
 																						</td>
-													                            <?php } ?>
+													                                </tr>
+													                    <?php } ?>
 																	</tbody>
 																</table>
-																<!--end: Datatable -->
 															</div>
 														</div>
 													</div>
@@ -216,6 +222,7 @@
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
+
 									</body>
 									<!-- end::Body -->
 								</html>

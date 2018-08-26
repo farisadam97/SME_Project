@@ -21,6 +21,17 @@ class Inbox extends CI_Controller {
 			$this->load->view('Inbox', $data);
 		}
 	}
+
+	public function InboxDeleteSuccess()
+	{
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("Login"));
+		}else{
+			$data['err_message'] = "";
+			$data['data4'] = $this->m_inbox->getDataInbox();
+			$this->load->view('InboxDelete', $data);
+		}
+	}
 	
 	public function item($id_pesan)
 	{
@@ -31,6 +42,15 @@ class Inbox extends CI_Controller {
 			$data = $this->m_inbox->getDataInboxItem($id_pesan);
 			$this->load->view('InboxItem', array('data'=>$data));
 
+		}
+	}
+
+	public function deletePesan($id_pesan2){
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("Login"));
+		}else{
+		    $this->m_inbox->deleteDataInboxItem($id_pesan2);
+		    redirect("Inbox/InboxDeleteSuccess");
 		}
 	}
 

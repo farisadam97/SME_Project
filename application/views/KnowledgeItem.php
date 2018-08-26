@@ -97,7 +97,7 @@
 																			<div class="m-portlet__head-title">
 																				<h1>
 																				<span>
-																						<?php echo $data8[0]['nama_pengetahuan']; ?>
+																						<b><?php echo $data8[0]['nama_pengetahuan']; ?></b>
 																				</span>
 																				</h1>
 																			</div>

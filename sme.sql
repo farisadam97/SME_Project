@@ -126,6 +126,7 @@ INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_penge
 (87, 'Change Management', 'Perencanaan implementasi dari perbaikan atau inisiatif baru yang meliputi tahapan perencanaan implementasi, sumber daya manusia, pelaksanaan sosialisasi, pembekalan kompetensi, dan pendampingan pasca implementasi.'),
 (88, 'Enterprise IT Architech Framework', 'Pengelolaan arsitektur TIK agar mendukung arsitektur bisnis Pelindo III.'),
 (89, 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa', 'Pemahaman terhadap:\n- Aplikasi SAP khususnya mengenai absensi, cuti, disiplin dan pemutahiran data pegawai (SDM)\n- Aplikasi SAP khususnya pembuatan PR, GR barang/jasa, dan invocing (PBJ).'),
+(90, 'Standar ANRI', 'Metode kearsipan yang mengacu pada standar dari Lembaga Pembina Kearsipan Nasional');
 (91, 'Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)', 'Standar penyusunan laporan keuangan beserta aturan-aturan yang harus dipenuhi dalam penyajian laporan keuangan.');
 
 -- --------------------------------------------------------

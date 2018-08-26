@@ -434,7 +434,7 @@
 													                            <tbody>
 													                            <?php $i=0; foreach ($data2 as $b) { $i++ ?>
 													                                <tr>
-													                                    <td width="content"><?php echo $b['id_pengetahuan']; ?></td>
+													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
 													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
 													                                    <td><?php $topik = explode(";", $b['topik']);
 													                                    foreach ($topik as $topikk)

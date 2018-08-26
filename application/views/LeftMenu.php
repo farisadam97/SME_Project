@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
 <div 
 	id="m_ver_menu" 
 	class="m-aside-menu  m-aside-menu--skin-light m-aside-menu--submenu-skin-light " 
@@ -11,7 +18,7 @@
 				<span class="m-menu__link-title">
 					<span class="m-menu__link-wrap">
 						<span class="m-menu__link-text">
-							Home
+							Home 
 						</span>
 					</span>
 				</span>
@@ -25,9 +32,10 @@
 						<span class="m-menu__link-text">
 							Inbox
 						</span>
+						
 						<span class="m-menu__link-badge">
 							<span class="m-badge m-badge--danger">
-								2
+								<?php echo $countPesan ?>
 							</span>
 						</span>
 					</span>
@@ -60,3 +68,6 @@
 		</li>
 	</ul>
 </div>
+
+</body>
+</html>
