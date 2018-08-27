@@ -27,6 +27,17 @@ class Knowledge extends CI_Controller {
 		}
 	}
 
+	public function indexExpert($id_knowledge)
+	{
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("Login"));
+		}else{
+			$data['err_message'] = "";
+			$data['id_knowledge'] = $this->m_knowledge->getDataKnowledgeParameter($id_knowledge);
+			$this->load->view('Knowledge', $data);
+		}
+	}
+
 	// public function indexExpert($id_knowledge)
 	// {
 	// 	if($this->session->userdata('status') != "login"){

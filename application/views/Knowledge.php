@@ -167,16 +167,16 @@
 													                                    </td>
 
 													                                    <td>
-													                                    <?php $experts = explode(";", $data7[$i-1]['expert']);
+													                                    <!-- <?php $experts = explode(";", $data7[$i-1]['expert']);
 													                                    foreach ($experts as $expert)
 													                                    {
 													                                    	echo '&bull;'. $expert. '<br>';
 													                                    }
-													                                    ?>
+													                                    ?> -->
 
 
 
-													                                   <!--  <?php foreach ($expert as $j) { ?>
+													                                   <?php foreach ($data9 as $j) { ?>
 																							<?php $experts1 = explode(";", $j['expert']); ?>
 																							<?php $experts2 = explode(";", $j['nippsme']); ?>
 																								<?php foreach ($experts1 as $expertt) { ?>
@@ -192,7 +192,7 @@
 																							</span>
 																								<?php } ?>
 																						<?php } ?>
-																						</a> -->
+																						</a>
 
 
 

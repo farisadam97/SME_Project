@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2018 at 05:16 AM
+-- Generation Time: Aug 27, 2018 at 11:53 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -127,7 +127,6 @@ INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_penge
 (88, 'Enterprise IT Architech Framework', 'Pengelolaan arsitektur TIK agar mendukung arsitektur bisnis Pelindo III.'),
 (89, 'Aplikasi SAP untuk SDM dan Pengadaan Barang & Jasa', 'Pemahaman terhadap:\n- Aplikasi SAP khususnya mengenai absensi, cuti, disiplin dan pemutahiran data pegawai (SDM)\n- Aplikasi SAP khususnya pembuatan PR, GR barang/jasa, dan invocing (PBJ).'),
 (90, 'Standar ANRI', 'Metode kearsipan yang mengacu pada standar dari Lembaga Pembina Kearsipan Nasional');
-(91, 'Akuntansi Keuangan berbasis PSAK (Pernyataan Standar Akuntansi Keuangan)', 'Standar penyusunan laporan keuangan beserta aturan-aturan yang harus dipenuhi dalam penyajian laporan keuangan.');
 
 -- --------------------------------------------------------
 
@@ -142,25 +141,18 @@ CREATE TABLE `pesan` (
   `subjek` varchar(1000) NOT NULL,
   `nama_pengirim` varchar(100) NOT NULL,
   `rating` int(11) NOT NULL,
-  `file` varchar(1000) NOT NULL
+  `file` varchar(1000) NOT NULL,
+  `read_pesan` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_pesan`, `timestamp`, `isi_pesan`, `subjek`, `nama_pengirim`, `rating`, `file`) VALUES
-(1, '2018-08-21 12:01:57', 'tesssssssssss', 'subjek ni', 'aq', 0, '-'),
-(2, '2018-08-21 12:21:09', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(3, '2018-08-21 12:21:26', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(4, '2018-08-21 12:21:26', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(5, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(6, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(7, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(8, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(9, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(10, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a'),
-(11, '2018-08-21 12:21:27', 'asdasd', 'asdasda', 'asdasdasdas', 0, 'a');
+INSERT INTO `pesan` (`id_pesan`, `timestamp`, `isi_pesan`, `subjek`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
+(15, '2018-08-27 08:20:59', 'dsa', 'sadad', 'sdasd', 1, 'asdadsa', 0),
+(17, '2018-08-27 04:23:58', 'dsadsa', 'sadsadsa', 'dsadsads', 1, 'asda', 1),
+(18, '2018-08-27 06:11:59', 'adsad', 'asdas', 'asda', 1, '2', 0);
 
 -- --------------------------------------------------------
 
@@ -3128,7 +3120,7 @@ INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 --
 
 CREATE TABLE `user` (
-  `email` varchar(100) NOT NULL,
+  `nipp` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -3136,7 +3128,7 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`email`, `password`) VALUES
+INSERT INTO `user` (`nipp`, `password`) VALUES
 ('admin', 'admin');
 
 --
@@ -3195,7 +3187,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --

@@ -32,6 +32,7 @@ class Inbox extends CI_Controller {
 		}else{
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
+			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('InboxDelete', $data);
 		}
 	}
