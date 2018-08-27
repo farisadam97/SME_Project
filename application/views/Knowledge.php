@@ -173,17 +173,36 @@
 													                                    	echo '&bull;'. $expert. '<br>';
 													                                    }
 													                                    ?>
+
+
+
+													                                   <!--  <?php foreach ($expert as $j) { ?>
+																							<?php $experts1 = explode(";", $j['expert']); ?>
+																							<?php $experts2 = explode(";", $j['nippsme']); ?>
+																								<?php foreach ($experts1 as $expertt) { ?>
+																						<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+
+																							<span class="m-list-search__result-item-pic">
+																								<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
+																							</span>
+																							<span class="m-list-search__result-item-text">
+																	                            <?php
+																	                               	echo $expertt. '<br>';
+															                                 	?>
+																							</span>
+																								<?php } ?>
+																						<?php } ?>
+																						</a> -->
+
+
+
 													                                    </td>
 													                                    
 													                                    <td>
 													                                    	<div style="text-align: center;">
-														                                    	<span>
-															                                    	<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>">
-															                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="width: 43%;">
-																										View
-																										</button>
-																									</a>
-																								</span>
+																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon m-btn--icon-only m-btn--pill">
+																									<i class="fa flaticon-eye"></i>
+																								</a>
 																							</div>
 																						</td>
 													                            <?php } ?>

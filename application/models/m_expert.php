@@ -6,6 +6,7 @@ class m_expert extends CI_Model
   {
     $this->db->select('*');
     $this->db->from('sme_list');
+    $this->db->order_by("nama_sme", "asc");
   	$data5 = $this->db->get();
   	return $data5->result_array();
   }
@@ -18,6 +19,7 @@ class m_expert extends CI_Model
     $data = $this->db->get();
     return $data->result_array();
   }
+
 } 
 
 ?>

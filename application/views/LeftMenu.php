@@ -32,12 +32,14 @@
 						<span class="m-menu__link-text">
 							Inbox
 						</span>
-						
+								<?php if ($countPesan > 0) { ?>
 						<span class="m-menu__link-badge">
 							<span class="m-badge m-badge--danger">
-								<?php echo $countPesan ?>
+
+	                            <?php echo $countPesan; ?> 
 							</span>
 						</span>
+								<?php } ?>
 					</span>
 				</span>
 			</a>

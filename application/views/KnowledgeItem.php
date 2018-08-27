@@ -142,7 +142,7 @@
 																	<div class="m-portlet__body">
 																		<div class="m-list-search">
 																			<div class="m-list-search__results">
-																				<?php $i=0; foreach ($data9 as $j) { $i++ ?>
+																				<?php foreach ($data9 as $j) { ?>
 																					<?php $experts = explode(";", $j['expert']); ?>
 																					<?php $experts2 = explode(";", $j['nippsme']); ?>
 																						<?php foreach ($experts as $expert) { ?>

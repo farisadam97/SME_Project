@@ -119,6 +119,26 @@
 																		</div>
 																	</div>
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
+
+																		<div class="m-form m-form--label-align-right m--margin-bottom-30">
+																			<div class="row align-items-center">
+																				<div class="col-xl-8 order-2 order-xl-1">
+																					<div class="form-group m-form__group row align-items-center">
+																						<div class="col-md-4">
+																							<div class="m-input-icon m-input-icon--left">
+																								<input type="text" class="form-control m-input" placeholder="Search..." id="generalSearch">
+																								<span class="m-input-icon__icon m-input-icon__icon--left">
+																									<span>
+																										<i class="la la-search"></i>
+																									</span>
+																								</span>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+
 																		<div class="row">
 																			<table class="m-datatable table table-bordered" id="html_table">
 																				
@@ -163,13 +183,9 @@
 																						</td>
 																						<td>
 																							<div style="text-align: center;">
-														                                    	<span>
-																									<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>">
-																										<button type="button" class="btn btn-info m-btn--wide">
-																											View
-																										</button>
-																									</a>
-																								</span>
+																								<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>" class="btn btn-info m-btn m-btn--icon m-btn--icon-only m-btn--pill">
+																									<i class="fa flaticon-eye"></i>
+																								</a>
 																							</div>
 																						</td>
 																					</tr>

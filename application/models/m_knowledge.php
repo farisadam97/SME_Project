@@ -36,7 +36,7 @@ class m_knowledge extends CI_Model
 
   public function getDataKnowledgeExpertItem($id_knowledge) 
   {
-    $this->db->select('GROUP_CONCAT(sme_list.id SEPARATOR ";") as idsme, GROUP_CONCAT(sme_list.nipp SEPARATOR ";") as nippsme, GROUP_CONCAT(sme_list.nama_sme SEPARATOR ";") as expert');
+    $this->db->select('pengetahuan.id_pengetahuan, GROUP_CONCAT(sme_list.id SEPARATOR ";") as idsme, GROUP_CONCAT(sme_list.nipp SEPARATOR ";") as nippsme, GROUP_CONCAT(sme_list.nama_sme SEPARATOR ";") as expert');
     $this->db->from('pengetahuan');
     $this->db->join('sme_pengetahuan', 'pengetahuan.id_pengetahuan = sme_pengetahuan.id_pengetahuan', 'left');
     $this->db->join('sme_list', 'sme_pengetahuan.nipp_sme = sme_list.nipp', 'left');
@@ -45,6 +45,27 @@ class m_knowledge extends CI_Model
     $data9 = $this->db->get();
     return $data9->result_array();
   }
+
+  // public function getDataKnowledgeParameter($expert) 
+  // {
+  //   $this->db->select('pengetahuan.id_pengetahuan, GROUP_CONCAT(sme_list.id SEPARATOR ";") as idsme, GROUP_CONCAT(sme_list.nipp SEPARATOR ";") as nippsme, GROUP_CONCAT(sme_list.nama_sme SEPARATOR ";") as expert');
+  //   $this->db->from('pengetahuan');
+  //   $this->db->join('sme_pengetahuan', 'pengetahuan.id_pengetahuan = sme_pengetahuan.id_pengetahuan', 'left');
+  //   $this->db->join('sme_list', 'sme_pengetahuan.nipp_sme = sme_list.nipp', 'left');
+  //   $this->db->where('pengetahuan.id_pengetahuan', $expert);
+  //   $this->db->group_by('pengetahuan.id_pengetahuan');
+  //   $data9 = $this->db->get();
+  //   return $data9->result_array();
+  // }
+
+
+  // public function getDataIdPengetahuan()
+  // {
+  //   $this->db->select('*');
+  //   $this->db->from('pengetahuan');
+  //   $expert = $this->db->get();
+  //   return $expert->result_array();
+  // }
 
 } 
 

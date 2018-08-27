@@ -19,6 +19,7 @@ class Inbox extends CI_Controller {
 		}else{
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
+			$data['unread'] = $this->m_inbox->getDataInboxUnread();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('Inbox', $data);
 		}
@@ -48,7 +49,8 @@ class Inbox extends CI_Controller {
 		}
 	}
 
-	public function deletePesan($id_pesan2){
+	public function deletePesan($id_pesan2)
+	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
