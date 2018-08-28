@@ -57,7 +57,7 @@
 			</a>
 		</li>
 		<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" >
-			<a  href=<?php echo base_url('Knowledge/indexExpert') ?> class="m-menu__link ">
+			<a  href=<?php echo base_url('Knowledge') ?> class="m-menu__link ">
 				<i class="m-menu__link-icon fa fa-book"></i>
 				<span class="m-menu__link-title">
 					<span class="m-menu__link-wrap">

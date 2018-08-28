@@ -24,17 +24,7 @@ class Knowledge extends CI_Controller {
 			// $data['expert'] = $this->m_knowledge->getDataKnowledgeExpertItem($expert);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('Knowledge', $data);
-		}
-	}
-
-	public function indexExpert($id_knowledge)
-	{
-		if($this->session->userdata('status') != "login"){
-			redirect(base_url("Login"));
-		}else{
-			$data['err_message'] = "";
-			$data['id_knowledge'] = $this->m_knowledge->getDataKnowledgeParameter($id_knowledge);
-			$this->load->view('Knowledge', $data);
+			// $this->indexExpert($id_knowledge);
 		}
 	}
 
@@ -43,7 +33,9 @@ class Knowledge extends CI_Controller {
 	// 	if($this->session->userdata('status') != "login"){
 	// 		redirect(base_url("Login"));
 	// 	}else{
-	// 		$data['data9'] = $this->m_knowledge->getDataKnowledgeExpertItem($id_knowledge);
+	// 		$data['err_message'] = "";
+	// 		$data['id_knowledge'] = $this->m_knowledge->getDataKnowledgeParameter($id_knowledge);
+			
 	// 	}
 	// }
 

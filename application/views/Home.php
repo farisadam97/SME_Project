@@ -454,11 +454,11 @@
 													                                    </td>
 													                                    
 													                                    <td>
-													                                    	<a href="<?php echo base_url()."index.php/Knowledge/item/". $b['id_pengetahuan']?>">
-													                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase">
-																									View
-																								</button>
-																							</a>
+													                                    	<div style="text-align: center;">
+																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																									<i class="fa flaticon-visible"></i>
+																								</a>
+																							</div>
 																					</td>
 																				</tr>									
 																			<?php } ?>															                        

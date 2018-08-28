@@ -183,7 +183,7 @@
 																						</td>
 																						<td>
 																							<div style="text-align: center;">
-																								<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>" class="btn btn-info m-btn m-btn--icon m-btn--icon-only m-btn--pill">
+																								<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																									<i class="fa flaticon-eye"></i>
 																								</a>
 																							</div>

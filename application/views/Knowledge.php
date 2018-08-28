@@ -167,16 +167,16 @@
 													                                    </td>
 
 													                                    <td>
-													                                    <!-- <?php $experts = explode(";", $data7[$i-1]['expert']);
+													                                    <?php $experts = explode(";", $data7[$i-1]['expert']);
 													                                    foreach ($experts as $expert)
 													                                    {
 													                                    	echo '&bull;'. $expert. '<br>';
 													                                    }
-													                                    ?> -->
+													                                    ?>
 
 
 
-													                                   <?php foreach ($data9 as $j) { ?>
+													                                   <!-- <?php foreach ($data10 as $j) { ?>
 																							<?php $experts1 = explode(";", $j['expert']); ?>
 																							<?php $experts2 = explode(";", $j['nippsme']); ?>
 																								<?php foreach ($experts1 as $expertt) { ?>
@@ -193,14 +193,14 @@
 																								<?php } ?>
 																						<?php } ?>
 																						</a>
-
+ -->
 
 
 													                                    </td>
 													                                    
 													                                    <td>
 													                                    	<div style="text-align: center;">
-																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon m-btn--icon-only m-btn--pill">
+																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																									<i class="fa flaticon-eye"></i>
 																								</a>
 																							</div>
