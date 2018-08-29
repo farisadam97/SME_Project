@@ -26,8 +26,8 @@ class m_home extends CI_Model
     $this->db->join('sme_pengetahuan', 'pengetahuan.id_pengetahuan = sme_pengetahuan.id_pengetahuan', 'left');
     $this->db->join('sme_list', 'sme_pengetahuan.nipp_sme = sme_list.nipp', 'left');
     $this->db->group_by('pengetahuan.id_pengetahuan');
-	$data3 = $this->db->get();
-	return $data3->result_array();
+  	$data3 = $this->db->get();
+  	return $data3->result_array();
   }
 
 }
