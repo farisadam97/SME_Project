@@ -12,33 +12,36 @@
 																		</button>
 																	</div>
 																	<div class="modal-body">
-																		<form>
+																		<form action="<?php echo base_url('Inbox/kirimPesan') ?>" method="post">
 																			<div class="form-group">
-																				<label for="recipient-name" class="form-control-label">
+																				<label  class="form-control-label">
 																					Recipient:
 																				</label>
-                                                                                <input type="text" class="form-control" id="recipient-name">
-                                                                                <label for="recipient-name" class="form-control-label">
+                                                                                <input type="text" class="form-control" id="nipp_penerima">
+                                                                                <label  class="form-control-label">
 																					Subject:
 																				</label>
-																				<input type="text" class="form-control" id="subject-name">
+																				<input type="text" class="form-control" id="subjek">
 																			</div>
 																			<div class="form-group">
-																				<label for="message-text" class="form-control-label">
+																				<label  class="form-control-label">
 																					Message:
 																				</label>
-																				<textarea class="form-control" id="message-text"></textarea>
+																				<textarea class="form-control" id="isi_pesan"></textarea>
 																			</div>
 																			<input type="file" name="pic" accept="image/*">
+																		
+																			<div class="modal-footer">
+																				<button type="button" class="btn btn-secondary" data-dismiss="modal">
+																					Close
+																				</button>
+																				<div class="m-login__form-action">
+																					<button type="button" class="btn btn-primary" type="submit" value="Submit">
+																						Send message
+																					</button>
+																				</div>
+																			</div>
 																		</form>
-																	</div>
-																	<div class="modal-footer">
-																		<button type="button" class="btn btn-secondary" data-dismiss="modal">
-																			Close
-																		</button>
-																		<button type="button" class="btn btn-primary">
-																			Send message
-																		</button>
 																	</div>
 																</div>
 															</div>

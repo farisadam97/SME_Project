@@ -1,7 +1,9 @@
 <?php
 class m_inbox extends CI_Model
 {
-  
+  function __construct() {
+    parent::__construct();
+    }
   public function getDataInbox() 
   {
    
@@ -39,6 +41,10 @@ class m_inbox extends CI_Model
   {
     $this->db->where_in('id_pesan', $id_pesan2);
     $this->db->delete('pesan');
+  }
+
+  public function kirimPesan($data_insert){
+    $this->db->insert('pesan',$data_insert);
   }
 
 }

@@ -131,19 +131,22 @@
 																							</span>
 																						</span>
 																					</div>
+																					
+																				</div>
+																				<div class="col-md-3">
+																					<div class="email-btn" >
+																						<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
+																						Send Email
+																						</button>
+																					</div>
+																					<?php include 'EmailModal.php' ?>
 																				</div>
 																			</div>
+																			
 																		</div>
 																	</div>
 																</div>
-																<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert" id="success1" style="display: none;">
-																	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-																		<strong>
-																			Warning!
-																		</strong>
-																			Better check yourself, you're not looking too good.
-																</div> -->
-																<!-- End Search Form -->
+																
 																<table class="m-datatable" id="html_table">
 																	<thead>
 																		<tr> 
@@ -184,10 +187,10 @@
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
-														                                    		<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+														                                    		<a href="<?php echo base_url()."/Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																										<i class="fa flaticon-eye"></i>
 																									</a>
-														                                    		<a href="<?php echo base_url()."index.php/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+														                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																										<i class="fa flaticon-delete-1"></i>
 																									</a>
 																						</td>

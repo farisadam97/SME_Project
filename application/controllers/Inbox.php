@@ -8,6 +8,7 @@ class Inbox extends CI_Controller {
 		$this->load->model('m_inbox');
 		$this->load->model('m_leftMenu');
 		$this->load->library('session');
+		$this->load->helper('form');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login")); }       
 	}
@@ -44,7 +45,7 @@ class Inbox extends CI_Controller {
 			$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('InboxItem', $data);
-
+			
 		}
 	}
 
@@ -57,6 +58,28 @@ class Inbox extends CI_Controller {
 		}
 	}
 
+	public function kirimPesan(){
+		
+		$nipp = $_POST['nipp_penerima'];
+		$subjek = $_POST['subjek'];
+		$isi_pesan = $_POST['isi_pesan'];
+		$nama = $this->db->select('nama')->from('user')->where('nipp',$this->session->userdata('nipp'))->get();
+		return $nama->result_array();
+		$nama[0]['nama'];
+		$data_insert = array(
+			'id_pesan' => '',
+			'nipp_penerima' => $nipp,
+			'nipp_pengirim' => $this->session->userdata('nipp'),
+			'subjek' => $subjek,
+			'isi_pesan' => $isi_pesan,
+			'nama_pengirim' => $nama,
+			'read_pesan' => '0'
+		);
+		$this->m_inbox->kirimPesan($data_insert);
+		$data['err_message'] = "Message Sent!";
+
+		$this->load->view('Inbox');
+	}
 	
 }
 ?>
