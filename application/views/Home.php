@@ -48,7 +48,7 @@
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png"/>
+										<img alt="" src="assets/demo/default/media/img/logo/logo.png"/>
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -387,9 +387,11 @@
 																	<div class="col-xl-3">
 																	</div>
 																	<div class="col-xl-3" style="text-align:right;">
-																	<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																			Show More..
-																		</button>
+																		<a href="<?php echo base_url("Experts") ?>">
+																			<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																				Show More..
+																			</button>
+																		</a>
 																	</div>
 																</div>
 															</div>
@@ -455,7 +457,7 @@
 													                                    
 													                                    <td>
 													                                    	<div style="text-align: center;">
-																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																								<a href="<?php echo base_url("Knowledge/item/". $b['id_pengetahuan'])?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																									<i class="fa flaticon-visible"></i>
 																								</a>
 																							</div>
@@ -475,7 +477,7 @@
 																<div class="col-xl-3">
 																</div>
 																<div class="col-xl-3" style="text-align:right;">
-																	<a href="<?php echo base_url()."index.php/Knowledge" ?>">
+																	<a href="<?php echo base_url("Knowledge") ?>">
 																		<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
 																			Show More..
 																		</button>

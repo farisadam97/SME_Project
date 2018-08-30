@@ -162,7 +162,7 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="m-portlet__head">
+																	<!-- <div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
 																				<h2 >
@@ -217,7 +217,7 @@
 																				</a>
 																			</div>
 																		</div>
-																	</div>
+																	</div> -->
 																</div>
 															</div>
 														</div>

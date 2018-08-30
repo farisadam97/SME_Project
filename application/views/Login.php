@@ -47,13 +47,13 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="#">
-								<img src=<?php echo base_url("assets/app/media/img//logos/logo-1.png") ?>>
+								<img src=<?php echo base_url("assets/app/media/img//logos/logo.png") ?>>
 							</a>
 						</div>
 						<div class="m-login__signin">
 							<div class="m-login__head">
 								<h3 class="m-login__title">
-									Sign In To Admin
+									Sign In SME
 								</h3>
 							</div>
 							<form class="m-login__form m-form" action="<?php echo base_url('login/aksi_login'); ?>" method="post">

@@ -16,7 +16,7 @@ class Login extends CI_Controller{
 		}else{ 
 			redirect(base_url('Home'));
 		}
-		//$this->load->view('Login');
+		
 	}
 
 	function aksi_login(){
@@ -26,14 +26,20 @@ class Login extends CI_Controller{
 			'nipp' => $nipp,
 			'password' => $password
 			);
+				
 		$cek = $this->m_login->cek_login("user",$where)->num_rows();
+		
 		if($cek > 0){
 
 			$data_session = array(
+				
 				'nipp' => $nipp,
 				'status' => "login"
 				);
-
+				// $nama = $this->db->select('nama')
+                // ->where('nipp', $nipp)
+				// ->from('user')->get();
+				// $data_session2 = array($data_session, $nama);
 			$this->session->set_userdata($data_session);
 
 			redirect(base_url('Home'));
