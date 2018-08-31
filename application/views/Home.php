@@ -106,9 +106,10 @@
 													</div>
 													<!-- END: Subheader -->
 													<div class="m-content">
-														<!--Begin::Section Hot Threads-->
+														
 														<div class="row">
-															<div class="col-xl-6">
+														<!--Begin::Section Hot Threads-->
+															<!-- <div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
 																		<div class="m-portlet__head-caption">
@@ -125,7 +126,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-12" >
-		  																		<!--Begin::Section-->
+		  																		
 																				  <table class="table table-striped- table-bordered table-hover" >
 																				  	<col width="85%">
   																					<col width="15%">
@@ -164,15 +165,15 @@
 																						</tr>
 																					</tbody>
 																				</table>
-														<!--End::Section-->
+																				
 																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 														<!--End::Section Hot Threads-->
 														<!--Begin::Section SME of The Week-->
-															<div class="col-xl-6">
+															<!-- <div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
 																		<div class="m-portlet__head-caption">
@@ -186,7 +187,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-12" >
-																				<!--begin:: Widgets/Blog-->
+																			
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
 																					<div class="m-portlet__body col-xl-4">
 																						<div class="m-widget19">
@@ -200,24 +201,20 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																							
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 														</div>
 														<!--End::Section SME of the Week-->
 														<!--Begin::Section Topic Graph-->
-														<div class="row">
+														<!-- <div class="row">
 															<div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
@@ -232,7 +229,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-12" >
-																				<!--begin:: Widgets/Blog-->
+																				
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
 																					<div class="m-portlet__body" style="">
@@ -247,15 +244,11 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																							
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																			
 																			
@@ -277,7 +270,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
+																				
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
 																					<div class="m-portlet__body" style="">
@@ -292,18 +285,14 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																							
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
+																				
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
 																					<div class="m-portlet__body" style="">
@@ -318,21 +307,17 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																						
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
-														</div>
+														</div> -->
 														<!--Begin::Section Experts-->
 														<div class="m-portlet" >
 															<div class="m-portlet__head" >
