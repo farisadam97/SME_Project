@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head>
 		<meta charset="utf-8" />
 		<title>
-			Metronic | Login Page - 3
+			Login | SME 
 		</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
@@ -47,13 +47,13 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="#">
-								<img src=<?php echo base_url("assets/app/media/img//logos/logo-1.png") ?>>
+								<img src=<?php echo base_url("assets/app/media/img//logos/logo.png") ?>>
 							</a>
 						</div>
 						<div class="m-login__signin">
 							<div class="m-login__head">
 								<h3 class="m-login__title">
-									Sign In To Admin
+									Sign In SME
 								</h3>
 							</div>
 							<form class="m-login__form m-form" action="<?php echo base_url('login/aksi_login'); ?>" method="post">

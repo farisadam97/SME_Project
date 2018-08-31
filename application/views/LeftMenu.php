@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+
 
 <div 
 	id="m_ver_menu" 
@@ -71,5 +66,3 @@
 	</ul>
 </div>
 
-</body>
-</html>

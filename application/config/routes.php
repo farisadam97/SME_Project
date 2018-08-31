@@ -60,6 +60,6 @@ $route['Inbox'] = 'Inbox';
 $route['Login'] = 'Login';
 
 
-$route['Knowledgeitem'] = 'Knowledge/item';
-$route['Expertsitem'] = 'Experts/item';
-$route['Inboxitem'] = 'Inbox/item';
+$route['Knowledgeitem'] = 'Knowledgeitem';
+$route['Expertsitem'] = 'Expertsitem';
+$route['Inboxitem'] = 'Inboxitem';

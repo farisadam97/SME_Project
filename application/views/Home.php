@@ -48,7 +48,7 @@
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png"/>
+										<img alt="" src="assets/demo/default/media/img/logo/logo.png"/>
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -106,9 +106,10 @@
 													</div>
 													<!-- END: Subheader -->
 													<div class="m-content">
-														<!--Begin::Section Hot Threads-->
+														
 														<div class="row">
-															<div class="col-xl-6">
+														<!--Begin::Section Hot Threads-->
+															<!-- <div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
 																		<div class="m-portlet__head-caption">
@@ -125,7 +126,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-12" >
-		  																		<!--Begin::Section-->
+		  																		
 																				  <table class="table table-striped- table-bordered table-hover" >
 																				  	<col width="85%">
   																					<col width="15%">
@@ -164,15 +165,15 @@
 																						</tr>
 																					</tbody>
 																				</table>
-														<!--End::Section-->
+																				
 																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 														<!--End::Section Hot Threads-->
 														<!--Begin::Section SME of The Week-->
-															<div class="col-xl-6">
+															<!-- <div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
 																		<div class="m-portlet__head-caption">
@@ -186,7 +187,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-12" >
-																				<!--begin:: Widgets/Blog-->
+																			
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
 																					<div class="m-portlet__body col-xl-4">
 																						<div class="m-widget19">
@@ -200,24 +201,20 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																							
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 														</div>
 														<!--End::Section SME of the Week-->
 														<!--Begin::Section Topic Graph-->
-														<div class="row">
+														<!-- <div class="row">
 															<div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
@@ -232,7 +229,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-12" >
-																				<!--begin:: Widgets/Blog-->
+																				
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
 																					<div class="m-portlet__body" style="">
@@ -247,15 +244,11 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																							
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																			
 																			
@@ -277,7 +270,7 @@
 																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																		<div class="row">
 																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
+																				
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
 																					<div class="m-portlet__body" style="">
@@ -292,18 +285,14 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																							
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																			<div class="col-xl-3" >
-																				<!--begin:: Widgets/Blog-->
+																				
 																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
 																					
 																					<div class="m-portlet__body" style="">
@@ -318,21 +307,17 @@
 																									<h5> hlo hlo hlo hlo hlo </h5>
 																								</div>
 																							</div>
-																							<!-- <div class="m-widget19__action">
-																								<button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-																									Read More
-																								</button>
-																							</div> -->
+																						
 																						</div>
 																					</div>
 																				</div>
-																				<!--end:: Widgets/Blog-->
+																				
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
-														</div>
+														</div> -->
 														<!--Begin::Section Experts-->
 														<div class="m-portlet" >
 															<div class="m-portlet__head" >
@@ -387,9 +372,11 @@
 																	<div class="col-xl-3">
 																	</div>
 																	<div class="col-xl-3" style="text-align:right;">
-																	<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																			Show More..
-																		</button>
+																		<a href="<?php echo base_url("Experts") ?>">
+																			<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																				Show More..
+																			</button>
+																		</a>
 																	</div>
 																</div>
 															</div>
@@ -471,7 +458,7 @@
 													                                    
 													                                    <td>
 													                                    	<div style="text-align: center;">
-																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																								<a href="<?php echo base_url("Knowledge/item/". $b['id_pengetahuan'])?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																									<i class="fa flaticon-visible"></i>
 																								</a>
 																							</div>
@@ -491,7 +478,7 @@
 																<div class="col-xl-3">
 																</div>
 																<div class="col-xl-3" style="text-align:right;">
-																	<a href="<?php echo base_url()."index.php/Knowledge" ?>">
+																	<a href="<?php echo base_url("Knowledge") ?>">
 																		<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
 																			Show More..
 																		</button>
