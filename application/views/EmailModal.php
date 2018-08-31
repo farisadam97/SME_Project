@@ -36,18 +36,16 @@
 																					Close
 																				</button>
 																				<div class="m-login__form-action">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 																					<button class="btn btn-primary" type="button submit" value="Submit">
-=======
+
 																					<button  class="btn btn-primary" type="submit" value="Submit">
->>>>>>> 089be0c0735cc531f2c71fc9a66c6a81635d90db
-=======
+
 																					<button  class="btn btn-primary" type="submit" value="Submit">
-=======
+
 																					<button class="btn btn-primary" type="button submit" value="Submit">
->>>>>>> master
->>>>>>> 91879da5cdf4573f3d8ce1e38059bc50f8335bfd
+																					<button  class="btn btn-primary" type="submit" value="Submit">
+																					<button class="btn btn-primary" type="button submit" value="Submit">
 																						Send message
 																					</button>
 																				</div>
