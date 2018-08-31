@@ -155,49 +155,41 @@
 																		</tr>
 																	</thead>
 																	<tbody>
-																		<?php $i=0; foreach ($data6 as $f) { $i++ ?>
+																			<?php  foreach ($data7 as $f) {  ?>
 													                                <tr>
 													                                    <td><?php echo $f['nama_pengetahuan']; ?></td>
-													                                    <td><?php $topik = explode(";", $f['topik']);
+													                                    <td><?php $topik = array_unique(explode(";", $f['topik']));
 													                                    foreach ($topik as $topikk)
 													                                    {
 													                                    	echo '&bull;'. $topikk. '<br>';
 													                                    }
+																					
 													                                    ?>
 													                                    </td>
-
 													                                    <td>
-													                                    <?php $experts = explode(";", $data7[$i-1]['expert']);
-													                                    foreach ($experts as $expert)
-													                                    {
-													                                    	echo '&bull;'. $expert. '<br>';
-													                                    }
-													                                    ?>
+													                                    	<div class="m-portlet__body">
+																								<div class="m-list-search">
+																									<div class="m-list-search__results">
+																									<?php $experts = array_unique(explode(";", $f['expert'])); ?>
+																									<?php $experts2 = array_unique(explode(";", $f['nippsme'])); ?>
+																										<?php $i=0; foreach ($experts as $expert) { ?>
+																		 									<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
 
-
-
-													                                   <!-- <?php foreach ($data10 as $j) { ?>
-																							<?php $experts1 = explode(";", $j['expert']); ?>
-																							<?php $experts2 = explode(";", $j['nippsme']); ?>
-																								<?php foreach ($experts1 as $expertt) { ?>
-																						<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
-
-																							<span class="m-list-search__result-item-pic">
-																								<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
-																							</span>
-																							<span class="m-list-search__result-item-text">
-																	                            <?php
-																	                               	echo $expertt. '<br>';
-															                                 	?>
-																							</span>
-																								<?php } ?>
-																						<?php } ?>
-																						</a> -->
-
-
-
-													                                    </td>
-													                                    
+																											<span class="m-list-search__result-item-pic">
+																												<img class="m--img-rounded" src="<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?>"" title="">
+																											</span>
+																											<span class="m-list-search__result-item-text">
+																					                            <?php
+																					                               	echo $expert;
+																					                               	
+																			                                 	?>
+																											</span>
+																										<?php } ?>
+																										</a>
+																                                    </div>
+																								</div>
+																							</div>
+													                                    </td>             
 													                                    <td>
 													                                    	<div style="text-align: center;">
 																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
@@ -205,7 +197,9 @@
 																								</a>
 																							</div>
 																						</td>
-													                            <?php } ?>
+																					
+													                            	</tr>
+													                        <?php } ?>   
 																	</tbody>
 																</table>
 																<!--end: Datatable -->

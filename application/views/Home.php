@@ -432,11 +432,11 @@
 																				</tr>
 													                            </thead>
 													                            <tbody>
-													                            <?php $i=0; foreach ($data2 as $b) { $i++ ?>
+													                            <?php $i=0; foreach ($data7 as $b) { $i++ ?>
 													                                <tr>
 													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
 													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
-													                                    <td><?php $topik = explode(";", $b['topik']);
+													                                    <td><?php $topik = array_unique(explode(";", $b['topik']));
 													                                    foreach ($topik as $topikk)
 													                                    {
 													                                    	echo '&bull;'. $topikk. '<br>';
@@ -445,12 +445,28 @@
 													                                    </td>
 
 													                                    <td>
-													                                    <?php $experts = explode(";", $data3[$i]['expert']);
-													                                    foreach ($experts as $expert)
-													                                    {
-													                                    	echo '&bull;'. $expert. '<br>';
-													                                    }
-													                                    ?>
+													                                    <div class="m-portlet__body">
+																								<div class="m-list-search">
+																									<div class="m-list-search__results">
+																									<?php $experts = array_unique(explode(";", $b['expert'])); ?>
+																									<?php $experts2 = array_unique(explode(";", $b['nippsme'])); ?>
+																										<?php $i=0; foreach ($experts as $expert) { ?>
+																		 									<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+
+																											<span class="m-list-search__result-item-pic">
+																												<img class="m--img-rounded" src="<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?>"" title="">
+																											</span>
+																											<span class="m-list-search__result-item-text">
+																					                            <?php
+																					                               	echo $expert;
+																					                               	
+																			                                 	?>
+																											</span>
+																										<?php } ?>
+																										</a>
+																                                    </div>
+																								</div>
+																							</div>
 													                                    </td>
 													                                    
 													                                    <td>

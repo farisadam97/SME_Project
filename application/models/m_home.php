@@ -30,6 +30,18 @@ class m_home extends CI_Model
   	return $data3->result_array();
   }
 
+  public function getDataKnowledgeTopikExpert()
+  {
+    $this->db->select('pengetahuan.id_pengetahuan, pengetahuan.nama_pengetahuan, GROUP_CONCAT(topik.nama_topik SEPARATOR ";") as topik, GROUP_CONCAT(sme_list.nama_sme SEPARATOR ";") as expert, GROUP_CONCAT(sme_list.nipp SEPARATOR ";") as nippsme');
+    $this->db->from('pengetahuan');
+    $this->db->join('topik', 'pengetahuan.id_pengetahuan = topik.id_pengetahuan', 'left');
+    $this->db->join('sme_pengetahuan', 'topik.id_pengetahuan = sme_pengetahuan.id_pengetahuan', 'left');
+    $this->db->join('sme_list', 'sme_pengetahuan.nipp_sme = sme_list.nipp', 'left');
+    $this->db->group_by('pengetahuan.id_pengetahuan');
+    $data7 = $this->db->get();
+    return $data7->result_array();
+  }
+
 }
 
 ?>

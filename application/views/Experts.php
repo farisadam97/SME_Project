@@ -175,12 +175,12 @@
 																						</td>
 																						<td>
 																							<?php $bidang = explode(";", $e['ilmu']);
-													                                    foreach ($bidang as $bidangg)
-													                                    { 
-													                                    	echo '&bull; <a href="'. base_url().'index.php/Knowledge/item/'. $e['id_pengetahuan'].'">
-													                                    		'. $bidangg .' </a><br>' ;
-													                                    }
-													                                    ?>
+															                                    foreach ($bidang as $bidangg)
+															                                    { 
+															                                    	echo '&bull; <a href="'. base_url().'index.php/Knowledge/item/'. $e['id_pengetahuan'].'">
+															                                    		'. $bidangg .' </a><br>' ;
+															                                    }
+														                                    ?>
 																						</td>
 																						<td>
 																							<div style="text-align: center;">

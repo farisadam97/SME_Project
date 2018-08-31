@@ -146,19 +146,19 @@
 																					<?php $experts = explode(";", $j['expert']); ?>
 																					<?php $experts2 = explode(";", $j['nippsme']); ?>
 																						<?php foreach ($experts as $expert) { ?>
-																				<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+																							<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
 
-																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
-																					</span>
-																					<span class="m-list-search__result-item-text">
-															                            <?php
-															                               	echo $expert. '<br>';
-													                                 	?>
-																					</span>
-																						<?php } ?>
-																				<?php } ?>
-																				</a>
+																								<span class="m-list-search__result-item-pic">
+																									<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
+																								</span>
+																								<span class="m-list-search__result-item-text">
+																		                            <?php
+																		                               	echo $expert. '<br>';
+																                                 	?>
+																								</span>
+																									<?php } ?>
+																							<?php } ?>
+																							</a>
 																			</div>
 																		</div>
 																	</div>

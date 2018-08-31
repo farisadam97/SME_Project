@@ -22,6 +22,7 @@ class Home extends CI_Controller {
 			$data['data1'] = $this->m_home->getDataExpert();
 			$data['data2'] = $this->m_home->getDataPengetahuanTopik();
 			$data['data3'] = $this->m_home->getDataPengetahuanExpert();
+			$data['data7'] = $this->m_home->getDataKnowledgeTopikExpert();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('Home', $data);
 		}

@@ -18,26 +18,11 @@ class Knowledge extends CI_Controller {
 			redirect(base_url("Login"));
 		}else{
 			$data['err_message'] = "";
-			$data['data6'] = $this->m_knowledge->getDataKnowledgeTopik();
-			$data['data7'] = $this->m_knowledge->getDataKnowledgeExpert();
-			// // $data['data9'] = $this->m_knowledge->getDataKnowledgeExpertItem();
-			// $data['expert'] = $this->m_knowledge->getDataKnowledgeExpertItem($expert);
+			$data['data7'] = $this->m_knowledge->getDataKnowledgeTopikExpert();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$this->load->view('Knowledge', $data);
-			// $this->indexExpert($id_knowledge);
 		}
 	}
-
-	// public function indexExpert($id_knowledge)
-	// {
-	// 	if($this->session->userdata('status') != "login"){
-	// 		redirect(base_url("Login"));
-	// 	}else{
-	// 		$data['err_message'] = "";
-	// 		$data['id_knowledge'] = $this->m_knowledge->getDataKnowledgeParameter($id_knowledge);
-			
-	// 	}
-	// }
 
 	public function item($id_knowledge)
 	{
