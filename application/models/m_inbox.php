@@ -43,7 +43,12 @@ class m_inbox extends CI_Model
     $this->db->delete('pesan');
   }
 
-  public function kirimPesan($data_insert){
+  public function getNama()
+  {
+    
+  }
+  public function kirimPesan($data_insert)
+  {
     $this->db->insert('pesan',$data_insert);
   }
 

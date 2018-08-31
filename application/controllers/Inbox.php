@@ -78,7 +78,7 @@ class Inbox extends CI_Controller {
 		$this->m_inbox->kirimPesan($data_insert);
 		$data['err_message'] = "Message Sent!";
 
-		$this->load->view('Inbox');
+		redirect("Inbox");
 	}
 	
 }
