@@ -36,11 +36,7 @@
 																					Close
 																				</button>
 																				<div class="m-login__form-action">
-<<<<<<< HEAD
 																					<button  class="btn btn-primary" type="submit" value="Submit">
-=======
-																					<button class="btn btn-primary" type="button submit" value="Submit">
->>>>>>> master
 																						Send message
 																					</button>
 																				</div>
