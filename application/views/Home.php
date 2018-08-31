@@ -108,71 +108,71 @@
 													<div class="m-content">
 														
 														<div class="row">
-														<!--Begin::Section Hot Threads-->
-															<!-- <div class="col-xl-6">
-																<div class="m-portlet" >
-																	<div class="m-portlet__head" >
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
-																					HOT THREADS! 
-																				</h3>
-																				<span style="margin-left: 5px;">
-																				<i class="fa fa-fire"></i>
-																				</span>
+															<!--Begin::Section Hot Threads-->
+																<!-- <div class="col-xl-6">
+																	<div class="m-portlet" >
+																		<div class="m-portlet__head" >
+																			<div class="m-portlet__head-caption">
+																				<div class="m-portlet__head-title">
+																					<h3 class="m-portlet__head-text">
+																						HOT THREADS! 
+																					</h3>
+																					<span style="margin-left: 5px;">
+																					<i class="fa fa-fire"></i>
+																					</span>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
+																			<div class="row">
+																				<div class="col-xl-12" >
+																					
+																					<table class="table table-striped- table-bordered table-hover" >
+																						<col width="85%">
+																						<col width="15%">
+																						<tbody>
+																							<tr>
+																								<td>
+																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																								</td>
+																								<td>
+																									<i class="fa fa-eye"> 29<i>
+																								</td>
+																							</tr>
+																							<tr>
+																								<td>
+																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																								</td>
+																								<td>
+																									<i class="fa fa-eye"> 29<i>
+																								</td>
+																							</tr>
+																							<tr>
+																								<td>
+																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																								</td>
+																								<td>
+																									<i class="fa fa-eye"> 29<i>
+																								</td>
+																							</tr>
+																							<tr>
+																								<td>
+																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
+																								</td>
+																								<td>
+																									<i class="fa fa-eye"> 29<i>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					
+																				</div>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																		<div class="row">
-																			<div class="col-xl-12" >
-		  																		
-																				  <table class="table table-striped- table-bordered table-hover" >
-																				  	<col width="85%">
-  																					<col width="15%">
-																					<tbody>
-																						<tr>
-																							<td>
-																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																							</td>
-																							<td>
-																								<i class="fa fa-eye"> 29<i>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>
-																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																							</td>
-																							<td>
-																								<i class="fa fa-eye"> 29<i>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>
-																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																							</td>
-																							<td>
-																								<i class="fa fa-eye"> 29<i>
-																							</td>
-																						</tr>
-																						<tr>
-																							<td>
-																								[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																							</td>
-																							<td>
-																								<i class="fa fa-eye"> 29<i>
-																							</td>
-																						</tr>
-																					</tbody>
-																				</table>
-																				
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div> -->
-														<!--End::Section Hot Threads-->
-														<!--Begin::Section SME of The Week-->
+																</div> -->
+															<!--End::Section Hot Threads-->
+															<!--Begin::Section SME of The Week-->
 															<!-- <div class="col-xl-6">
 																<div class="m-portlet" >
 																	<div class="m-portlet__head" >
@@ -498,7 +498,7 @@
 										</div>
 										<!-- end:: Page -->
     		        <!-- begin::Quick Sidebar -->
-										<div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
+										<!-- <div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
 											<div class="m-quick-sidebar__content m--hide">
 												<span id="m_quick_sidebar_close" class="m-quick-sidebar__close">
 													<i class="la la-close"></i>
@@ -522,7 +522,7 @@
 												</ul>
 												
 											</div>
-										</div>
+										</div> -->
 										<!-- end::Quick Sidebar -->		    
 	    <!-- begin::Scroll Top -->
 										<div id="m_scroll_top" class="m-scroll-top">
