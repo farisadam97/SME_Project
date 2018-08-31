@@ -38,6 +38,7 @@ class m_home extends CI_Model
     $this->db->join('sme_pengetahuan', 'topik.id_pengetahuan = sme_pengetahuan.id_pengetahuan', 'left');
     $this->db->join('sme_list', 'sme_pengetahuan.nipp_sme = sme_list.nipp', 'left');
     $this->db->group_by('pengetahuan.id_pengetahuan');
+    $this->db->limit(5);
     $data7 = $this->db->get();
     return $data7->result_array();
   }
