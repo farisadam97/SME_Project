@@ -7,6 +7,7 @@ class Experts extends CI_Controller {
 		parent::__construct();
 		$this->load->model('m_expert');
 		$this->load->model('m_leftMenu');
+		$this->load->model('m_login');
 		$this->load->library('session');
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login")); }       
@@ -21,6 +22,7 @@ class Experts extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data5'] = $this->m_expert->getDataExperts();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('Experts', $data);
 		}
 	}
@@ -33,6 +35,7 @@ class Experts extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data'] = $this->m_expert->getDataExpertsItem($nipp);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('ExpertsItem', $data);
 		}
 	}

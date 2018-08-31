@@ -22,6 +22,7 @@ class Inbox extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('Inbox', $data);
 		}
 	}
@@ -33,6 +34,7 @@ class Inbox extends CI_Controller {
 		}else{
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
+			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('InboxDelete', $data);
 		}
 	}
@@ -45,6 +47,7 @@ class Inbox extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('InboxItem', $data);
 			
 		}
@@ -61,10 +64,10 @@ class Inbox extends CI_Controller {
 
 	public function kirimPesan(){
 		
-		$nipp = $_POST['nipp_penerima '];
+		$nipp = $_POST['nipp_penerima'];
 		$subjek = $_POST['subjek'];
 		$isi_pesan = $_POST['isi_pesan'];
-		$this->m_login->cek_nama();
+		$nama = $this->m_login->cek_nama();
 		$data_insert = array(
 			'id_pesan' => '',
 			'nipp_penerima' => $nipp,
