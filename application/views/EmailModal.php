@@ -36,7 +36,7 @@
 																					Close
 																				</button>
 																				<div class="m-login__form-action">
-																					<button type="button" class="btn btn-primary" type="submit" value="Submit">
+																					<button class="btn btn-primary" type="button submit" value="Submit">
 																						Send message
 																					</button>
 																				</div>
