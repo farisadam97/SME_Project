@@ -401,21 +401,21 @@
 																		<table class="table table-striped- table-bordered table-hover" >
 																			<thead>
 																				<tr>
-																				<th>
-																					No
-																				</th>
-																				<th>
-																					Ilmu
-																				</th>
-																				<th>
-																					Sub Ilmu
-																				</th>
-																				<th>
-																					Experts
-																				</th>
-																				<th>
-																					Action
-																				</th>
+																					<th title="No" style="text-align: center;">
+																						No
+																					</th>
+																					<th title="Nama Ilmu" style="text-align: center;">
+																						Ilmu
+																					</th>
+																					<th title="Nama Topik" style="text-align: center;">
+																						Sub Ilmu
+																					</th>
+																					<th title="Nama Expert" style="text-align: center;">
+																						Experts
+																					</th>
+																					<th title="Action" style="text-align: center;">
+																						Action
+																					</th>
 																				</tr>
 													                            </thead>
 													                            <tbody>
@@ -458,11 +458,11 @@
 													                                    
 													                                    <td>
 													                                    	<div style="text-align: center;">
-																								<a href="<?php echo base_url("Knowledge/item/". $b['id_pengetahuan'])?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
-																									<i class="fa flaticon-visible"></i>
+																								<a href="<?php echo base_url()."Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																									<i class="fa flaticon-eye"></i>
 																								</a>
 																							</div>
-																					</td>
+																						</td>
 																				</tr>									
 																			<?php } ?>															                        
 																			</tbody>

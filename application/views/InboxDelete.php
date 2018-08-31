@@ -147,50 +147,49 @@
 																<table class="m-datatable" id="html_table">
 																	<thead>
 																		<tr> 
-																			<th title="Field #1" style="text-align: center;">
+																			<th style="text-align: center;">
+
+																			</th>
+																			<th style="text-align: center;">
 																				Pengirim
 																			</th>
-																			<th title="Field #2" style="text-align: center;">
+																			<th style="text-align: center;">
 																				Subjek
 																			</th>
-																			<th title="Field #3" style="text-align: center;">
-																				Mbo
+																			<th style="text-align: center;">
+																				Isi Pesan
 																			</th>
-																			<th title="Field #4" style="text-align: center;">
+																			<th style="text-align: center;">
 																				Waktu 
 																			</th>
-																			<th title="Field #4" style="text-align: center;">
+																			<th style="text-align: center;">
 																				Action 
 																			</th>
 																		</tr>
 																	</thead>
 																	<tbody>
-																		<?php foreach ($data4 as $d) { ?>
-													                                <tr style="text-align: center; vertical-align: middle;">
+																		<?php foreach ($data4 as $d) {  ?>
+													                                <tr style="text-align: center;">
+													                                	<td><?php if ($d['read_pesan'] == 0) { ?>
+													                                	
+																							<span class="m-menu__link-badge">
+																								<span class="m-badge m-badge--danger">
+																									1 
+																								</span>
+																							</span>
+
+													                                	<?php } ?></td>
 													                                    <td><?php echo $d['nama_pengirim']; ?></td>
 													                                    <td><?php echo $d['subjek']; ?></td>
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
-													                                    	<div style="text-align: center;">
-														                                    	<span>
-															                                    	<a href="<?php echo base_url()."index.php/Inbox/item/". $d['id_pesan']?>">
-															                                    		<button type="button" class="btn btn-info m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="width: 55%; height: 55%">
-																										View
-																										</button>
+														                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																										<i class="fa flaticon-eye"></i>
 																									</a>
-																								</span>
-																							</div>
-																							
-																							<div style="text-align: center;">
-																								<span>
-															                                    	<a href="<?php echo base_url()."index.php/Inbox/deletePesan/".$d['id_pesan'];?>	">
-															                                    		<button type="button" class="btn btn-danger m-btn m-btn--custom m-btn--bolder m-btn--uppercase" style="margin-top: 5px;" onclick="alertSuccess()">
-																										Delete
-																										</button>
+														                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																										<i class="fa flaticon-delete-1"></i>
 																									</a>
-																								</span>
-																							</div>
 																						</td>
 													                                </tr>
 													                    <?php } ?>

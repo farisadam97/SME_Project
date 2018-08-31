@@ -4,7 +4,7 @@ class m_leftMenu extends CI_Model
 
   public function countDataInbox() 
   {
-   $this->db->count_all_results('pesan');  
+    $this->db->count_all_results('pesan');  
 	$this->db->from('pesan');
 	$this->db->where('read_pesan', 0);
 	$this->db->where('nipp_penerima', $this->session->userdata('nipp'));
