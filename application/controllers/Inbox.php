@@ -7,6 +7,7 @@ class Inbox extends CI_Controller {
 		parent::__construct();
 		$this->load->model('m_inbox');
 		$this->load->model('m_leftMenu');
+		$this->load->model('m_login');
 		$this->load->library('session');
 		$this->load->helper('form');
 		if($this->session->userdata('status') != "login"){
@@ -60,12 +61,10 @@ class Inbox extends CI_Controller {
 
 	public function kirimPesan(){
 		
-		$nipp = $_POST['nipp_penerima'];
+		$nipp = $_POST['nipp_penerima '];
 		$subjek = $_POST['subjek'];
 		$isi_pesan = $_POST['isi_pesan'];
-		$nama = $this->db->select('nama')->from('user')->where('nipp',$this->session->userdata('nipp'))->get();
-		return $nama->result_array();
-		$nama[0]['nama'];
+		$this->m_login->cek_nama();
 		$data_insert = array(
 			'id_pesan' => '',
 			'nipp_penerima' => $nipp,

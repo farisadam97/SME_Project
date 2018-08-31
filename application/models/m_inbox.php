@@ -17,7 +17,7 @@ class m_inbox extends CI_Model
     $this->db->select('*');
     $this->db->from('pesan');
     $this->db->where('read_pesan', 0);
-    // $this->db->where($array);
+    $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
     $unread = $this->db->get();
     return $unread->result_array();
   }

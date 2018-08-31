@@ -13,7 +13,7 @@ class Login extends CI_Controller{
 		$data['err_message'] = "";
 		if($this->session->userdata('status') != "login"){
 			$this->load->view('Login');
-		}else{ 
+		}else{ 			
 			redirect(base_url('Home'));
 		}
 		
@@ -37,11 +37,10 @@ class Login extends CI_Controller{
 				'status' => "login"
 				);
 				// $nama = $this->db->select('nama')
-                // ->where('nipp', $nipp)
+    //             ->where('nipp', $nipp)
 				// ->from('user')->get();
 				// $data_session2 = array($data_session, $nama);
 			$this->session->set_userdata($data_session);
-
 			redirect(base_url('Home'));
 
 		}else{

@@ -38,7 +38,7 @@
 																	<?php echo $this->session->userdata('nipp') ?>
 																</span>
 																<span class="m-card-user__name m--font-weight-500">
-																	<!-- <?php echo $this->session->userdata($nama) ?> -->
+																	<?php echo $nama; ?>
 																</span>
 															</div>
 														</div>
