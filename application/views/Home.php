@@ -334,8 +334,9 @@
 																	<?php foreach ($data1 as $a) { ?>
 																	<div class="col-xl-3" >
 																		<!--begin:: Widgets/Blog-->
-																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																			
+																		
+																		<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
+																			<a href="<?php echo base_url()."index.php/Experts/item/". $a['nipp']?>">
 																			<div class="m-portlet__body" style="">
 																				<div class="m-widget19" >
 																					<div class="m-widget19__content">
@@ -355,6 +356,7 @@
 																					</div> -->
 																				</div>
 																			</div>
+																		</a>
 																		</div>
 																		<!--end:: Widgets/Blog-->
 																	</div>
