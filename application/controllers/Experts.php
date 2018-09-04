@@ -34,6 +34,7 @@ class Experts extends CI_Controller {
 		}else{
 			$data['err_message'] = "";
 			$data['data'] = $this->m_expert->getDataExpertsItem($nipp);
+			$data['keahlian'] = $this->m_expert->getDataExpertsKeahlian($nipp);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('ExpertsItem', $data);

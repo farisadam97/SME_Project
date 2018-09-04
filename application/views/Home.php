@@ -398,7 +398,7 @@
 															<div class="row">
 																<div class="col-sm-12">
 																	<div class="row">
-																		<table class="table table-striped- table-bordered table-hover" >
+																		<table class="table table-striped html-table table-bordered table-hover" >
 																			<thead>
 																				<tr>
 																					<th title="No" style="text-align: center;">
@@ -456,7 +456,7 @@
 																							</div>
 													                                    </td>
 													                                    
-													                                    <td>
+													                                    <td style="vertical-align: middle;">
 													                                    	<div style="text-align: center;">
 																								<a href="<?php echo base_url()."Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																									<i class="fa flaticon-eye"></i>

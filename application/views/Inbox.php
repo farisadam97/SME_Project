@@ -146,6 +146,8 @@
 																		</div>
 																	</div>
 																</div>
+
+																<?php include 'Alert_DeleteSuccess.php' ?>
 																
 																<table class="m-datatable" id="html_table">
 																	<thead>
@@ -190,6 +192,9 @@
 														                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																										<i class="fa flaticon-eye"></i>
 																									</a>
+																				
+
+																				    			
 														                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																										<i class="fa flaticon-delete-1"></i>
 																									</a>
@@ -224,12 +229,7 @@
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
-										<script>
-											function alertSuccess() {
-											    var x = document.getElementById("success1");
-											        x.style.display = "block";
-											}
-										</script>
+										
 
 									</body>
 									<!-- end::Body -->

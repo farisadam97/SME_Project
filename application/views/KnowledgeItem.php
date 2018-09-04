@@ -116,17 +116,16 @@
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																		<?php $i=0; foreach ($data8 as $h) { $i++ ?>
-																			<?php $topik = explode(";", $h['topik']); ?>
 																		
-													                            <?php foreach ($topik as $topikk) { ?>
+																		
+													                            <?php $i=0; foreach ($data8 as $topikk) { ?>
 													                    <ul>
 																			<li>            	
-													                            <?php echo $topikk. '<br>'; ?>  
+													                            <?php echo $topikk['topik']. '<br>'; 
+													                            ?>  
 																			</li>
 																		</ul>
 
-																		<?php } ?>
 																		<?php } ?>
 
 																	</div>
@@ -154,6 +153,7 @@
 																								<span class="m-list-search__result-item-text">
 																		                            <?php
 																		                               	echo $expert. '<br>';
+																		                               	$i++;
 																                                 	?>
 																								</span>
 																									<?php } ?>

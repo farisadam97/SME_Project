@@ -155,20 +155,31 @@
 																						<h2 >
 																							Bidang Keahlian
 																						</h2>
-																					</div>
-																				</div>
-																				<div class="m-portlet__body">
-																					<?php foreach ($data as $ilmu) { ?>
-																					<h5>
-																						
-																						<?php $bidang = explode(",", $ilmu['ahli']);
+																						<ul>
+																						<?php foreach ($keahlian as $ilmu) { ?>
+
+																						<?php $bidang = explode(";", $ilmu['ilmu']);
+															                                    foreach ($bidang as $bidangg)
+															                                    { 
+															                                    	echo '<li><a href="'. base_url().'index.php/Knowledge/item/'. $ilmu['id_pengetahuan'].'" style="color: #e08600;">
+															                                    		'. $bidangg .' </a></li>' ;
+															                                    }
+
+														                                    ?>
+														                                </ul>
+																						<!-- <?php $bidang = explode(",", $ilmu['ahli']);
 													                                    foreach ($bidang as $bidangg)
 													                                    {
 													                                    	echo '&bull;'. $bidangg. '<br><br>';
 													                                    }
-													                                    ?>
-													                                </h5>
-													                                <?php } ?> 	
+													                                    ?> -->
+													                                
+													                                <?php } ?>
+																					</div>
+																	
+																				</div>
+																				<div class="m-portlet__body">
+																					
 																				</div>
 																				<div class="m-portlet__head-caption">
 																					<div class="m-portlet__head-title">

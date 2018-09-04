@@ -16,11 +16,11 @@ class m_knowledge extends CI_Model
 
   public function getDataKnowledgeTopikItem($id_knowledge) 
   {
-    $this->db->select('pengetahuan.id_pengetahuan, pengetahuan.nama_pengetahuan, pengetahuan.definisi_pengetahuan, GROUP_CONCAT(topik.nama_topik SEPARATOR ";") as topik');
+    $this->db->select('pengetahuan.id_pengetahuan, pengetahuan.nama_pengetahuan, pengetahuan.definisi_pengetahuan, topik.nama_topik as topik');
     $this->db->from('pengetahuan');
-    $this->db->join('topik', 'pengetahuan.id_pengetahuan = topik.id_pengetahuan', 'left');
+    $this->db->join('topik', 'pengetahuan.id_pengetahuan = topik.id_pengetahuan');
     $this->db->where('pengetahuan.id_pengetahuan', $id_knowledge);
-    $this->db->group_by('pengetahuan.id_pengetahuan');
+    // $this->db->group_by('pengetahuan.id_pengetahuan');
     $data8 = $this->db->get();
     return $data8->result_array();
   }

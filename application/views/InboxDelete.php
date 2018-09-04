@@ -132,10 +132,20 @@
 																						</span>
 																					</div>
 																				</div>
+																				<div class="col-md-3">
+																					<div class="email-btn" >
+																						<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
+																						Send Email
+																						</button>
+																					</div>
+																					<?php include 'EmailModal.php' ?>
+																				</div>
+																			</div>
 																			</div>
 																		</div>
 																	</div>
 																</div>
+
 																<div class="alert alert-warning alert-dismissible fade show" role="alert">
 																	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 																		<strong>
