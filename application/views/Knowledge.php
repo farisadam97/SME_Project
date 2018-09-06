@@ -27,12 +27,11 @@
 		<!--end::Web font -->
         <!--begin::Base Styles -->  
         <!--begin::Page Vendors -->
-		<link href=<?php echo base_url('assets/vendors/custom/fullcalendar/fullcalendar.bundle.css') ?> rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors -->
-		<link href=<?php echo base_url('assets/vendors/base/vendors.bundle.css') ?> rel="stylesheet" type="text/css" />
-		<link href=<?php echo base_url('assets/demo/default/base/style.bundle.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php echo base_url('assets/css/vendors.bundle.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php echo base_url('assets/css/style.bundle.css') ?> rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href=<?php echo base_url("assets/demo/default/media/img/logo/favicon.ico") ?> />
+		<link rel="shortcut icon" href=<?php echo base_url("assets/img/iKnow-icon.png") ?> />
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -48,7 +47,7 @@
 							<div class="m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-stack__item--middle m-brand__logo">
 									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="assets/demo/default/media/img/logo/logo_default_dark.png"/>
+										<img alt="" src=<?php echo base_url("assets/img/iKnow2ee.png") ?> />
 									</a>
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -173,10 +172,10 @@
 																									<?php $experts = array_unique(explode(";", $f['expert'])); ?>
 																									<?php $experts2 = array_unique(explode(";", $f['nippsme'])); ?>
 																										<?php $i=0; foreach ($experts as $expert) { ?>
-																		 									<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+																		 									<a href="<?php echo base_url()."Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
 
 																											<span class="m-list-search__result-item-pic">
-																												<img class="m--img-rounded" src="<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?>"" title="">
+																												<img class="m--img-rounded" src="<?php echo base_url("assets/img/man.png"); ?>" title="">
 																											</span>
 																											<span class="m-list-search__result-item-text">
 																					                            <?php
@@ -192,7 +191,7 @@
 													                                    </td>             
 													                                    <td>
 													                                    	<div style="text-align: center;">
-																								<a href="<?php echo base_url()."index.php/Knowledge/item/". $f['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																								<a href="<?php echo base_url()."Knowledge/item/". $f['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																									<i class="fa flaticon-eye"></i>
 																								</a>
 																							</div>
@@ -223,11 +222,11 @@
 										</div>
 										<!-- end::Scroll Top -->		    	
     									<!--begin::Base Scripts -->
-										<script src=<?php echo base_url("assets/vendors/base/vendors.bundle.js") ?> type="text/javascript"></script>
-										<script src=<?php echo base_url("assets/demo/default/base/scripts.bundle.js") ?> type="text/javascript"></script>
+										<script src=<?php echo base_url("assets/js/vendors.bundle.js") ?> type="text/javascript"></script>
+										<script src=<?php echo base_url("assets/js/scripts.bundle.js") ?> type="text/javascript"></script>
 										<!--end::Base Scripts -->   
 										 <!--begin::Page Resources -->
-										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
+										 <script src=<?php echo base_url("assets/js/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
 									</body>
 									<!-- end::Body -->
