@@ -166,12 +166,6 @@
 
 														                                    ?>
 														                                </ul>
-																						<!-- <?php $bidang = explode(",", $ilmu['ahli']);
-													                                    foreach ($bidang as $bidangg)
-													                                    {
-													                                    	echo '&bull;'. $bidangg. '<br><br>';
-													                                    }
-													                                    ?> -->
 													                                
 													                                <?php } ?>
 																					</div>
