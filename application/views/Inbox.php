@@ -135,8 +135,8 @@
 																				</div>
 																				<div class="col-md-3">
 																					<div class="email-btn" >
-																						<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
-																						Send Email
+																						<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 100%;">
+																						Send Message
 																						</button>
 																					</div>
 																					<?php include 'EmailModal.php' ?>
@@ -147,7 +147,7 @@
 																	</div>
 																</div>
 
-																<?php include 'Alert_DeleteSuccess.php' ?>
+																<?php //include 'Alert_DeleteSuccess.php' ?>
 																
 																<table class="m-datatable" id="html_table">
 																	<thead>
@@ -229,7 +229,6 @@
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
-										
 
 									</body>
 									<!-- end::Body -->
