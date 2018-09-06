@@ -27,12 +27,11 @@
 		<!--end::Web font -->
         <!--begin::Base Styles -->  
         <!--begin::Page Vendors -->
-		<link href=<?php echo base_url('assets/vendors/custom/fullcalendar/fullcalendar.bundle.css') ?> rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors -->
-		<link href=<?php echo base_url('assets/vendors/base/vendors.bundle.css') ?> rel="stylesheet" type="text/css" />
-		<link href=<?php echo base_url('assets/demo/default/base/style.bundle.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php echo base_url('assets/css/vendors.bundle.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php echo base_url('assets/css/style.bundle.css') ?> rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href=<?php echo base_url("assets/demo/default/media/img/logo/favicon.ico") ?> />
+		<link rel="shortcut icon" href=<?php echo base_url("assets/img/iKnow-icon.png") ?> />
 	</head>
 	<!-- end::Head -->
     <!-- end::Body -->
@@ -164,7 +163,7 @@
 																								<div class="m-list-search__results">
 																									<a href="<?php echo base_url()."index.php/Experts/item/". $e['nipp']?>" class="m-list-search__result-item">
 																										<span class="m-list-search__result-item-pic">
-																											<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg") ?> title="">
+																											<img class="m--img-rounded" src=<?php echo base_url("assets/img/man.png") ?> title="">
 																										</span>
 																										<span class="m-list-search__result-item-text">
 																											<?php echo $e['nama_sme']; ?>
@@ -216,17 +215,17 @@
 										</div>
 										<!-- end::Scroll Top -->		    	
     	<!--begin::Base Scripts -->
-										<script src=<?php echo base_url("assets/vendors/base/vendors.bundle.js") ?> type="text/javascript"></script>
-										<script src=<?php echo base_url("assets/demo/default/base/scripts.bundle.js") ?> type="text/javascript"></script>
+										<script src=<?php echo base_url("assets/js/vendors.bundle.js") ?> type="text/javascript"></script>
+										<script src=<?php echo base_url("assets/js/scripts.bundle.js") ?> type="text/javascript"></script>
 										<!--end::Base Scripts --> 
 										 <!--begin::Page Resources -->
-										 <script src=<?php echo base_url("assets/demo/default/custom/crud/metronic-datatable/base/html-table.js") ?> type="text/javascript"></script>
+										 <script src=<?php echo base_url("assets/js/html-table.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
 										<!--begin::Page Vendors -->
-										<script src=<?php echo base_url("assets/vendors/custom/datatables/datatables.bundle.js") ?> type="text/javascript"></script>
+										<script src=<?php echo base_url("assets/js/datatables.bundle.js") ?> type="text/javascript"></script>
 										<!--end::Page Vendors -->  
         <!--begin::Page Resources -->
-										<script src=<?php echo base_url("assets/demo/default/custom/crud/datatables/basic/basic.js") ?> type="text/javascript"></script>
+										<script src=<?php echo base_url("assets/js/basic/basic.js") ?> type="text/javascript"></script>
 										<!--end::Page Resources -->
 									</body>
 									<!-- end::Body -->
