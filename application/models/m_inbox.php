@@ -31,6 +31,7 @@ class m_inbox extends CI_Model
     $this->db->select('*');
     $this->db->from('pesan');
     $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
+    $this->db->where('id_pesan',$id_pesan);
     $data = $this->db->get();
     return $data->result_array();
 
@@ -46,6 +47,7 @@ class m_inbox extends CI_Model
     $this->db->select('*');
     $this->db->from('pesan');
     $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
+    $this->db->where('id_pesan',$id_pesan);
     $data = $this->db->get();
     return $data->result_array();
 
