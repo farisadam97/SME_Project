@@ -142,16 +142,14 @@
 																</div>
 																
 																	<div class="form-group m-form__group">
-																		<label for="exampleTextarea">
-																			Reply :
-																		</label>
-																		<textarea class="form-control m-input m-input--air" name="balasan" rows="3"></textarea>
-																		
-																	</div>
-																	<div class="m-login__form-action">
-																		<button  class="btn btn-primary" name="pesan" type="submit" value="Submit">	
-																			Kirim
-																		</button>
+																		<div class="col-md-2" >
+																			<div class="email-btn" >
+																				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
+																				Send Reply
+																				</button>
+																			</div>
+																			<?php include 'ReplyModal.php' ?>
+																		</div>
 																	</div>
 																</form>
 															</div>
