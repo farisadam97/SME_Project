@@ -88,7 +88,7 @@ class Inbox extends CI_Controller {
 			} else{
 				$this->m_inbox->kirimPesan($data_insert);
 				$data['err_message'] = "Message Sent!";
-				redirect("Inbox");
+				redirect("Inbox",$data);
 			}
 		    }
 			// $config['upload_path']          = APPPATH. '../assets/uploaded_files/';
@@ -117,6 +117,25 @@ class Inbox extends CI_Controller {
 		 	// $data['err_message'] = "Message Sent!";
 			// redirect("Inbox");
             
+	}
+	public function balasPesan(){
+		$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
+		$nipp = $_GET['nipp_pengirim'];
+		$subjek = 'Balasan untuk'.$_GET['subjek'];
+		$isi_pesan = $_POST['balasan'];
+		$nama = $this->m_login->cek_nama();
+		$data_insert = array(
+			'id_pesan' => '',
+			'nipp_penerima' => $nipp,
+			'nipp_pengirim' => $this->session->userdata('nipp'),
+			'subjek' => $subjek,
+			'isi_pesan' => $isi_pesan,
+			'nama_pengirim' => $nama,
+			'read_pesan' => '0'
+		);
+		$this->m_inbox->kirimPesan($data_insert);
+		$data['err_message'] = "Message Sent!";
+		redirect("Inbox",$data);
 	}
 }
 ?>

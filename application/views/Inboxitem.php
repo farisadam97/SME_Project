@@ -106,12 +106,22 @@
 													<!-- END: Subheader -->
 													<div class="m-content">
 														<div class="m-portlet m-portlet--mobile">
+														<form action="<?php echo base_url('Inbox/balasPesan') ?>" method="post">
 															<div class="m-portlet__head">
 																<div class="m-portlet__head-caption">
 																	<div class="m-portlet__head-title">
-																		<h3 class="m-portlet__head-text">
-																			Inbox From <?php echo $data[0]['nama_pengirim']; ?>
-																		</h3>
+																		<div class="row">
+																			<div class="col-lg-6">
+																					<h3 class="m-portlet__head-text" name="nipp_pengirim">
+																						[<?php echo $data[0]['nipp_pengirim'] ?>] 
+																					</h3>
+																			</div>
+																			<div class="col-lg-6">
+																					<h3 class="m-portlet__head-text" name="nama_pengirim">
+																						<?php echo $data[0]['nama_pengirim']; ?>
+																					</h3>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -120,7 +130,7 @@
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
+																				<h3 class="m-portlet__head-text" name="subjek">
 																					Subject : <?php echo $data[0]['subjek']; ?>
 																				</h3>
 																			</div>
@@ -130,18 +140,20 @@
 																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6>
 																	</div>
 																</div>
-																<div class="form-group m-form__group">
-																	<label for="exampleTextarea">
-																		Reply :
-																	</label>
-																	<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
-																	
-																</div>
-																<div class="m-form__actions">
-																	<button type="reset" class="btn btn-accent">
-																		Submit
-																	</button>
-																</div>
+																
+																	<div class="form-group m-form__group">
+																		<label for="exampleTextarea">
+																			Reply :
+																		</label>
+																		<textarea class="form-control m-input m-input--air" name="balasan" rows="3"></textarea>
+																		
+																	</div>
+																	<div class="m-login__form-action">
+																		<button  class="btn btn-primary" name="pesan" type="submit" value="Submit">	
+																			Kirim
+																		</button>
+																	</div>
+																</form>
 															</div>
 														</div>
 													</div>
