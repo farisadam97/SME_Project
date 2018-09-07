@@ -188,13 +188,13 @@
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
-														                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+														                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" >
 																										<i class="fa flaticon-eye"></i>
 																									</a>
 																				
-
+																									<!-- <?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?> -->
 																				    			
-														                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+														                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class=" btn btn-success m-btn m-btn--custom btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
 																										<i class="fa flaticon-delete-1"></i>
 																									</a>
 																						</td>
@@ -227,7 +227,44 @@
 										<!--end::Base Scripts -->   
 										 <!--begin::Page Resources -->
 										 <script src=<?php echo base_url("assets/js/html-table.js") ?> type="text/javascript"></script>
+										 <script src=<?php echo base_url("assets/js/sweetalert2.js") ?> type="text/javascript"></script>
+										<script>
+
+											// var SweetAlert2Demo={
+											// 	init:function(){
+											// 	$("#m_sweetalert_demo_8").click(function(e){
+											// 		swal({title:"Are you sure?",text:"You won't be able to revert this!",type:"warning",showCancelButton:!0,confirmButtonText:"Yes, delete it!"})
+											// 		.then(function(e){e.value&&swal("Deleted!","Your file has been deleted.","success")})}),
+											// }	
+											// }
+											
+										</script>
+
 										<!--end::Page Resources -->
+<<<<<<< HEAD
+=======
+										<!-- <script type="text/javascript">
+											$(".remove").click(function(){
+												var id = $(this).parents("tr").attr("id");
+
+
+												if(confirm('Are you sure to remove this record ?'))
+												{
+													$.ajax({
+													url: '/inbox/',
+													type: 'DELETE',
+													error: function() {
+														alert('Something is wrong');
+													},
+													success: function(data) {
+															$("#"+id).remove();
+															alert("Record removed successfully");  
+													}
+													});
+												}
+											});
+										</script> -->
+>>>>>>> 69b33f93ebb0abd869a8894f5b6e1b4a3feea2a6
 
 									</body>
 									<!-- end::Body -->

@@ -29,14 +29,14 @@
 																				</label>
 																				<textarea class="form-control" name="isi_pesan"></textarea>
 																			</div>
-																			<input type="file" name="pic" accept="image/*">
+																			<input type="file" name="file" accept="image/*" >
 																		
 																			<div class="modal-footer">
 																				<button type="button" class="btn btn-secondary" data-dismiss="modal">
 																					Close
 																				</button>
 																				<div class="m-login__form-action">
-																					<button  class="btn btn-primary" type="submit" value="Submit">	
+																					<button  class="btn btn-primary" name="pesan" type="submit" value="Submit">	
 																						Send message
 																					</button>
 																				</div>
