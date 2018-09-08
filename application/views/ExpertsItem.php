@@ -160,11 +160,13 @@
 																						<ul>
 																						<?php foreach ($keahlian as $ilmu) { ?>
 
-																						<?php $bidang = explode(";", $ilmu['ilmu']);
-															                                    foreach ($bidang as $bidangg)
+																						<?php $bidang = explode(";", $ilmu['nama_ilmu']); ?>
+																						<?php $bidang_ilmu = explode(";", $ilmu['id_ilmu']); ?>
+															                                    <?php $i=0; foreach ($bidang as $bidangg)
 															                                    { 
-															                                    	echo '<li><a href="'. base_url().'Knowledge/item/'. $ilmu['id_pengetahuan'].'" style="color: #e08600;">
+															                                    	echo '<li><a href="'. base_url().'Knowledge/item/'. $bidang_ilmu[$i].'" style="color: #e08600;">
 															                                    		'. $bidangg .' </a></li>' ;
+															                                    		$i++;
 															                                    }
 
 														                                    ?>

@@ -90,12 +90,12 @@
                                                     <div class="m-content">
 														<div class="row">
 															<div class="col-md-12">
-																<div class="m-portlet m-portlet--responsive-mobile m-portlet--warning m-portlet--head-solid-bg m-portlet--bordered">
+																<div class="m-portlet m-portlet--responsive-mobile m-portlet--danger m-portlet--head-solid-bg m-portlet--bordered">	
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
 																				<span class="m-portlet__head-icon">
-																					<i class="flaticon-placeholder"></i>
+																					<i class="flaticon-light"></i>
 																				</span>
 																				<h3 class="m-portlet__head-text">
 																					<?php echo $data8[0]['nama_pengetahuan']; ?>
@@ -105,19 +105,13 @@
 																	</div>
 
 																	<div class="m-portlet__body">
-																		<?php echo $data8[0]['definisi_pengetahuan']; ?>
+																		<a class="flaticon-info"><?php echo " ".$data8[0]['definisi_pengetahuan']; ?></a>
 																	</div>
-																	<div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h2 >
-																					Sub-Ilmu
-																				</h2>
-																			</div>
-																		</div>
-																	</div>
+
 																	<div class="m-portlet__body">
-																		
+																		<h2>
+																			Sub Ilmu
+																		</h2>
 																		
 													                            <?php $i=0; foreach ($data8 as $topikk) { ?>
 													                    <ul>
@@ -130,14 +124,10 @@
 																		<?php } ?>
 
 																	</div>
-																	<div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h2 >
-																					Experts
-																				</h2>
-																			</div>
-																		</div>
+																	<div class="m-portlet__body">
+																		<h2>
+																			Experts
+																		</h2>	
 																	</div>
 																	<div class="m-portlet__body">
 																		<div class="m-list-search">
@@ -149,7 +139,7 @@
 																				<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
 
 																					<span class="m-list-search__result-item-pic">
-																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/img/user4.jpg"); ?> title="">
 																					</span>
 																					<span class="m-list-search__result-item-text">
 															                            <?php
