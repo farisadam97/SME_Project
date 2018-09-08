@@ -173,11 +173,13 @@
 																							</div>
 																						</td>
 																						<td>
-																							<?php $bidang = explode(";", $e['ilmu']);
-															                                    foreach ($bidang as $bidangg)
+																							<?php $bidang = explode(";", $e['nama_ilmu']); ?>
+																							<?php $bidang2 = explode(";", $e['id_ilmu']); ?>
+															                                    <?php $i=0; foreach ($bidang as $bidangg)
 															                                    { 
-															                                    	echo '&bull; <a href="'. base_url().'index.php/Knowledge/item/'. $e['id_pengetahuan'].'">
+															                                    	echo '&bull; <a href="'. base_url().'index.php/Knowledge/item/'. $bidang2[$i].'">
 															                                    		'. $bidangg .' </a><br>' ;
+															                                    		$i++;
 															                                    }
 														                                    ?>
 																						</td>
