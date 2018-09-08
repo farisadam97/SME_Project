@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2018 at 11:53 AM
+-- Generation Time: Sep 08, 2018 at 09:18 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `pengetahuan` (
   `id_pengetahuan` int(9) NOT NULL,
-  `nama_pengetahuan` varchar(500) DEFAULT NULL,
+  `nama_pengetahuan` varchar(1000) DEFAULT NULL,
   `definisi_pengetahuan` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
@@ -136,6 +136,8 @@ INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_penge
 
 CREATE TABLE `pesan` (
   `id_pesan` int(11) NOT NULL,
+  `nipp_penerima` int(15) NOT NULL,
+  `nipp_pengirim` int(15) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `isi_pesan` varchar(1000) NOT NULL,
   `subjek` varchar(1000) NOT NULL,
@@ -149,10 +151,14 @@ CREATE TABLE `pesan` (
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_pesan`, `timestamp`, `isi_pesan`, `subjek`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(15, '2018-08-27 08:20:59', 'dsa', 'sadad', 'sdasd', 1, 'asdadsa', 0),
-(17, '2018-08-27 04:23:58', 'dsadsa', 'sadsadsa', 'dsadsads', 1, 'asda', 1),
-(18, '2018-08-27 06:11:59', 'adsad', 'asdas', 'asda', 1, '2', 0);
+INSERT INTO `pesan` (`id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
+(3, 110, 90, '2018-08-31 06:38:41', '12e12', 'dsadas', 'dsada', 1, 'd', 1),
+(4, 110, 90, '2018-08-31 07:01:47', 'lsdald', 'slmda;ldm', 'a;lsdma;lmd;', 0, 'laskdlad', 1),
+(5, 110, 90, '2018-08-31 07:13:10', 'sadlkasmldk', 'dskadjkos', 'bobby', 0, '', 0),
+(13, 808, 90, '2018-09-04 08:01:21', 'ugu', 'gu', 'bobby', 0, '', 0),
+(16, 90, 90, '2018-09-07 08:10:41', 'koko', 'Balasan untuk lklio', 'bobby', 0, '', 1),
+(17, 90, 110, '2018-09-07 08:06:07', 'KACAAAAANG', 'Balasan untuk kdsakdmska', 'admin', 0, '', 1),
+(18, 110, 90, '2018-09-07 08:33:32', 'huehuehuehue', 'Balasan untuk huehue', 'bobby', 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2481,11 +2487,6 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 (660403567, 77),
 (660103606, 82),
 (750704048, 43),
-(700703724, 17),
-(700703724, 18),
-(700703724, 21),
-(700703724, 74),
-(700703724, 21),
 (690703449, 42),
 (690703449, 43),
 (690703449, 45),
@@ -2657,7 +2658,13 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 (810604178, 16),
 (770604190, 3),
 (770604190, 6),
-(830204612, 79);
+(830204612, 79),
+(711003975, 76),
+(871105174, 76),
+(700703724, 21),
+(700703724, 17),
+(700703724, 18),
+(700703724, 74);
 
 -- --------------------------------------------------------
 
@@ -2667,7 +2674,7 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 
 CREATE TABLE `topik` (
   `id_topik` int(9) NOT NULL,
-  `nama_topik` varchar(299) DEFAULT NULL,
+  `nama_topik` varchar(1000) DEFAULT NULL,
   `id_pengetahuan` int(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
@@ -3121,6 +3128,7 @@ INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 
 CREATE TABLE `user` (
   `nipp` varchar(100) NOT NULL,
+  `nama` varchar(25) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -3128,8 +3136,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`nipp`, `password`) VALUES
-('admin', 'admin');
+INSERT INTO `user` (`nipp`, `nama`, `password`) VALUES
+('090', 'bobby', 'admin'),
+('110', 'admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -3175,6 +3184,12 @@ ALTER TABLE `topik`
   ADD KEY `topik_ibfk_1` (`id_pengetahuan`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`nipp`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -3182,7 +3197,7 @@ ALTER TABLE `topik`
 -- AUTO_INCREMENT for table `pengetahuan`
 --
 ALTER TABLE `pengetahuan`
-  MODIFY `id_pengetahuan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id_pengetahuan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT for table `pesan`
 --
@@ -3201,13 +3216,13 @@ ALTER TABLE `sme_list`
 -- Constraints for table `sme_list`
 --
 ALTER TABLE `sme_list`
-  ADD CONSTRAINT `sme_list_ibfk_1` FOREIGN KEY (`NIPP`) REFERENCES `sdm` (`NIPP`);
+  ADD CONSTRAINT `sme_list_ibfk_1` FOREIGN KEY (`nipp`) REFERENCES `sdm` (`nipp`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `sme_pengetahuan`
 --
 ALTER TABLE `sme_pengetahuan`
-  ADD CONSTRAINT `sme_pengetahuan_ibfk_1` FOREIGN KEY (`nipp_sme`) REFERENCES `sme_list` (`NIPP`),
+  ADD CONSTRAINT `sme_pengetahuan_ibfk_1` FOREIGN KEY (`nipp_sme`) REFERENCES `sme_list` (`nipp`),
   ADD CONSTRAINT `sme_pengetahuan_ibfk_2` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
