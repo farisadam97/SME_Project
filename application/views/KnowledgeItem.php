@@ -90,18 +90,20 @@
                                                     <div class="m-content">
 														<div class="row">
 															<div class="col-md-12">
-																<div class="m-portlet m-portlet--creative m-portlet--bordered-semi" >
+																<div class="m-portlet m-portlet--responsive-mobile m-portlet--warning m-portlet--head-solid-bg m-portlet--bordered">
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
-																				<h1>
-																				<span>
-																						<b><?php echo $data8[0]['nama_pengetahuan']; ?></b>
+																				<span class="m-portlet__head-icon">
+																					<i class="flaticon-placeholder"></i>
 																				</span>
-																				</h1>
+																				<h3 class="m-portlet__head-text">
+																					<?php echo $data8[0]['nama_pengetahuan']; ?>
+																				</h3>
 																			</div>
 																		</div>
 																	</div>
+
 																	<div class="m-portlet__body">
 																		<?php echo $data8[0]['definisi_pengetahuan']; ?>
 																	</div>
@@ -141,82 +143,26 @@
 																		<div class="m-list-search">
 																			<div class="m-list-search__results">
 																				<?php foreach ($data9 as $j) { ?>
-																					<?php $experts = explode(";", $j['expert']); ?>
-																					<?php $experts2 = explode(";", $j['nippsme']); ?>
-																						<?php foreach ($experts as $expert) { ?>
-																							<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+																				<?php $experts = explode(";", $j['expert']); ?>
+																				<?php $experts2 = explode(";", $j['nippsme']); ?>
+																				<?php foreach ($experts as $expert) { ?>
+																				<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
 
-																								<span class="m-list-search__result-item-pic">
-																									<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
-																								</span>
-																								<span class="m-list-search__result-item-text">
-																		                            <?php
-																		                               	echo $expert. '<br>';
-																		                               	$i++;
-																                                 	?>
-																								</span>
-																									<?php } ?>
-																							<?php } ?>
-																							</a>
-																			</div>
-																		</div>
-																	</div>
-																	<!-- <div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h2 >
-																					FAQ
-																				</h2>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet__body">
-																		<div class="m-portlet">
-																			<div class="m-portlet__body" style="padding-bottom: 10px;">
-																				<span>
-																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
-																				</span>
-																				<span>
-																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
-																				</span>
-																			</div>
-																		</div>
-																		<div class="m-portlet">
-																			<div class="m-portlet__body" style="padding-bottom: 10px;">
-																				<span>
-																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
-																				</span>
-																				<span>
-																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
-																				</span>
-																			</div>
-																		</div>
-																		<div class="m-portlet">
-																			<div class="m-portlet__body" style="padding-bottom: 10px;">
-																				<span>
-																					<p> Q : Siapa yang dapat mengajukan permohonan informasi publik? </p>
-																				</span>
-																				<span>
-																					<p> A : Setiap warga negara dan/atau badan hukum Indonesia sebagaimana diatur dalam Undang-Undang Republik Indonesia Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. </p>
-																				</span>
-																			</div>
-																		</div>
-																		<div class="row" style="ma">
-																			<div class="col-xl-3">
-																			</div>
-																			<div class="col-xl-3">
-																			</div>
-																			<div class="col-xl-3">
-																			</div>
-																			<div class="col-xl-3" style="text-align:right;">
-																				<a href="<?php echo base_url()."index.php/Knowledge" ?>">
-																					<button type="button" class="btn btn-warning">
-																						Back
-																					</button>
+																					<span class="m-list-search__result-item-pic">
+																						<img class="m--img-rounded" src=<?php echo base_url("assets/app/media/img/users/user1.jpg"); ?> title="">
+																					</span>
+																					<span class="m-list-search__result-item-text">
+															                            <?php
+															                               	echo $expert. '<br>';
+															                               	$i++;
+													                                 	?>
+																					</span>
+																						<?php } ?>
+																				<?php } ?>
 																				</a>
 																			</div>
 																		</div>
-																	</div> -->
+																	</div>
 																</div>
 															</div>
 														</div>

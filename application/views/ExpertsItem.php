@@ -94,6 +94,9 @@
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
+																				<h3 class="m-portlet__head-text">
+																					Subject Matter Expert Profile
+																				</h3>
 																				<h2 class="m-portlet__head-label m-portlet__head-label--danger">
 																					<span>
 																						<?php echo $data[0]['nama_sme']; ?>

@@ -425,37 +425,42 @@
 													                                <tr>
 													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
 													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
-													                                    <td><?php $topik = array_unique(explode(";", $b['topik']));
-													                                    foreach ($topik as $topikk)
+													                                    <td><?php $topik = array_unique(explode(";", $b['topik'])); ?>
+													                                    <ul>
+													                                    <?php foreach ($topik as $topikk)
 													                                    {
-													                                    	echo '&bull;'. $topikk. '<br>';
+													                                    	echo '<li>'. $topikk. '</li>';
 													                                    }
 													                                    ?>
+													                                	</ul>
 													                                    </td>
 
 													                                    <td>
-													                                    <div class="m-portlet__body">
+													                                    	<div class="m-portlet__body">
 																								<div class="m-list-search">
 																									<div class="m-list-search__results">
 																									<?php $experts = array_unique(explode(";", $b['expert'])); ?>
 																									<?php $experts2 = array_unique(explode(";", $b['nippsme'])); ?>
 																										<?php $i=0; foreach ($experts as $expert) { ?>
-																		 									<a href="<?php echo base_url()."index.php/Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
-
+																		 									<a href="<?php echo base_url()."Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
 																											<span class="m-list-search__result-item-pic">
 																												<img class="m--img-rounded" src="<?php echo base_url("assets/img/man.png"); ?>" title="">
 																											</span>
 																											<span class="m-list-search__result-item-text">
 																					                            <?php
-																					                               	echo $expert;
-																					                               	
+																					                               	echo $expert;	
 																			                                 	?>
 																											</span>
+																											</a>
+
+																										<?php $i++; ?>
 																										<?php } ?>
-																										</a>
+
+																										
 																                                    </div>
 																								</div>
 																							</div>
+													                                   		
 													                                    </td>
 													                                    
 													                                    <td style="vertical-align: middle;">
