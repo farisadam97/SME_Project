@@ -14,8 +14,7 @@ class Inbox extends CI_Controller {
 			redirect(base_url("Login")); }       
 	}
 
-	public function index()
-	{
+	public function index(){
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
@@ -65,16 +64,25 @@ class Inbox extends CI_Controller {
 
 	public function kirimPesan(){
 
-		$namaFile = $_FILES['file']['name'];
-		$namaSementara = $_FILES['file']['tmp_name'];
-		$dirUpload = ".assets/uploaded_files/";
-		if (isset($_POST['pesan'])){
-			$file = $dirUpload.basename($namaFile);
-			$nipp = $_POST['nipp_penerima'];
-			$subjek = $_POST['subjek'];
-			$isi_pesan = $_POST['isi_pesan'];
-			$nama = $this->m_login->cek_nama();
-			$data_insert = array(
+		$nipp = $_POST['nipp_penerima'];
+		$subjek = $_POST['subjek'];
+		$isi_pesan = $_POST['isi_pesan'];
+		$nama = $this->m_login->cek_nama();
+			
+        $config['upload_path']         = './assets/uploaded_files';
+		$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
+		$config['max_size']             = 1000000;
+		$config['max_width']            = 10000;
+		$config['max_height']           = 10000;
+        
+        $this->upload->initialize($config);
+        $temp = explode(".", $_FILES["file"]["name"]);
+		$newfilename = round(microtime(true)) . '.' . end($temp);
+		move_uploaded_file($_FILES["file"]["tmp_name"], "assets/uploaded_files/" . $newfilename);
+
+        $file=('assets/uploaded_files/'.$newfilename);
+        
+        $data_insert = array(
 				'id_pesan' => '',
 				'nipp_penerima' => $nipp,
 				'nipp_pengirim' => $this->session->userdata('nipp'),
@@ -84,20 +92,47 @@ class Inbox extends CI_Controller {
 				'file' => $file,
 				'read_pesan' => '0'
 			);
-				if(is_uploaded_file($namaSementara)){
-					// $destination_path = getcwd().DIRECTORY_SEPARATOR;
-					// $target_path = $destination_path . basename( $_FILES["file"]["name"]);
-					move_uploaded_file($namaSementara,$file); // lek pengen gae fungsi sing atas, $file gantien dadi $target_path ; //
-					$this->m_inbox->kirimPesan($data_insert);
-					$data['err_message'] = "Message Sent!";
-					redirect("Inbox",$data);
-				} else{
-					$this->m_inbox->kirimPesan($data_insert);
-					$data['err_message'] = "Message Sent!";
-					redirect("Inbox",$data);
-				}
-		}
+
+        $res = $this->m_inbox->InsertData('pesan',$data_insert);
+        $this->upload->do_upload('file');
+        redirect('Inbox');      
 	}
+
+	// public function kirimPesan2(){
+
+	// 	$namaFile = $_FILES['file']['name'];
+	// 	$namaSementara = $_FILES['file']['tmp_name'];
+	// 	$dirUpload = "assets/uploaded_files/";
+	// 	if (isset($_POST['pesan'])){
+	// 		$target_path = $dirUpload.basename($namaFile);
+	// 		$nipp = $_POST['nipp_penerima'];
+	// 		$subjek = $_POST['subjek'];
+	// 		$isi_pesan = $_POST['isi_pesan'];
+	// 		$nama = $this->m_login->cek_nama();
+	// 		$data_insert = array(
+	// 			'id_pesan' => '',
+	// 			'nipp_penerima' => $nipp,
+	// 			'nipp_pengirim' => $this->session->userdata('nipp'),
+	// 			'subjek' => $subjek,
+	// 			'isi_pesan' => $isi_pesan,
+	// 			'nama_pengirim' => $nama,
+	// 			'file' => $target_path,
+	// 			'read_pesan' => '0'
+	// 		);
+	// 			if(is_uploaded_file($namaSementara)){
+	// 				// $destination_path = getcwd().DIRECTORY_SEPARATOR;
+	// 				// $target_path = $destination_path . basename( $_FILES["file"]["name"]);
+	// 				move_uploaded_file($namaSementara,$file); // lek pengen gae fungsi sing atas, $file gantien dadi $target_path ; //
+	// 				$this->m_inbox->kirimPesan($data_insert);
+	// 				$data['err_message'] = "Message Sent!";
+	// 				redirect("Inbox",$data);
+	// 			} else{
+	// 				$this->m_inbox->kirimPesan($data_insert);
+	// 				$data['err_message'] = "Message Sent!";
+	// 				redirect("Inbox",$data);
+	// 			}
+	// 	}
+	// }
 			// $config['upload_path']          = APPPATH. '../assets/uploaded_files/';
 			// $config['allowed_types']        = 'jpeg|jpg|png';
 			// $config['max_size']             = 25000;
@@ -168,24 +203,59 @@ class Inbox extends CI_Controller {
 				
             
 	
-	public function balasPesan(){
-		//$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
-		$nipp = $this->input->post('nipp_penerima');
-		$subjek = 'Balasan untuk '.$_POST['subjek'];
-		$isi_pesan = $_POST['isi_pesan'];
-		$nama = $this->m_login->cek_nama();
-		$data_insert = array(
-			'id_pesan' => '',
-			'nipp_penerima' => $nipp,
-			'nipp_pengirim' => $this->session->userdata('nipp'),
-			'subjek' => $subjek,
-			'isi_pesan' => $isi_pesan,
-			'nama_pengirim' => $nama,
-			'read_pesan' => '0'
-		);
-		$this->m_inbox->kirimPesan($data_insert);
-		$data['err_message'] = "Message Sent!";
-		redirect("Inbox",$data);
-	}
+	// public function balasPesan(){
+
+	// 	$nipp = $_POST['nipp_penerima'];
+	// 	$subjek = $_POST['subjek'];
+	// 	$isi_pesan = $_POST['isi_pesan'];
+	// 	$nama = $this->m_login->cek_nama();
+			
+ //        $config['upload_path']         = './assets/uploaded_files';
+	// 	$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
+	// 	$config['max_size']             = 1000000;
+	// 	$config['max_width']            = 10000;
+	// 	$config['max_height']           = 10000;
+        
+ //        $this->upload->initialize($config);
+ //        $temp = explode(".", $_FILES["file"]["name"]);
+	// 	$newfilename = round(microtime(true)) . '.' . end($temp);
+	// 	move_uploaded_file($_FILES["file"]["tmp_name"], "assets/uploaded_files/" . $newfilename);
+
+ //        $file=('assets/uploaded_files/'.$newfilename);
+        
+ //        $data_insert = array(
+	// 			'id_pesan' => '',
+	// 			'nipp_penerima' => $nipp,
+	// 			'nipp_pengirim' => $this->session->userdata('nipp'),
+	// 			'subjek' => $subjek,
+	// 			'isi_pesan' => $isi_pesan,
+	// 			'nama_pengirim' => $nama,
+	// 			'file' => $file,
+	// 			'read_pesan' => '0'
+	// 		);
+
+ //        $res = $this->m_inbox->InsertData('pesan',$data_insert);
+ //        $this->upload->do_upload('file');
+ //        redirect('Inbox'); 
+
+		// -------------------------------------------------------
+
+		// $nipp = $this->input->post('nipp_penerima');
+		// $subjek = 'Balasan untuk '.$_POST['subjek'];
+		// $isi_pesan = $_POST['isi_pesan'];
+		// $nama = $this->m_login->cek_nama();
+		// $data_insert = array(
+		// 	'id_pesan' => '',
+		// 	'nipp_penerima' => $nipp,
+		// 	'nipp_pengirim' => $this->session->userdata('nipp'),
+		// 	'subjek' => $subjek,
+		// 	'isi_pesan' => $isi_pesan,
+		// 	'nama_pengirim' => $nama,
+		// 	'read_pesan' => '0'
+		// );
+		// $this->m_inbox->kirimPesan($data_insert);
+		// $data['err_message'] = "Message Sent!";
+		// redirect("Inbox",$data);
+	// }
 }
 ?>

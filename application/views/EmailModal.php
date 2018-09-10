@@ -30,12 +30,8 @@
 																				<textarea class="form-control" name="isi_pesan"></textarea>
 																			</div>
 																			<div class="form-group">
-																				<label  class="form-control-label">
-																					Upload Picture
-																				</label>
 																				
-																				<input type="file" name="file" accept="image/*" >
-																				<!-- <input type="hidden" name="is_submit" value="1" /> -->
+																				<input type="file" name="file" accept="image/*">
 																			</div>
 																			<div class="modal-footer">
 																				<button type="button" class="btn btn-secondary" data-dismiss="modal">
