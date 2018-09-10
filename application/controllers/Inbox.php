@@ -87,7 +87,7 @@ class Inbox extends CI_Controller {
 				if(is_uploaded_file($namaSementara)){
 					// $destination_path = getcwd().DIRECTORY_SEPARATOR;
 					// $target_path = $destination_path . basename( $_FILES["file"]["name"]);
-					move_uploaded_file($namaSementara,$file);
+					move_uploaded_file($namaSementara,$file); // lek pengen gae fungsi sing atas, $file gantien dadi $target_path ; //
 					$this->m_inbox->kirimPesan($data_insert);
 					$data['err_message'] = "Message Sent!";
 					redirect("Inbox",$data);
