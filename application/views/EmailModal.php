@@ -12,16 +12,16 @@
 																		</button>
 																	</div>
 																	<div class="modal-body">
-																		<form action="<?php echo base_url('Inbox/kirimPesan') ?>" method="post">
+																		<form action="<?php echo base_url('Inbox/kirimPesan') ?>" method="post" role="form" enctype="multipart/form-data">
 																			<div class="form-group">
 																				<label  class="form-control-label">
 																					Recipient:
 																				</label>
-                                                                                <input type="text" class="form-control" name="nipp_penerima">
+                                                                                <input type="text" class="form-control" name="nipp_penerima" required>
                                                                                 <label  class="form-control-label">
 																					Subject:
 																				</label>
-																				<input type="text" class="form-control" name="subjek">
+																				<input type="text" class="form-control" name="subjek" required>
 																			</div>
 																			<div class="form-group">
 																				<label  class="form-control-label">
@@ -29,8 +29,14 @@
 																				</label>
 																				<textarea class="form-control" name="isi_pesan"></textarea>
 																			</div>
-																			<input type="file" name="file" accept="image/*" >
-																		
+																			<div class="form-group">
+																				<label  class="form-control-label">
+																					Upload Picture
+																				</label>
+																				
+																				<input type="file" name="file" accept="image/*" >
+																				<!-- <input type="hidden" name="is_submit" value="1" /> -->
+																			</div>
 																			<div class="modal-footer">
 																				<button type="button" class="btn btn-secondary" data-dismiss="modal">
 																					Close

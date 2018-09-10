@@ -138,6 +138,7 @@
 																	</div>
 																	<div class="m-portlet__body">
 																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6>
+																		<span><<img src=<?php echo $data[0]['file']  ?> alt="Smiley face" >
 																	</div>
 																</div>
 																
@@ -147,6 +148,7 @@
 																				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
 																				Send Reply
 																				</button>
+																				
 																			</div>
 																			<?php include 'ReplyModal.php' ?>
 																		</div>
