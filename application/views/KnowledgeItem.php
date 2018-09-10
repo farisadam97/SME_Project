@@ -90,7 +90,7 @@
                                                     <div class="m-content">
 														<div class="row">
 															<div class="col-md-12">
-																<div class="m-portlet m-portlet--responsive-mobile m-portlet--danger m-portlet--head-solid-bg m-portlet--bordered">	
+																<div class="m-portlet m-portlet--responsive-mobile m-portlet--warning m-portlet--head-solid-bg m-portlet--bordered">	
 																	<div class="m-portlet__head">
 																		<div class="m-portlet__head-caption">
 																			<div class="m-portlet__head-title">
