@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2018 at 09:18 AM
+-- Generation Time: Sep 11, 2018 at 05:35 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -136,8 +136,8 @@ INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_penge
 
 CREATE TABLE `pesan` (
   `id_pesan` int(11) NOT NULL,
-  `nipp_penerima` int(15) NOT NULL,
-  `nipp_pengirim` int(15) NOT NULL,
+  `nipp_penerima` varchar(15) NOT NULL,
+  `nipp_pengirim` varchar(15) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `isi_pesan` varchar(1000) NOT NULL,
   `subjek` varchar(1000) NOT NULL,
@@ -152,13 +152,10 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(3, 110, 90, '2018-08-31 06:38:41', '12e12', 'dsadas', 'dsada', 1, 'd', 1),
-(4, 110, 90, '2018-08-31 07:01:47', 'lsdald', 'slmda;ldm', 'a;lsdma;lmd;', 0, 'laskdlad', 1),
-(5, 110, 90, '2018-08-31 07:13:10', 'sadlkasmldk', 'dskadjkos', 'bobby', 0, '', 0),
-(13, 808, 90, '2018-09-04 08:01:21', 'ugu', 'gu', 'bobby', 0, '', 0),
-(16, 90, 90, '2018-09-07 08:10:41', 'koko', 'Balasan untuk lklio', 'bobby', 0, '', 1),
-(17, 90, 110, '2018-09-07 08:06:07', 'KACAAAAANG', 'Balasan untuk kdsakdmska', 'admin', 0, '', 1),
-(18, 110, 90, '2018-09-07 08:33:32', 'huehuehuehue', 'Balasan untuk huehue', 'bobby', 0, '', 1);
+(73, '090', '090', '2018-09-10 07:50:51', 'tes', 'tes', 'bobby', 0, 'assets/uploaded_files/1536565849.jpg', 1),
+(74, '090', '090', '2018-09-10 07:51:01', 'isok', 'huee', 'bobby', 0, 'assets/uploaded_files/1536565859.jpg', 1),
+(76, '090', '090', '2018-09-10 09:16:27', 'reply', 'tes', 'bobby', 0, 'assets/uploaded_files/1536570947.', 1),
+(77, '090', '090', '2018-09-11 15:32:54', 'bisa', 'hehe', 'bobby', 0, 'assets/uploaded_files/1536679972.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -2509,8 +2506,6 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 (830204188, 68),
 (830204188, 69),
 (760403815, 8),
-(760403815, 9),
-(760403815, 9),
 (760403815, 23),
 (760403815, 24),
 (760403815, 54),
@@ -2664,7 +2659,8 @@ INSERT INTO `sme_pengetahuan` (`nipp_sme`, `id_pengetahuan`) VALUES
 (700703724, 21),
 (700703724, 17),
 (700703724, 18),
-(700703724, 74);
+(700703724, 74),
+(760403815, 9);
 
 -- --------------------------------------------------------
 
@@ -2995,7 +2991,7 @@ INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 (310, 'Penerapan teknik negosiasi dalam penyelesaian permasalahan dan sengketa ketenagakerjaan', 66),
 (311, 'Teknik negosiasi yang dapat memberikan keuntungan bagi perusahaan', 66),
 (312, 'Memahami seluruh peraturan direksi yang mengatur bidang SDM dan keterkaitannya satu sama lainnya sehingga mengetahui konsekuensi atas perubahan satu perdir terhadap perdir lainnya yang memiliki keterkaitan', 67),
-(313, 'Memahami bagian-bagian dari peraturan direksi sehingga dapat menentukan pengaturan isi dari peraturan direksi. Contoh; konsideran, maksud dan tujuan, definisi-definisi, pengaturan mekanisme dalam batang tubuh perdir, pasal lain-lain, ketentuan peralihan dan penutup, serta membuat lampiran-lampiran;', 67),
+(313, 'Memahami bagian-bagian dari peraturan direksi sehingga dapat menentukan pengaturan isi dari peraturan direksi. Contoh: konsideran, maksud dan tujuan, definisi-definisi, pengaturan mekanisme dalam batang tubuh perdir, pasal lain-lain, ketentuan peralihan dan penutup, serta membuat lampiran-lampiran.', 67),
 (314, 'Memahami peraturan atau perundang-undangan terkait sebagai dasar atau pertimbangan yang memiliki relevansi dengan topic yang sedang dibahas.', 67),
 (315, 'Memahami tata cara menyusun peraturan direksi, keputusan direksi sebagaimana diatur dalam peraturan direksi no 42 tahun 2013 tentang pedoman format penyusunan peraturan perusahaan di lingkungan PT Pelabuhan Indonesia III (Persero)', 67),
 (316, 'Pemahaman peraturan terkait reward dan sanksi', 68),
@@ -3202,7 +3198,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --
