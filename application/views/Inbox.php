@@ -191,20 +191,69 @@
 													                                    <td><?php echo $d['subjek']; ?></td>
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
-													                                    <td><?php echo $d['keterangan']; ?></td>
 													                                    <td>
-												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" >
+																							<?php switch ($d['keterangan']) {
+																							case "Solved": ?>
+																								<span class="m-badge m-badge--info m-badge--wide" style="color : white;">
+																									<?php echo $d['keterangan']; ?>
+																								</span>
+																							<?php   break;
+																							default:?>
+																								<span class="m-badge m-badge--danger m-badge--wide" style="color : white;">
+																									<?php echo $d['keterangan']; ?>
+																								</span> <?php ;
+																							} 
+																							?>																						
+																						</td>
+													                                    <td>
+												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="View" >
 																								<i class="fa flaticon-eye"></i>
 																							</a>
 																		    			
-												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
 																							</a>
+																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_5" title="Keterangan">
+																								<i class="fa flaticon-edit"></i>
+																							</button>
 																						</td>
 													                                </tr>
 													                    <?php } ?>
 																	</tbody>
 																</table>
+																<!--begin::Modal-->
+																<div class="modal fade" id="m_modal_5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+																	<div class="modal-dialog modal-sm modal-dialog modal-dialog-centered" role="document">
+																		<div class="modal-content">
+																			<div class="modal-body">
+																				<form>
+																					<div class="form-group m-form__group">
+																						<label for="exampleSelect1">
+																							Pilih Keterangan 
+																						</label>
+																						<select class="form-control m-input m-input--air" id="exampleSelect1">
+																							<option>
+																								Solved
+																							</option>
+																							<option>
+																								Unsolved
+																							</option>
+																						</select>
+																					</div>
+																				</form>
+																			</div>
+																			<div class="modal-footer">
+																				<button type="button" class="btn btn-secondary" data-dismiss="modal">
+																					Close
+																				</button>
+																				<button type="button" class="btn btn-primary">
+																					Update
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!--end::Modal-->
 															</div>
 														</div>
 													</div>
@@ -244,30 +293,6 @@
 										</script>
 
 										<!--end::Page Resources -->
-<<<<<<< HEAD
-=======
-										<!-- <script type="text/javascript">
-											$(".remove").click(function(){
-												var id = $(this).parents("tr").attr("id");
-
-
-												if(confirm('Are you sure to remove this record ?'))
-												{
-													$.ajax({
-													url: '/inbox/',
-													type: 'DELETE',
-													error: function() {
-														alert('Something is wrong');
-													},
-													success: function(data) {
-															$("#"+id).remove();
-															alert("Record removed successfully");  
-													}
-													});
-												}
-											});
-										</script> -->
->>>>>>> 69b33f93ebb0abd869a8894f5b6e1b4a3feea2a6
 
 									</body>
 									<!-- end::Body -->
