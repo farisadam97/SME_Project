@@ -76,6 +76,11 @@ class m_inbox extends CI_Model
     return $res;
   }
 
+  public function InsertReply($tableName,$data){
+    $res2 = $this->db->insert($tableName,$data);
+    return $res2;
+  }
+
 }
 
 ?>

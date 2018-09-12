@@ -177,8 +177,10 @@
 																					    default:
 																					        echo "";
 																					} 
-																					?> ">
+																					?> " alt="">
 																				</div>
+																				<?php $count = count($data[0]['file']); ?>
+																					<?php if($count>1) { ?>
 																				<div class="m-widget4__info">
 																					<span class="m-widget4__text">
 																						<?php echo str_replace("assets/uploaded_files/", "", $data[0]['file']) ?>
@@ -189,6 +191,7 @@
 																						<i class="la la-download"></i>
 																					</a>
 																				</div>
+																				<?php } else {} ?>
 																			</div>
 																		</div>
 																	</div>
@@ -196,7 +199,7 @@
 																<?php if ($data4[0]['keterangan'] == 'Unsolved') { ?>
 																	<div class="form-group m-form__group">
 																		<div class="col-md-2" >
-																			<div class="email-btn" >
+																			<div class="email-btn">
 																				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
 																				Send Reply
 																				</button>
