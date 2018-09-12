@@ -136,9 +136,61 @@
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6></br>													<span>
-																			<img src="<?php echo base_url($data[0]['file']); ?>" style="max-width: 300px; height: auto;" alt=""/>
-																		</span>
+																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6></br>			
+																		<div class="m-widget4">
+																			<div class="m-widget4__item">
+																				<div class="m-widget4__img m-widget4__img--icon">
+																					<img src="  
+																					<?php $file_explode = explode(".", $data[0]['file']);
+																						  $file_ext = array_slice($file_explode, 1);
+																						switch ($file_ext[0]) {
+																					    case "css":
+																					        echo base_url("assets/img/css.svg");
+																					        break;
+																					    case "csv":
+																					        echo base_url("assets/img/csv.svg");
+																					        break;
+																					    case "doc":
+																					        echo base_url("assets/img/doc.svg");
+																					        break;
+																					    case "html":
+																					        echo base_url("assets/img/html.svg");
+																					        break;
+																					    case "javascript":
+																					        echo base_url("assets/img/javascript.svg");
+																					        break;
+																					    case "jpg":
+																					        echo base_url("assets/img/jpg.svg");
+																					        break;
+																					    case "mp4":
+																					        echo base_url("assets/img/mp4.svg");
+																					        break;
+																					    case "pdf":
+																					        echo base_url("assets/img/pdf.svg");
+																					        break;
+																					    case "xml":
+																					        echo base_url("assets/img/xml.svg");
+																					        break;
+																					    case "zip":
+																					        echo base_url("assets/img/zip.svg");
+																					        break;
+																					    default:
+																					        echo "";
+																					} 
+																					?> ">
+																				</div>
+																				<div class="m-widget4__info">
+																					<span class="m-widget4__text">
+																						<?php echo str_replace("assets/uploaded_files/", "", $data[0]['file']) ?>
+																					</span>
+																				</div>
+																				<div class="m-widget4__ext">
+																					<a href="<?php echo base_url($data[0]['file']); ?>" class="m-widget4__icon" download>
+																						<i class="la la-download"></i>
+																					</a>
+																				</div>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 																
@@ -172,7 +224,7 @@
 																						<label  class="form-control-label">
 																							Recipient:
 																						</label>
-		                                                                                 <input type="text" class="form-control" name="nipp_penerima" value="<?php echo $data[0]['nipp_pengirim'] ?>" readonly>
+		                                                                                 <input type="text" class="form-control" name="nipp_penerima" value="<?php echo $data[0]['nipp_pengirim'] ?>" readonly required>
 		                                                                                <label  class="form-control-label">
 																							Subject:
 																						</label>
@@ -182,7 +234,8 @@
 																						<label  class="form-control-label">
 																							Message:
 																						</label>
-																						<textarea class="form-control" name="isi_pesan"></textarea>
+																						<textarea class="form-control" name="isi_pesan" required>
+																						</textarea>
 																					</div>
 																					<div class="form-group">
 																						

@@ -31,7 +31,7 @@
 																			</div>
 																			<div class="form-group">
 																				
-																				<input type="file" name="file" accept="image/*">
+																				<input type="file" name="file">
 																			</div>
 																			<div class="modal-footer">
 																				<button type="button" class="btn btn-secondary" data-dismiss="modal">
