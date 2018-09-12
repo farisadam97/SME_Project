@@ -180,7 +180,7 @@
 																					?> " alt="">
 																				</div>
 																				<?php $count = count($data[0]['file']); ?>
-																					<?php if($count>1) { ?>
+																					<?php if($count>0) { ?>
 																				<div class="m-widget4__info">
 																					<span class="m-widget4__text">
 																						<?php echo str_replace("assets/uploaded_files/", "", $data[0]['file']) ?>
