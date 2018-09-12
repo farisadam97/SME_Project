@@ -196,7 +196,7 @@
 																		</div>
 																	</div>
 																</div>
-																<?php if ($data4[0]['keterangan'] == 'Unsolved') { ?>
+																	<?php if ($data[0]['keterangan'] == 'Unsolved') { ?>
 																	<div class="form-group m-form__group">
 																		<div class="col-md-2" >
 																			<div class="email-btn">
@@ -207,7 +207,15 @@
 																		</div>
 																	</div>
 																	<?php }else{ ?>
-
+																	<div class="form-group m-form__group">
+																		<div class="col-lg-12" >
+																			<div class="email-btn">
+																				<span class="m-badge m-badge--danger m-badge--wide">
+																					This conversation is solved.
+																				</span>
+																			</div>
+																		</div>
+																	</div>
 																	<?php } ?>
 
 																	<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="align:left;">
