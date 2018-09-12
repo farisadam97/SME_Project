@@ -46,6 +46,7 @@ class Inbox extends CI_Controller {
 		}else{
 			$data['err_message'] = "";
 			$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
+			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$data['nama'] = $this->m_login->cek_nama();
 			$this->load->view('InboxItem', $data);

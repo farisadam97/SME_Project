@@ -148,7 +148,7 @@
 
 																<?php //include 'Alert_DeleteSuccess.php' ?>
 																
-																<table class="m-datatable" id="html_table">
+																<table class="m-datatable table table-striped- table-bordered table-hover table-checkable" id="html_table">
 																	<thead>
 																		<tr> 
 																			<th style="text-align: center;">
@@ -161,14 +161,18 @@
 																				Subjek
 																			</th>
 																			<th style="text-align: center;">
-																				Isi Pesan
+																				Pesan
 																			</th>
 																			<th style="text-align: center;">
 																				Waktu 
 																			</th>
 																			<th style="text-align: center;">
+																				Keterangan 
+																			</th>
+																			<th style="text-align: center;">
 																				Action 
 																			</th>
+
 																		</tr>
 																	</thead>
 																	<tbody>
@@ -187,16 +191,15 @@
 													                                    <td><?php echo $d['subjek']; ?></td>
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
+													                                    <td><?php echo $d['keterangan']; ?></td>
 													                                    <td>
-														                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" >
-																										<i class="fa flaticon-eye"></i>
-																									</a>
-																				
-																									<!-- <?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?> -->
-																				    			
-														                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class=" btn btn-success m-btn m-btn--custom btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
-																										<i class="fa flaticon-delete-1"></i>
-																									</a>
+												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" >
+																								<i class="fa flaticon-eye"></i>
+																							</a>
+																		    			
+												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																								<i class="fa flaticon-delete-1"></i>
+																							</a>
 																						</td>
 													                                </tr>
 													                    <?php } ?>

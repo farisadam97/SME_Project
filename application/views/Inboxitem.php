@@ -193,18 +193,20 @@
 																		</div>
 																	</div>
 																</div>
-																
+																<?php if ($data4[0]['keterangan'] == 'Unsolved') { ?>
 																	<div class="form-group m-form__group">
 																		<div class="col-md-2" >
 																			<div class="email-btn" >
 																				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
 																				Send Reply
 																				</button>
-																				
 																			</div>
-																			
 																		</div>
 																	</div>
+																	<?php }else{ ?>
+
+																	<?php } ?>
+
 																	<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="align:left;">
 																	<div class="modal-dialog modal-lg" role="document">
 																		<div class="modal-content">

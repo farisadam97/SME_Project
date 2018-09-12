@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 11, 2018 at 05:35 PM
+-- Generation Time: Sep 12, 2018 at 02:09 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -141,6 +141,7 @@ CREATE TABLE `pesan` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `isi_pesan` varchar(1000) NOT NULL,
   `subjek` varchar(1000) NOT NULL,
+  `keterangan` enum('Solved','Unsolved') NOT NULL DEFAULT 'Unsolved',
   `nama_pengirim` varchar(100) NOT NULL,
   `rating` int(11) NOT NULL,
   `file` varchar(1000) NOT NULL,
@@ -151,11 +152,9 @@ CREATE TABLE `pesan` (
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(73, '090', '090', '2018-09-10 07:50:51', 'tes', 'tes', 'bobby', 0, 'assets/uploaded_files/1536565849.jpg', 1),
-(74, '090', '090', '2018-09-10 07:51:01', 'isok', 'huee', 'bobby', 0, 'assets/uploaded_files/1536565859.jpg', 1),
-(76, '090', '090', '2018-09-10 09:16:27', 'reply', 'tes', 'bobby', 0, 'assets/uploaded_files/1536570947.', 1),
-(77, '090', '090', '2018-09-11 15:32:54', 'bisa', 'hehe', 'bobby', 0, 'assets/uploaded_files/1536679972.jpg', 1);
+INSERT INTO `pesan` (`id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
+(87, '090', '090', '2018-09-12 11:51:35', '1', '1', 'Solved', 'bobby', 0, 'assets/uploaded_files/1536752293.jpg', 1),
+(88, 'lasj;akdj', '090', '2018-09-12 11:41:30', 'dk', 'dksjadlk', 'Unsolved', 'bobby', 0, 'assets/uploaded_files/1536752491.', 0);
 
 -- --------------------------------------------------------
 
@@ -3198,7 +3197,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --
