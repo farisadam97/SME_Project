@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2018 at 02:09 PM
+-- Generation Time: Sep 13, 2018 at 05:25 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -153,8 +153,9 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(87, '090', '090', '2018-09-12 11:51:35', '1', '1', 'Solved', 'bobby', 0, 'assets/uploaded_files/1536752293.jpg', 1),
-(88, 'lasj;akdj', '090', '2018-09-12 11:41:30', 'dk', 'dksjadlk', 'Unsolved', 'bobby', 0, 'assets/uploaded_files/1536752491.', 0);
+(92, '090', '090', '2018-09-13 01:29:41', '1', '1', 'Solved', 'bobby', 0, 'assets/uploaded_files/1536772659.html', 1),
+(94, '090', '090', '2018-09-13 02:06:50', '3', '3', 'Solved', 'bobby', 0, 'assets/uploaded_files/1536802156.docx', 1),
+(95, '090', '090', '2018-09-13 02:09:10', '4', '4', 'Unsolved', 'bobby', 0, 'assets/uploaded_files/1536804542.pptx', 1);
 
 -- --------------------------------------------------------
 
@@ -3124,16 +3125,17 @@ INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 CREATE TABLE `user` (
   `nipp` varchar(100) NOT NULL,
   `nama` varchar(25) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `role` enum('admin','user','expert') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`nipp`, `nama`, `password`) VALUES
-('090', 'bobby', 'admin'),
-('110', 'admin', 'admin');
+INSERT INTO `user` (`nipp`, `nama`, `password`, `role`) VALUES
+('090', 'bobby', 'admin', 'admin'),
+('110', 'admin', 'admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -3197,7 +3199,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --
