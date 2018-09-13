@@ -38,6 +38,14 @@ class m_inbox extends CI_Model
     
   }
 
+  public function updateKeterangan($id_pesan)
+  {
+    $this->db->set('keterangan', 'Solved');
+    $this->db->where('id_pesan', $id_pesan);
+    $this->db->update('pesan');
+  }
+
+
   // public function balasPesan($id_pesan) 
   // {
   //   $this->db->set('read_pesan', '1');
@@ -58,12 +66,6 @@ class m_inbox extends CI_Model
   {
     $this->db->where_in('id_pesan', $id_pesan2);
     $this->db->delete('pesan');
-  }
-
-
-  public function getNama()
-  {
-    
   }
   
   // public function kirimPesan($data_insert)

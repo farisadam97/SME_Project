@@ -153,6 +153,9 @@
 																					    case "doc":
 																					        echo base_url("assets/img/doc.svg");
 																					        break;
+																				        case "docx":
+																					        echo base_url("assets/img/doc.svg");
+																					        break;
 																					    case "html":
 																					        echo base_url("assets/img/html.svg");
 																					        break;
@@ -175,7 +178,7 @@
 																					        echo base_url("assets/img/zip.svg");
 																					        break;
 																					    default:
-																					        echo "";
+																					        echo base_url("assets/img/file.svg");
 																					} 
 																					?> " alt="">
 																				</div>
