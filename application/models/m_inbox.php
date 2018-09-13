@@ -35,7 +35,6 @@ class m_inbox extends CI_Model
     $data = $this->db->get();
     return $data->result_array();
 
-    
   }
 
   public function updateKeterangan($id_pesan)
@@ -45,40 +44,48 @@ class m_inbox extends CI_Model
     $this->db->update('pesan');
   }
 
-
-  // public function balasPesan($id_pesan) 
-  // {
-  //   $this->db->set('read_pesan', '1');
-  //   $this->db->where('id_pesan', $id_pesan);
-  //   $this->db->update('pesan');
-
-  //   $this->db->select('*');
-  //   $this->db->from('pesan');
-  //   $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
-  //   $this->db->where('id_pesan',$id_pesan);
-  //   $data = $this->db->get();
-  //   return $data->result_array();
-
-    
-  // }
-
   public function deleteDataInboxItem($id_pesan2)
   {
     $this->db->where_in('id_pesan', $id_pesan2);
     $this->db->delete('pesan');
   }
-  
-  // public function kirimPesan($data_insert)
-  // {
-  //   $this->db->insert('pesan',$data_insert);
-  // }
 
-  public function InsertData($tableName,$data){
+  public function InsertData($tableName,$data)
+  {
     $res = $this->db->insert($tableName,$data);
     return $res;
   }
 
-  public function InsertReply($tableName,$data){
+  public function getConversation()
+  {
+    
+    $this->db->select('id_conversation');
+    $this->db->from('pesan');
+    $this->db->order_by('id_conversation', 'desc');
+    $this->db->limit(1);
+    $conv = $this->db->get();
+    return $conv->result_array();
+  }
+
+  public function getConversationItem($id_conversation)
+  {
+    
+    $this->db->select('id_conversation');
+    $this->db->from('pesan');
+    $this->db->where('id_conversation', $id_conversation);
+    $conv_item = $this->db->get();
+    return $conv_item->result_array();
+  }
+
+  public function updateConversation($updated, $id_conversation)
+  {
+    $this->db->set('id_conversation', $updated);
+    $this->db->where('id_conversation', $id_conversation);
+    $this->db->update('pesan');
+  }
+
+  public function InsertReply($tableName,$data)
+  {
     $res2 = $this->db->insert($tableName,$data);
     return $res2;
   }

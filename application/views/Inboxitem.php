@@ -136,13 +136,18 @@
 																		</div>
 																	</div>
 																	<div class="m-portlet__body">
-																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6></br>			
+																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6></br>
+																		<?php $file_explode = explode(".", $data[0]['file']);
+																			  $file_ext = array_slice($file_explode, 1);
+																				if($file_ext){
+
+
+																				?>
 																		<div class="m-widget4">
 																			<div class="m-widget4__item">
 																				<div class="m-widget4__img m-widget4__img--icon">
 																					<img src="  
-																					<?php $file_explode = explode(".", $data[0]['file']);
-																						  $file_ext = array_slice($file_explode, 1);
+																						<?php
 																						switch ($file_ext[0]) {
 																					    case "css":
 																					        echo base_url("assets/img/css.svg");
@@ -162,7 +167,7 @@
 																					    case "javascript":
 																					        echo base_url("assets/img/javascript.svg");
 																					        break;
-																					    case "jpg":
+																					    case "jpg" || "JPG" || "JPEG" || "PNG":
 																					        echo base_url("assets/img/jpg.svg");
 																					        break;
 																					    case "mp4":
@@ -197,6 +202,7 @@
 																				<?php } else {} ?>
 																			</div>
 																		</div>
+																		<?php } else {} ?>
 																	</div>
 																</div>
 																	<?php if ($data[0]['keterangan'] == 'Unsolved') { ?>
@@ -235,7 +241,7 @@
 																				</button>
 																			</div>
 																			<div class="modal-body">
-																				<form action="<?php echo base_url('Inbox/kirimPesan') ?>" method="post" role="form" enctype="multipart/form-data">
+																				<form action="<?php echo base_url('Inbox/balasPesan') ?>" method="post" role="form" enctype="multipart/form-data">
 																					<div class="form-group">
 																						<label  class="form-control-label">
 																							Recipient:

@@ -71,22 +71,29 @@ class Inbox extends CI_Controller {
 			$subjek = $_POST['subjek'];
 			$isi_pesan = $_POST['isi_pesan'];
 			$nama = $this->m_login->cek_nama();
-				
-	        $config['upload_path']         = './assets/uploaded_files';
-			$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
-			$config['max_size']             = 1000000;
-			$config['max_width']            = 10000;
-			$config['max_height']           = 10000;
+			if ($_FILES["file"]["name"]!=null) {
+		        $config['upload_path']         = './assets/uploaded_files';
+				$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
+				$config['max_size']             = 1000000;
+				$config['max_width']            = 10000;
+				$config['max_height']           = 10000;
+		        
+		        $this->upload->initialize($config);
+		        $temp = explode(".", $_FILES["file"]["name"]);
+				$newfilename = round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($_FILES["file"]["tmp_name"], "assets/uploaded_files/" . $newfilename);
+				$file=('assets/uploaded_files/'.$newfilename);
+			}else{
+			 	$file="";
+			}
 	        
-	        $this->upload->initialize($config);
-	        $temp = explode(".", $_FILES["file"]["name"]);
-			$newfilename = round(microtime(true)) . '.' . end($temp);
-			move_uploaded_file($_FILES["file"]["tmp_name"], "assets/uploaded_files/" . $newfilename);
 
-	        $file=('assets/uploaded_files/'.$newfilename);
+	        $id_conversation = $this->m_inbox->getConversation();
+			$a=(int)$id_conversation[0]['id_conversation'];
+			$b= $a+1;
 	        
 	        $data_insert = array(
-	        		// 'id_conversation' => '',
+	        		'id_conversation' => $b,
 					'id_pesan' => '',
 					'nipp_penerima' => $nipp,
 					'nipp_pengirim' => $this->session->userdata('nipp'),
@@ -97,8 +104,10 @@ class Inbox extends CI_Controller {
 					'read_pesan' => '0'
 				);
 			$this->upload->data('userfile');
-	        $res = $this->m_inbox->InsertData('pesan',$data_insert);
-	        redirect('Inbox');     
+			
+	        $this->m_inbox->InsertData('pesan',$data_insert);
+	        redirect('Inbox');
+	        
         } 
 	}
 
@@ -111,21 +120,28 @@ class Inbox extends CI_Controller {
 			$subjek = $_POST['subjek'];
 			$isi_pesan = $_POST['isi_pesan'];
 			$nama = $this->m_login->cek_nama();
-				
-	        $config['upload_path']         = './assets/uploaded_files';
-			$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
-			$config['max_size']             = 1000000;
-			$config['max_width']            = 10000;
-			$config['max_height']           = 10000;
-	        
-	        $this->upload->initialize($config);
-	        $temp = explode(".", $_FILES["file"]["name"]);
-			$newfilename = round(microtime(true)) . '.' . end($temp);
-			move_uploaded_file($_FILES["file"]["tmp_name"], "assets/uploaded_files/" . $newfilename);
+			if ($_FILES["file"]["name"]!=null) {
+		        $config['upload_path']         = './assets/uploaded_files';
+				$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
+				$config['max_size']             = 1000000;
+				$config['max_width']            = 10000;
+				$config['max_height']           = 10000;
+		        
+		        $this->upload->initialize($config);
+		        $temp = explode(".", $_FILES["file"]["name"]);
+				$newfilename = round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($_FILES["file"]["tmp_name"], "assets/uploaded_files/" . $newfilename);
+		        $file=('assets/uploaded_files/'.$newfilename);
 
-	        $file=('assets/uploaded_files/'.$newfilename);
+	        }else{
+			 	$file="";
+			}
+
+			$id_conv = 
+	        $id_conversation = $this->m_inbox->getConversation($id_conv);
 	        
 	        $data_insert = array(
+	        		'id_conversation' => $id_conversation,
 					'id_pesan' => '',
 					'nipp_penerima' => $nipp,
 					'nipp_pengirim' => $this->session->userdata('nipp'),
