@@ -148,7 +148,7 @@
 																				<div class="m-widget4__img m-widget4__img--icon">
 																					<img src="  
 																						<?php
-																						switch ($file_ext[0]) {
+																						switch (strtolower($file_ext[0])) {
 																					    case "css":
 																					        echo base_url("assets/img/css.svg");
 																					        break;
@@ -167,7 +167,7 @@
 																					    case "javascript":
 																					        echo base_url("assets/img/javascript.svg");
 																					        break;
-																					    case "jpg" || "JPG" || "JPEG" || "PNG":
+																					    case "jpg":
 																					        echo base_url("assets/img/jpg.svg");
 																					        break;
 																					    case "mp4":
@@ -260,9 +260,7 @@
 																						</textarea>
 																					</div>
 																					<div class="form-group">
-																						
-																						<input type="file" name="file" accept="image/*">
-																						<!-- <input type="hidden" name="is_submit" value="1" /> -->
+																						<input type="file" name="file">
 																					</div>
 																					<div class="modal-footer">
 																						<button type="button" class="btn btn-secondary" data-dismiss="modal">

@@ -39,13 +39,13 @@ class Inbox extends CI_Controller {
 		}
 	}
 	
-	public function item($id_pesan)
+	public function item($id_inbox)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
 			$data['err_message'] = "";
-			$data['data'] = $this->m_inbox->getDataInboxItem($id_pesan);
+			$data['data'] = $this->m_inbox->getDataInboxItem($id_inbox);
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$data['nama'] = $this->m_login->cek_nama();
@@ -54,11 +54,11 @@ class Inbox extends CI_Controller {
 		}
 	}
 
-	public function deletePesan($id_pesan2){
+	public function deletePesan($id_inbox){
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-		    $this->m_inbox->deleteDataInboxItem($id_pesan2);
+		    $this->m_inbox->deleteDataInboxItem($id_inbox);
 		    redirect("Inbox");
 		}
 	}
@@ -91,10 +91,14 @@ class Inbox extends CI_Controller {
 	        $id_conversation = $this->m_inbox->getConversation();
 			$a=(int)$id_conversation[0]['id_conversation'];
 			$b= $a+1;
+
+			$id_pesan = $this->m_inbox->getPesan();
+			$c=(int)$id_pesan[0]['id_pesan'];
+			$d= $c+1;
 	        
 	        $data_insert = array(
 	        		'id_conversation' => $b,
-					'id_pesan' => '',
+					'id_pesan' => $d,
 					'nipp_penerima' => $nipp,
 					'nipp_pengirim' => $this->session->userdata('nipp'),
 					'subjek' => $subjek,
@@ -137,12 +141,18 @@ class Inbox extends CI_Controller {
 			 	$file="";
 			}
 
-			$id_conv = 
-	        $id_conversation = $this->m_inbox->getConversation($id_conv);
-	        
+
+			$id_conversation = $this->m_inbox->getConversation();
+			$a=(int)$id_conversation[0]['id_conversation'];
+
+			$id_pesan = $this->m_inbox->getPesan();
+			$c=(int)$id_pesan[0]['id_pesan'];
+			$d= $c+1;
+
+	        // $id_conv2 = $this->m_inbox->getConversationItem($id_conv);
 	        $data_insert = array(
-	        		'id_conversation' => $id_conversation,
-					'id_pesan' => '',
+	        		'id_conversation' => $a,
+					'id_pesan' => $d,
 					'nipp_penerima' => $nipp,
 					'nipp_pengirim' => $this->session->userdata('nipp'),
 					'subjek' => $subjek,
@@ -157,12 +167,12 @@ class Inbox extends CI_Controller {
 	    }  
 	}
 
-	public function gantiKeterangan($id_pesan)
+	public function gantiKeterangan($id_inbox)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-			$this->m_inbox->updateKeterangan($id_pesan);
+			$this->m_inbox->updateKeterangan($id_inbox);
 			redirect('Inbox');
 		}
 	}

@@ -138,16 +138,64 @@
 																						Send Message
 																						</button>
 																					</div>
-																					<?php include 'EmailModal.php' ?>
+																					<!-- Start of Modal -->
+																					<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="align:left;">
+																						<div class="modal-dialog modal-lg" role="document">
+																							<div class="modal-content">
+																								<div class="modal-header">
+																									<h5 class="modal-title" id="exampleModalLabel">
+																										Create Message 
+																									</h5>
+																									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																										<span aria-hidden="true">
+																											&times;
+																										</span>
+																									</button>
+																								</div>
+																								<div class="modal-body">
+																									<form action="<?php echo base_url('Inbox/kirimPesan') ?>" method="post" role="form" enctype="multipart/form-data">
+																										<div class="form-group">
+																											<label  class="form-control-label">
+																												Recipient:
+																											</label>
+							                                                                                <input type="text" class="form-control" name="nipp_penerima" required>
+							                                                                                <label  class="form-control-label">
+																												Subject:
+																											</label>
+																											<input type="text" class="form-control" name="subjek" required>
+																										</div>
+																										<div class="form-group">
+																											<label  class="form-control-label">
+																												Message:
+																											</label>
+																											<textarea class="form-control" name="isi_pesan"></textarea>
+																										</div>
+																										<div class="form-group">
+																											
+																											<input type="file" name="file">
+																										</div>
+																										<div class="modal-footer">
+																											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+																												Close
+																											</button>
+																											<div class="m-login__form-action">
+																												<button  class="btn btn-primary" name="pesan" type="submit" value="Submit">	
+																													Send message
+																												</button>
+																											</div>
+																										</div>
+																									</form>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<!-- End of Modal -->
 																				</div>
 																			</div>
-																			
 																		</div>
 																	</div>
 																</div>
 
-																<?php //include 'Alert_DeleteSuccess.php' ?>
-																
 																<table class="m-datatable table table-striped- table-bordered table-hover table-checkable" id="html_table">
 																	<thead>
 																		<tr> 
@@ -206,15 +254,15 @@
 																							?>																						
 																						</td>
 													                                    <td>
-												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_pesan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="View" >
+												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_inbox']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="View" >
 																								<i class="fa flaticon-eye"></i>
 																							</a>
 																		    			
-												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_pesan'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
+												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_inbox'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
 																							</a>
 																							<?php if($d['keterangan'] == 'Unsolved') { ?>
-																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_pesan'];?>" title="Keterangan">
+																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_inbox'];?>" title="Keterangan">
 																								<i class="fa flaticon-edit"></i>
 																							</button>
 																							<?php }else{} ?>
@@ -225,7 +273,7 @@
 																</table>
 																<!--begin::Modal-->
 																<?php foreach ($data4 as $e) {  ?>
-																	<div class="modal fade" id="m_modal_<?php echo $e['id_pesan'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+																	<div class="modal fade" id="m_modal_<?php echo $e['id_inbox'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 																		<div class="modal-dialog modal-dialog-centered" role="document">
 																			<div class="modal-content">
 																				<div class="modal-header">
@@ -248,7 +296,7 @@
 																						Close
 																					</button>
 
-																					<a href="<?php echo base_url()."Inbox/gantiKeterangan/". $e['id_pesan']?>">
+																					<a href="<?php echo base_url()."Inbox/gantiKeterangan/". $e['id_inbox']?>">
 																						<button type="submit" class="btn btn-primary">
 																							Solved
 																						</button>
