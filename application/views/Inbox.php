@@ -258,7 +258,7 @@
 																								<i class="fa flaticon-eye"></i>
 																							</a>
 																		    			
-												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_inbox'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
+												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_conversation'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
 																							</a>
 																							<?php if($d['keterangan'] == 'Unsolved') { ?>

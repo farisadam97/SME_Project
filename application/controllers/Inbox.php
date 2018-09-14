@@ -54,11 +54,11 @@ class Inbox extends CI_Controller {
 		}
 	}
 
-	public function deletePesan($id_inbox){
+	public function deletePesan($id_conversation){
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-		    $this->m_inbox->deleteDataInboxItem($id_inbox);
+		    $this->m_inbox->deleteDataInboxItem($id_conversation);
 		    redirect("Inbox");
 		}
 	}
