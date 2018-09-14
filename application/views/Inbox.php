@@ -262,7 +262,7 @@
 																								<i class="fa flaticon-delete-1"></i>
 																							</a>
 																							<?php if($d['keterangan'] == 'Unsolved') { ?>
-																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_inbox'];?>" title="Keterangan">
+																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_conversation'];?>" title="Keterangan">
 																								<i class="fa flaticon-edit"></i>
 																							</button>
 																							<?php }else{} ?>
@@ -273,7 +273,7 @@
 																</table>
 																<!--begin::Modal-->
 																<?php foreach ($data4 as $e) {  ?>
-																	<div class="modal fade" id="m_modal_<?php echo $e['id_inbox'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+																	<div class="modal fade" id="m_modal_<?php echo $e['id_conversation'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 																		<div class="modal-dialog modal-dialog-centered" role="document">
 																			<div class="modal-content">
 																				<div class="modal-header">
@@ -296,7 +296,7 @@
 																						Close
 																					</button>
 
-																					<a href="<?php echo base_url()."Inbox/gantiKeterangan/". $e['id_inbox']?>">
+																					<a href="<?php echo base_url()."Inbox/gantiKeterangan/". $e['id_conversation']?>">
 																						<button type="submit" class="btn btn-primary">
 																							Solved
 																						</button>

@@ -173,8 +173,7 @@ class Inbox extends CI_Controller {
 			redirect(base_url("Login"));
 		}else{
 			$this->m_inbox->updateKeterangan($id_conversation);
-			// redirect('Inbox');
-			var_dump($id_conversation);
+			redirect('Inbox');
 		}
 	}
 

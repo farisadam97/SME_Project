@@ -229,7 +229,7 @@
 												<div class="form-group m-form__group">
 													<div class="col-lg-12" >
 														<div class="email-btn">
-															<span class="m-badge m-badge--danger m-badge--wide">
+															<span class="m-badge m-badge--danger m-badge--wide" style="margin: 0px 0px 30px 10px">
 																This conversation is solved.
 															</span>
 														</div>
