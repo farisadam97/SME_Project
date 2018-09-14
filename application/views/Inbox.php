@@ -254,7 +254,7 @@
 																							?>																						
 																						</td>
 													                                    <td>
-												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_inbox']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="View" >
+												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_conversation']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="View" >
 																								<i class="fa flaticon-eye"></i>
 																							</a>
 																		    			

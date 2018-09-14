@@ -52,8 +52,7 @@
 								</div>
 								<div class="m-stack__item m-stack__item--middle m-brand__tools">
 									<!-- BEGIN: Left Aside Minimize Toggle -->
-									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
-					 ">
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
 										<span></span>
 									</a>
 									<!-- END -->
@@ -76,233 +75,247 @@
 							</div>
 						</div>
 						<!-- END: Brand -->
-						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
-							<!-- begin Header -->
-							<?php include 'Header.php' ?>
-							<!-- end Header -->
-											<!-- begin::Body -->
-											<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
-												<!-- BEGIN: Left Aside -->
-												<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
-													<i class="la la-close"></i>
-												</button>
-												<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
-													<!-- BEGIN: Aside Menu -->
-													<?php include 'LeftMenu.php' ?>
-													<!-- END: Aside Menu -->
-												</div>
-												<!-- END: Left Aside -->
-												<div class="m-grid__item m-grid__item--fluid m-wrapper">
-													<!-- BEGIN: Subheader -->
-													<div class="m-subheader ">
-														<div class="d-flex align-items-center">
-															<div class="mr-auto">
-																<h2 class="m-subheader__title ">
-																	Inbox 
-																</h2>
-															</div>
-														</div>
-													</div>
-													<!-- END: Subheader -->
-													<div class="m-content">
-														<div class="m-portlet m-portlet--mobile">
-															<div class="m-portlet__head">
-																<div class="m-portlet__head-caption">
-																	<div class="m-portlet__head-title">
-																		<div class="row">
-																			<div class="col-lg-6">
-																					<h3 class="m-portlet__head-text" name="nipp_pengirim">
-																						[<?php echo $data[0]['nipp_pengirim'] ?>] 
-																					</h3>
-																			</div>
-																			<div class="col-lg-6">
-																					<h3 class="m-portlet__head-text" name="nama_pengirim">
-																						<?php echo $data[0]['nama_pengirim']; ?>
-																					</h3>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="m-portlet__body">
-																<div class="m-portlet m-portlet--mobile">
-																	<div class="m-portlet__head">
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text" name="subjek">
-																					Subject : <?php echo $data[0]['subjek']; ?>
-																				</h3>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet__body">
-																		<h6> <?php echo $data[0]['isi_pesan']; ?> </h6></br>
-																		<?php $file_explode = explode(".", $data[0]['file']);
-																			  $file_ext = array_slice($file_explode, 1);
-																				if($file_ext){
-
-
-																				?>
-																		<div class="m-widget4">
-																			<div class="m-widget4__item">
-																				<div class="m-widget4__img m-widget4__img--icon">
-																					<img src="  
-																						<?php
-																						switch (strtolower($file_ext[0])) {
-																					    case "css":
-																					        echo base_url("assets/img/css.svg");
-																					        break;
-																					    case "csv":
-																					        echo base_url("assets/img/csv.svg");
-																					        break;
-																					    case "doc":
-																					        echo base_url("assets/img/doc.svg");
-																					        break;
-																				        case "docx":
-																					        echo base_url("assets/img/doc.svg");
-																					        break;
-																					    case "html":
-																					        echo base_url("assets/img/html.svg");
-																					        break;
-																					    case "javascript":
-																					        echo base_url("assets/img/javascript.svg");
-																					        break;
-																					    case "jpg":
-																					        echo base_url("assets/img/jpg.svg");
-																					        break;
-																					    case "mp4":
-																					        echo base_url("assets/img/mp4.svg");
-																					        break;
-																					    case "pdf":
-																					        echo base_url("assets/img/pdf.svg");
-																					        break;
-																					    case "xml":
-																					        echo base_url("assets/img/xml.svg");
-																					        break;
-																					    case "zip":
-																					        echo base_url("assets/img/zip.svg");
-																					        break;
-																					    default:
-																					        echo base_url("assets/img/file.svg");
-																					} 
-																					?> " alt="">
-																				</div>
-																				<?php $count = count($data[0]['file']); ?>
-																					<?php if($count>0) { ?>
-																				<div class="m-widget4__info">
-																					<span class="m-widget4__text">
-																						<?php echo str_replace("assets/uploaded_files/", "", $data[0]['file']) ?>
-																					</span>
-																				</div>
-																				<div class="m-widget4__ext">
-																					<a href="<?php echo base_url($data[0]['file']); ?>" class="m-widget4__icon" download>
-																						<i class="la la-download"></i>
-																					</a>
-																				</div>
-																				<?php } else {} ?>
-																			</div>
-																		</div>
-																		<?php } else {} ?>
-																	</div>
-																</div>
-																	<?php if ($data[0]['keterangan'] == 'Unsolved') { ?>
-																	<div class="form-group m-form__group">
-																		<div class="col-md-2" >
-																			<div class="email-btn">
-																				<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%;">
-																				Send Reply
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<?php }else{ ?>
-																	<div class="form-group m-form__group">
-																		<div class="col-lg-12" >
-																			<div class="email-btn">
-																				<span class="m-badge m-badge--danger m-badge--wide">
-																					This conversation is solved.
-																				</span>
-																			</div>
-																		</div>
-																	</div>
-																	<?php } ?>
-
-																	<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="align:left;">
-																	<div class="modal-dialog modal-lg" role="document">
-																		<div class="modal-content">
-																			<div class="modal-header">
-																				<h5 class="modal-title" id="exampleModalLabel">
-																					Reply
-																				</h5>
-																				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-																					<span aria-hidden="true">
-																						&times;
-																					</span>
-																				</button>
-																			</div>
-																			<div class="modal-body">
-																				<form action="<?php echo base_url('Inbox/balasPesan') ?>" method="post" role="form" enctype="multipart/form-data">
-																					<div class="form-group">
-																						<label  class="form-control-label">
-																							Recipient:
-																						</label>
-		                                                                                 <input type="text" class="form-control" name="nipp_penerima" value="<?php echo $data[0]['nipp_pengirim'] ?>" readonly required>
-		                                                                                <label  class="form-control-label">
-																							Subject:
-																						</label>
-																						<input type="text" class="form-control" name="subjek" required>
-																					</div>
-																					<div class="form-group">
-																						<label  class="form-control-label">
-																							Message:
-																						</label>
-																						<textarea class="form-control" name="isi_pesan" required>
-																						</textarea>
-																					</div>
-																					<div class="form-group">
-																						<input type="file" name="file">
-																					</div>
-																					<div class="modal-footer">
-																						<button type="button" class="btn btn-secondary" data-dismiss="modal">
-																							Close
-																						</button>
-																						<div class="m-login__form-action">
-																							<button  class="btn btn-primary" name="pesan" type="submit" value="Submit">	
-																								Send message
-																							</button>
-																						</div>
-																					</div>
-																				</form>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
+							<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+								<!-- begin Header -->
+								<?php include 'Header.php' ?>
+								<!-- end Header -->
+								
+								<!-- begin::Body -->
+								<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+									<!-- BEGIN: Left Aside -->
+									<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+										<i class="la la-close"></i>
+									</button>
+									<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
+										<!-- BEGIN: Aside Menu -->
+										<?php include 'LeftMenu.php' ?>
+										<!-- END: Aside Menu -->
+									</div>
+									<!-- END: Left Aside -->
+									<div class="m-grid__item m-grid__item--fluid m-wrapper">
+										<!-- BEGIN: Subheader -->
+										<div class="m-subheader ">
+											<div class="d-flex align-items-center">
+												<div class="mr-auto">
+													<h2 class="m-subheader__title ">
+														Inbox 
+													</h2>
 												</div>
 											</div>
-											<!-- end:: Body -->
+										</div>
+										<!-- END: Subheader -->
+										<div class="m-content">
+											<div class="m-portlet m-portlet--mobile">
+												<div class="m-portlet__head">
+													<div class="m-portlet__head-caption">
+														<div class="m-portlet__head-title">
+															<div class="row">
+																<span>
+																		<h3 class="m-portlet__head-text" name="nipp_pengirim" style="font-size: 28px; padding: 10px 10px 10px 10px;">
+																			[<?php echo $data[0]['nipp_pengirim'] ?>] &mdash; 
+																		</h3>
+																</span>
+																<span>
+																		<h3 class="m-portlet__head-text" name="nama_pengirim" style="font-size: 20px; padding: 10px 10px 10px 0px;">
+																			Subject : <?php echo $data[0]['subjek']; ?>
+																		</h3>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<?php foreach ($data as $data) { ?>
+												<div class="m-portlet__body" style=" padding: 10px 20px 0px 20px;">
+													<div class="m-portlet m-portlet--mobile">
+														<div class="m-portlet__head">
+															<div class="m-portlet__head-caption">
+																<div class="m-portlet__head-title">
+																	<span class="m-list-search__result-item-pic">
+																		<img class="m--img-rounded" src=<?php echo base_url("assets/img/man.png"); ?> alt="" style="width: 40px; height: auto;">
+																	</span>
+																	<h3 class="m-portlet__head-text" name="subjek" style="padding-left: 10px">
+																		<?php echo $data['nama_pengirim']; ?>
+																	</h3>
+																</div>
+															</div>
+														</div>
+														<div class="m-portlet__body">
+															<h6> <?php echo $data['isi_pesan']; ?> </h6></br>
+
+															<?php $file_explode = explode(".", $data['file']);
+																  $file_ext = array_slice($file_explode, 1);
+
+															if($file_ext){
+
+
+															?>
+															<div class="m-widget4">
+																<div class="m-widget4__item">
+																	<div class="m-widget4__img m-widget4__img--icon">
+																		<img src="  
+																			<?php
+																			switch (array_map('strtolower', $file_ext)) {
+																		    case "css":
+																		        echo base_url("assets/img/css.svg");
+																		        break;
+																		    case "csv":
+																		        echo base_url("assets/img/csv.svg");
+																		        break;
+																		    case "doc":
+																		        echo base_url("assets/img/doc.svg");
+																		        break;
+																	        case "docx":
+																		        echo base_url("assets/img/doc.svg");
+																		        break;
+																		    case "html":
+																		        echo base_url("assets/img/html.svg");
+																		        break;
+																		    case "javascript":
+																		        echo base_url("assets/img/javascript.svg");
+																		        break;
+																		    case "jpg":
+																		        echo base_url("assets/img/jpg.svg");
+																		        break;
+																		    case "mp4":
+																		        echo base_url("assets/img/mp4.svg");
+																		        break;
+																		    case "pdf":
+																		        echo base_url("assets/img/pdf.svg");
+																		        break;
+																		    case "xml":
+																		        echo base_url("assets/img/xml.svg");
+																		        break;
+																		    case "zip":
+																		        echo base_url("assets/img/zip.svg");
+																		        break;
+																		    default:
+																		        echo base_url("assets/img/file.svg");
+																		} 
+																		?> " alt="">
+																	</div>
+																	<?php $count = count($data['file']); ?>
+																		<?php if($count>0) { ?>
+																	<div class="m-widget4__info">
+																		<span class="m-widget4__text">
+																			<?php echo str_replace("assets/uploaded_files/", "", $data['file']) ?>
+																		</span>
+																	</div>
+																	<div class="m-widget4__ext">
+																		<a href="<?php echo base_url($data['file']); ?>" class="m-widget4__icon" download>
+																			<i class="la la-download"></i>
+																		</a>
+																	</div>
+																	<?php } else {} ?>
+																</div>
+															</div>
+															<?php } else {} ?>
+														</div>
+													</div>
+												</div>
+												<?php } ?>
+
+												<?php if ($data['keterangan'] == 'Unsolved') { ?>
+												<div class="form-group m-form__group">
+													<div class="col-md-2" >
+														<div class="email-btn">
+															<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#m_modal_4" style="width: 80%; margin: 0px 0px 30px 10px">
+															Send Reply
+															</button>
+														</div>
+													</div>
+												</div>
+												<?php }else{ ?>
+												<div class="form-group m-form__group">
+													<div class="col-lg-12" >
+														<div class="email-btn">
+															<span class="m-badge m-badge--danger m-badge--wide">
+																This conversation is solved.
+															</span>
+														</div>
+													</div>
+												</div>
+												<?php } ?>
+											</div>
+										</div>
+
+												<!-- START MODAL -->
+												<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="align:left;">
+													<div class="modal-dialog modal-lg" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="exampleModalLabel">
+																	Reply
+																</h5>
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																	<span aria-hidden="true">
+																		&times;
+																	</span>
+																</button>
+															</div>
+															<div class="modal-body">
+																<form action="<?php echo base_url('Inbox/balasPesan/'.$data['id_inbox']) ?>" method="post" role="form" enctype="multipart/form-data">
+																	<div class="form-group">
+																		<label  class="form-control-label">
+																			Recipient:
+																		</label>
+		                                                                 <input type="text" class="form-control" name="nipp_penerima" value="<?php echo $data['nipp_pengirim'] ?>" readonly required>
+		                                                                <label  class="form-control-label">
+																			Subject:
+																		</label>
+																		<input type="text" class="form-control" name="subjek" value="<?php echo $data['subjek'] ?>" readonly required>
+																	</div>
+																	<div class="form-group">
+																		<label  class="form-control-label">
+																			Message:
+																		</label>
+																		<textarea class="form-control" name="isi_pesan" required>
+																		</textarea>
+																	</div>
+																	<div class="form-group">
+																		<input type="file" name="file">
+																	</div>
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-secondary" data-dismiss="modal">
+																			Close
+																		</button>
+																		<div class="m-login__form-action">
+																			<button  class="btn btn-primary" name="pesan" type="submit" value="Submit">	
+																				Send message
+																			</button>
+																		</div>
+																	</div>
+																</form>
+															</div>
+														</div>
+									</div>
+								</div>
+												<!-- END OF MODAL -->
+											<!-- </div> -->
+							</div>
+					</div>
+				</div>
+										
 											<!-- begin::Footer -->
 											<?php include 'Footer.php' ?>
 											<!-- end::Footer -->
-										</div>
-										<!-- end:: Page -->
-    		        <!-- begin::Quick Sidebar -->
-										
-										<!-- end::Quick Sidebar -->		    
+		</div>
+
 	    <!-- begin::Scroll Top -->
-										<div id="m_scroll_top" class="m-scroll-top">
-											<i class="la la-arrow-up"></i>
-										</div>
-										<!-- end::Scroll Top -->		    	
-    									<!--begin::Base Scripts -->
-										<script src=<?php echo base_url("assets/js/vendors.bundle.js") ?> type="text/javascript"></script>
-										<script src=<?php echo base_url("assets/js/scripts.bundle.js") ?> type="text/javascript"></script>
-										<!--end::Base Scripts -->   
-										 <!--begin::Page Resources -->
-										 <script src=<?php echo base_url("assets/js/html-table.js") ?> type="text/javascript"></script>
-										<!--end::Page Resources -->
-									</body>
-									<!-- end::Body -->
-								</html>
+		<div id="m_scroll_top" class="m-scroll-top">
+			<i class="la la-arrow-up"></i>
+		</div>
+		<!-- end::Scroll Top -->	
+
+		<!--begin::Base Scripts -->
+		<script src=<?php echo base_url("assets/js/vendors.bundle.js") ?> type="text/javascript"></script>
+		<script src=<?php echo base_url("assets/js/scripts.bundle.js") ?> type="text/javascript"></script>
+		<!--end::Base Scripts -->   
+
+		<!--begin::Page Resources -->
+		<script src=<?php echo base_url("assets/js/html-table.js") ?> type="text/javascript"></script>
+		<!--end::Page Resources -->
+
+	</body>
+	<!-- end::Body -->
+</html>

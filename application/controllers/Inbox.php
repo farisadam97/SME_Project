@@ -39,13 +39,13 @@ class Inbox extends CI_Controller {
 		}
 	}
 	
-	public function item($id_inbox)
+	public function item($id_conversation)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
 			$data['err_message'] = "";
-			$data['data'] = $this->m_inbox->getDataInboxItem($id_inbox);
+			$data['data'] = $this->m_inbox->getDataInboxItem($id_conversation);
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
 			$data['nama'] = $this->m_login->cek_nama();
@@ -111,11 +111,11 @@ class Inbox extends CI_Controller {
 			
 	        $this->m_inbox->InsertData('pesan',$data_insert);
 	        redirect('Inbox');
-	        
+
         } 
 	}
 
-	public function balasPesan(){
+	public function balasPesan($id_inbox){
 
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
@@ -142,7 +142,7 @@ class Inbox extends CI_Controller {
 			}
 
 
-			$id_conversation = $this->m_inbox->getConversation();
+			$id_conversation = $this->m_inbox->getConversationID($id_inbox);
 			$a=(int)$id_conversation[0]['id_conversation'];
 
 			$id_pesan = $this->m_inbox->getPesan();
@@ -167,13 +167,14 @@ class Inbox extends CI_Controller {
 	    }  
 	}
 
-	public function gantiKeterangan($id_inbox)
+	public function gantiKeterangan($id_conversation)
 	{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-			$this->m_inbox->updateKeterangan($id_inbox);
-			redirect('Inbox');
+			$this->m_inbox->updateKeterangan($id_conversation);
+			// redirect('Inbox');
+			var_dump($id_conversation);
 		}
 	}
 
