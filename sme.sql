@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2018 at 05:25 AM
+-- Generation Time: Sep 14, 2018 at 01:00 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -135,6 +135,8 @@ INSERT INTO `pengetahuan` (`id_pengetahuan`, `nama_pengetahuan`, `definisi_penge
 --
 
 CREATE TABLE `pesan` (
+  `id_inbox` int(11) NOT NULL,
+  `id_conversation` int(11) NOT NULL,
   `id_pesan` int(11) NOT NULL,
   `nipp_penerima` varchar(15) NOT NULL,
   `nipp_pengirim` varchar(15) NOT NULL,
@@ -144,7 +146,7 @@ CREATE TABLE `pesan` (
   `keterangan` enum('Solved','Unsolved') NOT NULL DEFAULT 'Unsolved',
   `nama_pengirim` varchar(100) NOT NULL,
   `rating` int(11) NOT NULL,
-  `file` varchar(1000) NOT NULL,
+  `file` varchar(1000) DEFAULT NULL,
   `read_pesan` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -152,10 +154,14 @@ CREATE TABLE `pesan` (
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(92, '090', '090', '2018-09-13 01:29:41', '1', '1', 'Solved', 'bobby', 0, 'assets/uploaded_files/1536772659.html', 1),
-(94, '090', '090', '2018-09-13 02:06:50', '3', '3', 'Solved', 'bobby', 0, 'assets/uploaded_files/1536802156.docx', 1),
-(95, '090', '090', '2018-09-13 02:09:10', '4', '4', 'Unsolved', 'bobby', 0, 'assets/uploaded_files/1536804542.pptx', 1);
+INSERT INTO `pesan` (`id_inbox`, `id_conversation`, `id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
+(9, 1, 1, '090', '090', '2018-09-14 07:23:13', 'a', 'a', 'Unsolved', 'bobby', 0, '', 1),
+(10, 1, 2, '090', '090', '2018-09-14 08:11:59', 'a																						', 'a', 'Unsolved', 'bobby', 0, '', 1),
+(11, 2, 3, '090', '090', '2018-09-14 08:53:27', 'cobaaaa', 'coba', 'Unsolved', 'bobby', 0, '', 1),
+(12, 2, 4, '090', '090', '2018-09-14 09:38:27', '				e																		', 'a', 'Unsolved', 'bobby', 0, '', 1),
+(18, 2, 5, '090', '090', '2018-09-14 10:50:52', '								bbbbbbbbbbbbbbbbb										', 'a', 'Unsolved', 'bobby', 0, '', 1),
+(19, 2, 6, '090', '090', '2018-09-14 10:50:59', '					ccccccccccc													', 'a', 'Unsolved', 'bobby', 0, '', 1),
+(20, 1, 7, '090', '090', '2018-09-14 10:51:10', 'ddddddddddddddddddddddd																		', 'a', 'Unsolved', 'bobby', 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3151,7 +3157,7 @@ ALTER TABLE `pengetahuan`
 -- Indexes for table `pesan`
 --
 ALTER TABLE `pesan`
-  ADD PRIMARY KEY (`id_pesan`);
+  ADD PRIMARY KEY (`id_inbox`);
 
 --
 -- Indexes for table `sdm`
@@ -3199,7 +3205,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --
