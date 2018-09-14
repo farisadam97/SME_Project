@@ -73,7 +73,7 @@ class Inbox extends CI_Controller {
 			$nama = $this->m_login->cek_nama();
 			if ($_FILES["file"]["name"]!=null) {
 		        $config['upload_path']         = './assets/uploaded_files';
-				$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';
+				$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx|zip|csv/css';
 				$config['max_size']             = 1000000;
 				$config['max_width']            = 10000;
 				$config['max_height']           = 10000;

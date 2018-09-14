@@ -147,15 +147,14 @@
 																  $file_ext = array_slice($file_explode, 1);
 
 															if($file_ext){
-
-
 															?>
 															<div class="m-widget4">
 																<div class="m-widget4__item">
 																	<div class="m-widget4__img m-widget4__img--icon">
 																		<img src="  
 																			<?php
-																			switch (array_map('strtolower', $file_ext)) {
+																			switch ($file_ext[0]) {
+
 																		    case "css":
 																		        echo base_url("assets/img/css.svg");
 																		        break;
@@ -191,6 +190,8 @@
 																		        break;
 																		    default:
 																		        echo base_url("assets/img/file.svg");
+
+																		    
 																		} 
 																		?> " alt="">
 																	</div>
