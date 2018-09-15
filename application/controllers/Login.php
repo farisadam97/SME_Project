@@ -44,7 +44,8 @@ class Login extends CI_Controller{
 			redirect(base_url('Home'));
 
 		}else{
-			$this->load->view('Login');
+			$this->session->set_flashdata('message', 'Oops! Try again.');
+			redirect('Login');
 		}
 	}
 

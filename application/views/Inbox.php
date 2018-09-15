@@ -138,6 +138,7 @@
 																						Send Message
 																						</button>
 																					</div>
+
 																					<!-- Start of Modal -->
 																					<div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="align:left;">
 																						<div class="modal-dialog modal-lg" role="document">
@@ -168,7 +169,7 @@
 																											<label  class="form-control-label">
 																												Message:
 																											</label>
-																											<textarea class="form-control" name="isi_pesan"></textarea>
+																											<textarea class="form-control" name="isi_pesan" required></textarea>
 																										</div>
 																										<div class="form-group">
 																											
@@ -257,10 +258,14 @@
 												                                    		<a href="<?php echo base_url()."Inbox/item/". $d['id_conversation']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="View" >
 																								<i class="fa flaticon-eye"></i>
 																							</a>
-																		    			
-												                                    		<a href="<?php echo base_url()."/Inbox/deletePesan/".$d['id_conversation'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
+																		    				
+																							<button type="button" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_delete_<?php echo $d['id_conversation'];?>" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
-																							</a>
+																							</button>
+
+												                                    		<!-- <a href="<?php //echo base_url()."/Inbox/deletePesan/".$d['id_conversation'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
+																								<i class="fa flaticon-delete-1"></i>
+																							</a> -->
 																							<?php if($d['keterangan'] == 'Unsolved') { ?>
 																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_conversation'];?>" title="Keterangan">
 																								<i class="fa flaticon-edit"></i>
@@ -299,6 +304,41 @@
 																					<a href="<?php echo base_url()."Inbox/gantiKeterangan/". $e['id_conversation']?>">
 																						<button type="submit" class="btn btn-primary">
 																							Solved
+																						</button>
+																					</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																<!--end::Modal-->
+
+																<!--begin::Modal-->
+																	<div class="modal fade" id="m_modal_delete_<?php echo $e['id_conversation'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+																		<div class="modal-dialog modal-dialog-centered" role="document">
+																			<div class="modal-content">
+																				<div class="modal-header">
+																					<h5 class="modal-title" id="exampleModalLongTitleDelet">
+																						Delete Conversation
+																					</h5>
+																					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																						<span aria-hidden="true">
+																							&times;
+																						</span>
+																					</button>
+																				</div>
+																				<div class="modal-body">
+																					<span>
+																						Are you sure want to delete this conversation?
+																					</span>
+																				</div>
+																				<div class="modal-footer">
+																					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+																						Close
+																					</button>
+
+																					<a href="<?php echo base_url()."Inbox/deletePesan/". $e['id_conversation']?>">
+																						<button type="submit" class="btn btn-primary">
+																							Delete
 																						</button>
 																					</a>
 																				</div>

@@ -26,18 +26,18 @@ class Inbox extends CI_Controller {
 		}
 	}
 
-	public function InboxDeleteSuccess()
-	{
-		if($this->session->userdata('status') != "login"){
-			redirect(base_url("Login"));
-		}else{
-			$data['err_message'] = "";
-			$data['data4'] = $this->m_inbox->getDataInbox();
-			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
-			$this->load->view('InboxDelete', $data);
-		}
-	}
+	// public function InboxDeleteSuccess()
+	// {
+	// 	if($this->session->userdata('status') != "login"){
+	// 		redirect(base_url("Login"));
+	// 	}else{
+	// 		$data['err_message'] = "";
+	// 		$data['data4'] = $this->m_inbox->getDataInbox();
+	// 		$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+	// 		$data['nama'] = $this->m_login->cek_nama();
+	// 		$this->load->view('InboxDelete', $data);
+	// 	}
+	// }
 	
 	public function item($id_conversation)
 	{
@@ -149,7 +149,6 @@ class Inbox extends CI_Controller {
 			$c=(int)$id_pesan[0]['id_pesan'];
 			$d= $c+1;
 
-	        // $id_conv2 = $this->m_inbox->getConversationItem($id_conv);
 	        $data_insert = array(
 	        		'id_conversation' => $a,
 					'id_pesan' => $d,
