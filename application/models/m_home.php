@@ -4,7 +4,6 @@ class m_home extends CI_Model
 
   public function getStatsCount()
   {
-    // $this->db->query('UPDATE user set rank = 1');
     $this->db->select('*');
     $this->db->from('user');
     $this->db->where('nipp', $this->session->userdata('nipp'));

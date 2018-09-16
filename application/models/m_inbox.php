@@ -16,16 +16,6 @@ class m_inbox extends CI_Model
     return $data4->result_array();
   }
 
-  // public function getDataInboxUnread()
-  // {
-    
-  //   $this->db->select('*');
-  //   $this->db->from('pesan');
-  //   $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
-  //   $unread = $this->db->get();
-  //   return $unread->result_array();
-  // }
-
   public function getDataInboxItem($id_conversation) 
   {
     $this->db->query('SET @@session.group_concat_max_len = 10000');
@@ -62,18 +52,7 @@ class m_inbox extends CI_Model
   public function updateAnswerCount()
   {
     $this->db->query('UPDATE user set answer = answer + 1, poin = poin + 3 where nipp = '.$this->session->userdata('nipp'));
-    // $this->db->set('answer', 'answer + 3');
-    // $this->db->where('nipp', $this->session->userdata('nipp'));
-    // $this->db->update('user');
   }
-
-  // public function updateRank()
-  // {
-  //   $rank = $this->db->query('SELECT * FROM user ORDER BY poin desc');
-  //   return $rank->result_array();
-    
-  //   $this->db->query('UPDATE user set rank = '$)
-  // }
 
   public function deleteDataInboxItem($id_conversation)
   {
@@ -92,7 +71,6 @@ class m_inbox extends CI_Model
     
     $this->db->select('id_pesan');
     $this->db->from('pesan');
-    // $this->db->where('id_conversation', $id_conversation);
     $this->db->order_by('id_pesan', 'desc');
     $this->db->limit(1);
     $pesan = $this->db->get();

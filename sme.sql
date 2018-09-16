@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2018 at 11:50 AM
+-- Generation Time: Sep 16, 2018 at 01:47 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -3142,10 +3142,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`nipp`, `nama`, `password`, `role`, `question`, `answer`, `login`, `poin`, `rank`, `tanggal`) VALUES
-('001', 'hehe', 'admin', 'user', 15, 20, 2, 40, 4, '2018-09-16'),
-('002', 'huehue', 'admin', 'user', 10, 10, 1, 40, 4, '2018-09-16'),
-('090', 'bobby', 'admin', 'expert', 100, 2, 1, 100, 1, '2018-09-16'),
-('110', 'admin', 'admin', 'admin', 30, 30, 0, 90, 2, '2018-09-16');
+('001', 'hehe', 'admin', 'user', 0, 0, 0, 0, 4, '2018-09-16'),
+('002', 'huehue', 'admin', 'user', 0, 0, 0, 0, 4, '2018-09-16'),
+('090', 'bobby', 'admin', 'expert', 0, 0, 0, 0, 4, '2018-09-16'),
+('110', 'admin', 'admin', 'admin', 0, 0, 0, 0, 4, '2018-09-16');
 
 --
 -- Indexes for dumped tables
@@ -3209,7 +3209,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --
@@ -3237,6 +3237,16 @@ ALTER TABLE `sme_pengetahuan`
 --
 ALTER TABLE `topik`
   ADD CONSTRAINT `topik_ibfk_1` FOREIGN KEY (`id_pengetahuan`) REFERENCES `pengetahuan` (`id_pengetahuan`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+DELIMITER $$
+--
+-- Events
+--
+CREATE DEFINER=`root`@`localhost` EVENT `reset_usage_count` ON SCHEDULE EVERY 1 MONTH STARTS '2018-10-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+ UPDATE `user` SET `question`= 0, `answer`= 0, `login`= 0, 	`poin` =0, `rank`= 0;
+END$$
+
+DELIMITER ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

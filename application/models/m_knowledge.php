@@ -21,7 +21,6 @@ class m_knowledge extends CI_Model
     $this->db->from('pengetahuan');
     $this->db->join('topik', 'pengetahuan.id_pengetahuan = topik.id_pengetahuan');
     $this->db->where('pengetahuan.id_pengetahuan', $id_knowledge);
-    // $this->db->group_by('pengetahuan.id_pengetahuan');
     $data8 = $this->db->get();
     return $data8->result_array();
   }

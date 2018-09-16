@@ -23,7 +23,6 @@ class m_login extends CI_Model{
 
 	function getLoginDate()
 	{
-		// $this->db->query('select tanggal from user where nipp = '.$this->session->userdata('nipp'));
 		$this->db->select('tanggal');
 	    $this->db->from('user');
 	    $this->db->where('nipp', $this->session->userdata('nipp'));
@@ -58,8 +57,6 @@ class m_login extends CI_Model{
             }
             return false;
 
-
-
     }
 
 	function updateLoginCount()
@@ -68,7 +65,6 @@ class m_login extends CI_Model{
 		$this->db->set('login', 'login + 1');
 	    $this->db->where('nipp', $this->session->userdata('nipp'));
 	    $this->db->update('user');
-		// $this->db->query('update user set tanggal = curdate(), login = login+1 where nipp = '.$this->session->userdata('nipp'));
 	}
 
 	public function updateKeterangan($id_conversation)

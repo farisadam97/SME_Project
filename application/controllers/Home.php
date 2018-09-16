@@ -58,14 +58,5 @@ class Home extends CI_Controller {
         
     }
 
-    public function solved()
-    {
-    	if($this->session->userdata('status') != "login"){
-			redirect(base_url("Login"));
-		}else{ 
-
-			// if($data['solved'])
-		}
-    }
 }
 ?>

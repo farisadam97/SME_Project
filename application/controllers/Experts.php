@@ -18,7 +18,6 @@ class Experts extends CI_Controller {
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-			$this->load->model('m_expert');
 			$data['err_message'] = "";
 			$data['data5'] = $this->m_expert->getDataExperts();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
