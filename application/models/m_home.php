@@ -2,6 +2,42 @@
 class m_home extends CI_Model
 {
 
+  public function getStatsCount()
+  {
+    // $this->db->query('UPDATE user set rank = 1');
+    $this->db->select('*');
+    $this->db->from('user');
+    $this->db->where('nipp', $this->session->userdata('nipp'));
+    $this->db->order_by('poin', 'desc');
+    $login = $this->db->get();
+    return $login->result_array();
+  }
+
+  public function setRanking($j,$k)
+  {
+    $this->db->query('UPDATE user as u set u.rank = '.$j.' where u.poin=(select poin from (SELECT poin FROM user ORDER BY poin DESC LIMIT '.$k.')as r ORDER BY poin LIMIT 1)');
+  }
+
+  public function getStatsRanking()
+  {
+    $this->db->select('*');
+    $this->db->from('user');
+    $this->db->order_by('poin', 'desc');
+    $ranking = $this->db->get();
+    return $ranking->result_array();
+  }
+
+  public function getPercentile()
+  {
+    $this->db->select('poin');
+    $this->db->from('user');
+    $this->db->where('nipp', $this->session->userdata('nipp'));
+    $this->db->order_by('poin', 'asc');
+    $percent = $this->db->get();
+    return $percent->result_array();
+  }
+  
+ 
   public function getDataExpert() 
   {
     $data1 = $this->db->select('*')->from('sme_list')->limit(8)->get();

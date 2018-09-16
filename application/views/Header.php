@@ -38,7 +38,7 @@
 																	<?php echo $this->session->userdata('nipp') ?>
 																</span>
 																<span class="m-card-user__name m--font-weight-500">
-																	<?php echo $nama; ?>
+																	<?php echo $role; ?>
 																</span>
 															</div>
 														</div>
@@ -53,7 +53,7 @@
 																</li>
 																<li class="m-nav__item">
 																	<a href="header/profile.html" class="m-nav__link">
-																		<i class="m-nav__link-icon flaticon-profile-1"></i>
+																		<i class="m-nav__link-icon flaticon-users"></i>
 																		<span class="m-nav__link-title">
 																			<span class="m-nav__link-wrap">
 																				<span class="m-nav__link-text">

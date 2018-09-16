@@ -21,23 +21,10 @@ class Inbox extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
+			$data['role'] = $this->m_login->getRole();
 			$this->load->view('Inbox', $data);
 		}
 	}
-
-	// public function InboxDeleteSuccess()
-	// {
-	// 	if($this->session->userdata('status') != "login"){
-	// 		redirect(base_url("Login"));
-	// 	}else{
-	// 		$data['err_message'] = "";
-	// 		$data['data4'] = $this->m_inbox->getDataInbox();
-	// 		$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-	// 		$data['nama'] = $this->m_login->cek_nama();
-	// 		$this->load->view('InboxDelete', $data);
-	// 	}
-	// }
 	
 	public function item($id_conversation)
 	{
@@ -48,7 +35,7 @@ class Inbox extends CI_Controller {
 			$data['data'] = $this->m_inbox->getDataInboxItem($id_conversation);
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
+			$data['role'] = $this->m_login->getRole();
 			$this->load->view('InboxItem', $data);
 			
 		}
@@ -70,7 +57,7 @@ class Inbox extends CI_Controller {
 			$nipp = $_POST['nipp_penerima'];
 			$subjek = $_POST['subjek'];
 			$isi_pesan = $_POST['isi_pesan'];
-			$nama = $this->m_login->cek_nama();
+			$nama = $this->m_login->getRole();
 			if ($_FILES["file"]["name"]!=null) {
 		        $config['upload_path']         = './assets/uploaded_files';
 				$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx|zip|csv/css';
@@ -172,6 +159,9 @@ class Inbox extends CI_Controller {
 			redirect(base_url("Login"));
 		}else{
 			$this->m_inbox->updateKeterangan($id_conversation);
+			$this->m_inbox->updateAnswerCount();
+			$data = $this->m_inbox->getPengirim($id_conversation);
+			$this->m_inbox->updateQuestionCount($data[0]['nipp_pengirim']);
 			redirect('Inbox');
 		}
 	}

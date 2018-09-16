@@ -31,6 +31,11 @@
 		<!--end::Page Vendors -->
 		<link href=<?php echo base_url('assets/css/vendors.bundle.css') ?> rel="stylesheet" type="text/css" />
 		<link href=<?php echo base_url('assets/css/style.bundle.css') ?> rel="stylesheet" type="text/css" />
+		<!-- <link href=<?php //echo base_url('assets/css/style.bundle.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php //echo base_url('assets/css/fontawesome.min.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php //echo base_url('assets/css/fontawesome.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php //echo base_url('assets/css/fontawesome-all.min.css') ?> rel="stylesheet" type="text/css" />
+		<link href=<?php //echo base_url('assets/css/fa-svg-with-js.css') ?> rel="stylesheet" type="text/css" /> -->
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href=<?php echo base_url("assets/img/iKnow-icon.png") ?> />
 	</head>
@@ -105,219 +110,158 @@
 														</div>
 													</div>
 													<!-- END: Subheader -->
+
 													<div class="m-content">
-														
-														<div class="row">
-															<!--Begin::Section Hot Threads-->
-																<!-- <div class="col-xl-6">
-																	<div class="m-portlet" >
-																		<div class="m-portlet__head" >
-																			<div class="m-portlet__head-caption">
-																				<div class="m-portlet__head-title">
-																					<h3 class="m-portlet__head-text">
-																						HOT THREADS! 
-																					</h3>
-																					<span style="margin-left: 5px;">
-																					<i class="fa fa-fire"></i>
-																					</span>
+														<?php foreach ($login as $l) { ?>
+														<!--begin:: Widgets/Stats-->
+														<div class="m-portlet ">
+															<div class="m-portlet__body  m-portlet__body--no-padding">
+																<div class="row m-row--no-padding m-row--col-separator-xl">
+																	<div class="col-md-12 col-lg-6 col-xl-3">
+																		<!--begin::Total Profit-->
+																		<div class="m-widget24">
+																			<div class="m-widget24__item">
+																				<h4 class="m-widget24__title">
+																					Questions
+																				</h4>
+																				<br>
+																				<span class="m-widget24__desc">
+																					This Month <!-- echo this month -->
+																				</span>
+																				<span class="m-widget24__stats m--font-brand">
+																					<?php 	$question = $l['question'];
+																							$persen = 100;
+																							$target = 30;
+																					?>
+																					<?php echo $question ?>
+																				</span>
+																				<div class="m--space-10"></div>
+																				<div class="progress m-progress--sm">
+																					<div class="progress-bar m--bg-brand" role="progressbar" style="width: <?php echo ($question/$target)*$persen; ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 																				</div>
+																				<span class="m-widget24__change">
+																					Target
+																				</span>
+																				<span class="m-widget24__number">
+																					30 Times
+																				</span>
 																			</div>
 																		</div>
-																		<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																			<div class="row">
-																				<div class="col-xl-12" >
-																					
-																					<table class="table table-striped- table-bordered table-hover" >
-																						<col width="85%">
-																						<col width="15%">
-																						<tbody>
-																							<tr>
-																								<td>
-																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																								</td>
-																								<td>
-																									<i class="fa fa-eye"> 29<i>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																								</td>
-																								<td>
-																									<i class="fa fa-eye"> 29<i>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																								</td>
-																								<td>
-																									<i class="fa fa-eye"> 29<i>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									[Studi Lingkungan] - Apa pengaruh dari pembuangan sam..
-																								</td>
-																								<td>
-																									<i class="fa fa-eye"> 29<i>
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
-																					
-																				</div>
-																			</div>
-																		</div>
+																		<!--end::Total Profit-->
 																	</div>
-																</div> -->
-															<!--End::Section Hot Threads-->
-															<!--Begin::Section SME of The Week-->
-															<!-- <div class="col-xl-6">
-																<div class="m-portlet" >
-																	<div class="m-portlet__head" >
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
-																					SME Of The Week
-																				</h3>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																		<div class="row">
-																			<div class="col-xl-12" >
-																			
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
-																					<div class="m-portlet__body col-xl-4">
-																						<div class="m-widget19">
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;">
-																									<div class="m-widget19__user-img">
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body col-xl-4" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							
-																						</div>
-																					</div>
+																	<div class="col-md-12 col-lg-6 col-xl-3">
+																		<!--begin::New Feedbacks-->
+																		<div class="m-widget24">
+																			<div class="m-widget24__item">
+																				<h4 class="m-widget24__title">
+																					Answers
+																				</h4>
+																				<br>
+																				<span class="m-widget24__desc">
+																					This Month <!-- echo this month -->
+																				</span>
+																				<span class="m-widget24__stats m--font-info">
+																					<?php 	$answer = $l['answer'];
+																							$persen = 100;
+																							$target = 30;
+																					?>
+																					<?php echo $answer ?>
+																				</span>
+																				<div class="m--space-10"></div>
+																				<div class="progress m-progress--sm">
+																					<div class="progress-bar m--bg-info" role="progressbar" style="width: <?php echo ($answer/$target)*$persen; ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 																				</div>
-																				
+																				<span class="m-widget24__change">
+																					Target
+																				</span>
+																				<span class="m-widget24__number">
+																					30 Times
+																				</span>
 																			</div>
 																		</div>
+																		<!--end::New Feedbacks-->
+																	</div>
+																	<div class="col-md-12 col-lg-6 col-xl-3">
+																		<!--begin::New Orders-->
+																		<div class="m-widget24">
+																			<div class="m-widget24__item">
+																				<h4 class="m-widget24__title">
+																					Login
+																				</h4>
+																				<br>
+																				<span class="m-widget24__desc">
+																					This Month <!-- echo this month -->
+																				</span>
+																				<span class="m-widget24__stats m--font-danger">
+																					<?php 	$login = $l['login'];
+																							$persen = 100;
+																							$target = 30;
+																					?>
+																					<?php echo $login;?>
+																				</span>
+																				<div class="m--space-10"></div>
+																				<div class="progress m-progress--sm">
+																					<div class="progress-bar m--bg-danger" role="progressbar" style="width: <?php echo ($login/$target)*$persen; ?>%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+																				</div>
+																				<span class="m-widget24__change">
+																					Target
+																				</span>
+																				<span class="m-widget24__number">
+																					30 Times
+																				</span>
+																			</div>
+																		</div>
+																		<!--end::New Orders-->
+																	</div>
+																	<div class="col-md-12 col-lg-6 col-xl-3">
+																		<!--begin::New Users-->
+																		<div class="m-widget24">
+																			<div class="m-widget24__item">
+																				<h4 class="m-widget24__title">
+																					Ranking 
+																				</h4>
+																				<br>
+																				<span class="m-widget24__desc">
+																					This Month <!-- echo this month -->
+																				</span>
+																				<span class="m-widget24__stats m--font-warning">
+																					<?php if($l['rank']==1){ ?>
+																						<img src="<?php echo base_url('assets/img/first.svg') ?>" style="width: 120px; height: auto;">
+																					<?php }elseif($l['rank']==2){ ?>
+																						<img src="<?php echo base_url('assets/img/second.svg') ?>" style="width: 120px; height: auto;">
+																					<?php }elseif($l['rank']==3){ ?>
+																						<img src="<?php echo base_url('assets/img/third.svg') ?>" style="width: 120px; height: auto;">
+																					<?php }else{ 
+																						echo $l['rank']; ?>
+																						<br>
+																						<span>
+																							<img src="<?php echo base_url('assets/img/winner.svg') ?>" style="width: 60px; height: auto;">
+																						</span>
+																					
+																					
+																				</span>
+																				<!-- <div class="m--space-10"></div>
+																				<div class="progress m-progress--sm">
+																					<div class="progress-bar m--bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+																				</div>
+																				<span class="m-widget24__change">
+																					Percentile
+																				</span>
+																				<span class="m-widget24__number">
+
+																				</span> -->
+																				<?php } ?>
+																			</div>
+																		</div>
+																		<!--end::New Users-->
 																	</div>
 																</div>
-															</div> -->
+															</div>
 														</div>
-														<!--End::Section SME of the Week-->
-														<!--Begin::Section Topic Graph-->
-														<!-- <div class="row">
-															<div class="col-xl-6">
-																<div class="m-portlet" >
-																	<div class="m-portlet__head" >
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
-																					Topic's Graph 
-																				</h3>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																		<div class="row">
-																			<div class="col-xl-12" >
-																				
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							
-																						</div>
-																					</div>
-																				</div>
-																				
-																			</div>
-																			
-																			
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="col-xl-6">
-																<div class="m-portlet" >
-																	<div class="m-portlet__head" >
-																		<div class="m-portlet__head-caption">
-																			<div class="m-portlet__head-title">
-																				<h3 class="m-portlet__head-text">
-																					Questioner of The Week
-																				</h3>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
-																		<div class="row">
-																			<div class="col-xl-3" >
-																				
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																							
-																						</div>
-																					</div>
-																				</div>
-																				
-																			</div>
-																			<div class="col-xl-3" >
-																				
-																				<div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force" >
-																					
-																					<div class="m-portlet__body" style="">
-																						<div class="m-widget19" >
-																							<div class="m-widget19__content">
-																								<div class="m-widget19__header" style="margin: 0 auto 0 auto;align-content:centre;">
-																									<div class="m-widget19__user-img" >
-																										<img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="" style="margin-top: 10px;margin-bottom: 20px;width: 100px; height: 100px;">
-																									</div>
-																								</div>
-																								<div class="m-widget19__body" style="text-align:center;">
-																									<h5> hlo hlo hlo hlo hlo </h5>
-																								</div>
-																							</div>
-																						
-																						</div>
-																					</div>
-																				</div>
-																				
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div> -->
+														<?php }?>
+														<!--end:: Widgets/Stats--> 
+														
+
 														<!--Begin::Section Experts-->
 														<div class="m-portlet" >
 															<div class="m-portlet__head" >
