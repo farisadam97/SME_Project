@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2018 at 01:00 PM
+-- Generation Time: Sep 16, 2018 at 11:50 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -155,13 +155,9 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`id_inbox`, `id_conversation`, `id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(9, 1, 1, '090', '090', '2018-09-14 07:23:13', 'a', 'a', 'Unsolved', 'bobby', 0, '', 1),
-(10, 1, 2, '090', '090', '2018-09-14 08:11:59', 'a																						', 'a', 'Unsolved', 'bobby', 0, '', 1),
-(11, 2, 3, '090', '090', '2018-09-14 08:53:27', 'cobaaaa', 'coba', 'Unsolved', 'bobby', 0, '', 1),
-(12, 2, 4, '090', '090', '2018-09-14 09:38:27', '				e																		', 'a', 'Unsolved', 'bobby', 0, '', 1),
-(18, 2, 5, '090', '090', '2018-09-14 10:50:52', '								bbbbbbbbbbbbbbbbb										', 'a', 'Unsolved', 'bobby', 0, '', 1),
-(19, 2, 6, '090', '090', '2018-09-14 10:50:59', '					ccccccccccc													', 'a', 'Unsolved', 'bobby', 0, '', 1),
-(20, 1, 7, '090', '090', '2018-09-14 10:51:10', 'ddddddddddddddddddddddd																		', 'a', 'Unsolved', 'bobby', 0, '', 1);
+(2, 1, 1, '110', '090', '2018-09-15 21:23:50', 'hehe', 'halo', 'Solved', 'bobby', 0, '', 1),
+(3, 1, 2, '090', '110', '2018-09-15 21:23:50', 'lapo?														', 'halo', 'Solved', 'admin', 0, '', 0),
+(4, 2, 3, '090', '110', '2018-09-16 03:22:42', 'hehe', '1 hehe', 'Unsolved', 'admin', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -3132,16 +3128,24 @@ CREATE TABLE `user` (
   `nipp` varchar(100) NOT NULL,
   `nama` varchar(25) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `role` enum('admin','user','expert') NOT NULL
+  `role` enum('admin','user','expert') NOT NULL,
+  `question` int(11) NOT NULL,
+  `answer` int(11) NOT NULL,
+  `login` int(11) NOT NULL,
+  `poin` int(11) NOT NULL,
+  `rank` int(11) NOT NULL,
+  `tanggal` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`nipp`, `nama`, `password`, `role`) VALUES
-('090', 'bobby', 'admin', 'admin'),
-('110', 'admin', 'admin', 'admin');
+INSERT INTO `user` (`nipp`, `nama`, `password`, `role`, `question`, `answer`, `login`, `poin`, `rank`, `tanggal`) VALUES
+('001', 'hehe', 'admin', 'user', 15, 20, 2, 40, 4, '2018-09-16'),
+('002', 'huehue', 'admin', 'user', 10, 10, 1, 40, 4, '2018-09-16'),
+('090', 'bobby', 'admin', 'expert', 100, 2, 1, 100, 1, '2018-09-16'),
+('110', 'admin', 'admin', 'admin', 30, 30, 0, 90, 2, '2018-09-16');
 
 --
 -- Indexes for dumped tables
@@ -3205,7 +3209,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --

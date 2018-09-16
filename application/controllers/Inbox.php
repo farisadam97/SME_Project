@@ -110,7 +110,7 @@ class Inbox extends CI_Controller {
 			$nipp = $_POST['nipp_penerima'];
 			$subjek = $_POST['subjek'];
 			$isi_pesan = $_POST['isi_pesan'];
-			$nama = $this->m_login->cek_nama();
+			$nama = $this->m_login->getRole();
 			if ($_FILES["file"]["name"]!=null) {
 		        $config['upload_path']         = './assets/uploaded_files';
 				$config['allowed_types']        = 'jpeg|gif|jpg|png|xlsx|docx|doc|xls|pdf|ppt|pptx';

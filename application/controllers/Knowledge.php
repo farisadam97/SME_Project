@@ -21,7 +21,7 @@ class Knowledge extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data7'] = $this->m_knowledge->getDataKnowledgeTopikExpert();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
+			$data['nama'] = $this->m_login->getRole();
 			$this->load->view('Knowledge', $data);
 		}
 	}
@@ -35,7 +35,7 @@ class Knowledge extends CI_Controller {
 			$data['data8'] = $this->m_knowledge->getDataKnowledgeTopikItem($id_knowledge);
 			$data['data9'] = $this->m_knowledge->getDataKnowledgeExpertItem($id_knowledge);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
+			$data['nama'] = $this->m_login->getRole();
 			$this->load->view('KnowledgeItem', $data);
 		}
 	}

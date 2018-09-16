@@ -22,7 +22,7 @@ class Experts extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data5'] = $this->m_expert->getDataExperts();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
+			$data['nama'] = $this->m_login->getRole();
 			$this->load->view('Experts', $data);
 		}
 	}
@@ -36,7 +36,7 @@ class Experts extends CI_Controller {
 			$data['data'] = $this->m_expert->getDataExpertsItem($nipp);
 			$data['keahlian'] = $this->m_expert->getDataExpertsKeahlian($nipp);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->cek_nama();
+			$data['nama'] = $this->m_login->getRole();
 			$this->load->view('ExpertsItem', $data);
 		}
 	}
