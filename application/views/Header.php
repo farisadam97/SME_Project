@@ -15,7 +15,7 @@
 									-->
 								</span>
 								<span class="m-topbar__username m--hide">
-									Nick
+									
 								</span>
 							</a>
 							<div class="m-dropdown__wrapper">

@@ -227,7 +227,7 @@
 																	<tbody>
 																		<?php foreach ($data4 as $d) {  ?>
 													                                <tr style="text-align: center;">
-													                                	<td><?php if ($d['read_pesan_penerima'] == 0) { ?>
+													                                	<td><?php if($d['read_pesan_penerima'] == 0 && $d['nipp_pengirim'] != $this->session->userdata('nipp')) { ?>
 													                                	
 																							<span class="m-menu__link-badge">
 																								<span class="m-badge m-badge--warning m-badge--wide">
@@ -235,7 +235,11 @@
 																								</span>
 																							</span>
 
-													                                	<?php } ?></td>
+													                                	<?php } elseif($d['nipp_pengirim'] == $this->session->userdata('nipp')){
+
+													                                	} ?>
+
+													                                	</td>
 													                                    <td><?php echo $d['nama_pengirim']; ?></td>
 													                                    <td><?php echo $d['subjek']; ?></td>
 													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
@@ -266,7 +270,7 @@
 												                                    		<!-- <a href="<?php //echo base_url()."/Inbox/deletePesan/".$d['id_conversation'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
 																							</a> -->
-																							<?php if($d['keterangan'] == 'Unsolved' && $role == 'expert') { ?>
+																							<?php if($d['keterangan'] == 'Unsolved') { ?>
 																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_conversation'];?>" title="Keterangan">
 																								<i class="fa flaticon-edit"></i>
 																							</button>

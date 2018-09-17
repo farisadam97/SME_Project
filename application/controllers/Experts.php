@@ -21,7 +21,7 @@ class Experts extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data5'] = $this->m_expert->getDataExperts();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->getRole();
+			$data['role'] = $this->m_login->getRole();
 			$this->load->view('Experts', $data);
 		}
 	}

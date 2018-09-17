@@ -108,18 +108,16 @@
 											<div class="m-portlet m-portlet--mobile">
 												<div class="m-portlet__head">
 													<div class="m-portlet__head-caption">
+														<span class="m-portlet__head-text " name="nipp_pengirim" style="font-size: 20px; padding: 10px 10px 10px 10px;">
+																<strong>[<?php echo $data[0]['nipp_pengirim'] ?>]</strong> &mdash; &nbsp;
+														</span>
 														<div class="m-portlet__head-title">
 															<div class="row">
-																<span>
-																		<h3 class="m-portlet__head-text" name="nipp_pengirim" style="font-size: 28px; padding: 10px 10px 10px 10px;">
-																			[<?php echo $data[0]['nipp_pengirim'] ?>] &mdash; 
-																		</h3>
-																</span>
-																<span>
-																		<h3 class="m-portlet__head-text" name="nama_pengirim" style="font-size: 20px; padding: 10px 10px 10px 0px;">
-																			Subject : <?php echo $data[0]['subjek']; ?>
-																		</h3>
-																</span>
+																<div>
+																	<h3 class="m-portlet__head-text" name="nama_pengirim" style="font-size: 16px; padding: 10px 10px 10px 0px;">
+																		Subject : <?php echo $data[0]['subjek']; ?>
+																	</h3>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -141,7 +139,7 @@
 															</div>
 														</div>
 														<div class="m-portlet__body">
-															<h6> <?php echo $data['isi_pesan']; ?> </h6></br>
+															<h6 class="m-portlet__head-title"> <?php echo $data['isi_pesan']; ?> </h6></br>
 
 															<?php $file_explode = explode(".", $data['file']);
 																  $file_ext = array_slice($file_explode, 1);
@@ -295,7 +293,7 @@
 											<!-- </div> -->
 							</div>
 					</div>
-				</div>
+				
 										
 											<!-- begin::Footer -->
 											<?php include 'Footer.php' ?>
