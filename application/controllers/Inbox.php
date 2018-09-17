@@ -21,6 +21,7 @@ class Inbox extends CI_Controller {
 			$data['err_message'] = "";
 			$data['data4'] = $this->m_inbox->getDataInbox();
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
+			$data['countUnread'] = $this->m_inbox->countUnread();
 			$data['role'] = $this->m_login->getRole();
 			$this->load->view('Inbox', $data);
 		}
@@ -41,11 +42,11 @@ class Inbox extends CI_Controller {
 		}
 	}
 
-	public function deletePesan($id_conversation){
+	public function deletePesan($id_pesan){
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("Login"));
 		}else{
-		    $this->m_inbox->deleteDataInboxItem($id_conversation);
+		    $this->m_inbox->deleteDataInboxItem($id_pesan);
 		    redirect("Inbox");
 		}
 	}
@@ -90,9 +91,10 @@ class Inbox extends CI_Controller {
 					'nipp_pengirim' => $this->session->userdata('nipp'),
 					'subjek' => $subjek,
 					'isi_pesan' => $isi_pesan,
-					'nama_pengirim' => $nama,
+					'nama_pengirim' => $nama[0]['nama'],
 					'file' => $file,
-					'read_pesan' => '0'
+					'read_pesan_penerima' => '0',
+					'read_pesan_pengirim' => '1'
 				);
 			$this->upload->data('userfile');
 			
@@ -143,9 +145,10 @@ class Inbox extends CI_Controller {
 					'nipp_pengirim' => $this->session->userdata('nipp'),
 					'subjek' => $subjek,
 					'isi_pesan' => $isi_pesan,
-					'nama_pengirim' => $nama,
+					'nama_pengirim' => $nama[0]['nama'],
 					'file' => $file,
-					'read_pesan' => '0'
+					'read_pesan_penerima' => '0',
+					'read_pesan_pengirim' => '1'
 				);
 			$this->upload->data('userfile');
 	        $res = $this->m_inbox->InsertData('pesan',$data_insert);

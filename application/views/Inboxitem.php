@@ -134,7 +134,7 @@
 																	<span class="m-list-search__result-item-pic">
 																		<img class="m--img-rounded" src=<?php echo base_url("assets/img/man.png"); ?> alt="" style="width: 40px; height: auto;">
 																	</span>
-																	<h3 class="m-portlet__head-text" name="subjek" style="padding-left: 10px">
+																	<h3 class="m-portlet__head-text" name="nama_pengirim" style="padding-left: 10px">
 																		<?php echo $data['nama_pengirim']; ?>
 																	</h3>
 																</div>

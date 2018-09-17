@@ -34,11 +34,14 @@
 																-->
 															</div>
 															<div class="m-card-user__details">
-																<span class="m-card-user__name m--font-weight-500">
-																	<?php echo $this->session->userdata('nipp') ?>
+																<span class="m-card-user__name m--font-weight-1000">
+																	<strong><?php echo $this->session->userdata('nipp') ?></strong>
+																</span>
+																<span class="m-card-user__name m--font-weight-500" style="color: gold;">
+																	<?php echo $role[0]['role']; ?>
 																</span>
 																<span class="m-card-user__name m--font-weight-500">
-																	<?php echo $role; ?>
+																	<?php echo $role[0]['nama']; ?>
 																</span>
 															</div>
 														</div>

@@ -227,11 +227,11 @@
 																	<tbody>
 																		<?php foreach ($data4 as $d) {  ?>
 													                                <tr style="text-align: center;">
-													                                	<td><?php if ($d['read_pesan'] == 0) { ?>
+													                                	<td><?php if ($d['read_pesan_penerima'] == 0) { ?>
 													                                	
 																							<span class="m-menu__link-badge">
-																								<span class="m-badge m-badge--danger">
-																									1 
+																								<span class="m-badge m-badge--warning m-badge--wide">
+																									NEW
 																								</span>
 																							</span>
 
@@ -259,7 +259,7 @@
 																								<i class="fa flaticon-eye"></i>
 																							</a>
 																		    				
-																							<button type="button" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_delete_<?php echo $d['id_conversation'];?>" title="Delete">
+																							<button type="button" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_delete_<?php echo $d['id_pesan'];?>" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
 																							</button>
 
@@ -313,7 +313,7 @@
 																<!--end::Modal-->
 
 																<!--begin::Modal-->
-																	<div class="modal fade" id="m_modal_delete_<?php echo $e['id_conversation'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+																	<div class="modal fade" id="m_modal_delete_<?php echo $e['id_pesan'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 																		<div class="modal-dialog modal-dialog-centered" role="document">
 																			<div class="modal-content">
 																				<div class="modal-header">
@@ -336,7 +336,7 @@
 																						Close
 																					</button>
 
-																					<a href="<?php echo base_url()."Inbox/deletePesan/". $e['id_conversation']?>">
+																					<a href="<?php echo base_url()."Inbox/deletePesan/". $e['id_pesan']?>">
 																						<button type="submit" class="btn btn-primary">
 																							Delete
 																						</button>

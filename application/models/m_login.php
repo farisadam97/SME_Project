@@ -16,9 +16,8 @@ class m_login extends CI_Model{
 		$this->db->select('*');
 	    $this->db->from('user');
 	    $this->db->where('nipp', $this->session->userdata('nipp'));
-	    $result = $this->db->get();
-	    $role = $result->row();
-	    return $role->role;
+	    $role = $this->db->get();
+	    return $role->result_array();
 	}
 
 	function getLoginDate()

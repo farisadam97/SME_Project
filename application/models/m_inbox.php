@@ -1,17 +1,19 @@
 <?php
 class m_inbox extends CI_Model
 {
-  function __construct() {
+  function __construct() 
+  {
     parent::__construct();
-    }
+  }
+
   public function getDataInbox() 
   {
     $this->db->query('SET @@session.group_concat_max_len = 10000');
-    $this->db->select('id_inbox, id_conversation, SUBSTRING_INDEX(id_pesan, ";", -1) AS id_pesan, nipp_penerima, nipp_pengirim, SUBSTRING_INDEX(timestamp, ";", -1) AS timestamp, SUBSTRING_INDEX(isi_pesan, ";", -1) AS isi_pesan, subjek, keterangan, nama_pengirim, rating, SUBSTRING_INDEX(file, ";", -1) AS file, SUBSTRING_INDEX(read_pesan, ";", -1) AS read_pesan');
+    $this->db->select('id_inbox, id_conversation, SUBSTRING_INDEX(id_pesan, ";", -1) AS id_pesan, nipp_penerima, nipp_pengirim, SUBSTRING_INDEX(timestamp, ";", -1) AS timestamp, SUBSTRING_INDEX(isi_pesan, ";", -1) AS isi_pesan, subjek, keterangan, nama_pengirim, rating, SUBSTRING_INDEX(file, ";", -1) AS file, SUBSTRING_INDEX(read_pesan_penerima, ";", -1) AS read_pesan_penerima, SUBSTRING_INDEX(read_pesan_pengirim, ";", -1) AS read_pesan_pengirim');
     $this->db->from('pesan');
     $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
     $this->db->or_where('nipp_pengirim', $this->session->userdata('nipp'));
-    $this->db->group_by('id_conversation');
+    $this->db->group_by('id_pesan');
     $data4 = $this->db->get();
     return $data4->result_array();
   }
@@ -19,7 +21,7 @@ class m_inbox extends CI_Model
   public function getDataInboxItem($id_conversation) 
   {
     $this->db->query('SET @@session.group_concat_max_len = 10000');
-    $this->db->set('read_pesan', '1');
+    $this->db->set('read_pesan_penerima', '1');
     $this->db->where('id_conversation', $id_conversation);
     $this->db->update('pesan');
 
@@ -29,6 +31,16 @@ class m_inbox extends CI_Model
     $data = $this->db->get();
     return $data->result_array();
 
+  }
+
+  public function countUnread()
+  {
+    $countUnread = $this->db->query("select count(read_pesan_penerima) as countUnread FROM pesan where read_pesan_penerima = 0 AND nipp_penerima = ".$this->session->userdata('nipp'));
+    // $this->db->select('COUNT(read_pesan_penerima) as countUnread');
+    // $this->db->from('pesan');
+    // $where = "id_pesan = ".$id_pesan." AND read_pesan_penerima = 0 AND nipp_penerima = ".$this->session->userdata('nipp');
+    // $this->db->where($where);
+    return $countUnread->num_rows();
   }
 
   public function updateKeterangan($id_conversation)
@@ -54,9 +66,9 @@ class m_inbox extends CI_Model
     $this->db->query('UPDATE user set answer = answer + 1, poin = poin + 3 where nipp = '.$this->session->userdata('nipp'));
   }
 
-  public function deleteDataInboxItem($id_conversation)
+  public function deleteDataInboxItem($id_pesan)
   {
-    $this->db->where_in('id_conversation', $id_conversation);
+    $this->db->where_in('id_pesan', $id_pesan);
     $this->db->delete('pesan');
   }
 
@@ -98,15 +110,15 @@ class m_inbox extends CI_Model
     return $conv->result_array();
   }
 
-  public function getConversationItem($id_inbox)
-  {
+  // public function getConversationItem($id_inbox)
+  // {
     
-    $this->db->select('id_conversation');
-    $this->db->from('pesan');
-    $this->db->where('id_inbox', $id_inbox);
-    $conv_item = $this->db->get();
-    return $conv_item->result_array();
-  }
+  //   $this->db->select('id_conversation');
+  //   $this->db->from('pesan');
+  //   $this->db->where('id_inbox', $id_inbox);
+  //   $conv_item = $this->db->get();
+  //   return $conv_item->result_array();
+  // }
 
 }
 
