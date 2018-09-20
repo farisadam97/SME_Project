@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2018 at 01:47 PM
+-- Generation Time: Sep 17, 2018 at 04:01 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -147,17 +147,18 @@ CREATE TABLE `pesan` (
   `nama_pengirim` varchar(100) NOT NULL,
   `rating` int(11) NOT NULL,
   `file` varchar(1000) DEFAULT NULL,
-  `read_pesan` tinyint(4) NOT NULL
+  `read_pesan_penerima` tinyint(4) NOT NULL,
+  `read_pesan_pengirim` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pesan`
 --
 
-INSERT INTO `pesan` (`id_inbox`, `id_conversation`, `id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan`) VALUES
-(2, 1, 1, '110', '090', '2018-09-15 21:23:50', 'hehe', 'halo', 'Solved', 'bobby', 0, '', 1),
-(3, 1, 2, '090', '110', '2018-09-15 21:23:50', 'lapo?														', 'halo', 'Solved', 'admin', 0, '', 0),
-(4, 2, 3, '090', '110', '2018-09-16 03:22:42', 'hehe', '1 hehe', 'Unsolved', 'admin', 0, '', 0);
+INSERT INTO `pesan` (`id_inbox`, `id_conversation`, `id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan_penerima`, `read_pesan_pengirim`) VALUES
+(27, 1, 1, '090', '110', '2018-09-17 07:26:44', 'tes', 'tes', 'Solved', 'admin', 0, 'assets/uploaded_files/1537167943.pdf', 1, 1),
+(29, 2, 2, '110', '090', '2018-09-17 07:25:05', 'tes', 'tes', 'Unsolved', 'bobby', 0, '', 1, 1),
+(30, 2, 3, '090', '090', '2018-09-17 07:31:22', 'reply 2														', 'tes', 'Unsolved', 'bobby', 0, '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3144,8 +3145,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`nipp`, `nama`, `password`, `role`, `question`, `answer`, `login`, `poin`, `rank`, `tanggal`) VALUES
 ('001', 'hehe', 'admin', 'user', 0, 0, 0, 0, 4, '2018-09-16'),
 ('002', 'huehue', 'admin', 'user', 0, 0, 0, 0, 4, '2018-09-16'),
-('090', 'bobby', 'admin', 'expert', 0, 0, 0, 0, 4, '2018-09-16'),
-('110', 'admin', 'admin', 'admin', 0, 0, 0, 0, 4, '2018-09-16');
+('090', 'bobby', 'admin', 'expert', 0, 2, 1, 7, 2, '2018-09-17'),
+('110', 'admin', 'admin', 'admin', 2, 0, 1, 7, 2, '2018-09-17');
 
 --
 -- Indexes for dumped tables
@@ -3209,7 +3210,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --

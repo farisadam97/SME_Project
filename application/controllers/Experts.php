@@ -35,7 +35,7 @@ class Experts extends CI_Controller {
 			$data['data'] = $this->m_expert->getDataExpertsItem($nipp);
 			$data['keahlian'] = $this->m_expert->getDataExpertsKeahlian($nipp);
 			$data['countPesan'] = $this->m_leftMenu->countDataInbox();
-			$data['nama'] = $this->m_login->getRole();
+			$data['role'] = $this->m_login->getRole();
 			$this->load->view('ExpertsItem', $data);
 		}
 	}

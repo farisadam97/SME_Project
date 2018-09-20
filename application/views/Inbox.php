@@ -163,7 +163,7 @@
 							                                                                                <label  class="form-control-label">
 																												Subject:
 																											</label>
-																											<input type="text" class="form-control" name="subjek" required>
+																											<input type="text" class="form-control" name="subjek" required maxlength="120">
 																										</div>
 																										<div class="form-group">
 																											<label  class="form-control-label">
@@ -210,9 +210,6 @@
 																				Subjek
 																			</th>
 																			<th style="text-align: center;">
-																				Pesan
-																			</th>
-																			<th style="text-align: center;">
 																				Waktu 
 																			</th>
 																			<th style="text-align: center;">
@@ -226,23 +223,22 @@
 																	</thead>
 																	<tbody>
 																		<?php foreach ($data4 as $d) {  ?>
+																			<?php if($d['nipp_pengirim'] == $this->session->userdata('nipp')){
+
+																			}else{  ?>
 													                                <tr style="text-align: center;">
-													                                	<td><?php if($d['read_pesan_penerima'] == 0 && $d['nipp_pengirim'] != $this->session->userdata('nipp')) { ?>
-													                                	
+													                                	<td>
+													                                		<?php if($d['read_pesan_penerima'] == 0 && $d['nipp_pengirim'] != $this->session->userdata('nipp')) { ?>
 																							<span class="m-menu__link-badge">
 																								<span class="m-badge m-badge--warning m-badge--wide">
 																									NEW
 																								</span>
 																							</span>
-
-													                                	<?php } elseif($d['nipp_pengirim'] == $this->session->userdata('nipp')){
-
-													                                	} ?>
-
+													                                	<?php } ?>
 													                                	</td>
-													                                    <td><?php echo $d['nama_pengirim']; ?></td>
+													                                    <td><?php echo $d['nama_pengirim']; ?>	
+													                                    </td>
 													                                    <td><?php echo $d['subjek']; ?></td>
-													                                    <td><?php echo $d['isi_pesan']; ?></a></td>
 													                                    <td><?php echo $d['timestamp']; ?></td>
 													                                    <td>
 																							<?php switch ($d['keterangan']) {
@@ -277,6 +273,7 @@
 																							<?php }else{}?>
 																						</td>
 													                                </tr>
+													                            <?php } ?>	
 													                    <?php } ?>
 																	</tbody>
 																</table>

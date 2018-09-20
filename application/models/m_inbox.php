@@ -9,11 +9,13 @@ class m_inbox extends CI_Model
   public function getDataInbox() 
   {
     $this->db->query('SET @@session.group_concat_max_len = 10000');
-    $this->db->select('id_inbox, id_conversation, SUBSTRING_INDEX(id_pesan, ";", -1) AS id_pesan, nipp_penerima, nipp_pengirim, SUBSTRING_INDEX(timestamp, ";", -1) AS timestamp, SUBSTRING_INDEX(isi_pesan, ";", -1) AS isi_pesan, subjek, keterangan, nama_pengirim, rating, SUBSTRING_INDEX(file, ";", -1) AS file, SUBSTRING_INDEX(read_pesan_penerima, ";", -1) AS read_pesan_penerima, SUBSTRING_INDEX(read_pesan_pengirim, ";", -1) AS read_pesan_pengirim');
+    // $this->db->select('id_inbox, id_conversation, SUBSTRING_INDEX(id_pesan, ";", -1) AS id_pesan, nipp_penerima, nipp_pengirim, SUBSTRING_INDEX(timestamp, ";", -1) AS timestamp, SUBSTRING_INDEX(isi_pesan, ";", -1) AS isi_pesan, subjek, keterangan, nama_pengirim, rating, SUBSTRING_INDEX(file, ";", -1) AS file, SUBSTRING_INDEX(read_pesan_penerima, ";", -1) AS read_pesan_penerima, SUBSTRING_INDEX(read_pesan_pengirim, ";", -1) AS read_pesan_pengirim');
+    $this->db->select('id_inbox, id_conversation, id_pesan, nipp_pengirim, nipp_penerima, timestamp, isi_pesan, subjek, keterangan, nama_pengirim, rating, file, read_pesan_penerima, read_pesan_pengirim');
     $this->db->from('pesan');
     $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
     $this->db->or_where('nipp_pengirim', $this->session->userdata('nipp'));
     $this->db->group_by('id_pesan');
+    $this->db->order_by('timestamp', 'desc');
     $data4 = $this->db->get();
     return $data4->result_array();
   }
@@ -68,8 +70,7 @@ class m_inbox extends CI_Model
 
   public function deleteDataInboxItem($id_pesan)
   {
-    $this->db->where_in('id_pesan', $id_pesan);
-    $this->db->delete('pesan');
+    $this->db->query('UPDATE pesan set nipp_penerima = 1 where id_pesan = '.$id_pesan.' AND nipp_penerima = '.$this->session->userdata('nipp'));
   }
 
   public function InsertData($tableName,$data)

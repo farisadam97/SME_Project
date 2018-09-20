@@ -108,14 +108,14 @@
 											<div class="m-portlet m-portlet--mobile">
 												<div class="m-portlet__head">
 													<div class="m-portlet__head-caption">
-														<span class="m-portlet__head-text " name="nipp_pengirim" style="font-size: 20px; padding: 10px 10px 10px 10px;">
+														<span class="m-portlet__head-text " name="nipp_pengirim" style="font-size: 16px; padding: 10px 10px 10px 10px; color: #F4BE28;">
 																<strong>[<?php echo $data[0]['nipp_pengirim'] ?>]</strong> &mdash; &nbsp;
 														</span>
 														<div class="m-portlet__head-title">
 															<div class="row">
 																<div>
-																	<h3 class="m-portlet__head-text" name="nama_pengirim" style="font-size: 16px; padding: 10px 10px 10px 0px;">
-																		Subject : <?php echo $data[0]['subjek']; ?>
+																	<h3 class="m-portlet__head-text" name="nama_pengirim" style="font-size: 14px; padding: 10px 10px 10px 0px;">
+																		Subject : [<?php echo $data[0]['subjek']; ?>]
 																	</h3>
 																</div>
 															</div>
