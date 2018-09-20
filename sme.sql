@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2018 at 04:01 PM
+-- Generation Time: Sep 20, 2018 at 04:06 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -140,7 +140,7 @@ CREATE TABLE `pesan` (
   `id_pesan` int(11) NOT NULL,
   `nipp_penerima` varchar(15) NOT NULL,
   `nipp_pengirim` varchar(15) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `isi_pesan` varchar(1000) NOT NULL,
   `subjek` varchar(1000) NOT NULL,
   `keterangan` enum('Solved','Unsolved') NOT NULL DEFAULT 'Unsolved',
@@ -156,9 +156,13 @@ CREATE TABLE `pesan` (
 --
 
 INSERT INTO `pesan` (`id_inbox`, `id_conversation`, `id_pesan`, `nipp_penerima`, `nipp_pengirim`, `timestamp`, `isi_pesan`, `subjek`, `keterangan`, `nama_pengirim`, `rating`, `file`, `read_pesan_penerima`, `read_pesan_pengirim`) VALUES
-(27, 1, 1, '090', '110', '2018-09-17 07:26:44', 'tes', 'tes', 'Solved', 'admin', 0, 'assets/uploaded_files/1537167943.pdf', 1, 1),
-(29, 2, 2, '110', '090', '2018-09-17 07:25:05', 'tes', 'tes', 'Unsolved', 'bobby', 0, '', 1, 1),
-(30, 2, 3, '090', '090', '2018-09-17 07:31:22', 'reply 2														', 'tes', 'Unsolved', 'bobby', 0, '', 1, 1);
+(36, 1, 1, '090', '090', '2018-09-20 13:40:13', 'aaaaaaaa', 'aaa', 'Unsolved', 'bobby', 0, 'assets/uploaded_files/1537450813.jpg', 1, 1),
+(37, 1, 2, '090', '090', '2018-09-20 13:42:03', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model ', 'aaa', 'Unsolved', 'bobby', 0, 'assets/uploaded_files/1537450923.jpg', 1, 1),
+(38, 2, 3, '1', '090', '2018-09-20 13:42:52', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model ', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model tex', 'Unsolved', 'bobby', 0, '', 1, 1),
+(39, 3, 4, '090', '090', '2018-09-20 13:45:06', 'aaa090', 'aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa aaaaa', 'Unsolved', 'bobby', 0, '', 1, 1),
+(40, 4, 5, '090', '090', '2018-09-20 13:49:42', 'll', '[Pelatihan perkelabuhan untuk informasi dan pengetahuan PT Pelindo III 12 Januar', 'Unsolved', 'bobby', 0, '', 1, 1),
+(41, 5, 6, '090', '090', '2018-09-20 13:50:21', 'j', '[Pelatihan perkelabuhan untuk informasi dan pengetahuan PT Pelindo III 12 Januari 2018 jam 20.12 untuk keberlangsungan k', 'Unsolved', 'bobby', 0, '', 1, 1),
+(42, 6, 7, '090', '090', '2018-09-20 13:57:03', 'huehue', 'huehue', 'Unsolved', 'bobby ilham akbar akbar akbar akbar akbar', 0, '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3127,7 +3131,7 @@ INSERT INTO `topik` (`id_topik`, `nama_topik`, `id_pengetahuan`) VALUES
 
 CREATE TABLE `user` (
   `nipp` varchar(100) NOT NULL,
-  `nama` varchar(25) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` enum('admin','user','expert') NOT NULL,
   `question` int(11) NOT NULL,
@@ -3145,8 +3149,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`nipp`, `nama`, `password`, `role`, `question`, `answer`, `login`, `poin`, `rank`, `tanggal`) VALUES
 ('001', 'hehe', 'admin', 'user', 0, 0, 0, 0, 4, '2018-09-16'),
 ('002', 'huehue', 'admin', 'user', 0, 0, 0, 0, 4, '2018-09-16'),
-('090', 'bobby', 'admin', 'expert', 0, 2, 1, 7, 2, '2018-09-17'),
-('110', 'admin', 'admin', 'admin', 2, 0, 1, 7, 2, '2018-09-17');
+('090', 'bobby', 'admin', 'expert', 1, 2, 2, 11, 2, '2018-09-20'),
+('110', 'admin', 'admin', 'admin', 2, 1, 2, 11, 2, '2018-09-20');
 
 --
 -- Indexes for dumped tables
@@ -3210,7 +3214,7 @@ ALTER TABLE `pengetahuan`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_inbox` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `sme_list`
 --
