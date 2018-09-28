@@ -22,31 +22,8 @@ class Home extends CI_Controller {
 			$data['err_message'] = "";
 			$data['login'] = $this->m_home->getStatsCount();
 			$data['ranking'] = $this->m_home->getStatsRanking();
-
-				$rank = count($data['ranking']);
-			    $i=1; $k=1; 
-			    while ($i < $rank)
-			    {
-			    	if($data['ranking'][$i-1]['poin'] > $data['ranking'][$i]['poin'] ){
-			    		$j = $i;
-				    	$this->m_home->setRanking($j,$k);
-			  			$k++;
-			  		}
-			  		else if($data['ranking'][$i-1]['poin'] == $data['ranking'][$i]['poin'] ){
-			  			$j = $i+1;
-			  			$this->m_home->setRanking($j,$k);
-			  			$k++;
-			  		
-			  		}else{
-
-			  		}
-			  		$i++;
-			    }
-			    $j=$i;
-			    $k++;
-			    $this->m_home->setRanking($j,$k);
-
-			$data['percent'] = $this->m_home->getPercentile();
+			$data['leaderboard'] = $this->m_home->getLeaderboard();
+			$data['rank'] = $this->m_home->getLeaderboardUser();
 			$data['data1'] = $this->m_home->getDataExpert();
 			$data['data2'] = $this->m_home->getDataPengetahuanTopik();
 			$data['data3'] = $this->m_home->getDataPengetahuanExpert();

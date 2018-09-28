@@ -9,9 +9,9 @@ class m_inbox extends CI_Model
   public function getDataInbox() 
   {
     $this->db->query('SET @@session.group_concat_max_len = 10000');
-    // $this->db->select('id_inbox, id_conversation, SUBSTRING_INDEX(id_pesan, ";", -1) AS id_pesan, nipp_penerima, nipp_pengirim, SUBSTRING_INDEX(timestamp, ";", -1) AS timestamp, SUBSTRING_INDEX(isi_pesan, ";", -1) AS isi_pesan, subjek, keterangan, nama_pengirim, rating, SUBSTRING_INDEX(file, ";", -1) AS file, SUBSTRING_INDEX(read_pesan_penerima, ";", -1) AS read_pesan_penerima, SUBSTRING_INDEX(read_pesan_pengirim, ";", -1) AS read_pesan_pengirim');
-    $this->db->select('id_inbox, id_conversation, id_pesan, nipp_pengirim, nipp_penerima, timestamp, isi_pesan, subjek, keterangan, nama_pengirim, rating, file, read_pesan_penerima, read_pesan_pengirim');
+    $this->db->select('pesan.id_inbox, pesan.id_conversation, pesan.id_pesan, pesan.nipp_pengirim, pesan.nipp_penerima, pesan.timestamp, pesan.isi_pesan, pesan.subjek, pesan.keterangan, pesan.nama_pengirim, pesan.rating, pesan.file, pesan.read_pesan_penerima, pesan.read_pesan_pengirim, user.role');
     $this->db->from('pesan');
+    $this->db->join('user', 'pesan.nipp_penerima = user.nipp');
     $this->db->where('nipp_penerima', $this->session->userdata('nipp'));
     $this->db->or_where('nipp_pengirim', $this->session->userdata('nipp'));
     $this->db->group_by('id_pesan');
@@ -38,10 +38,6 @@ class m_inbox extends CI_Model
   public function countUnread()
   {
     $countUnread = $this->db->query("select count(read_pesan_penerima) as countUnread FROM pesan where read_pesan_penerima = 0 AND nipp_penerima = ".$this->session->userdata('nipp'));
-    // $this->db->select('COUNT(read_pesan_penerima) as countUnread');
-    // $this->db->from('pesan');
-    // $where = "id_pesan = ".$id_pesan." AND read_pesan_penerima = 0 AND nipp_penerima = ".$this->session->userdata('nipp');
-    // $this->db->where($where);
     return $countUnread->num_rows();
   }
 
@@ -110,16 +106,6 @@ class m_inbox extends CI_Model
     $conv = $this->db->get();
     return $conv->result_array();
   }
-
-  // public function getConversationItem($id_inbox)
-  // {
-    
-  //   $this->db->select('id_conversation');
-  //   $this->db->from('pesan');
-  //   $this->db->where('id_inbox', $id_inbox);
-  //   $conv_item = $this->db->get();
-  //   return $conv_item->result_array();
-  // }
 
 }
 

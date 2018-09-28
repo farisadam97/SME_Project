@@ -266,7 +266,7 @@
 												                                    		<!-- <a href="<?php //echo base_url()."/Inbox/deletePesan/".$d['id_conversation'];?>" class="btn btn-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" title="Delete">
 																								<i class="fa flaticon-delete-1"></i>
 																							</a> -->
-																							<?php if($d['keterangan'] == 'Unsolved') { ?>
+																							<?php if($d['keterangan'] == 'Unsolved' && $d['role'] == 'expert') { ?>
 																							<button type="button" class="btn btn-warning m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_modal_<?php echo $d['id_conversation'];?>" title="Keterangan">
 																								<i class="fa flaticon-edit"></i>
 																							</button>

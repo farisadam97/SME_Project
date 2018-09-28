@@ -4,7 +4,7 @@ class m_home extends CI_Model
 
   public function getStatsCount()
   {
-    $this->db->select('*');
+    $this->db->select('nipp, poin, question, answer, login');
     $this->db->from('user');
     $this->db->where('nipp', $this->session->userdata('nipp'));
     $this->db->order_by('poin', 'desc');
@@ -12,30 +12,32 @@ class m_home extends CI_Model
     return $login->result_array();
   }
 
-  public function setRanking($j,$k)
+  public function getLeaderboard()
   {
-    $this->db->query('UPDATE user as u set u.rank = '.$j.' where u.poin=(select poin from (SELECT poin FROM user ORDER BY poin DESC LIMIT '.$k.')as r ORDER BY poin LIMIT 1)');
+    $leaderboard = $this->db->query('SELECT nipp, nama, poin, question, answer, login, FIND_IN_SET(poin, (SELECT GROUP_CONCAT(poin ORDER BY poin DESC) FROM user)) AS rank
+      FROM user
+      ORDER BY poin DESC
+      LIMIT 10');
+    return $leaderboard->result_array();
+  }
+
+  public function getLeaderboardUser()
+  {
+    $rank = $this->db->query('SELECT nipp, poin, question, answer, login, FIND_IN_SET(poin, (SELECT GROUP_CONCAT(poin ORDER BY poin DESC) FROM user)) AS rank
+      FROM user
+      WHERE nipp = '.$this->session->userdata('nipp').'
+      ORDER BY poin DESC');
+    return $rank->result_array();
   }
 
   public function getStatsRanking()
   {
-    $this->db->select('*');
+    $this->db->select('poin');
     $this->db->from('user');
     $this->db->order_by('poin', 'desc');
     $ranking = $this->db->get();
     return $ranking->result_array();
-  }
-
-  public function getPercentile()
-  {
-    $this->db->select('poin');
-    $this->db->from('user');
-    $this->db->where('nipp', $this->session->userdata('nipp'));
-    $this->db->order_by('poin', 'asc');
-    $percent = $this->db->get();
-    return $percent->result_array();
-  }
-  
+  }  
  
   public function getDataExpert() 
   {

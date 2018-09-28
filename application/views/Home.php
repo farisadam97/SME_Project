@@ -112,7 +112,7 @@
 													<!-- END: Subheader -->
 
 													<div class="m-content">
-														<?php foreach ($login as $l) { ?>
+														<?php foreach ($rank as $l) { ?>
 														<!--begin:: Widgets/Stats-->
 														<div class="m-portlet ">
 															<div class="m-portlet__body  m-portlet__body--no-padding">
@@ -224,6 +224,10 @@
 																				<span class="m-widget24__desc">
 																					This Month <!-- echo this month -->
 																				</span>
+																				<br>
+																				<a href="" class="btn m-btn m-btn--icon btn-lg m-btn--icon-only" data-toggle="modal" data-target="#m_modal_6" title="leaderboard" style="margin: 58px 0px 0px 10px;">
+																					<i><img src="<?php echo base_url('assets/img/ranking.svg')?>" style="width: 40px; height: auto;"></i>
+																				</a>
 																				<span class="m-widget24__stats m--font-warning">
 																					<?php if($l['rank']==1){ ?>
 																						<img src="<?php echo base_url('assets/img/first.svg') ?>" style="width: 120px; height: auto;">
@@ -232,7 +236,7 @@
 																					<?php }elseif($l['rank']==3){ ?>
 																						<img src="<?php echo base_url('assets/img/third.svg') ?>" style="width: 120px; height: auto;">
 																					<?php }else{ 
-																						echo $l['rank']; ?>
+																						echo 'Unranked' ?>
 																						<br>
 																						<span>
 																							<img src="<?php echo base_url('assets/img/winner.svg') ?>" style="width: 60px; height: auto;">
@@ -240,6 +244,8 @@
 																					
 																					
 																				</span>
+
+
 																				<!-- <div class="m--space-10"></div>
 																				<div class="progress m-progress--sm">
 																					<div class="progress-bar m--bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -260,7 +266,8 @@
 														</div>
 														<?php }?>
 														<!--end:: Widgets/Stats--> 
-														
+
+
 
 														<!--Begin::Section Experts-->
 														<div class="m-portlet" >
@@ -307,9 +314,6 @@
 																	<?php } ?>
 																</div>
 																
-
-
-
 																<div class="row">
 		  															<div class="col-xl-3">
 																	</div>
@@ -341,104 +345,277 @@
 															</div>
 															<div class="m-portlet-body" style="padding: 2.2rem 2.2rem;">
 																	<!--begin: Datatable -->
-															<div class="row">
-																<div class="col-sm-12">
-																	<div class="row">
-																		<table class="table table-striped html-table table-bordered table-hover" >
-																			<thead>
-																				<tr>
-																					<th title="No" style="text-align: center;">
-																						No
-																					</th>
-																					<th title="Nama Ilmu" style="text-align: center;">
-																						Ilmu
-																					</th>
-																					<th title="Nama Topik" style="text-align: center;">
-																						Sub Ilmu
-																					</th>
-																					<th title="Nama Expert" style="text-align: center;">
-																						Experts
-																					</th>
-																					<th title="Action" style="text-align: center;">
-																						Action
-																					</th>
-																				</tr>
-													                            </thead>
-													                            <tbody>
-													                            <?php $i=0; foreach ($data7 as $b) { $i++ ?>
-													                                <tr>
-													                                    <td><?php echo $b['id_pengetahuan']; ?></td>
-													                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
-													                                    <td><?php $topik = array_unique(explode(";", $b['topik'])); ?>
-													                                    <ul>
-													                                    <?php foreach ($topik as $topikk)
-													                                    {
-													                                    	echo '<li>'. $topikk. '</li>';
-													                                    }
-													                                    ?>
-													                                	</ul>
-													                                    </td>
+																<div class="row">
+																	<div class="col-sm-12">
+																		<div class="row">
+																			<table class="table table-striped html-table table-bordered table-hover" >
+																				<thead>
+																					<tr>
+																						<th title="No" style="text-align: center;">
+																							No
+																						</th>
+																						<th title="Nama Ilmu" style="text-align: center;">
+																							Ilmu
+																						</th>
+																						<th title="Nama Topik" style="text-align: center;">
+																							Sub Ilmu
+																						</th>
+																						<th title="Nama Expert" style="text-align: center;">
+																							Experts
+																						</th>
+																						<th title="Action" style="text-align: center;">
+																							Action
+																						</th>
+																					</tr>
+														                            </thead>
+														                            <tbody>
+														                            <?php $i=0; foreach ($data7 as $b) { $i++ ?>
+														                                <tr>
+														                                    <td><?php echo $b['id_pengetahuan']; ?></td>
+														                                    <td><?php echo $b['nama_pengetahuan']; ?></td>
+														                                    <td><?php $topik = array_unique(explode(";", $b['topik'])); ?>
+														                                    <ul>
+														                                    <?php foreach ($topik as $topikk)
+														                                    {
+														                                    	echo '<li>'. $topikk. '</li>';
+														                                    }
+														                                    ?>
+														                                	</ul>
+														                                    </td>
 
-													                                    <td>
-													                                    	<div class="m-portlet__body">
-																								<div class="m-list-search">
-																									<div class="m-list-search__results">
-																									<?php $experts = array_unique(explode(";", $b['expert'])); ?>
-																									<?php $experts2 = array_unique(explode(";", $b['nippsme'])); ?>
-																										<?php $i=0; foreach ($experts as $expert) { ?>
-																		 									<a href="<?php echo base_url()."Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
-																											<span class="m-list-search__result-item-pic">
-																												<img class="m--img-rounded" src="<?php echo base_url("assets/img/man.png"); ?>" title="">
-																											</span>
-																											<span class="m-list-search__result-item-text">
-																					                            <?php
-																					                               	echo $expert;	
-																			                                 	?>
-																											</span>
-																											</a>
+														                                    <td>
+														                                    	<div class="m-portlet__body">
+																									<div class="m-list-search">
+																										<div class="m-list-search__results">
+																										<?php $experts = array_unique(explode(";", $b['expert'])); ?>
+																										<?php $experts2 = array_unique(explode(";", $b['nippsme'])); ?>
+																											<?php $i=0; foreach ($experts as $expert) { ?>
+																			 									<a href="<?php echo base_url()."Experts/item/". $experts2[$i]; ?>" class="m-list-search__result-item">
+																												<span class="m-list-search__result-item-pic">
+																													<img class="m--img-rounded" src="<?php echo base_url("assets/img/man.png"); ?>" title="">
+																												</span>
+																												<span class="m-list-search__result-item-text">
+																						                            <?php
+																						                               	echo $expert;	
+																				                                 	?>
+																												</span>
+																												</a>
 
-																										<?php $i++; ?>
-																										<?php } ?>
+																											<?php $i++; ?>
+																											<?php } ?>
 
-																										
-																                                    </div>
+																											
+																	                                    </div>
+																									</div>
 																								</div>
-																							</div>
-													                                   		
-													                                    </td>
-													                                    
-													                                    <td style="vertical-align: middle;">
-													                                    	<div style="text-align: center;">
-																								<a href="<?php echo base_url()."Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
-																									<i class="fa flaticon-eye"></i>
-																								</a>
-																							</div>
-																						</td>
-																				</tr>									
-																			<?php } ?>															                        
-																			</tbody>
-																		</table>	
+														                                   		
+														                                    </td>
+														                                    
+														                                    <td style="vertical-align: middle;">
+														                                    	<div style="text-align: center;">
+																									<a href="<?php echo base_url()."Knowledge/item/". $b['id_pengetahuan']?>" class="btn btn-info m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+																										<i class="fa flaticon-eye"></i>
+																									</a>
+																								</div>
+																							</td>
+																					</tr>									
+																				<?php } ?>															                        
+																				</tbody>
+																			</table>	
+																		</div>
+																	</div>
+																</div>
+																<div class="row" style="ma">
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3">
+																	</div>
+																	<div class="col-xl-3" style="text-align:right;">
+																		<a href="<?php echo base_url("Knowledge") ?>">
+																			<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
+																				Show More..
+																			</button>
+																		</a>
 																	</div>
 																</div>
 															</div>
-															<div class="row" style="ma">
-																<div class="col-xl-3">
-																</div>
-																<div class="col-xl-3">
-																</div>
-																<div class="col-xl-3">
-																</div>
-																<div class="col-xl-3" style="text-align:right;">
-																	<a href="<?php echo base_url("Knowledge") ?>">
-																		<button type="button" class="btn btn-outline-accent m-btn m-btn--custom">
-																			Show More..
-																		</button>
-																	</a>
-																</div>
-															</div>
-															</div>
 														</div>
 														<!--End::Section-->
+														<!--begin::Modal-->
+														<div class="modal fade" id="m_modal_6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+															<div class="modal-dialog modal-dialog-centered" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<div class="col-xl-12">
+																		<!--begin:: Widgets/New Users-->
+																			<div class="m-portlet m-portlet--full-height ">
+																				<div class="m-portlet__head">
+																					<div class="m-portlet__head-caption">
+																						<div class="m-portlet__head-title">
+																							<h3 class="m-portlet__head-text">
+																								Leaderboard!
+																							</h3>
+																						</div>
+																					</div>
+																					<div class="m-portlet__head-tools">
+																						<ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm" role="tablist">
+																							<li class="nav-item m-tabs__item">
+																								
+																							</li>
+																							<li class="nav-item m-tabs__item">
+																								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																									<span aria-hidden="true">
+																										&times;
+																									</span>
+																								</button>
+																							</li>
+																						</ul>
+																					</div>
+																				</div>
+																				<?php foreach ($leaderboard as $leader) { ?>
+																				<div class="m-portlet__body">
+																					<div class="tab-content">
+																						<div class="tab-pane active" id="m_widget4_tab1_content">
+																							<!--begin::Widget 14-->
+																							<div class="m-widget4">
+																								<!--begin::Widget 14 Item-->
+																								<div class="m-widget4__item">
+																									<?php
+																									switch ($leader['rank']) {
+
+																									    case $leader['rank']==1:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-warning' style='pointer-events: none;'>
+																													1
+																												</a>
+																											</div>";
+																									        break;
+																									    case $leader['rank']==2:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-accent' style='pointer-events: none;'>
+																													2
+																												</a>
+																											</div>";
+																									        break;
+																									    case $leader['rank']==3:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-danger' style='pointer-events: none;'>
+																													3
+																												</a>
+																											</div>";
+																									        break;
+																									    case $leader['rank']==4:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													4
+																												</a>
+																											</div>";
+																											break;
+																										case $leader['rank']==5:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													5
+																												</a>
+																											</div>";
+																											break;
+																										case $leader['rank']==6:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													6
+																												</a>
+																											</div>";
+																											break;
+																										case $leader['rank']==7:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													7
+																												</a>
+																											</div>";
+																											break;
+																										case $leader['rank']==8:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													8
+																												</a>
+																											</div>";
+																											break;
+																										case $leader['rank']==9:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													9
+																												</a>
+																											</div>";
+																											break;
+																										case $leader['rank']==10:
+																									        echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-outline-metal' style='pointer-events: none;'>
+																													10
+																												</a>
+																											</div>";
+																											break;
+																										default:
+																										echo 
+																									        "<div class='m-widget4__ext'>
+																												<a href='#'  class='m-btn m-btn--pill m-btn--hover-brand btn btn-sm btn-secondary' style='pointer-events: none;'>
+																													0
+																												</a>
+																											</div>";
+
+																									    
+																									} 
+																									?>
+																									<div class="m-widget4__ext">
+																										<span class="m-widget4__title">
+																											&nbsp;
+																										</span>
+																									</div>
+																									<div class="m-widget4__img m-widget4__img--pic">
+																										<img src="<?php echo base_url('assets/img/user4.jpg') ?>" alt="">
+																									</div>
+																									<div class="m-widget4__info">
+																										<span class="m-widget4__title">
+																											<?php echo $leader['nama']; ?>
+
+																										</span>
+																										<br>
+																										<span class="m-widget4__sub">
+																											<?php echo $leader['nipp']; ?>
+																										</span>
+																									</div>
+																								</div>
+																								<!--end::Widget 14 Item-->
+																							</div>
+																							<!--end::Widget 14-->
+																						</div>
+																					</div>
+																				</div>
+																				<?php } ?>
+																			</div>
+																			<!--end:: Widgets/New Users-->
+																		</div>
+																	</div>
+																	
+																	<div class="modal-footer">
+																		<button type="button" class="btn btn-secondary" data-dismiss="modal">
+																			Close
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													<!--end::Modal-->
 													</div>
 												</div>
 											</div>
